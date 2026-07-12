@@ -191,10 +191,20 @@ Not included here (repo-specific, never shared in the source conversation):
    Nobody's built a raid overview page since the events-based rewrite, so this
    hasn't been hit yet, but it will be — see WORKFLOW.md's "Regression to know
    about" note for the fix (a `combatantinfo` events pull).
-3. `resources`/`resources-gains` (HPM, mana-over-time) were abandoned after
-   `resourcetype=mana`/`resourcetype=0` both failed — but the real swagger spec
-   later revealed the correct param name is `abilityid`, and **nobody's gone back
-   and actually tested it**. Cheap, real opportunity if you want it.
+3. `resources`/`resources-gains` (HPM, mana-over-time) — **the API endpoint is
+   confirmed dead (2026-07-12, 5 real test calls, every variant of `abilityid`
+   tried, all identical failure), but it doesn't matter: we already have real
+   mana data from a different source.** Every `*_casts_events.json` file already
+   pulled (character AND Top 100 benchmark data alike) carries a
+   `classResources[0]` object per cast event — `amount` = max mana pool
+   (constant), `max` = that spell's real mana cost, `type` = current mana at
+   that moment (despite the misleading field name). Verified by tracing a full
+   real kill's cast sequence: `type` decreases smoothly from 10175 to 2781 over
+   the fight, and `max` matches known real TBC spell costs exactly (Lifebloom
+   220, Regrowth 675, Healing Touch 935, etc). HPM and a real mana-over-time
+   trace are both computable right now, from data already on disk, no new pull
+   needed — just not built into `summarize_class_benchmarks.ps1` or the boss
+   page template yet. See WORKFLOW.md gotcha #11 for the full writeup.
 4. Tranquility's guid is unknown/unobserved — `$cooldownGuids["Tranquility"]` is an
    empty array in both pull scripts and will silently show 0 forever until someone
    adds the real guid once it's actually seen in a pull.

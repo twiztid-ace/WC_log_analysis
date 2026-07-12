@@ -65,10 +65,14 @@
 # report they have no events in it anyway. Step 5 (parse history) still runs
 # since it only needs name/server/region, not a report-local ID.
 #
-# NOT included: resources / resources-gains (mana-over-time, HPM) - see
-# WORKFLOW.md, this needs a fresh test with the now-confirmed `abilityid`
-# parameter (not `resourcetype`, which was an earlier wrong guess) before it's
-# worth adding here.
+# NOT a separate pull, and doesn't need to be: resources / resources-gains
+# (mana-over-time, HPM) as an API endpoint is confirmed dead (tested for real
+# 2026-07-12, every `abilityid` variant, see WORKFLOW.md gotcha #11) - but every
+# casts event this script already saves carries a `classResources[0]` object with
+# real mana data under misleadingly-generic field names (`amount`=max mana pool,
+# `max`=that spell's real mana cost, `type`=current mana at that moment - verified
+# against a full real kill's cast sequence). HPM is already computable from
+# `*_casts_events.json`, no new pull needed here.
 #
 # Run this from your repo ROOT directory, which should contain:
 #   - an apikey.txt file at the root, with just your WCL API key on a single line
@@ -288,8 +292,20 @@ function Get-CharacterEvents {
 
     $events = @($data.events)
     foreach ($ev in $events) {
-        $ev | Add-Member -NotePropertyName "sourceName" -NotePropertyValue (Resolve-ActorName $ev.sourceID) -Force
-        $ev | Add-Member -NotePropertyName "targetName" -NotePropertyValue (Resolve-ActorName $ev.targetID) -Force
+        $srcName = Resolve-ActorName $ev.sourceID
+        # A missing targetID means WCL logged no real other-actor target for this event
+        # at all (self-only-castable spells like Nature's Swiftness come back as
+        # target={"name":"Environment","id":-1,...} instead of a real actor ID) - fixed
+        # 2026-07-12 to fall back to the caster's own name, not $null/Resolve-ActorName's
+        # own null-passthrough, since a spell with no real other-actor target can only
+        # have affected the caster. Before this fix, every downstream self-vs-other
+        # classification (see summarize_class_benchmarks.ps1) silently miscounted these
+        # as "not self" - confirmed on real data: Nature's Swiftness showed 0% self
+        # across a full 100-person Top 100 sample, implausible for a spell that can't
+        # target anyone else.
+        $tgtName = if ($ev.targetID -ne $null) { Resolve-ActorName $ev.targetID } else { $srcName }
+        $ev | Add-Member -NotePropertyName "sourceName" -NotePropertyValue $srcName -Force
+        $ev | Add-Member -NotePropertyName "targetName" -NotePropertyValue $tgtName -Force
     }
 
     # -ErrorAction SilentlyContinue on these two: Measure-Object throws a hard error

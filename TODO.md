@@ -71,19 +71,22 @@ new ones get found — don't let it go stale.
       page's numbers/findings fully recomputed against the new CSVs — not just
       relabeled. Regenerated all 4 Druid `benchmark_*.csv` files against real
       active data to confirm.
-- [ ] **New bug found via this switch: Nature's Swiftness's self-cast % is
-      probably wrong in the benchmark, and possibly any similarly self-only
-      spell.** `summarize_class_benchmarks.ps1`'s self/other classification is
-      `sourceName -eq targetName`. Self-only spells with no real target (NS,
-      possibly others) get logged by WCL with `target = {"name": "Environment",
-      ...}`, not the caster — so `targetName` is `null`/"Environment", never
-      equal to `sourceName`, and every self-cast of a spell shaped like this
-      gets silently counted as "not self." Confirmed real on Hydross:
-      `benchmark_cooldowns.csv` shows NS at 0% self across the full 100-person
-      sample, which isn't plausible for a spell that can only ever be cast on
-      the caster. Not fixed yet — the Hydross page's coverage-note flags this
-      number as unreliable rather than trusting it, but the underlying
-      classification bug is still live in the script.
+- [x] **Fixed: Nature's Swiftness's (and any similarly self-only spell's)
+      self-cast % was wrong in the benchmark.** Root cause: WCL logs a
+      self-only-castable spell's cast event with `target:
+      {"name":"Environment","id":-1,...}` instead of a real actor, since there's
+      no other-actor target to report - the pull scripts left `targetName` as
+      `null` in this case, and `summarize_class_benchmarks.ps1`'s self-check
+      (`sourceName -eq targetName`) silently counted every one of these as "not
+      self." Fixed in three places: (1) `summarize_class_benchmarks.ps1` now
+      also counts a null/empty `targetName` as self; (2) `pull_top100_druid.ps1`
+      and (3) `pull_character_TEMPLATE.ps1` now annotate these events with the
+      caster's own name instead of `null` at pull time, so future data doesn't
+      need the same workaround. No bulk re-processing of already-pulled files
+      needed - fix (1) alone makes both old (null) and new (self-name) data
+      compute correctly. Regenerated Druid's `benchmark_cooldowns.csv` to
+      confirm, and updated the Hydross page's coverage-note with the real
+      corrected number.
 
 ## Known data gaps / report-copy caveats
 
@@ -97,9 +100,41 @@ new ones get found — don't let it go stale.
       just means the row never gets shown as "notable," not that a wrong number gets
       surfaced. Revisit adding the real guid only if Tranquility usage actually needs
       to be tracked for some other reason later — not blocking anything right now.
-- [ ] **`resources`/`resources-gains` (HPM, mana-over-time) still untested** with
-      the correct `abilityid` param (the earlier `resourcetype` guess was
-      confirmed wrong). Not blocking, just unclaimed upside.
+- [x] **`resources`/`resources-gains` (HPM, mana-over-time) — resolved, and better
+      than expected (2026-07-12).** The API endpoint itself is confirmed dead: 5
+      real test calls (events + tables endpoints, `abilityid` 0/1/absent,
+      with/without `sourceid`, against a known-good real fight) all failed —
+      either the same `"No valid resource type specified."` error the original
+      attempt hit, or (for `resources-gains` with no `abilityid`) a different,
+      more fundamental `"Invalid command specified."` rejection suggesting that
+      view may not even be recognized on this deployment. The documented
+      `abilityid` param genuinely doesn't work against the real Fresh Classic
+      API — a real spec/API mismatch, not a param-guessing problem.
+      **But it turned out not to matter** — while chasing this, found that every
+      `*_casts_events.json` file already pulled (character AND Top 100 data
+      alike) carries a `classResources[0]` object per cast event with real mana
+      data under misleadingly generic field names: `amount` = max mana pool
+      (constant, e.g. 10175), `max` = that spell's real mana cost (verified
+      against known real TBC costs — Lifebloom 220, Rejuvenation 415, Regrowth
+      675, Healing Touch 935, etc — matched exactly), `type` = current mana at
+      that moment (traced across a full real kill: smooth 10175→2781 decline
+      with small regen bumps, not a "resource type ID" despite the name).
+      **Built into the pipeline the same day**: `summarize_class_benchmarks.ps1`
+      now computes HPM per parse (effective healing / total mana cost summed
+      from `classResources[0].max`) and adds `HPM_Top1`/`HPM_Top100Avg`/
+      `HPM_Median`/`HPM_SampleUsed` to `benchmark_summary.csv` — regenerated and
+      verified real on Hydross (Top1=7.59, avg=median=5.82, full 100-sample
+      used). `boss_page_template_druid.html`'s Cooldowns & Consumables stat grid
+      grew a 5th stat for it (scoped `.stat-grid-5` CSS modifier so the
+      Scorecard's own 4-stat grid is untouched). The real Hydross page now shows
+      Danceswtrees's real HPM (3.45) — meaningfully below both the Top 100
+      average and median, a genuine finding that reinforces the scorecard's
+      overheal problem from a different angle (mana was spent, a lot of the
+      healing it bought didn't count as effective). A real mana-over-time trace
+      (using the `type` field) is still just decoded, not built into anything -
+      no immediate use case for it yet. Updated WORKFLOW.md (gotcha #11 + the
+      boss-page spec section), CLAUDE.md, and both pull scripts' header comments
+      with the full story.
 - [x] *Checked, not a bug:* `benchmark_buffs.csv` showing identical
       Flask%/Food% for some bosses (e.g. Morogrim 70/70, from the old Top-10-only
       view — worth a fresh look now that the aggregate is Top 100) is a genuine

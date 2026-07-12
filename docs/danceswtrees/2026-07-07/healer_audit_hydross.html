@@ -457,7 +457,7 @@
           <td class="ability-name">Nature's Swiftness</td>
           <td class="num-cell">1</td>
           <td>self</td>
-          <td class="num-cell">0.9 (0%*)</td>
+          <td class="num-cell">0.9 (100%)</td>
         </tr>
         <tr>
           <td class="ability-name">Swiftmend</td>
@@ -471,7 +471,7 @@
          0% used on this boss - matching the norm, not a deviation, so it doesn't earn
          a row (see boss_page_template_druid.html's 2026-07-12 rule). -->
 
-    <div class="stat-grid" style="margin-top:22px;">
+    <div class="stat-grid stat-grid-5" style="margin-top:22px;">
       <div class="stat">
         <div class="stat-label">Flask / Elixir</div>
         <div class="stat-value good">Yes</div>
@@ -492,9 +492,14 @@
         <div class="stat-value">0</div>
         <div class="stat-sub">None used this kill — Top 100 avg 0.5 casts (47% used one)</div>
       </div>
+      <div class="stat">
+        <div class="stat-label">HPM</div>
+        <div class="stat-value warn">3.45</div>
+        <div class="stat-sub">Top 100: top1 7.59 &nbsp;·&nbsp; avg 5.82 &nbsp;·&nbsp; median 5.82</div>
+      </div>
     </div>
 
-    <div class="coverage-note">Innervate went to Captinspanky rather than self — worth flagging that this now reads differently at the full Top 100 sample size than it did against just the Top 10: the broader sample mostly self-casts Innervate (66% self), so giving it away puts her in the minority pattern here, not the majority one. *Nature's Swiftness's 0% self figure is suspect, not a real finding — it's a self-only buff with no real target, WCL logs its cast event with target "Environment" rather than the caster, and the benchmark's self-check (source name == target name) can't recognize that as self; this likely undercounts self-casts for any spell shaped like this, not just here. The real standout: Nature's Swiftness (2557268ms) and Healing Touch (2557281ms) landed 13 milliseconds apart on Jotes, in the final ~2 seconds of the kill (fight ends at 2559468ms) — a real, verified NS→instant-Healing-Touch combo, not a coincidence of timing. Tree of Life uptime (98.5%) is more than double the Top 100 average (44.9%) — she stayed in Tree Form for essentially the entire kill, dropping out only for that one final instant-cast window. Zero raid deaths this kill, so there's no cooldown-timing/death correlation to draw — trivially nothing to correlate against.</div>
+    <div class="coverage-note">Innervate went to Captinspanky rather than self — worth flagging that this now reads differently at the full Top 100 sample size than it did against just the Top 10: the broader sample mostly self-casts Innervate (66% self), so giving it away puts her in the minority pattern here, not the majority one. Nature's Swiftness usage (1 cast, self) matches the Top 100 sample closely — 84% used it, and of those, 100% self-cast it (mechanically the only option, since it's a self-only buff). The real standout: Nature's Swiftness (2557268ms) and Healing Touch (2557281ms) landed 13 milliseconds apart on Jotes, in the final ~2 seconds of the kill (fight ends at 2559468ms) — a real, verified NS→instant-Healing-Touch combo, not a coincidence of timing. Tree of Life uptime (98.5%) is more than double the Top 100 average (44.9%) — she stayed in Tree Form for essentially the entire kill, dropping out only for that one final instant-cast window. HPM (3.45) is well below both the Top 100 average and median (5.82) — a real mana-efficiency gap that lines up with the scorecard's overheal finding: 23,306 real mana was spent this kill, but with 67.9% overheal, a large share of what that mana bought never counted as effective healing. Zero raid deaths this kill, so there's no cooldown-timing/death correlation to draw — trivially nothing to correlate against.</div>
   </div>
 
   <!-- ===== TARGET DISTRIBUTION ===== -->

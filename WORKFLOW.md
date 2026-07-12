@@ -660,7 +660,15 @@ template's Cooldowns & Consumables section.
    (consumables register as cast events, not resource gains). Flask/food (yes/no,
    active at pull start) and real Tree of Life uptime % come from `*_consumables.json`
    — see "Buff uptime — fixed" above. Omit the Tree of Life stat entirely for a build
-   that isn't talented into it, rather than showing a permanent 0%. Cross-reference
+   that isn't talented into it, rather than showing a permanent 0%. **HPM (healing per
+   mana), added 2026-07-12**: effective healing / total real mana cost summed from
+   `*_casts_events.json`'s `classResources[0].max` field on every cast that carries
+   one — see gotcha #11 for the full writeup on why `resources`/`resources-gains`
+   turned out unnecessary for this. Same "effective, not raw" healing definition HPS
+   already uses. Compared against
+   `benchmark_summary.csv`'s `HPM_Top1`/`HPM_Top100Avg`/`HPM_Median` — omit the whole
+   stat if `HPM_SampleUsed` is 0 for that boss (no benchmark to compare against),
+   same principle as omitting Tree of Life for a non-Tree build. Cross-reference
    cooldown timing against `deaths` for this fight and note it in the coverage-note
    ONLY if there's an actual correlation — most kills won't have one (a 0-death kill
    trivially has none), and forcing a finding that isn't there is worse than saying
@@ -738,11 +746,54 @@ overview. Extensible — new raid nights get added as new dated entries.
     `Invoke-WebRequest` did NOT catch it and happily saved a 293-byte "success" file.
     Any new table-view addition should sanity-check the saved content (e.g. does it
     start with `HTTP/`, or contain a JSON `"error"` field) rather than trusting that
-    the request didn't throw. **The actual required parameter, found later by reading
-    the real swagger spec, is `abilityid`** (used as the resource-type filter for the
-    `resources`/`resources-gains` views specifically) — `resourcetype=mana` and
-    `resourcetype=0` were both wrong parameter *names*, not just wrong values, which is
-    why both were rejected identically. Nobody's re-tested with `abilityid` yet.
+    the request didn't throw. The real swagger spec (`reference\warcraftlogs_api.json`)
+    documents `abilityid` as the resource-type filter for the `resources`/
+    `resources-gains` views specifically — `resourcetype=mana` and `resourcetype=0`
+    were both wrong parameter *names*, not just wrong values, which is why both were
+    rejected identically. **Tested for real on 2026-07-12, and the endpoint itself
+    does NOT work**: 5 real calls against Danceswtrees's Hydross fight (report
+    `XJp8vAxzM4KtHYyb`, fight 6) — `/report/events/resources/` and
+    `/report/tables/resources/`, with and without `sourceid`, `abilityid=0`,
+    `abilityid=1`, and no `abilityid` at all — all five returned the identical
+    `"No valid resource type specified."` error, the same 200-OK-with-embedded-400
+    shape described above. `/report/events/resources-gains/` without `abilityid`
+    returned a different, more fundamental rejection instead (`<p>Invalid command
+    specified.</p>`, not even JSON) — suggesting `resources-gains` may not be a
+    recognized view at all on this endpoint as actually deployed, regardless of
+    params. The documented `abilityid` parameter genuinely doesn't work against the
+    real Fresh Classic realm cluster - a real mismatch between the swagger spec and
+    live API behavior, not a param-value guessing problem.
+
+    **This turned out not to matter — we already have the mana data, from a
+    completely different place.** Every `*_casts_events.json` file (both
+    `pull_character_TEMPLATE.ps1` and `pull_top100_druid.ps1` output — already
+    pulled, for every character and all 1,000 Top 100 parses) carries a
+    `classResources[0]` object on each cast event with three fields whose names
+    are generic/misleading but whose real meaning was confirmed by tracing 72
+    consecutive events across one full real kill (Danceswtrees/Hydross) and
+    checking the values against known real TBC spell costs:
+      - `amount` — the character's max mana pool. Constant across the whole fight
+        (10175 for Danceswtrees; 10805 for a different Top 100 parse checked as a
+        cross-sample sanity check).
+      - `max` — the mana COST of the specific spell in that event. Matched real
+        known TBC Druid costs closely: Lifebloom 220, Rejuvenation 415, Regrowth
+        675, Swiftmend 379, Innervate 94, Healing Touch 935, and 0 for free
+        procs/trinkets (Essence of the Martyr, Power of Prayer) and Nature's
+        Swiftness (the buff itself is free, it just removes the cost from the
+        next cast).
+      - `type` — the character's CURRENT mana at the moment of that cast. Traced
+        across the whole Hydross kill: monotonically decreases from 10175 to
+        2781 over the fight with small upward bumps (regen ticks between casts),
+        exactly the shape a real mana-over-time trace should have - not a
+        "resource type ID" (which would be a small constant enum value) despite
+        the field's name.
+    This means HPM (healing per mana) and a real mana-over-time trace are both
+    computable directly from data already on disk, for every character pull and
+    every Top 100 parse ever collected - no new API call, no re-pull, and no
+    dependency on the broken `resources`/`resources-gains` views at all. Not
+    built into the pipeline yet as of this writing - confirmed the data exists
+    and decoded its real meaning, stopped there pending a decision on whether/how
+    to surface it (new benchmark CSV columns, a boss-page stat, etc).
 12. **`deaths` is fight-wide, not class/player-scoped — don't pull it once per player.**
     Unlike `healing`/`casts`/`buffs` (which take `sourceclass` and return every player
     of that class in the fight), `deaths` returns the whole raid's death list for the

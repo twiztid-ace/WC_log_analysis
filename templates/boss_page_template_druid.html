@@ -115,6 +115,9 @@
     border-radius: 3px;
     overflow:hidden;
   }
+  /* 2026-07-12: cooldowns/consumables stat row grew a 5th stat (HPM) - scoped modifier
+     so the Scorecard's own stat-grid (still 4 real stats) is untouched. */
+  .stat-grid.stat-grid-5{ grid-template-columns: repeat(5, 1fr); }
   .stat{
     padding: 16px 18px;
     border-right: 1px solid var(--line);
@@ -396,7 +399,7 @@
       <span class="section-num">03</span>
       <h2 class="section-title">Cooldowns &amp; consumables</h2>
     </div>
-    <p class="section-desc">Real cooldown/utility usage, consumable casts, and self-buff status on this kill, vs. real Top 100 average on {{BOSS_NAME}}. Sourced from the fight's <span class="placeholder-tag">*_casts_events.json</span> and <span class="placeholder-tag">*_consumables.json</span> (see WORKFLOW.md) - match abilities by guid, not localized name (gotcha #2).</p>
+    <p class="section-desc">Real cooldown/utility usage, consumable casts, mana efficiency, and self-buff status on this kill, vs. real Top 100 average on {{BOSS_NAME}}. Sourced from the fight's <span class="placeholder-tag">*_casts_events.json</span> and <span class="placeholder-tag">*_consumables.json</span> (see WORKFLOW.md) - match abilities by guid, not localized name (gotcha #2).</p>
 
     <table class="cd-table">
       <thead>
@@ -450,7 +453,7 @@
       </tbody>
     </table>
 
-    <div class="stat-grid" style="margin-top:22px;">
+    <div class="stat-grid stat-grid-5" style="margin-top:22px;">
       <div class="stat">
         <!-- flask/food are booleans from the pull-start combatantinfo snapshot, not a
              computed uptime % - these buffs outlast any single fight (1-2hr duration),
@@ -479,6 +482,22 @@
         <div class="stat-label">Mana consumables</div>
         <div class="stat-value">{{MANA_CONSUMABLE_COUNT}}</div>
         <div class="stat-sub">{{MANA_CONSUMABLE_DETAIL}} — e.g. "1x Restore Mana", from *_casts_events.json (consumables register as casts, matched by name not guid - see benchmark_cooldowns.csv note on "Mana Potion")</div>
+      </div>
+      <div class="stat">
+        <!-- Added 2026-07-12 once resources/resources-gains was confirmed dead and HPM
+             turned out to be computable from *_casts_events.json's classResources field
+             instead (see WORKFLOW.md gotcha #11 and summarize_class_benchmarks.ps1's own
+             header note for the full writeup) - effective healing / total real mana cost
+             summed across every cast that carries a classResources entry. Same "effective,
+             not raw" healing definition HPS already uses, so the two are directly
+             comparable in spirit (throughput vs. throughput-per-mana). Leave this whole
+             stat out entirely if HPM_SampleUsed in benchmark_summary.csv is 0 for this
+             boss (no benchmark comparison available), rather than showing a benchmark
+             value of "0" or blank next to a real character number - same principle as
+             omitting Tree of Life for a non-Tree build. -->
+        <div class="stat-label">HPM</div>
+        <div class="stat-value">{{HPM}}</div>
+        <div class="stat-sub">Top 100: top1 {{HPM_TOP1}} &nbsp;·&nbsp; avg {{HPM_TOP100AVG}} &nbsp;·&nbsp; median {{HPM_MEDIAN}}</div>
       </div>
     </div>
 

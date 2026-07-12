@@ -128,9 +128,18 @@
 # target: Turkeykin -> Churbert). /report/events/{view}/{code} with `sourceid` (a real,
 # documented, standalone query param) returns complete, untruncated per-event records.
 #
-# DROPPED: resources / resources-gains (mana-over-time, HPM). Confirmed the real param
-# name is `abilityid` (not `resourcetype`, an earlier wrong guess), untested against
-# this specific endpoint as of this writing.
+# DROPPED (and no longer needed): resources / resources-gains (mana-over-time, HPM)
+# as a separate API pull. The real swagger spec documents `abilityid` as the
+# resource-type param (not `resourcetype`, an earlier wrong guess) - tested for real
+# 2026-07-12 (5 real calls, every abilityid variant tried) and the endpoint itself
+# does NOT work against the real Fresh Classic API. Doesn't matter though: every
+# casts event this script already saves carries a `classResources[0]` object with
+# real mana data under misleadingly-generic field names - `amount` = max mana pool
+# (constant), `max` = that spell's real mana cost, `type` = current mana at that
+# moment. Verified against a full real kill's cast sequence (type decreases smoothly
+# 10175->2781 over the fight; max matches known real TBC spell costs exactly). HPM
+# is computable from data this script already writes, no new pull needed - just not
+# summarized/surfaced yet. See WORKFLOW.md gotcha #11 for the full writeup.
 #
 # Run this from your repo ROOT directory (e.g. C:\Users\raymo\wc_logs\), which should contain:
 #   - an apikey.txt file at the root, with just your WCL API key on a single line

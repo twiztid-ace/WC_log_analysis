@@ -2,7 +2,8 @@
 #
 # Reads the raw Top 100 data pulled by pull_top100_druid.ps1 and computes the derived
 # benchmark stats our analysis actually uses - PER BOSS:
-#   - HPS / overheal percentiles           (from rankings.json + *_healing_events.json)
+#   - HPS / HPM / overheal percentiles     (from rankings.json + *_healing_events.json +
+#                                            *_casts_events.json - see the HPM note below)
 #   - Top 100 spell composition            (from *_healing_events.json, grouped by guid)
 #   - Top 100 target concentration         (from *_healing_events.json, grouped by target)
 #   - Top 100 cooldown/utility/consumable cast counts, with self-vs-other target split
@@ -11,10 +12,33 @@
 #     Tree of Life uptime %                (from *_consumables.json)
 #
 # Outputs compact CSVs, small enough to upload to Claude Project knowledge:
-#   benchmark_summary.csv               <- one row per boss (HPS, overheal, target stats)
+#   benchmark_summary.csv               <- one row per boss (HPS, HPM, overheal, target stats)
 #   benchmark_spell_composition.csv     <- one row per boss+spell (Top 100 avg % of healing)
 #   benchmark_cooldowns.csv             <- one row per boss+ability (Top 100 avg casts, self%)
 #   benchmark_buffs.csv                 <- one row per boss (Top 100 flask/food/Tree of Life)
+#
+# ============================================================================
+# 2026-07-12: ADDED HPM (HEALING PER MANA) - resources/resources-gains API confirmed
+# dead, used classResources on *_casts_events.json instead (already had the data)
+# ============================================================================
+# The resources/resources-gains WCL views were confirmed genuinely broken against the
+# real Fresh Classic API this session (5 real test calls, every documented param
+# variant - see WORKFLOW.md gotcha #11) - but it turned out not to matter. Every
+# *_casts_events.json file already pulled carries a `classResources[0]` object per cast
+# event with real mana data under misleadingly-generic field names: `amount` = the
+# character's max mana pool (constant, unused here), `max` = that spell's real mana
+# cost (this is what gets summed into HPM's denominator), `type` = current mana at that
+# moment (unused here, would feed a mana-over-time trace if ever built). Verified
+# against real known TBC spell costs (Lifebloom 220, Rejuvenation 415, Regrowth 675,
+# Healing Touch 935, etc - all matched exactly) and a real kill's cast sequence (`type`
+# traced smoothly 10175->2781 over one fight, confirming it's really current mana, not
+# a resource-type ID). HPM = effective healing / total mana cost summed across every
+# cast event that carries a classResources entry - same `$total` numerator already used
+# for HPS, so HPM and HPS share the same "effective, not raw" healing definition.
+# `HPM_SampleUsed` can be smaller than `SampleSize` for the same reason
+# `benchmark_cooldowns.csv`'s SampleUsed can - excludes any parse whose casts file was
+# missing/unparseable, not silently zero-filled.
+# ============================================================================
 #
 # ============================================================================
 # 2026-07-12: SWITCHED FROM TOP-10-AVG TO TOP-100-AVG (SAME DAY AS THE ACTIVE/ARCHIVED
@@ -360,9 +384,33 @@ foreach ($bossFolder in $bosses.Keys) {
         # ----- Cooldowns/utility/consumables, from the sibling *_casts_events.json -----
         $cooldownCounts = $null
         $castsFile = $file.FullName -replace '_healing_events\.json$', '_casts_events.json'
+        $manaSpent = $null
         if (Test-Path $castsFile) {
             try {
                 $castsData = Get-Content $castsFile -Raw -Encoding UTF8 | ConvertFrom-Json
+
+                # ----- HPM (healing per mana), from the same *_casts_events.json - added
+                # 2026-07-12 after the resources/resources-gains API endpoint was confirmed
+                # dead (5 real test calls, every documented param variant, all failed - see
+                # WORKFLOW.md gotcha #11). Turned out not to matter: every cast event here
+                # already carries a classResources[0] object with real mana data under
+                # misleadingly-generic field names - `amount` is the character's max mana
+                # pool (constant, unused here), `max` is that spell's real mana cost, `type`
+                # is current mana at that moment (unused here, would feed a mana-over-time
+                # trace if ever built). Verified against real known TBC spell costs (Lifebloom
+                # 220, Rejuvenation 415, Regrowth 675, Healing Touch 935, etc - all matched
+                # exactly) and a real kill's cast sequence (type traced smoothly 10175->2781
+                # over one fight). Summing `max` across every event that has a classResources
+                # entry gives total real mana spent; some cast events (begincast placeholders,
+                # a few proc/utility casts) carry no classResources at all and are skipped,
+                # same as they'd contribute 0 cost either way.
+                $manaSpent = 0.0
+                foreach ($ev in $castsData.events) {
+                    if ($ev.classResources -and $ev.classResources.Count -gt 0) {
+                        $manaSpent += $ev.classResources[0].max
+                    }
+                }
+
                 $cooldownCounts = @{}
                 foreach ($cdName in $cooldownGuids.Keys) {
                     $guidList = $cooldownGuids[$cdName]
@@ -423,9 +471,17 @@ foreach ($bossFolder in $bosses.Keys) {
             }
         }
 
+        # $manaSpent is $null if the casts file was missing/unparseable (excluded from
+        # the HPM aggregate entirely, same treatment as Cooldowns/BuffUptimes above) or
+        # a real 0.0+ accumulator otherwise. A real 0 (no mana-costing casts at all -
+        # not expected for a healer over a real fight, but not impossible) also can't
+        # produce a meaningful HPM, so both cases fall through to $null here.
+        $hpm = if ($manaSpent -and $manaSpent -gt 0) { $total / $manaSpent } else { $null }
+
         $records += [PSCustomObject]@{
             PlayerName    = $playerName
             HPS           = $hps
+            HPM           = $hpm
             OverhealPct   = $overhealPct
             CoveragePct   = $coveragePct
             Top1Pct       = $top1Pct
@@ -457,17 +513,34 @@ foreach ($bossFolder in $bosses.Keys) {
     $covAvg = ($sorted | Measure-Object -Property CoveragePct -Average).Average
     $top1PctAvg = ($sorted | Measure-Object -Property Top1Pct -Average).Average
 
+    # ----- HPM (healing per mana) across the sample that has it - excludes any parse
+    # whose casts file was missing/unparseable, so this sample size can be smaller than
+    # SampleSize (see HPM_SampleUsed below), same pattern as the cooldown/buff samples. -----
+    $sampleWithHpm = @($sorted | Where-Object { $_.HPM -ne $null })
+    $hpmSampleUsed = $sampleWithHpm.Count
+    $hpmTop1 = $null; $hpmTop100Avg = $null; $hpmMedian = $null
+    if ($hpmSampleUsed -gt 0) {
+        $hpmSorted = $sampleWithHpm | Sort-Object -Property HPM -Descending
+        $hpmTop1 = $hpmSorted[0].HPM
+        $hpmTop100Avg = ($sampleWithHpm | Measure-Object -Property HPM -Average).Average
+        $hpmMedian = $hpmSorted[[int]($hpmSampleUsed/2)].HPM
+    }
+
     $summaryRows += [PSCustomObject]@{
         Boss = $bossName
         HPS_Top1 = [math]::Round($top1, 0)
         HPS_Top100Avg = [math]::Round($top100Avg, 0)
         HPS_Median = [math]::Round($median, 0)
+        HPM_Top1 = if ($null -ne $hpmTop1) { [math]::Round($hpmTop1, 2) } else { "" }
+        HPM_Top100Avg = if ($null -ne $hpmTop100Avg) { [math]::Round($hpmTop100Avg, 2) } else { "" }
+        HPM_Median = if ($null -ne $hpmMedian) { [math]::Round($hpmMedian, 2) } else { "" }
         Overheal_Best = [math]::Round($ohBest, 1)
         Overheal_Median = [math]::Round($ohMedian, 1)
         Overheal_Worst = [math]::Round($ohWorst, 1)
         Top100_TargetCoveragePct = [math]::Round($covAvg, 1)
         Top100_TargetTop1Pct = [math]::Round($top1PctAvg, 1)
         SampleSize = $n
+        HPM_SampleUsed = $hpmSampleUsed
     }
 
     # ----- Aggregate spell composition across the full Top 100 sample, strictly by guid -----
