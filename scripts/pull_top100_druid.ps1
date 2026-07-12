@@ -17,6 +17,48 @@
 #                        per unique report+fight, not once per parse)
 #
 # ============================================================================
+# ACTIVE/ARCHIVED DIFF MODEL (2026-07-12) - replaces the old date-stamped-folder approach
+# ============================================================================
+# Every run used to create a brand new data\Classes\Druid\{date}\ folder and re-fetch all
+# ~1000 parses from scratch, even though the vast majority of a boss's Top 100 doesn't
+# change between runs and a completed log's healing/casts/consumables data can never
+# change once pulled. That's pure wasted API budget (WCL caps at 800 calls/hour - see the
+# PARALLELIZED note below). This version instead:
+#   1. Reads data\Classes\Druid\manifest.json (per-boss lastPulledDate/rankingsSnapshotDate,
+#      per-parse status "active"/"archived" keyed by "{reportID}_{fightID}_{playerName}").
+#   2. Fetches fresh rankings for a boss (1 call, same as before) and diffs the fresh
+#      reportID+fightID+name set against the manifest's currently-active parses for that
+#      boss:
+#        - present in fresh, NOT in manifest-active -> genuinely new, fetch its full data
+#          (this is the only case that costs real per-parse API calls)
+#        - present in BOTH -> still in the Top 100, zero API calls - just refresh its
+#          rank/hps in the manifest from the response we already have in memory
+#        - in manifest-active, NOT in fresh -> dropped out of the Top 100 - move its
+#          healing/casts/consumables files from active\{Boss}\ to archived\{Boss}\ (kept
+#          forever, not deleted) and flip its manifest status to "archived"
+#   3. The on-disk rankings_{boss}.json under active\ only gets overwritten - and the
+#      PREVIOUS version archived to archived\rankings_history\{Boss}\{old date}.json -
+#      when that diff found at least one add or drop. A pure rank/HPS reshuffle among the
+#      same 100 people (which shouldn't really happen for completed logs, but just in
+#      case) does NOT trigger a rewrite/archive - only real membership changes do. This
+#      means the on-disk rankings_{boss}.json can very slightly lag the manifest's
+#      per-parse rank/hps fields in that edge case - the manifest is always the source of
+#      truth for those, the JSON file is a periodic snapshot, not a live mirror.
+#   4. `deaths.json` files are NEVER archived, regardless of whether the parse(s) that
+#      reference them get archived - they're tiny, fight-wide (not per-parse), and
+#      cheap to just leave in active\{Boss}\ forever.
+#   5. lastPulledDate/rankingsSnapshotDate are plain "yyyy-MM-dd" calendar-date strings,
+#      not timestamps - staleness is ALWAYS computed by comparing to today's date, never
+#      stored as a boolean (a stored true/false flag would silently go wrong the instant
+#      the date rolls over). summarize_class_benchmarks.ps1 is expected to apply the same
+#      rule against `benchmarkGeneratedDate` at the top of the manifest.
+# Creates data\Classes\Druid\manifest.json fresh (empty bosses) if it doesn't exist yet -
+# for Druid specifically, it was created once by scripts\migrate_class_to_active.ps1
+# migrating the last date-folder pull (2026-07-10) into this layout; that migration
+# script does NOT need to run again for Druid.
+# ============================================================================
+#
+# ============================================================================
 # PARALLELIZED (2026-07-11): per-parse work runs across multiple threads via a
 # RunspacePool, since Windows PowerShell 5.1 doesn't have ForEach-Object -Parallel
 # (that's PS7+ only). Read this before changing -MaxThreads:
@@ -29,7 +71,9 @@
 # initial default of 5 once real runs showed the sequential `deaths` pass - since
 # folded into this same pool, see the THREAD SAFETY note below - as the actual
 # bottleneck at lower thread counts, not the rate limit). If you see repeated "FAILED"
-# lines mentioning 429 or rate limit, lower -MaxThreads back down.
+# lines mentioning 429 or rate limit, lower -MaxThreads back down. The active/archived
+# diff model above should make this a smaller concern in practice anyway, since most
+# runs now only fetch a handful of genuinely new parses per boss instead of all 100.
 #
 # THREAD SAFETY: the sequential version shared plain PowerShell hashtables
 # ($fightsCache, $tableCache, $deathsPulled) across the whole run - those are NOT safe
@@ -71,14 +115,6 @@
 # See WORKFLOW.md and pull_character_TEMPLATE.ps1's header for the full validation
 # writeup (including why a naive "every orphan removebuff = active since window
 # start" rule was wrong and had to be restricted to only the first such event).
-#
-# UNTESTED: this environment cannot run PowerShell to verify this script directly (no
-# PowerShell available here) - it's built carefully against documented RunspacePool/
-# ConcurrentDictionary APIs and mirrors the already-validated sequential logic as
-# closely as possible, but has NOT been run against the real API before being handed
-# over. Test on ONE boss first (comment out the other 9 in $bosses below, or just
-# delete all but one boss's rankings file before running) and watch the console output
-# for FAILED lines before trusting a full 10-boss run.
 # ============================================================================
 #
 # WHY HEALING/CASTS MOVED FROM TABLES TO EVENTS (2026-07-11 redesign)
@@ -101,13 +137,18 @@
 #     (add apikey.txt to your .gitignore so it never gets committed)
 #   - a data\Classes\ folder (created automatically if it doesn't exist yet)
 #
-# Creates:  data\Classes\Druid\{date}\rankings_hydross.json  (etc.) - if not already present
-# Writes, per parse:
-#   data\Classes\Druid\{date}\{BossName}\{reportID}_{fightID}_{playerName}_healing_events.json
-#   data\Classes\Druid\{date}\{BossName}\{reportID}_{fightID}_{playerName}_casts_events.json
-#   data\Classes\Druid\{date}\{BossName}\{reportID}_{fightID}_{playerName}_consumables.json
-# Writes, once per unique report+fight:
-#   data\Classes\Druid\{date}\{BossName}\{reportID}_{fightID}_deaths.json
+# Creates/updates: data\Classes\Druid\manifest.json
+# Writes, per NEW parse only:
+#   data\Classes\Druid\active\{BossName}\{reportID}_{fightID}_{playerName}_healing_events.json
+#   data\Classes\Druid\active\{BossName}\{reportID}_{fightID}_{playerName}_casts_events.json
+#   data\Classes\Druid\active\{BossName}\{reportID}_{fightID}_{playerName}_consumables.json
+# Writes, once per unique report+fight (never archived):
+#   data\Classes\Druid\active\{BossName}\{reportID}_{fightID}_deaths.json
+# Moves, per DROPPED parse (no longer in the Top 100):
+#   active\{BossName}\{...} -> archived\{BossName}\{...} (healing/casts/consumables only)
+# Conditionally (only when a boss's Top 100 membership actually changed):
+#   active\rankings_{boss}.json overwritten; previous version moved to
+#   archived\rankings_history\{BossName}\{previous rankingsSnapshotDate}.json
 #
 # Usage:
 #   powershell -ExecutionPolicy Bypass -File pull_top100_druid.ps1
@@ -124,8 +165,12 @@ $classesRoot = "data\Classes"
 $className = "Druid"
 $classID = 2
 $specID = 4          # Restoration
-$dateFolder = "2026-07-10"
-$classDateDir = Join-Path (Join-Path $classesRoot $className) $dateFolder
+$classDir = Join-Path $classesRoot $className
+$activeDir = Join-Path $classDir "active"
+$archivedDir = Join-Path $classDir "archived"
+$manifestPath = Join-Path $classDir "manifest.json"
+$today = Get-Date -Format "yyyy-MM-dd"
+$nowIso = (Get-Date).ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ssZ")
 
 if (-not (Test-Path $apiKeyFile)) {
     Write-Host "ERROR: $apiKeyFile not found in the current directory."
@@ -140,9 +185,11 @@ if ([string]::IsNullOrWhiteSpace($apiKey)) {
 }
 
 Write-Host "Running with -MaxThreads $MaxThreads (default 10 - lower this if you see rate-limit failures)"
+Write-Host "Today: $today"
 Write-Host ""
 
-# boss name -> (rankings filename, SSC/TK encounter ID)
+# boss name -> (rankings filename, SSC/TK encounter ID) - matches WORKFLOW.md's SSC/TK
+# reference ID table exactly.
 $bosses = [ordered]@{
     "Hydross"    = @{ file = "rankings_hydross.json";    encounterID = 100623 }
     "Lurker"     = @{ file = "rankings_lurker.json";     encounterID = 100624 }
@@ -156,56 +203,54 @@ $bosses = [ordered]@{
     "Kaelthas"   = @{ file = "rankings_kaelthas.json";   encounterID = 100733 }
 }
 
-New-Item -ItemType Directory -Force -Path $classDateDir | Out-Null
+New-Item -ItemType Directory -Force -Path $activeDir | Out-Null
+New-Item -ItemType Directory -Force -Path (Join-Path $archivedDir "rankings_history") | Out-Null
 
-# ===== STEP 1: Pull Top 100 rankings per boss (skip any already present) - sequential,
-#               only 10 calls total, not worth parallelizing =====
-Write-Host "=== Step 1: Fetching Top 100 rankings ==="
-Write-Host "Target directory: $classDateDir"
-foreach ($boss in $bosses.Keys) {
-    $rankingsFile = Join-Path $classDateDir $bosses[$boss].file
-    $encounterID = $bosses[$boss].encounterID
-
-    if (Test-Path $rankingsFile) {
-        Write-Host "  $boss - already have $rankingsFile, skipping"
-        continue
-    }
-
-    $rankingsUrl = "$baseUrl/rankings/encounter/$encounterID`?metric=hps&spec=$specID&class=$classID&api_key=$apiKey"
-    try {
-        Invoke-WebRequest -Uri $rankingsUrl -OutFile $rankingsFile -UseBasicParsing -ErrorAction Stop
-        $check = Get-Content $rankingsFile -Raw | ConvertFrom-Json
-        if ($check.PSObject.Properties.Name -contains "error") {
-            Write-Host "  $boss - API ERROR: $($check.error)"
-        } else {
-            Write-Host "  $boss - got $($check.rankings.Count) rankings"
+# ===== Manifest load/save - PSCustomObject (from ConvertFrom-Json) is awkward to mutate
+# with dynamically-named keys (Add-Member for every new parse), so it's converted to
+# plain ordered hashtables on load and converted back to JSON on save. No arrays appear
+# anywhere in this schema (bosses/parses are both object-keyed dictionaries), so a
+# straightforward recursive PSCustomObject->hashtable walk is all that's needed. =====
+function ConvertTo-OrderedHashtableLocal {
+    param($InputObject)
+    if ($InputObject -is [System.Array]) {
+        return @($InputObject | ForEach-Object { ConvertTo-OrderedHashtableLocal $_ })
+    } elseif ($InputObject -is [PSCustomObject]) {
+        $hash = [ordered]@{}
+        foreach ($prop in $InputObject.PSObject.Properties) {
+            $hash[$prop.Name] = ConvertTo-OrderedHashtableLocal $prop.Value
         }
-    } catch {
-        Write-Host "  $boss - FAILED: $_"
+        return $hash
+    } else {
+        return $InputObject
     }
-    Start-Sleep -Milliseconds 250
 }
-Write-Host ""
 
-# ===== STEP 2: Pull all per-parse data (healing events + casts events + buffs), in
-#               parallel via a bounded RunspacePool =====
-Write-Host "=== Step 2: Fetching fight data (healing events, casts events, consumables) - $MaxThreads threads ==="
+if (Test-Path $manifestPath) {
+    $manifest = ConvertTo-OrderedHashtableLocal (Get-Content $manifestPath -Raw -Encoding UTF8 | ConvertFrom-Json)
+} else {
+    Write-Host "No manifest.json found - creating a fresh one for $className."
+    $manifest = [ordered]@{
+        schemaVersion = 2
+        className = $className
+        classID = $classID
+        specID = $specID
+        benchmarkGeneratedDate = $null
+        bosses = [ordered]@{}
+    }
+}
 
-# Thread-safe caches, shared across all worker threads for one boss's pool.
-# ConcurrentDictionary, not a plain hashtable - see the PARALLELIZED note above for why.
-$fightsCache = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
-$actorNamesCache = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
+function Save-ManifestLocal {
+    param($Manifest, $Path)
+    $jsonText = $Manifest | ConvertTo-Json -Depth 12
+    [System.IO.File]::WriteAllText($Path, $jsonText, (New-Object System.Text.UTF8Encoding $false))
+}
 
-# Claim registry for deaths: TryAdd is atomic, so only the first thread to attempt a
-# given "reportID|fightID" key actually proceeds to fetch it - every other thread
-# calling TryAdd for the same key gets $false back and skips. This is a real mutex,
-# not just "tolerate the occasional race" - see the note above the deaths block below.
-$deathsClaimed = [System.Collections.Concurrent.ConcurrentDictionary[string,bool]]::new()
-
-# The self-contained per-parse worker. Runs in an isolated runspace with NO access to
-# the outer script's functions or variables - everything it needs is passed in as an
-# argument. Mirrors the sequential version's Get-PlayerEvents logic inline, since a
-# separate function isn't visible inside the runspace without extra plumbing.
+# ===== The self-contained per-parse worker (unchanged from the previous version except
+# for taking its output directory directly - it always writes into active\{Boss}\, since
+# it's only ever invoked for genuinely NEW parses now). Runs in an isolated runspace with
+# NO access to the outer script's functions or variables - everything it needs is passed
+# in as an argument. =====
 $workerScript = {
     param(
         $reportID, $fightID, $playerName, $i, $baseUrl, $apiKey, $className,
@@ -216,6 +261,9 @@ $workerScript = {
         Ok = $true
         Messages = New-Object System.Collections.Generic.List[string]
         ReportID = $reportID
+        FightID = $fightID
+        PlayerName = $playerName
+        SafeName = $null
     }
 
     function Get-EventsLocal {
@@ -295,6 +343,7 @@ $workerScript = {
     $start = $fight.start_time
     $end = $fight.end_time
     $safeName = ($playerName -replace '[\\/:*?"<>|]', '_')
+    $result.SafeName = $safeName
 
     $parseOk = $true
 
@@ -413,12 +462,7 @@ $workerScript = {
         }
     }
 
-    # --- deaths (fight-wide, once per report+fight - claim via TryAdd so only ONE
-    #     thread across the whole pool ever fetches a given report+fight's deaths,
-    #     eliminating the two-threads-race-on-one-file risk instead of just tolerating
-    #     it. If the claiming thread's own fetch fails, no other thread retries it
-    #     THIS run - a re-run of the whole script will pick it up fresh next time,
-    #     same as any other failed call here.) ---
+    # --- deaths (fight-wide, once per report+fight, NEVER archived - see header note) ---
     $deathsOutFile = Join-Path $outDir "$($reportID)_$($fightID)_deaths.json"
     if (-not (Test-Path $deathsOutFile)) {
         $deathsKey = "$reportID|$fightID"
@@ -439,53 +483,170 @@ $workerScript = {
     return $result
 }
 
-$totalDone = 0
+$fightsCache = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
+$actorNamesCache = [System.Collections.Concurrent.ConcurrentDictionary[string,object]]::new()
+$deathsClaimed = [System.Collections.Concurrent.ConcurrentDictionary[string,bool]]::new()
+
+$totalNew = 0
+$totalConfirmed = 0
+$totalArchived = 0
 $totalFailed = 0
 
-foreach ($boss in $bosses.Keys) {
-    $rankingsFile = Join-Path $classDateDir $bosses[$boss].file
+foreach ($bossName in $bosses.Keys) {
+    $encounterID = $bosses[$bossName].encounterID
+    $rankingsFileName = $bosses[$bossName].file
+    $activeRankingsPath = Join-Path $activeDir $rankingsFileName
+    $bossActiveDir = Join-Path $activeDir $bossName
+    $bossArchivedDir = Join-Path $archivedDir $bossName
+    New-Item -ItemType Directory -Force -Path $bossActiveDir | Out-Null
 
-    if (-not (Test-Path $rankingsFile)) {
-        Write-Host "SKIP: $rankingsFile not found (rankings pull may have failed above)."
+    Write-Host "=== $bossName ==="
+
+    # ----- Step 1: fetch fresh rankings into memory (NOT written to disk yet - we need
+    # to diff first to decide whether this counts as a real change worth archiving) -----
+    $rankingsUrl = "$baseUrl/rankings/encounter/$encounterID`?metric=hps&spec=$specID&class=$classID&api_key=$apiKey"
+    try {
+        $rankingsResp = Invoke-WebRequest -Uri $rankingsUrl -UseBasicParsing -ErrorAction Stop
+        $freshRankingsData = $rankingsResp.Content | ConvertFrom-Json
+    } catch {
+        Write-Host "  FAILED fetching rankings - $_ - skipping this boss entirely this run."
+        Write-Host ""
+        continue
+    }
+    if ($freshRankingsData.PSObject.Properties.Name -contains "error") {
+        Write-Host "  API ERROR: $($freshRankingsData.error) - skipping this boss entirely this run."
+        Write-Host ""
+        continue
+    }
+    $freshRankings = @($freshRankingsData.rankings)
+    Write-Host "  got $($freshRankings.Count) fresh rankings"
+
+    if (-not $manifest.bosses.Contains($bossName)) {
+        $manifest.bosses[$bossName] = [ordered]@{
+            encounterID = $encounterID
+            lastPulledDate = $null
+            rankingsSnapshotDate = $null
+            parses = [ordered]@{}
+        }
+    }
+    $bossEntry = $manifest.bosses[$bossName]
+
+    # ----- Build the fresh key set and diff against manifest-active parses -----
+    $freshByKey = [ordered]@{}
+    for ($k = 0; $k -lt $freshRankings.Count; $k++) {
+        $r = $freshRankings[$k]
+        $key = "$($r.reportID)_$($r.fightID)_$($r.name)"
+        $freshByKey[$key] = [ordered]@{ rank = $k + 1; hps = $r.total; reportID = $r.reportID; fightID = $r.fightID; name = $r.name }
+    }
+
+    $activeManifestKeys = @($bossEntry.parses.Keys | Where-Object { $bossEntry.parses[$_].status -eq "active" })
+    $newKeys = @($freshByKey.Keys | Where-Object { $activeManifestKeys -notcontains $_ })
+    $droppedKeys = @($activeManifestKeys | Where-Object { -not $freshByKey.Contains($_) })
+    $stillActiveKeys = @($activeManifestKeys | Where-Object { $freshByKey.Contains($_) })
+
+    # ----- Refresh rank/hps for parses still in the Top 100 - free, already in memory -----
+    foreach ($key in $stillActiveKeys) {
+        $bossEntry.parses[$key].rank = $freshByKey[$key].rank
+        $bossEntry.parses[$key].hps = [math]::Round($freshByKey[$key].hps, 1)
+        $bossEntry.parses[$key].lastConfirmedInTop100At = $nowIso
+    }
+    $totalConfirmed += $stillActiveKeys.Count
+
+    # ----- Archive parses that dropped out of the Top 100 -----
+    if ($droppedKeys.Count -gt 0) {
+        New-Item -ItemType Directory -Force -Path $bossArchivedDir | Out-Null
+    }
+    foreach ($key in $droppedKeys) {
+        $p = $bossEntry.parses[$key]
+        $stem = "$($p.reportID)_$($p.fightID)_$($p.safeName)"
+        foreach ($suffix in @("healing_events", "casts_events", "consumables")) {
+            $srcPath = Join-Path $bossActiveDir "$($stem)_$($suffix).json"
+            if (Test-Path $srcPath) {
+                Move-Item -Path $srcPath -Destination $bossArchivedDir -Force
+            } else {
+                Write-Host "  WARNING: expected $srcPath to archive for dropped parse $key, not found."
+            }
+        }
+        $p.status = "archived"
+        $p.archivedAt = $nowIso
+    }
+    $totalArchived += $droppedKeys.Count
+
+    # ----- Conditionally archive+overwrite the rankings snapshot - only on a real
+    # membership change (add or drop), never for a pure rank/HPS reshuffle -----
+    $changed = ($newKeys.Count -gt 0) -or ($droppedKeys.Count -gt 0)
+    if ($changed) {
+        if (Test-Path $activeRankingsPath) {
+            $oldSnapshotDate = $bossEntry.rankingsSnapshotDate
+            if (-not $oldSnapshotDate) { $oldSnapshotDate = "unknown-date" }
+            $rankingsHistoryDir = Join-Path (Join-Path $archivedDir "rankings_history") $bossName
+            New-Item -ItemType Directory -Force -Path $rankingsHistoryDir | Out-Null
+            $archivedRankingsPath = Join-Path $rankingsHistoryDir "$oldSnapshotDate.json"
+            Move-Item -Path $activeRankingsPath -Destination $archivedRankingsPath -Force
+        }
+        [System.IO.File]::WriteAllText($activeRankingsPath, $rankingsResp.Content, (New-Object System.Text.UTF8Encoding $false))
+        $bossEntry.rankingsSnapshotDate = $today
+        Write-Host "  rankings CHANGED ($($newKeys.Count) new, $($droppedKeys.Count) dropped) - snapshot updated"
+    } else {
+        Write-Host "  rankings unchanged since $($bossEntry.rankingsSnapshotDate) - not rewriting active\$rankingsFileName"
+    }
+    $bossEntry.lastPulledDate = $today
+
+    # ----- Step 2: fetch full per-parse data for genuinely NEW parses only, in parallel -----
+    if ($newKeys.Count -eq 0) {
+        Write-Host "  no new parses to fetch"
+        Save-ManifestLocal -Manifest $manifest -Path $manifestPath
+        Write-Host ""
         continue
     }
 
-    $outDir = Join-Path $classDateDir $boss
-    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
-
-    $rankingsData = Get-Content $rankingsFile -Raw | ConvertFrom-Json
-    if ($rankingsData.PSObject.Properties.Name -contains "error") {
-        Write-Host "SKIP: $boss rankings file contains an API error, not a rankings list."
-        continue
-    }
-    $rankings = $rankingsData.rankings
-
-    Write-Host "=== $boss ($($rankings.Count) parses, $MaxThreads threads) ==="
-
+    Write-Host "  fetching $($newKeys.Count) new parses ($MaxThreads threads)..."
     $pool = [runspacefactory]::CreateRunspacePool(1, $MaxThreads)
     $pool.Open()
 
     $jobs = New-Object System.Collections.Generic.List[object]
     $i = 0
-    foreach ($r in $rankings) {
+    foreach ($key in $newKeys) {
         $i++
+        $entry = $freshByKey[$key]
         $ps = [powershell]::Create()
         $ps.RunspacePool = $pool
-        [void]$ps.AddScript($workerScript.ToString()).AddArgument($r.reportID).AddArgument($r.fightID).AddArgument($r.name).AddArgument($i).AddArgument($baseUrl).AddArgument($apiKey).AddArgument($className).AddArgument($outDir).AddArgument($fightsCache).AddArgument($actorNamesCache).AddArgument($deathsClaimed)
+        [void]$ps.AddScript($workerScript.ToString()).AddArgument($entry.reportID).AddArgument($entry.fightID).AddArgument($entry.name).AddArgument($i).AddArgument($baseUrl).AddArgument($apiKey).AddArgument($className).AddArgument($bossActiveDir).AddArgument($fightsCache).AddArgument($actorNamesCache).AddArgument($deathsClaimed)
         $handle = $ps.BeginInvoke()
-        $jobs.Add([PSCustomObject]@{ Pipe = $ps; Handle = $handle })
+        $jobs.Add([PSCustomObject]@{ Pipe = $ps; Handle = $handle; Key = $key })
     }
 
-    $bossDone = 0
-    $bossFailed = 0
+    $bossNewOk = 0
+    $bossNewFailed = 0
     foreach ($job in $jobs) {
         try {
             $result = $job.Pipe.EndInvoke($job.Handle)
             foreach ($msg in $result.Messages) { Write-Host "  $msg" }
-            if ($result.Ok) { $bossDone++ } else { $bossFailed++ }
+            if ($result.Ok) {
+                $entry = $freshByKey[$job.Key]
+                $bossEntry.parses[$job.Key] = [ordered]@{
+                    reportID = $result.ReportID
+                    fightID = $result.FightID
+                    playerName = $result.PlayerName
+                    safeName = $result.SafeName
+                    status = "active"
+                    rank = $entry.rank
+                    hps = [math]::Round($entry.hps, 1)
+                    firstSeenAt = $nowIso
+                    lastConfirmedInTop100At = $nowIso
+                    archivedAt = $null
+                }
+                $bossNewOk++
+            } else {
+                # Not added to the manifest - stays absent from manifest-active, so
+                # next run's diff sees it as "new" again and retries. Any files that
+                # DID succeed before the failure are still on disk and get skipped
+                # (Test-Path) on that retry - only the missing piece is re-fetched.
+                $bossNewFailed++
+            }
         } catch {
-            Write-Host "  Worker threw unexpectedly: $_"
-            $bossFailed++
+            Write-Host "  Worker threw unexpectedly for $($job.Key): $_"
+            $bossNewFailed++
         } finally {
             $job.Pipe.Dispose()
         }
@@ -494,15 +655,19 @@ foreach ($boss in $bosses.Keys) {
     $pool.Close()
     $pool.Dispose()
 
-    Write-Host "  $boss done: $bossDone ok, $bossFailed failed"
-    $totalDone += $bossDone
-    $totalFailed += $bossFailed
+    Write-Host "  $bossName new parses done: $bossNewOk ok, $bossNewFailed failed"
+    $totalNew += $bossNewOk
+    $totalFailed += $bossNewFailed
 
+    Save-ManifestLocal -Manifest $manifest -Path $manifestPath
     Write-Host ""
 }
 
 Write-Host "=================================="
 Write-Host "Done."
-Write-Host "  Succeeded (all pulls ok):     $totalDone"
-Write-Host "  Failed (one or more pulls):   $totalFailed"
-Write-Host "  Unique reports fetched:       $($fightsCache.Count)"
+Write-Host "  New parses fetched (ok):        $totalNew"
+Write-Host "  New parses failed:              $totalFailed"
+Write-Host "  Still-active (no refetch):      $totalConfirmed"
+Write-Host "  Archived (dropped from Top 100): $totalArchived"
+Write-Host "  Unique reports fetched:         $($fightsCache.Count)"
+Write-Host "  manifest.json:                  $manifestPath"

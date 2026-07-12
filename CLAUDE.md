@@ -27,6 +27,27 @@ One catch: these scripts are Windows PowerShell 5.1-specific in places (see gotc
 `if/else` array-collapse bug). If you're not running on Windows, don't assume they'll
 behave identically on PowerShell 7+/pwsh on Linux/Mac — test before trusting.
 
+## Two generations of this pipeline — don't confuse them
+
+This project has a **simple v1** (already shipped, live on 4 healer sites) and an
+**enhanced v2** (in progress, Druid-only so far). Reading the repo cold, both look
+like "real output" — they're not at the same maturity, and mixing them up is the
+main way to get confused here.
+
+- **v1 (simple)**: gear check + basic spell composition + a couple of other checks,
+  built on the old `/report/tables/` healing view (5-entry truncation bug and all —
+  see WORKFLOW.md gotcha #4/#15). This is what produced the 4 fully-built healer
+  sites currently sitting at the repo root (`crowns/`, `danceswtrees/`, `lippies/`,
+  `vajomee/`, plus the root `index.html` homepage). Treat these as a finished
+  snapshot of the *old* methodology, not a template for new output — regenerating
+  them with the v2 pipeline is future work, not done.
+- **v2 (enhanced)**: events-based healing/casts (no truncation), cooldown/utility
+  tracking with self-vs-other targets, real buff uptime (flask/food snapshot + Tree
+  of Life interval reconstruction), Top 100 benchmarking, CSV summarization. Only
+  **Resto Druid** has this so far, and it's mid-pull, not complete (see "Current
+  state" below). No v2 healer site has been generated yet — `examples/` has one
+  reference page but it's out of date (see below).
+
 ## Repo structure
 
 ```
@@ -34,16 +55,22 @@ WORKFLOW.md                          <- read this first, full pipeline documenta
 CLAUDE.md                            <- this file
 
 scripts/
-  pull_character_TEMPLATE.ps1        <- pulls one specific healer's full raid night
-  pull_top100_druid.ps1              <- pulls Top 100 Resto Druid benchmark data (parallelized)
-  pull_top100_TEMPLATE.ps1           <- generic version for other classes (healing table only,
-                                         NOT yet updated to the events-based approach - see below)
+  pull_character_TEMPLATE.ps1        <- pulls one specific healer's full raid night (v2, events-based)
+  pull_top100_druid.ps1              <- Top 100 Resto Druid benchmark pull, v2/enhanced, parallelized
+  pull_top100_paladin.ps1            <- Top 100 Paladin/Holy pull — v1/simple, healing TABLE only
+  pull_top100_priest_holy.ps1        <- Top 100 Priest/Holy pull — v1/simple, healing TABLE only
+  pull_top100_shaman.ps1             <- Top 100 Resto Shaman pull — v1/simple, healing TABLE only
+  pull_top100_TEMPLATE.ps1           <- generic template these three v1 scripts were generated
+                                         from; still the base for any new v1-style class pull
   summarize_class_benchmarks.ps1     <- condenses raw Top 100 pulls into benchmark_*.csv files
+                                         (Druid-specific cooldown/buff columns only apply once
+                                         run against v2-style Druid data)
 
 templates/
   design_tokens.md                   <- the site's design system (colors, type, layout rules)
-  boss_page_template.html            <- generic per-boss-kill page (any class)
-  boss_page_template_druid.html      <- Resto Druid variant (extra cooldowns/consumables section)
+  boss_page_template.html            <- generic per-boss-kill page (any class, v1-style data)
+  boss_page_template_druid.html      <- Resto Druid variant (extra cooldowns/consumables section,
+                                         needs v2-style events/consumables data to fill in)
   raid_overview_template.html        <- per-raid-night page (gear audit + 10-boss summary)
   healer_raidlist_template.html      <- per-healer page (list of raid nights analyzed)
   site_index_template.html           <- site homepage (list of healers)
@@ -54,36 +81,64 @@ reference/
                                          #17 - this static copy is what unblocked several fixes)
 
 examples/
-  healer_audit_hydross.html          <- ONE real filled example page, built from real pulled
-                                         data (Danceswtrees on Hydross) - NOT a template, an
-                                         actual output. Useful as a reference for what a finished
-                                         page should look like. NOTE: this predates the buff-
-                                         uptime fix (see WORKFLOW.md) and still shows the old
-                                         "temporarily unavailable" note for flask/food/Tree of
-                                         Life - regenerate it before treating it as fully
-                                         representative of the current templates.
+  healer_audit_hydross.html          <- ONE real filled v1-generation example page (Danceswtrees
+                                         on Hydross). Predates the buff-uptime fix and the whole
+                                         events-based rewrite — still shows the old "temporarily
+                                         unavailable" note for flask/food/Tree of Life and uses
+                                         the truncated healing table underneath. Useful only as a
+                                         rough visual reference, not as ground truth for either
+                                         generation's current data shape.
+
+Live v1 site output (already generated, at repo root — not templates, actual pages):
+  index.html                         <- site homepage, links to all 4 healers below
+  crowns/, danceswtrees/, lippies/, vajomee/
+    index.html                       <- per-healer raid-night list
+    {date}/index.html                <- raid overview for that night
+    {date}/healer_audit_{boss}.html  <- one per boss kill (v1 methodology)
 ```
 
 Not included here (repo-specific, never shared in the source conversation):
-`apikey.txt` (gitignored, WCL API key), `.gitignore`, and the actual `data/` output
-folders from prior pulls. You'll need a real WCL API key to do anything live.
+`apikey.txt` (gitignored, WCL API key), `.gitignore`.
 
 ## Current state — what's solid vs. what's open
 
-**Solid, validated against real API data repeatedly:**
-- Resto Druid pipeline end to end: healing/casts (events-based, not the truncated
-  tables), cooldown/utility tracking with self-vs-other targets, buff uptime
-  (flask/food snapshot + real Tree of Life interval reconstruction), Top 100
-  benchmarking, CSV summarization, the Druid boss page template.
-- The parallelized `pull_top100_druid.ps1` (RunspacePool, `-MaxThreads 10` default,
-  thread-safe via `ConcurrentDictionary` + a `TryAdd`-based claim mechanism for
-  `deaths`) — validated on 2 of 10 bosses with clean data (199-200/200 successful
-  parses), not yet run against all 10.
+**v1 (simple) — shipped:**
+- 4 healer sites fully built and live at repo root (`crowns/`, `danceswtrees/`,
+  `lippies/`, `vajomee/`), each with all 10 SSC/TK boss kills for one raid night.
+  This is the old gear-check + basic-spell-composition methodology — not being
+  extended further, only kept as-is until v2 replaces it per class.
+- `pull_top100_paladin.ps1`, `pull_top100_priest_holy.ps1`, `pull_top100_shaman.ps1`
+  have all been run — `data\Classes\{Paladin,Priest,Shaman}\2026-07-10\` is
+  populated for all 10 bosses, with `benchmark_summary.csv` and
+  `benchmark_spell_composition.csv` already generated for at least Paladin and
+  Priest. This is v1-generation data (healing table, 5-entry truncation risk per
+  gotcha #15) — do not treat it as equivalent to Druid's v2 data.
+
+**v2 (enhanced) — in progress, Druid only:**
+- Pipeline validated end to end on real data: events-based healing/casts (no
+  truncation), cooldown/utility tracking with self-vs-other targets, buff uptime
+  (flask/food snapshot + real Tree of Life interval reconstruction), the Druid boss
+  page template.
+- `pull_top100_druid.ps1` (RunspacePool, `-MaxThreads 10` default, thread-safe via
+  `ConcurrentDictionary` + a `TryAdd`-based claim mechanism for `deaths`) has
+  actually been run for **5 of 10 bosses** as of the last check: Hydross,
+  Karathress, Leotheras, Lurker, Morogrim — confirmed by listing
+  `data\Classes\Druid\2026-07-10\` directly. Vashj, Al'ar, Void Reaver, Solarian,
+  and Kael'thas have not been pulled yet. **Verify this against the actual folder
+  before trusting a boss count someone recalls from memory** — this number has
+  drifted from reality before.
+- `summarize_class_benchmarks.ps1` has NOT yet been run against this Druid pull —
+  no `benchmark_*.csv` files exist in `data\Classes\Druid\2026-07-10\` yet.
+- No v2 healer site (raid overview + boss pages built from real Druid events data)
+  has been generated yet for any healer.
 
 **Explicitly open, in priority-ish order:**
-1. Only 2 of 10 bosses have been run through the full parallel Top 100 pipeline.
-   Worth running the remaining 8 before trusting a complete benchmark dataset.
-2. `healer_audit_hydross.html` needs regenerating post-buff-fix (see above).
+1. Finish the remaining 5 Druid bosses through `pull_top100_druid.ps1`, then run
+   `summarize_class_benchmarks.ps1` before trusting a complete Druid benchmark
+   dataset.
+2. Generate an actual v2 healer site (at least one full raid night) to prove the
+   enhanced pipeline end-to-end, including a raid overview page — see gear-audit
+   regression note below, this hasn't been exercised since the events-based rewrite.
 3. Gear audit has an undiscovered-but-expected regression: the old healing *table*
    embedded `gear` per player for free; healing *events* don't carry it at all.
    Nobody's built a raid overview page since the events-based rewrite, so this
@@ -96,9 +151,11 @@ folders from prior pulls. You'll need a real WCL API key to do anything live.
 5. Tranquility's guid is unknown/unobserved — `$cooldownGuids["Tranquility"]` is an
    empty array in both pull scripts and will silently show 0 forever until someone
    adds the real guid once it's actually seen in a pull.
-6. `pull_top100_TEMPLATE.ps1` (generic, non-Druid classes) still uses the OLD
-   truncation-prone table approach for healing — none of this session's fixes have
-   been ported to it. Same for `boss_page_template.html` (generic template).
+6. Paladin/Priest/Shaman are still on the v1/simple, truncation-prone table
+   approach — none of the events-based/cooldown/buff-uptime work has been ported to
+   them yet. Porting a class means: writing its own `pull_top100_{class}.ps1` on
+   the Druid model (not the TEMPLATE model), and its own
+   `boss_page_template_{class}.html` per WORKFLOW.md's "Site structure" section.
 7. One narrow, accepted gap: ~0.5% of Top 100 parses (1 real case observed) have no
    `combatantinfo` snapshot even within the 2-minute backward buffer, likely a
    late-joining player — currently just reported as a failure for that one player's
@@ -119,3 +176,64 @@ folders from prior pulls. You'll need a real WCL API key to do anything live.
   this pattern (ask for one small diagnostic, read the real response, THEN write
   code) caught almost every bug in WORKFLOW.md's gotcha list. Don't skip it just
   because you can now run things yourself.
+
+## Hosting — GitHub Pages
+
+The repo is already on GitHub: **`twiztid-ace/WC_log_analysis`** (public), default
+branch **`master`** (not `main` — worth noting since that's the more common default
+name now). The person manages it day-to-day through **SourceTree**, not the raw git
+CLI.
+
+**Git CLI is available even though it's not on PATH.** SourceTree bundles its own
+git at `%LOCALAPPDATA%\Atlassian\SourceTree\git_local\bin\git.exe`. Call it with a
+full path (or `-C <repo-path>`) to inspect real repo state directly — confirmed
+working:
+```powershell
+& "$env:LOCALAPPDATA\Atlassian\SourceTree\git_local\bin\git.exe" -C "C:\Users\raymo\wc_logs" status
+```
+Prefer this over asking the person to run/paste git output, same reasoning as the
+"you can do something I couldn't" section above. `apikey.txt` is confirmed **not**
+tracked (`git ls-files` doesn't list it) — safe as long as `.gitignore` isn't
+changed to drop that line.
+
+**Chosen approach: separate code from the served static site using a `docs/`
+folder**, not a dedicated `gh-pages` branch. GitHub Pages supports serving from
+`/docs` on a normal branch (Settings → Pages → Source → Deploy from a branch →
+`master` / `/docs`), which avoids juggling an orphan branch in a GUI client like
+SourceTree — a plain commit+push to `docs/` is enough to publish, no branch
+switching required.
+
+**What this means for the current repo layout — not done yet, real migration
+required:** the live v1 site output (`index.html`, `crowns/`, `danceswtrees/`,
+`lippies/`, `vajomee/`) currently sits at the **repo root**, alongside `scripts/`,
+`data/`, `templates/`, `reference/`. To use the `/docs` scheme as intended (site
+output separated from code/raw data), these need to move under a new `docs/`
+folder at repo root, preserving their internal structure exactly — the pages use
+relative links (`../index.html`, etc.), so moving the whole tree together keeps
+those working; moving pieces individually would break them. `scripts/`, `data/`,
+`templates/`, `reference/`, `examples/`, `WORKFLOW.md`, `CLAUDE.md` stay where they
+are — Pages only serves what's inside `docs/`, so keeping them at root just means
+they're not web-served (still visible in the repo browser itself, since the repo
+is public — Pages scoping doesn't hide them, it just keeps them out of the
+served site).
+
+**One-time setup on github.com (not doable via git/API from here):**
+1. Confirm repo visibility: Settings → General → Danger Zone → should already say
+   Public.
+2. After the `docs/` migration lands on `master`: Settings → Pages → Source →
+   "Deploy from a branch" → Branch: `master`, folder: `/docs` → Save.
+3. Resulting URL: `https://twiztid-ace.github.io/WC_log_analysis/` — a **project
+   site**, served from a subpath, not domain root. Smoke-test the first deploy
+   specifically for any accidentally-absolute (`/index.html`-style) links; the
+   site already uses relative links throughout per WORKFLOW.md's zip-delivery
+   convention, so this should already be fine, but hasn't been verified live.
+
+**Ongoing publish workflow once set up:** regenerate/edit the static pages under
+`docs/`, commit, push via SourceTree — GitHub rebuilds Pages automatically
+(typically under a minute), no separate build step, since this has always been
+plain static HTML/CSS with no bundler.
+
+**Not done automatically by writing this section:** the `docs/` folder migration
+and the GitHub Pages toggle itself are both real, visible changes (one moves
+already-linked files, the other exposes a public URL) — confirm before either
+happens rather than assuming this documentation update means it's live.
