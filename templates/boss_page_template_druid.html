@@ -323,7 +323,7 @@
       <div class="stat">
         <div class="stat-label">HPS</div>
         <div class="stat-value">{{HPS}}</div>
-        <div class="stat-sub">Top 100: #1 {{HPS_TOP1}} &nbsp;·&nbsp; top10avg {{HPS_TOP10AVG}} &nbsp;·&nbsp; median {{HPS_MEDIAN}}</div>
+        <div class="stat-sub">Top 100: #1 {{HPS_TOP1}} &nbsp;·&nbsp; avg {{HPS_TOP100AVG}} &nbsp;·&nbsp; median {{HPS_MEDIAN}}</div>
       </div>
       <div class="stat">
         <div class="stat-label">Overheal</div>
@@ -363,15 +363,15 @@
       <span class="section-num">02</span>
       <h2 class="section-title">Spell composition</h2>
     </div>
-    <p class="section-desc">{{HEALER_NAME}}'s real cast mix on this kill, vs. real Top 10 aggregate on {{BOSS_NAME}}.</p>
+    <p class="section-desc">{{HEALER_NAME}}'s real cast mix on this kill, vs. real Top 100 average on {{BOSS_NAME}}.</p>
 
     <div class="compare-legend">
       <span><span class="dot" style="background:#C97A3D"></span>{{HEALER_NAME}}</span>
-      <span><span class="dot" style="background:rgba(19,42,44,0.25)"></span>Top 10 avg</span>
+      <span><span class="dot" style="background:rgba(19,42,44,0.25)"></span>Top 100 avg</span>
     </div>
 
     <!-- One pair of rows per spell. Copy this block for each spell in the UNION of both
-         spell lists - the character's own casts AND any Top 10 benchmark spell they never
+         spell lists - the character's own casts AND any Top 100 benchmark spell they never
          cast (show as 0.0% rather than omitting the row - see WORKFLOW.md gotcha about this).
          This is HEALING THROUGHPUT spells only (Rejuvenation, Regrowth, Lifebloom, Tranquility,
          Swiftmend as % of total healing, etc.) - Innervate/NS/Rebirth are utility, not healing
@@ -396,7 +396,7 @@
       <span class="section-num">03</span>
       <h2 class="section-title">Cooldowns &amp; consumables</h2>
     </div>
-    <p class="section-desc">Real cooldown/utility usage, consumable casts, and self-buff status on this kill, vs. real Top 10 aggregate on {{BOSS_NAME}}. Sourced from the fight's <span class="placeholder-tag">*_casts_events.json</span> and <span class="placeholder-tag">*_consumables.json</span> (see WORKFLOW.md) - match abilities by guid, not localized name (gotcha #2).</p>
+    <p class="section-desc">Real cooldown/utility usage, consumable casts, and self-buff status on this kill, vs. real Top 100 average on {{BOSS_NAME}}. Sourced from the fight's <span class="placeholder-tag">*_casts_events.json</span> and <span class="placeholder-tag">*_consumables.json</span> (see WORKFLOW.md) - match abilities by guid, not localized name (gotcha #2).</p>
 
     <table class="cd-table">
       <thead>
@@ -404,7 +404,7 @@
           <th>Cooldown / utility</th>
           <th style="text-align:right;">{{HEALER_NAME}}</th>
           <th>Target</th>
-          <th style="text-align:right;">Top 10 avg (self%)</th>
+          <th style="text-align:right;">Top 100 avg (self%)</th>
         </tr>
       </thead>
       <tbody>
@@ -418,9 +418,9 @@
              different targets, list all of them ("→ Jotes ×3" if same target repeated,
              or "→ Jotes, → Captinspanky" if split) - this column is the entire point of
              the 2026-07-11 events-based redesign, don't collapse it back into a bare
-             count. Top 10 self% comes straight from benchmark_cooldowns.csv's
-             Top10SelfPct column - leave blank (not 0%) if that column was blank there
-             too (means nobody in the Top 10 cast it, self% is undefined, not zero). -->
+             count. Top 100 self% comes straight from benchmark_cooldowns.csv's
+             Top100SelfPct column - leave blank (not 0%) if that column was blank there
+             too (means nobody in the sample cast it, self% is undefined, not zero). -->
         <tr>
           <td class="ability-name">{{COOLDOWN_NAME}}</td>
           <td class="num-cell">{{COOLDOWN_CASTS}}</td>
@@ -439,12 +439,12 @@
              this data doesn't have. -->
         <div class="stat-label">Flask / Elixir</div>
         <div class="stat-value">{{FLASK_ACTIVE}}</div>
-        <div class="stat-sub">{{FLASK_NAME}} — Top 10: {{FLASK_BENCHMARK_PCT}}% had one active at pull start</div>
+        <div class="stat-sub">{{FLASK_NAME}} — Top 100: {{FLASK_BENCHMARK_PCT}}% had one active at pull start</div>
       </div>
       <div class="stat">
         <div class="stat-label">Food buff</div>
         <div class="stat-value">{{FOOD_ACTIVE}}</div>
-        <div class="stat-sub">{{FOOD_NAME}} — Top 10: {{FOOD_BENCHMARK_PCT}}% had one active at pull start</div>
+        <div class="stat-sub">{{FOOD_NAME}} — Top 100: {{FOOD_BENCHMARK_PCT}}% had one active at pull start</div>
       </div>
       <div class="stat">
         <!-- Tree of Life IS a real reconstructed uptime % (apply/remove event interval
@@ -453,7 +453,7 @@
              Life - don't show 0% for a form the build never had access to. -->
         <div class="stat-label">Tree of Life uptime</div>
         <div class="stat-value">{{TREE_OF_LIFE_PCT}}%</div>
-        <div class="stat-sub">Top 10 avg: {{TREE_OF_LIFE_BENCHMARK_PCT}}% — omit this stat if not talented, not 0%</div>
+        <div class="stat-sub">Top 100 avg: {{TREE_OF_LIFE_BENCHMARK_PCT}}% — omit this stat if not talented, not 0%</div>
       </div>
       <div class="stat">
         <div class="stat-label">Mana consumables</div>
@@ -462,7 +462,7 @@
       </div>
     </div>
 
-    <div class="coverage-note">{{COOLDOWN_FINDING}} — one to two sentences: how cooldown usage AND targeting compares to the Top 10 (e.g. "cast Innervate on the offhealer rather than self, matching the Top 10's mostly-not-self pattern" is a real finding; "cast Swiftmend 3x, all on the tank" is too), how flask/food/Tree of Life compares to the Top 10 benchmark if there's a real gap worth naming, and whether any raid death on this kill (per the fight's *_deaths.json, shown in the scorecard above) occurred in a window where a relevant cooldown had already been spent. Only make the death-correlation claim if it's actually true for this specific fight - most kills will show no meaningful correlation (including a 0-death kill, where there's trivially nothing to correlate), and that's fine to say plainly rather than reaching for a finding that isn't there.</div>
+    <div class="coverage-note">{{COOLDOWN_FINDING}} — one to two sentences: how cooldown usage AND targeting compares to the Top 100 average (e.g. "cast Innervate on the offhealer rather than self, matching the sample's mostly-not-self pattern" is a real finding; "cast Swiftmend 3x, all on the tank" is too), how flask/food/Tree of Life compares to the Top 100 benchmark if there's a real gap worth naming, and whether any raid death on this kill (per the fight's *_deaths.json, shown in the scorecard above) occurred in a window where a relevant cooldown had already been spent. Only make the death-correlation claim if it's actually true for this specific fight - most kills will show no meaningful correlation (including a 0-death kill, where there's trivially nothing to correlate), and that's fine to say plainly rather than reaching for a finding that isn't there.</div>
   </div>
 
   <!-- ===== TARGET DISTRIBUTION ===== -->
@@ -471,7 +471,7 @@
       <span class="section-num">04</span>
       <h2 class="section-title">Target distribution</h2>
     </div>
-    <p class="section-desc">Top 5 recipients of {{HEALER_NAME}}'s healing on this kill ({{COVERAGE_PCT}}% coverage) vs. Top 10 average on {{BOSS_NAME}} ({{BENCHMARK_COVERAGE_PCT}}% coverage, {{BENCHMARK_TOP1_PCT}}% to top target).</p>
+    <p class="section-desc">Top 5 recipients of {{HEALER_NAME}}'s healing on this kill ({{COVERAGE_PCT}}% coverage) vs. Top 100 average on {{BOSS_NAME}} ({{BENCHMARK_COVERAGE_PCT}}% coverage, {{BENCHMARK_TOP1_PCT}}% to top target).</p>
 
     <div class="target-list">
       <!-- One row per target, up to 5 (WCL truncates the targets array at 5). Sort descending
@@ -484,7 +484,7 @@
       </div>
     </div>
 
-    <div class="coverage-note">{{TARGET_FINDING}} — state the top target's % vs. the Top 10 benchmark average explicitly, and whether the gap (if any) represents a real targeting difference or falls within normal variance (roughly ±5 points has shown to be noise in practice).</div>
+    <div class="coverage-note">{{TARGET_FINDING}} — state the top target's % vs. the Top 100 benchmark average explicitly, and whether the gap (if any) represents a real targeting difference or falls within normal variance (roughly ±5 points has shown to be noise in practice).</div>
   </div>
 
   <div class="footer">

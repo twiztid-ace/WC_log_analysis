@@ -11,7 +11,7 @@ new ones get found — don't let it go stale.
 - [x] **Build one real v2 boss page end-to-end.** Done for Danceswtrees / Hydross
       the Unstable (2026-07-07): `docs/danceswtrees/2026-07-07/healer_audit_hydross.html`,
       built entirely from real data (healing/casts events, consumables, real WCL
-      percentile cross-matched by exact report/fight ID, real Top 10 benchmark
+      percentile cross-matched by exact report/fight ID, real Top 100 benchmark
       comparison). `boss_page_template_druid.html`'s placeholder set held up
       against real data with no structural surprises — union-of-spell-lists,
       self/other cooldown targeting, boolean vs. real-% buff display all worked
@@ -39,12 +39,13 @@ new ones get found — don't let it go stale.
       slot shows no item equipped (generic empty-slot icon in the raw
       `combatantinfo` response) — real, but which slot it is couldn't be
       determined from the data alone this session.
-- [x] *Partially verified:* **"Union of both spell lists" requirement.** Exercised
-      against real data on the Hydross page — mechanism works. Caveat: Danceswtrees's
-      6 cast spells happened to exactly match the benchmark's 6 tracked spells, so
-      this didn't actually test the "benchmark-only spell never cast, must still
-      show as 0%" edge case. Still worth watching for on a future boss/character
-      where the lists genuinely diverge.
+- [x] **"Union of both spell lists" requirement — now fully verified, not just
+      exercised.** The Top100-avg switch (below) surfaced 2 real benchmark-only
+      guids (Regrowth 9857/9858, ~0.9%/0.6% of the Top 100 average) that
+      Danceswtrees never cast — didn't show up at all under the old Top-10-only
+      view. The Hydross page now genuinely shows both as real 0% rows per the
+      union rule, the actual edge case this requirement exists for, not just the
+      trivial case where both lists already matched.
 - [x] *Reviewed, not live-tested:* **`pull_character_TEMPLATE.ps1` compatibility.**
       Read the full script this session — output field shapes (`sourceName`,
       `totalAmount`, `totalOverheal`, `events[]`, `flaskActive`/`foodActive`/
@@ -54,20 +55,51 @@ new ones get found — don't let it go stale.
       run of the script still works end-to-end. A real live test pull is still
       worth doing at some point.
 
+## Top100-avg methodology switch (2026-07-12)
+
+- [x] **Switched every "Top 10 avg" aggregate to "Top 100 avg."** Was: spell
+      composition, target coverage, cooldown/utility casts, and flask/food/Tree
+      of Life stats were all computed over only the best 10 of the ~100 real
+      parses pulled per boss, throwing away ~90 real data points for a noisier
+      10-person average. Now: every one of those aggregates uses the full real
+      sample (`SampleSize`/`SampleUsed` still reports the true count, not
+      assumed to be exactly 100). `HPS_Top1` and `HPS_Median` were already
+      whole-sample stats and didn't change. Updated: `summarize_class_benchmarks.ps1`
+      (columns renamed `Top10*` → `Top100*` throughout both CSVs and code),
+      `boss_page_template_druid.html` (all "Top 10" language → "Top 100"),
+      WORKFLOW.md's benchmark-methodology descriptions, and the real Hydross
+      page's numbers/findings fully recomputed against the new CSVs — not just
+      relabeled. Regenerated all 4 Druid `benchmark_*.csv` files against real
+      active data to confirm.
+- [ ] **New bug found via this switch: Nature's Swiftness's self-cast % is
+      probably wrong in the benchmark, and possibly any similarly self-only
+      spell.** `summarize_class_benchmarks.ps1`'s self/other classification is
+      `sourceName -eq targetName`. Self-only spells with no real target (NS,
+      possibly others) get logged by WCL with `target = {"name": "Environment",
+      ...}`, not the caster — so `targetName` is `null`/"Environment", never
+      equal to `sourceName`, and every self-cast of a spell shaped like this
+      gets silently counted as "not self." Confirmed real on Hydross:
+      `benchmark_cooldowns.csv` shows NS at 0% self across the full 100-person
+      sample, which isn't plausible for a spell that can only ever be cast on
+      the caster. Not fixed yet — the Hydross page's coverage-note flags this
+      number as unreliable rather than trusting it, but the underlying
+      classification bug is still live in the script.
+
 ## Known data gaps / report-copy caveats
 
 - [ ] **Tranquility's guid is unobserved** — `$cooldownGuids["Tranquility"]` is an
       empty array, so `benchmark_cooldowns.csv` shows 0 casts/0% used for every
       boss regardless of reality. Risk isn't the missing number, it's a report
-      reading "0% of Top 10 used Tranquility" as a real finding. Any report copy
-      touching cooldowns must omit Tranquility or caveat it explicitly until a
-      real cast is observed and the guid gets added.
+      reading "0% of the Top 100 used Tranquility" as a real finding. Any report
+      copy touching cooldowns must omit Tranquility or caveat it explicitly until
+      a real cast is observed and the guid gets added.
 - [ ] **`resources`/`resources-gains` (HPM, mana-over-time) still untested** with
       the correct `abilityid` param (the earlier `resourcetype` guess was
       confirmed wrong). Not blocking, just unclaimed upside.
 - [x] *Checked, not a bug:* `benchmark_buffs.csv` showing identical
-      Flask%/Food% for some bosses (e.g. Morogrim 70/70) is a genuine correlation
-      among prepared Top 10 raiders, not a code bug — spot-checked real
+      Flask%/Food% for some bosses (e.g. Morogrim 70/70, from the old Top-10-only
+      view — worth a fresh look now that the aggregate is Top 100) is a genuine
+      correlation among prepared raiders, not a code bug — spot-checked real
       `_consumables.json` files and confirmed flask/food are computed
       independently (found real divergent cases: flask-no-food, neither).
 - [ ] **~0.5% of Top 100 parses (1 in ~200) have no `combatantinfo` snapshot** even
@@ -95,6 +127,20 @@ new ones get found — don't let it go stale.
 - [ ] **`manifest.json` has no pruning, grows indefinitely.** Already ~1.3MB at
       1,000 active parses; archived entries kept forever by design. Not urgent,
       just a scaling note for whatever eventually reads this file often.
+
+## New folder convention — read before building the remaining 9 boss pages
+
+Established this session, real and in use now: v1 and v2 output for the same
+healer+raid-night live side by side, never overwriting each other.
+```
+docs/{healer}/{date}-v1/    <- original v1 pages, frozen, git-tracked reference
+docs/{healer}/{date}/       <- new v2 pages, built incrementally as each boss gets done
+```
+`docs/danceswtrees/index.html` links to both explicitly ("SSC / TK - V1" / "SSC / TK
+- V2" rows). **Never write directly into a `-v1` folder** — this session already
+made that mistake once (overwrote the live v1 Hydross page by accident before this
+convention existed) and had to restore it from git history. Always create/edit only
+under the plain `{date}` folder for new v2 work.
 
 ## Explicitly out of scope for now
 

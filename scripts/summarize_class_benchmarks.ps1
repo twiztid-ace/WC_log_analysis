@@ -3,18 +3,35 @@
 # Reads the raw Top 100 data pulled by pull_top100_druid.ps1 and computes the derived
 # benchmark stats our analysis actually uses - PER BOSS:
 #   - HPS / overheal percentiles           (from rankings.json + *_healing_events.json)
-#   - Top 10 spell composition             (from *_healing_events.json, grouped by guid)
-#   - Top 10 target concentration          (from *_healing_events.json, grouped by target)
-#   - Top 10 cooldown/utility/consumable cast counts, with self-vs-other target split
+#   - Top 100 spell composition            (from *_healing_events.json, grouped by guid)
+#   - Top 100 target concentration         (from *_healing_events.json, grouped by target)
+#   - Top 100 cooldown/utility/consumable cast counts, with self-vs-other target split
 #                                           (from *_casts_events.json)
-#   - Top 10 self-buff stats: % with flask/food active at pull start, average real
+#   - Top 100 self-buff stats: % with flask/food active at pull start, average real
 #     Tree of Life uptime %                (from *_consumables.json)
 #
 # Outputs compact CSVs, small enough to upload to Claude Project knowledge:
 #   benchmark_summary.csv               <- one row per boss (HPS, overheal, target stats)
-#   benchmark_spell_composition.csv     <- one row per boss+spell (Top 10 avg % of healing)
-#   benchmark_cooldowns.csv             <- one row per boss+ability (Top 10 avg casts, self%)
-#   benchmark_buffs.csv                 <- one row per boss (Top 10 flask/food/Tree of Life)
+#   benchmark_spell_composition.csv     <- one row per boss+spell (Top 100 avg % of healing)
+#   benchmark_cooldowns.csv             <- one row per boss+ability (Top 100 avg casts, self%)
+#   benchmark_buffs.csv                 <- one row per boss (Top 100 flask/food/Tree of Life)
+#
+# ============================================================================
+# 2026-07-12: SWITCHED FROM TOP-10-AVG TO TOP-100-AVG (SAME DAY AS THE ACTIVE/ARCHIVED
+# REWRITE BELOW, LATER PASS)
+# ============================================================================
+# Every aggregate here (spell composition, target coverage, cooldown/utility casts,
+# flask/food/Tree of Life) used to be computed over only the best 10 of however many
+# parses were actually pulled (usually ~100), discarding the other ~90 real, already-
+# fetched data points. Since we already pay the API cost to pull the full Top 100, and
+# a 100-person sample is a meaningfully less noisy average than 10, every "Top10*"
+# column below is now a "Top100*" column computed over the FULL real sample for that
+# boss (however many parses actually parsed successfully - usually close to 100, never
+# assumed to be exactly 100, see SampleSize/SampleUsed on every row). HPS_Top1 (the
+# single best parse) and HPS_Median (median of the full sample) were already
+# whole-sample stats and are unchanged by this - only the "-Avg" style aggregates moved
+# off the top-10-only slice.
+# ============================================================================
 #
 # ============================================================================
 # 2026-07-12: ACTIVE/ARCHIVED + MANIFEST AWARE, DUAL-MODE
@@ -399,8 +416,7 @@ foreach ($bossFolder in $bosses.Keys) {
     $sorted = $records | Sort-Object -Property HPS -Descending
     $n = $sorted.Count
     $top1 = $sorted[0].HPS
-    $top10 = $sorted | Select-Object -First 10
-    $top10Avg = ($top10 | Measure-Object -Property HPS -Average).Average
+    $top100Avg = ($sorted | Measure-Object -Property HPS -Average).Average
     $median = $sorted[[int]($n/2)].HPS
 
     $ohSorted = $records | Sort-Object -Property OverhealPct
@@ -408,23 +424,23 @@ foreach ($bossFolder in $bosses.Keys) {
     $ohMedian = $ohSorted[[int]($n/2)].OverhealPct
     $ohWorst = $ohSorted[$n-1].OverhealPct
 
-    $covAvg = ($top10 | Measure-Object -Property CoveragePct -Average).Average
-    $top1PctAvg = ($top10 | Measure-Object -Property Top1Pct -Average).Average
+    $covAvg = ($sorted | Measure-Object -Property CoveragePct -Average).Average
+    $top1PctAvg = ($sorted | Measure-Object -Property Top1Pct -Average).Average
 
     $summaryRows += [PSCustomObject]@{
         Boss = $bossName
         HPS_Top1 = [math]::Round($top1, 0)
-        HPS_Top10Avg = [math]::Round($top10Avg, 0)
+        HPS_Top100Avg = [math]::Round($top100Avg, 0)
         HPS_Median = [math]::Round($median, 0)
         Overheal_Best = [math]::Round($ohBest, 1)
         Overheal_Median = [math]::Round($ohMedian, 1)
         Overheal_Worst = [math]::Round($ohWorst, 1)
-        Top10_TargetCoveragePct = [math]::Round($covAvg, 1)
-        Top10_TargetTop1Pct = [math]::Round($top1PctAvg, 1)
+        Top100_TargetCoveragePct = [math]::Round($covAvg, 1)
+        Top100_TargetTop1Pct = [math]::Round($top1PctAvg, 1)
         SampleSize = $n
     }
 
-    # ----- Aggregate spell composition across the Top 10, strictly by guid -----
+    # ----- Aggregate spell composition across the full Top 100 sample, strictly by guid -----
     # NOT merged by name across different guids - confirmed on real data that two guids
     # sharing a display name can mean genuinely different things, not just localization
     # noise. Lifebloom's two guids (33763, 33778) both display as "Lifebloom" in every
@@ -440,7 +456,7 @@ foreach ($bossFolder in $bosses.Keys) {
     # rather than guessing at a semantic label.
     $spellAgg = @{}
     $spellTotal = 0.0
-    foreach ($r in $top10) {
+    foreach ($r in $sorted) {
         foreach ($guid in $r.Abilities.Keys) {
             Add-GuidAggregate -Agg $spellAgg -Guid $guid -Name $r.Abilities[$guid].Name -Amount $r.Abilities[$guid].Total
             $spellTotal += $r.Abilities[$guid].Total
@@ -460,19 +476,19 @@ foreach ($bossFolder in $bosses.Keys) {
             $spellCompRows += [PSCustomObject]@{
                 Boss = $bossName
                 Spell = $displayName
-                Top10Pct = [math]::Round($pct, 1)
+                Top100Pct = [math]::Round($pct, 1)
             }
         }
     }
 
-    # ----- Aggregate cooldowns/utility/consumables across the Top 10 -----
+    # ----- Aggregate cooldowns/utility/consumables across the full Top 100 sample -----
     $cdNames = @($cooldownGuids.Keys) + @("Mana Potion")
-    $top10WithCooldowns = @($top10 | Where-Object { $_.Cooldowns -ne $null })
-    $cdSampleUsed = $top10WithCooldowns.Count
+    $sampleWithCooldowns = @($sorted | Where-Object { $_.Cooldowns -ne $null })
+    $cdSampleUsed = $sampleWithCooldowns.Count
     foreach ($cdName in $cdNames) {
         if ($cdSampleUsed -eq 0) { continue }
-        $counts = $top10WithCooldowns | ForEach-Object { $_.Cooldowns[$cdName].Count }
-        $selfCounts = $top10WithCooldowns | ForEach-Object { $_.Cooldowns[$cdName].SelfCount }
+        $counts = $sampleWithCooldowns | ForEach-Object { $_.Cooldowns[$cdName].Count }
+        $selfCounts = $sampleWithCooldowns | ForEach-Object { $_.Cooldowns[$cdName].SelfCount }
         $avgCasts = ($counts | Measure-Object -Average).Average
         $usedCount = @($counts | Where-Object { $_ -gt 0 }).Count
         $usedPct = ($usedCount / $cdSampleUsed) * 100
@@ -482,29 +498,29 @@ foreach ($bossFolder in $bosses.Keys) {
         $cooldownRows += [PSCustomObject]@{
             Boss = $bossName
             Ability = $cdName
-            Top10AvgCasts = [math]::Round($avgCasts, 1)
-            Top10UsedPct = [math]::Round($usedPct, 0)
-            Top10SelfPct = if ($null -ne $selfPct) { [math]::Round($selfPct, 0) } else { "" }
+            Top100AvgCasts = [math]::Round($avgCasts, 1)
+            Top100UsedPct = [math]::Round($usedPct, 0)
+            Top100SelfPct = if ($null -ne $selfPct) { [math]::Round($selfPct, 0) } else { "" }
             SampleUsed = $cdSampleUsed
         }
     }
 
-    # ----- Aggregate self-buff uptime across the Top 10 -----
+    # ----- Aggregate self-buff uptime across the full Top 100 sample -----
     # Flask/food are booleans (active at pull start or not) - aggregated as "% of
-    # Top 10 that had it active", the same style as Top10UsedPct for cooldowns.
+    # the sample that had it active", the same style as Top100UsedPct for cooldowns.
     # Tree of Life is a real reconstructed uptime % - averaged directly.
-    $top10WithBuffs = @($top10 | Where-Object { $_.BuffUptimes -ne $null })
-    $buffSampleUsed = $top10WithBuffs.Count
+    $sampleWithBuffs = @($sorted | Where-Object { $_.BuffUptimes -ne $null })
+    $buffSampleUsed = $sampleWithBuffs.Count
     if ($buffSampleUsed -gt 0) {
-        $flaskCount = @($top10WithBuffs | Where-Object { $_.BuffUptimes.FlaskActive }).Count
-        $foodCount = @($top10WithBuffs | Where-Object { $_.BuffUptimes.FoodActive }).Count
-        $treeAvg = ($top10WithBuffs | ForEach-Object { $_.BuffUptimes.TreeOfLifePct } | Measure-Object -Average).Average
+        $flaskCount = @($sampleWithBuffs | Where-Object { $_.BuffUptimes.FlaskActive }).Count
+        $foodCount = @($sampleWithBuffs | Where-Object { $_.BuffUptimes.FoodActive }).Count
+        $treeAvg = ($sampleWithBuffs | ForEach-Object { $_.BuffUptimes.TreeOfLifePct } | Measure-Object -Average).Average
 
         $buffRows += [PSCustomObject]@{
             Boss = $bossName
-            Top10FlaskActivePct = [math]::Round(($flaskCount / $buffSampleUsed) * 100, 0)
-            Top10FoodActivePct  = [math]::Round(($foodCount / $buffSampleUsed) * 100, 0)
-            Top10TreeOfLifeAvgUptimePct = [math]::Round($treeAvg, 1)
+            Top100FlaskActivePct = [math]::Round(($flaskCount / $buffSampleUsed) * 100, 0)
+            Top100FoodActivePct  = [math]::Round(($foodCount / $buffSampleUsed) * 100, 0)
+            Top100TreeOfLifeAvgUptimePct = [math]::Round($treeAvg, 1)
             SampleUsed = $buffSampleUsed
         }
     } else {
@@ -546,7 +562,7 @@ if ($usingActiveModel -and (Test-Path $outSummary) -and $priorGeneratedDate -and
 # acceptable here since CSVs are commonly BOM-prefixed for Excel compatibility anyway,
 # and project-knowledge upload / any reasonable CSV reader tolerates it.
 $summaryRows | Export-Csv -Path $outSummary -NoTypeInformation -Encoding UTF8
-$spellCompRows | Sort-Object Boss, @{Expression="Top10Pct";Descending=$true} | Export-Csv -Path $outSpells -NoTypeInformation -Encoding UTF8
+$spellCompRows | Sort-Object Boss, @{Expression="Top100Pct";Descending=$true} | Export-Csv -Path $outSpells -NoTypeInformation -Encoding UTF8
 $cooldownRows | Sort-Object Boss, Ability | Export-Csv -Path $outCooldowns -NoTypeInformation -Encoding UTF8
 $buffRows | Sort-Object Boss | Export-Csv -Path $outBuffs -NoTypeInformation -Encoding UTF8
 

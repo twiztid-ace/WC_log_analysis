@@ -463,12 +463,15 @@ Workflow (Druid, v2 — active/archived model, see "Active/archived data model" 
    `-DateFolder` param anymore). Reads `data\Classes\Druid\active\*_healing_events.json`/
    `*_casts_events.json`/`*_consumables.json` (real per-event data, not the truncated
    tables — see "Why healing/casts moved to events, not tables") and computes, per
-   boss: HPS top1/top10avg/median, overheal best/median/worst, Top 10 spell
+   boss: HPS top1/Top100avg/median, overheal best/median/worst, Top 100 spell
    composition % (grouped by guid, never merged across different guids that share a
-   name — gotcha #20), Top 10 target coverage/concentration %, and Top 10 average
-   cooldown/consumable cast counts with a self-vs-other-target split, plus Top 10
+   name — gotcha #20), Top 100 target coverage/concentration %, and Top 100 average
+   cooldown/consumable cast counts with a self-vs-other-target split, plus Top 100
    flask/food active-at-pull-start % and average real Tree of Life uptime % (see
-   "Buff uptime — fixed" above).
+   "Buff uptime — fixed" above). **Averaged over the full real sample actually pulled
+   for that boss (up to 100), not just the best 10** — changed 2026-07-12, see
+   `summarize_class_benchmarks.ps1`'s own header for why (100 real data points beat
+   throwing away 90 of them for a noisier 10-person average).
 3. This writes small CSVs into `data\Classes\Druid\active\` (the previous set gets
    archived to `archived\benchmark_history\{date}\` first, on a real day-over-day
    regen):
@@ -481,12 +484,12 @@ Workflow (other classes, v1 — still the old date-folder convention, see gotcha
    repo root — the `-DateFolder` param still exists for this path.
 3. This writes small CSVs into that same date folder:
    - `benchmark_summary.csv` — one row per boss (HPS, overheal, target stats)
-   - `benchmark_spell_composition.csv` — one row per boss+spell-guid (Top 10 avg % of
+   - `benchmark_spell_composition.csv` — one row per boss+spell-guid (Top 100 avg % of
      healing; spell name may have `(guid N)` appended when two different guids share a
      display name — see gotcha #20, don't "clean up" by merging them)
-   - `benchmark_cooldowns.csv` — one row per boss+ability (Top 10 avg casts,
-     `Top10UsedPct`, `Top10SelfPct` — Druid only)
-   - `benchmark_buffs.csv` — one row per boss (Top 10 flask/food active %, Top 10 avg
+   - `benchmark_cooldowns.csv` — one row per boss+ability (Top 100 avg casts,
+     `Top100UsedPct`, `Top100SelfPct` — Druid only)
+   - `benchmark_buffs.csv` — one row per boss (Top 100 flask/food active %, Top 100 avg
      Tree of Life uptime % — Druid only)
 4. Upload **all the CSVs** to project knowledge. Small, text-based, no zip needed, and
    this is what future chats in this project should reference for benchmark comparisons —
@@ -631,7 +634,7 @@ template's Cooldowns & Consumables section.
    time" — that field came from the healing table and has no events-based equivalent,
    dropped 2026-07-11, see "Why healing/casts moved to events, not tables") — each
    compared against real Top 100 benchmark numbers where available
-3. Spell composition: character's cast mix vs. Top 10 average, grouped by ability
+3. Spell composition: character's cast mix vs. Top 100 average, grouped by ability
    guid, never by name (gotcha #2), and never merged across different guids that share
    a name without checking first (gotcha #20 — e.g. Lifebloom's HoT-tick and
    bloom-burst effects are different guids with the same display name, and are
@@ -643,7 +646,7 @@ template's Cooldowns & Consumables section.
    casts belong in section 4, not here.
 4. **Druid pages only, for now (`boss_page_template_druid.html`):** Cooldowns &
    consumables — Innervate/Nature's Swiftness/Swiftmend/Tranquility cast counts vs.
-   Top 10 avg (from `*_casts_events.json`), **with a Target column showing who each
+   Top 100 avg (from `*_casts_events.json`), **with a Target column showing who each
    cast went to** (self, or the real recipient's name) — this per-cast target is the
    entire reason this section moved off the old `casts` table, don't collapse it back
    into a bare count. Mana potion/Dark Rune usage also comes from casts events
@@ -656,7 +659,7 @@ template's Cooldowns & Consumables section.
    trivially has none), and forcing a finding that isn't there is worse than saying
    plainly there's nothing notable.
 5. Target distribution: top 5 healing recipients + coverage %, compared against real
-   Top 10 average concentration/coverage for that specific boss (computed from complete
+   Top 100 average concentration/coverage for that specific boss (computed from complete
    per-event target data, not the healing table's truncated `targets[]` array — same
    underlying fix as spell composition)
 **Raid overview page** (one per raid night):
