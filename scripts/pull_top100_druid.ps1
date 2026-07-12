@@ -280,7 +280,16 @@ $workerScript = {
         $events = @($data.events)
         foreach ($ev in $events) {
             $srcName = if ($ActorNames.ContainsKey([int]$ev.sourceID)) { $ActorNames[[int]$ev.sourceID] } else { "Unknown_$($ev.sourceID)" }
-            $tgtName = if ($ev.targetID -ne $null -and $ActorNames.ContainsKey([int]$ev.targetID)) { $ActorNames[[int]$ev.targetID] } else { if ($ev.targetID -ne $null) { "Unknown_$($ev.targetID)" } else { $null } }
+            # A missing targetID means WCL logged no real other-actor target for this
+            # event at all (self-only-castable spells like Nature's Swiftness come back
+            # as target={"name":"Environment","id":-1,...} instead of a real actor ID) -
+            # fixed 2026-07-12 to fall back to the caster's own name, not $null, since a
+            # spell with no real other-actor target can only have affected the caster.
+            # Before this fix, every downstream self-vs-other classification (see
+            # summarize_class_benchmarks.ps1) silently miscounted these as "not self" -
+            # confirmed on real data: Nature's Swiftness showed 0% self across a full
+            # 100-person sample, implausible for a spell that can't target anyone else.
+            $tgtName = if ($ev.targetID -ne $null -and $ActorNames.ContainsKey([int]$ev.targetID)) { $ActorNames[[int]$ev.targetID] } else { if ($ev.targetID -ne $null) { "Unknown_$($ev.targetID)" } else { $srcName } }
             $ev | Add-Member -NotePropertyName "sourceName" -NotePropertyValue $srcName -Force
             $ev | Add-Member -NotePropertyName "targetName" -NotePropertyValue $tgtName -Force
         }

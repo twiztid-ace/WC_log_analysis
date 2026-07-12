@@ -87,12 +87,16 @@ new ones get found — don't let it go stale.
 
 ## Known data gaps / report-copy caveats
 
-- [ ] **Tranquility's guid is unobserved** — `$cooldownGuids["Tranquility"]` is an
-      empty array, so `benchmark_cooldowns.csv` shows 0 casts/0% used for every
-      boss regardless of reality. Risk isn't the missing number, it's a report
-      reading "0% of the Top 100 used Tranquility" as a real finding. Any report
-      copy touching cooldowns must omit Tranquility or caveat it explicitly until
-      a real cast is observed and the guid gets added.
+- [x] *Deprioritized, not needed for now:* **Tranquility's guid is unobserved** —
+      `$cooldownGuids["Tranquility"]` is an empty array, so `benchmark_cooldowns.csv`
+      shows 0 casts/0% used for every boss regardless of reality. Originally risky
+      because a report could read "0% of the Top 100 used Tranquility" as a real
+      finding — but the 2026-07-12 conditional-display rule (Tranquility's row on a
+      boss page only appears when the character's usage is a real deviation from
+      Top100UsedPct) already neutralizes that risk: a permanently-0 benchmark number
+      just means the row never gets shown as "notable," not that a wrong number gets
+      surfaced. Revisit adding the real guid only if Tranquility usage actually needs
+      to be tracked for some other reason later — not blocking anything right now.
 - [ ] **`resources`/`resources-gains` (HPM, mana-over-time) still untested** with
       the correct `abilityid` param (the earlier `resourcetype` guess was
       confirmed wrong). Not blocking, just unclaimed upside.

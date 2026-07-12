@@ -34,6 +34,26 @@
 # ============================================================================
 #
 # ============================================================================
+# 2026-07-12: FIXED - SELF-ONLY SPELLS WERE MISCOUNTED AS "NOT SELF"
+# ============================================================================
+# Found while switching to Top100-avg (above) surfaced Nature's Swiftness at 0% self
+# across a full 100-person sample on Hydross - implausible, since NS can only ever be
+# cast on the caster. Root cause: WCL logs a self-only-castable spell's cast event with
+# `target: {"name":"Environment","id":-1,...}` instead of a real actor, since there's
+# no real other-actor target to report - the pull scripts' target-name annotation
+# leaves `targetName` as `null` in this case (no targetID to resolve), and the old
+# self-check (`sourceName -eq targetName`) treated that null as "not self" instead of
+# recognizing it as "no real target exists, so it can only have been self." Fixed by
+# also counting a null/empty targetName as self - a spell logged with no real
+# other-actor target mechanically cannot have gone to anyone else. Only affects the
+# self%/SelfCount aggregate in this script; the pull scripts' own target-name
+# annotation was also fixed the same day so future pulls store a real name instead of
+# null for these events (see their own header notes) - this script's fix handles both
+# old (null) and new (self-name) data correctly either way, so no re-pull or bulk
+# re-processing of already-pulled files was needed.
+# ============================================================================
+#
+# ============================================================================
 # 2026-07-12: ACTIVE/ARCHIVED + MANIFEST AWARE, DUAL-MODE
 # ============================================================================
 # pull_top100_druid.ps1 no longer writes into a fresh data\Classes\{Class}\{date}\ folder
@@ -361,7 +381,17 @@ foreach ($bossFolder in $bosses.Keys) {
                     # form is the same safe idiom already used two lines below for
                     # $selfCount and $manaMatched, which never showed this bug.
                     $matched = @(if ($guidList.Count -gt 0) { $castsData.events | Where-Object { $guidList -contains $_.ability.guid } })
-                    $selfCount = @($matched | Where-Object { $_.sourceName -eq $_.targetName }).Count
+                    # A null/empty targetName means the raw event carried no real targetID
+                    # at all (WCL logs self-only-castable spells like Nature's Swiftness
+                    # with target={"name":"Environment","id":-1,...} instead of a real
+                    # actor - see 2026-07-12 fix note below) - counted as self, not "not
+                    # self", since a spell with no real other-actor target can only have
+                    # affected the caster. Before this fix, every self-cast of a spell
+                    # shaped like this was silently miscounted as non-self (confirmed on
+                    # real data: Nature's Swiftness showed 0% self across the full
+                    # 100-person Hydross sample, implausible for a spell that mechanically
+                    # can't be cast on anyone else).
+                    $selfCount = @($matched | Where-Object { $_.sourceName -eq $_.targetName -or [string]::IsNullOrEmpty($_.targetName) }).Count
                     $cooldownCounts[$cdName] = [PSCustomObject]@{ Count = $matched.Count; SelfCount = $selfCount }
                 }
                 $manaMatched = @($castsData.events | Where-Object { $_.ability.name -eq $manaPotionName })

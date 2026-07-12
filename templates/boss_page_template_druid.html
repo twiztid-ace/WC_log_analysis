@@ -409,10 +409,30 @@
       </thead>
       <tbody>
         <!-- One row per tracked cooldown/utility ability, from *_casts_events.json.
-             Standard set for a Resto Druid: Innervate, Nature's Swiftness, Swiftmend,
-             Tranquility. Only add a Rebirth row if a battle-rez was actually relevant/
-             used on this specific kill - don't pad every page with a permanent 0 row
-             for an ability that had no reason to be cast here.
+             Innervate, Nature's Swiftness, and Swiftmend are always shown - real usage
+             (including zero) is itself the finding for these three.
+
+             Tranquility is DIFFERENT (2026-07-12 rule): only include its row when the
+             character's own usage doesn't line up with benchmark_cooldowns.csv's
+             Top100UsedPct for that boss - i.e. it's a real deviation worth a reader's
+             attention, not routine. Concretely, using Top100UsedPct for Tranquility:
+               - Character cast it (count > 0) AND Top100UsedPct <= 20% (rare in the
+                 sample) -> INCLUDE, this is a real "did something most don't" finding.
+               - Character did NOT cast it (count == 0) AND Top100UsedPct >= 50% (most
+                 of the sample DID) -> INCLUDE, this is a real gap worth naming.
+               - Anything else (cast it and it's common; didn't cast it and it's rare;
+                 or Top100UsedPct sits in the 20-50% dead zone either way) -> OMIT the
+                 row entirely. Most kills will land here, including any kill where
+                 nobody in the sample casts it at all (Top100UsedPct == 0%,
+                 character also 0) - that's the character matching the norm, not a
+                 finding, and doesn't deserve a permanent row on every page.
+             Only add a Rebirth row if a battle-rez was actually relevant/used on this
+             specific kill - don't pad every page with a permanent 0 row for an ability
+             that had no reason to be cast here (same reasoning as Tranquility above,
+             applied as a simpler always-omit-unless-relevant rule since Rebirth's
+             benchmark usage is situational enough that a Top100UsedPct comparison
+             isn't as meaningful).
+
              Target column: list each real cast's target by name (e.g. "→ Captinspanky"),
              or "self" if source==target, or "—" if never cast. If cast more than once on
              different targets, list all of them ("→ Jotes ×3" if same target repeated,

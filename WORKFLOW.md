@@ -645,11 +645,18 @@ template's Cooldowns & Consumables section.
    Regrowth, Lifebloom, Tranquility, Swiftmend, etc. as % of total healing) — utility
    casts belong in section 4, not here.
 4. **Druid pages only, for now (`boss_page_template_druid.html`):** Cooldowns &
-   consumables — Innervate/Nature's Swiftness/Swiftmend/Tranquility cast counts vs.
-   Top 100 avg (from `*_casts_events.json`), **with a Target column showing who each
+   consumables — Innervate/Nature's Swiftness/Swiftmend cast counts vs. Top 100 avg
+   (from `*_casts_events.json`), **with a Target column showing who each
    cast went to** (self, or the real recipient's name) — this per-cast target is the
    entire reason this section moved off the old `casts` table, don't collapse it back
-   into a bare count. Mana potion/Dark Rune usage also comes from casts events
+   into a bare count. **Tranquility is conditional, not always shown** (rule added
+   2026-07-12): only include its row when the character's usage is a real deviation
+   from `benchmark_cooldowns.csv`'s `Top100UsedPct` for that boss — cast it while the
+   sample rarely does (`Top100UsedPct` ≤20%), or didn't cast it while most of the
+   sample did (`Top100UsedPct` ≥50%). Otherwise omit the row entirely, including the
+   common case where nobody in the sample casts it and the character didn't either —
+   that's matching the norm, not a finding, and doesn't earn a permanent row on every
+   page. Mana potion/Dark Rune usage also comes from casts events
    (consumables register as cast events, not resource gains). Flask/food (yes/no,
    active at pull start) and real Tree of Life uptime % come from `*_consumables.json`
    — see "Buff uptime — fixed" above. Omit the Tree of Life stat entirely for a build
