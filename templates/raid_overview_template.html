@@ -98,6 +98,7 @@
   .check-item{
     display:grid;
     grid-template-columns: 22px 1fr auto;
+    grid-auto-rows: auto;
     align-items:center;
     gap: 12px;
     padding: 10px 0;
@@ -112,7 +113,21 @@
   }
   .check-icon.ok{ background: var(--moss); color: var(--parchment); }
   .check-icon.bad{ background: var(--rust); color: var(--parchment); }
-  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; }
+  .check-icon.note{ background: var(--gold); color: var(--ink); }
+  /* check-note is a short DATA TAG (item id, enchant id, a number) - not a sentence.
+     It's narrow, right-aligned, small monospace, sitting in a fixed `auto`-width grid
+     column next to a flexible label - real prose put here wraps ragged-left in tiny
+     monospace type and squeezes the label column. If a finding needs more than ~4-5
+     words of explanation, that explanation belongs in check-detail (below) or the
+     section's closing coverage-note, never crammed into this column. */
+  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; white-space:nowrap; }
+  /* Optional 4th line for a check-item that genuinely needs a real explanation (e.g.
+     "why this deviation isn't a bug") - spans under the label+tag columns, left-
+     aligned, wraps normally. Add ONLY when the one-line label truly isn't enough;
+     most check-items don't need this. Don't duplicate the same explanation again in
+     the section's coverage-note below - say it once, in whichever of the two spots
+     fits its length. */
+  .check-detail{ grid-column: 2 / 4; font-size: 12px; color: rgba(19,42,44,0.6); line-height: 1.45; margin-top: 2px; }
  
   .coverage-note{
     margin-top: 14px;
@@ -192,16 +207,44 @@
     </div>
  
     <div class="check-list">
-      <!-- One row per gear finding. Copy this block for each check. Use check-icon "ok" (moss) or "bad" (rust).
+      <!-- One row per gear finding. Copy this block for each check.
+           - check-icon: "ok" (moss, confirmed fine), "bad" (rust, a real gap), or
+             "note" (gold, informational - neither good nor bad, e.g. a benign,
+             explained deviation).
+           - {{CHECK_DESCRIPTION}} (middle column, 1fr): the finding itself, as a
+             short, complete label - "Back slot carries no permanent enchant, on all
+             10 kills" not a paragraph.
+           - {{CHECK_DETAIL}} (check-note, right column): a SHORT DATA TAG ONLY - an
+             item id, an enchant id, a number. "item 28765" or "avg ilvl 120". NEVER
+             a sentence - this column is narrow, right-aligned, small monospace type;
+             real prose here wraps ragged-left and is genuinely hard to read (this
+             broke on the first real gear audit built from this template - see
+             WORKFLOW.md's gear audit section for the fix). If there's nothing
+             tag-worthy, omit the check-note div entirely rather than padding it.
+           - check-detail (optional, full width, only when the one-line label truly
+             isn't enough to explain a real finding - e.g. "why this specific
+             deviation isn't a bug"): normal left-aligned wrapping prose. Most
+             check-items won't need this - reach for it before reaching for the
+             coverage-note if the explanation belongs to ONE specific row, not the
+             section as a whole.
            NEVER flag missing ring enchants - they are self-only in this era, see WORKFLOW.md gotcha #6. -->
       <div class="check-item">
         <div class="check-icon ok">✓</div>
         <div>{{CHECK_DESCRIPTION}}</div>
         <div class="check-note">{{CHECK_DETAIL}}</div>
       </div>
+      <!-- Example of a check-item that needs the extra explanation line - delete this
+           example block, it's here to show the pattern, not to ship as real content:
+      <div class="check-item">
+        <div class="check-icon note">i</div>
+        <div>Mainhand was a Fishing Pole instead of the real weapon, on one kill only</div>
+        <div class="check-note">item 25978</div>
+        <div class="check-detail">Not a gearing issue - some raiders fish during specific pulls (The Lurker Below here); the swap is expected and benign, confirmed real from the same combatantinfo snapshot.</div>
+      </div>
+      -->
     </div>
- 
-    <div class="coverage-note">{{GEAR_FINDING_NOTE}} — one or two sentences of real interpretation, e.g. a weapon-tier gap, missing tier-set piece, etc. Only include if there's a genuine finding.</div>
+
+    <div class="coverage-note">{{GEAR_FINDING_NOTE}} — one or two sentences of real interpretation that apply to the section as a whole (e.g. a weapon-tier gap, missing tier-set piece), not a restatement of any single check-item's own label or check-detail. Only include if there's a genuine finding left to add.</div>
   </div>
  
   <!-- ===== PER-BOSS SUMMARY ===== -->

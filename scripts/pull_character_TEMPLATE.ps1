@@ -23,6 +23,13 @@
 #                              %, replaces the buffs table - see "Buff uptime redesign"
 #                              below for why the table version was actually wrong, not
 #                              just unverified)
+#        - gear              (real combatantinfo .gear[] snapshot - added 2026-07-12.
+#                              Same one combatantinfo call as consumables above, not a
+#                              second API round-trip - see Get-CombatantInfoSnapshot's
+#                              header note. Lets a raid overview's gear audit be built
+#                              from every kill, not a single one-off pull, and catches
+#                              real mid-raid gear changes - e.g. a weapon swap between
+#                              kills - that one snapshot can't see.)
 #        - deaths table     (fight-wide raid death list, not class-scoped - unchanged)
 #   5. Pulls the character's full parse history (for real per-fight WCL percentiles)
 #
@@ -84,6 +91,7 @@
 #           fight{fightID}_{bossSlug}_healing_events.json   <- one per boss kill
 #           fight{fightID}_{bossSlug}_casts_events.json
 #           fight{fightID}_{bossSlug}_consumables.json      <- flask/food snapshot + real Tree of Life %
+#           fight{fightID}_{bossSlug}_gear.json              <- real combatantinfo gear[]/talents snapshot
 #           fight{fightID}_{bossSlug}_deaths.json
 #           {charactername}_all_parses.json
 #
@@ -449,10 +457,19 @@ function Get-TreeOfLifeUptimePct {
     return [math]::Round(($overlap / $duration) * 100, 1)
 }
 
-# Pulls the pull-start combatant snapshot for one fight and checks its auras list for
-# an active flask/elixir and food buff. Returns $null on failure (not "no consumables"
-# - that's a legitimate result with real flaskActive=$false/foodActive=$false).
-function Get-ConsumablesSnapshot {
+# Pulls the pull-start combatant snapshot for one fight - ONE real API call that is
+# the shared source for BOTH the consumables output (flask/food/Tree of Life, via
+# .auras) AND the gear-audit output (via .gear), added 2026-07-12 once the raid
+# overview's gear audit was found to still be resting on a single one-off snapshot
+# (Hydross only) instead of a real per-kill pull like every other section. Splitting
+# consumables/gear into two separately-guarded output files downstream (see the Step 4
+# loop below) means: a fresh pull fetches this once and writes both files; a re-run
+# against an already-pulled report where only gear.json is missing still needs to
+# re-fetch (this snapshot isn't itself cached to disk), but only backfills the one
+# missing file rather than re-deriving consumables.json's already-correct data.
+# Returns $null on total failure (no snapshot found at all) - not "no consumables"/"no
+# gear", both of which are legitimate real results the caller distinguishes itself.
+function Get-CombatantInfoSnapshot {
     param($StartTime, $EndTime, $FightLabel)
     # combatantinfo can fire BEFORE a fight's official start_time - confirmed on real
     # data: Kael'thas (fight 81, start_time=12858991) had zero combatantinfo events
@@ -487,28 +504,17 @@ function Get-ConsumablesSnapshot {
     $gapMs = $closest.timestamp - $StartTime
     if ($gapMs -gt 2000) {
         $gapS = [math]::Round($gapMs / 1000, 1)
-        Write-Host "  $FightLabel - WARNING: closest combatantinfo snapshot is ${gapS}s AFTER fight start - no earlier snapshot found even with the backward buffer (consumable status may not reflect the true pull-start state)"
+        Write-Host "  $FightLabel - WARNING: closest combatantinfo snapshot is ${gapS}s AFTER fight start - no earlier snapshot found even with the backward buffer (consumable/gear status may not reflect the true pull-start state)"
     } elseif ($gapMs -lt -1000) {
         $gapS = [math]::Round((-$gapMs) / 1000, 1)
         Write-Host "  $FightLabel - combatantinfo snapshot found ${gapS}s before official fight start (using it - this is expected, see script header)"
     }
     # else: within +/-1s of fight start - close enough to be unremarkable, no log line
-    $entry = $closest
-
-    if (-not $entry.auras) {
-        Write-Host "  $FightLabel - combatantinfo entry found for sourceID=$CharacterID but it has no auras field"
+    if (-not $closest.auras -and -not $closest.gear) {
+        Write-Host "  $FightLabel - combatantinfo entry found for sourceID=$CharacterID but it has neither auras nor gear fields"
         return $null
     }
-
-    $flask = $entry.auras | Where-Object { $_.name -match 'Flask|Elixir' } | Select-Object -First 1
-    $food = $entry.auras | Where-Object { $_.name -eq 'Well Fed' } | Select-Object -First 1
-
-    return [PSCustomObject]@{
-        flaskActive = [bool]$flask
-        flaskName   = if ($flask) { $flask.name } else { $null }
-        foodActive  = [bool]$food
-        foodName    = if ($food) { $food.name } else { $null }
-    }
+    return $closest
 }
 
 
@@ -557,25 +563,56 @@ foreach ($fight in $bossFights) {
     Start-Sleep -Milliseconds 250
 
     # --- consumables (flask/food snapshot + Tree of Life uptime, replaces the broken
-    #     buffs table - see the redesign note above Get-TreeOfLifeIntervals for why) ---
+    #     buffs table - see the redesign note above Get-TreeOfLifeIntervals for why)
+    #     AND gear (real combatantinfo .gear[], added 2026-07-12 - see the header note
+    #     on Get-CombatantInfoSnapshot for why these two share one API call). Each
+    #     output file is independently guarded so a re-run against an already-pulled
+    #     report backfills whichever one is missing without re-deriving the other. ---
     $consumablesOutFile = Join-Path $outDir "$($label)_consumables.json"
-    if (-not (Test-Path $consumablesOutFile)) {
-        $snapshot = Get-ConsumablesSnapshot -StartTime $fight.start_time -EndTime $fight.end_time -FightLabel $label
+    $gearOutFile = Join-Path $outDir "$($label)_gear.json"
+    $needsConsumables = -not (Test-Path $consumablesOutFile)
+    $needsGear = -not (Test-Path $gearOutFile)
+    if ($needsConsumables -or $needsGear) {
+        $snapshot = Get-CombatantInfoSnapshot -StartTime $fight.start_time -EndTime $fight.end_time -FightLabel $label
         if ($null -eq $snapshot) {
-            Write-Host "  $($label)_consumables.json - FAILED (combatantinfo snapshot)"
+            Write-Host "  $label - FAILED (combatantinfo snapshot unavailable for consumables/gear)"
             $fightOk = $false
         } else {
-            $treeOfLifePct = Get-TreeOfLifeUptimePct -Intervals $treeOfLifeIntervals -FightStart $fight.start_time -FightEnd $fight.end_time
-            $out = [PSCustomObject]@{
-                flaskActive        = $snapshot.flaskActive
-                flaskName          = $snapshot.flaskName
-                foodActive         = $snapshot.foodActive
-                foodName           = $snapshot.foodName
-                treeOfLifeUptimePct = $treeOfLifePct
+            if ($needsConsumables) {
+                if (-not $snapshot.auras) {
+                    Write-Host "  $($label)_consumables.json - FAILED (snapshot has no auras field)"
+                    $fightOk = $false
+                } else {
+                    $flask = $snapshot.auras | Where-Object { $_.name -match 'Flask|Elixir' } | Select-Object -First 1
+                    $food = $snapshot.auras | Where-Object { $_.name -eq 'Well Fed' } | Select-Object -First 1
+                    $treeOfLifePct = Get-TreeOfLifeUptimePct -Intervals $treeOfLifeIntervals -FightStart $fight.start_time -FightEnd $fight.end_time
+                    $out = [PSCustomObject]@{
+                        flaskActive        = [bool]$flask
+                        flaskName          = if ($flask) { $flask.name } else { $null }
+                        foodActive         = [bool]$food
+                        foodName           = if ($food) { $food.name } else { $null }
+                        treeOfLifeUptimePct = $treeOfLifePct
+                    }
+                    $jsonText = $out | ConvertTo-Json -Depth 5
+                    [System.IO.File]::WriteAllText($consumablesOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
+                    Write-Host "  $($label)_consumables.json - OK (flask=$([bool]$flask) food=$([bool]$food) treeOfLife=$treeOfLifePct%)"
+                }
             }
-            $jsonText = $out | ConvertTo-Json -Depth 5
-            [System.IO.File]::WriteAllText($consumablesOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
-            Write-Host "  $($label)_consumables.json - OK (flask=$($snapshot.flaskActive) food=$($snapshot.foodActive) treeOfLife=$treeOfLifePct%)"
+            if ($needsGear) {
+                if (-not $snapshot.gear) {
+                    Write-Host "  $($label)_gear.json - FAILED (snapshot has no gear field)"
+                    $fightOk = $false
+                } else {
+                    $gearOut = [PSCustomObject]@{
+                        gear    = $snapshot.gear
+                        talents = $snapshot.talents
+                    }
+                    $jsonText = $gearOut | ConvertTo-Json -Depth 8
+                    [System.IO.File]::WriteAllText($gearOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
+                    $filledCount = @($snapshot.gear | Where-Object { $_.id -and $_.id -ne 0 }).Count
+                    Write-Host "  $($label)_gear.json - OK ($filledCount/$($snapshot.gear.Count) slots filled)"
+                }
+            }
         }
         Start-Sleep -Milliseconds 250
     }

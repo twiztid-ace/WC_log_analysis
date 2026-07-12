@@ -435,15 +435,30 @@ one `fight{FIGHT_ID}_{bossname}_consumables.json` file per fight — see the pul
 scripts themselves for the exact reconstruction logic, it's too much to usefully
 inline here.
 
-**Regression to know about:** the old healing *table*'s per-player entry embedded
-`gear` directly, which is what the raid overview page's gear audit (see "What goes on
-each page" below) has been reading — no separate combatantInfo pull needed. Healing
-*events* don't carry gear at all. This pipeline hasn't needed a gear audit since
-switching to events yet, so it's undiscovered-but-expected breakage, not a confirmed
-bug — if a raid overview page is needed for a character pulled with the new script,
-budget for a `filter=type%3D%22combatantinfo%22` events pull (the one confirmed-working
-flat-form `/report/events/` call, see above) to get gear back, rather than assuming
-it's still sitting in a file that no longer contains it.
+**Gear audit — real pipeline step, not a one-off (fixed 2026-07-12).** The old healing
+*table*'s per-player entry embedded `gear` directly; healing *events* don't carry gear
+at all, so this broke silently when the pipeline moved to events. It went undiscovered
+for a while because nothing exercised a gear audit under the new script until the raid
+overview's gear-audit section actually needed one — and even then, the first fix only
+pulled ONE fight's combatantinfo snapshot (Hydross) and presented it as if it covered
+the whole raid night, without the "confirm gear is identical across all kills" check
+this same doc already called for. Fixed properly: `pull_character_TEMPLATE.ps1`'s
+`Get-CombatantInfoSnapshot` (generalized from the old flask/food-only
+`Get-ConsumablesSnapshot`) returns the full raw combatantinfo entry — `.auras` feeds
+consumables same as before, `.gear`/`.talents` now get saved to a new
+`fight{FIGHT_ID}_{bossname}_gear.json` per fight, both from the ONE combatantinfo call
+already being made (not a second round-trip). Both output files are independently
+`Test-Path`-guarded, so re-running the script against an already-pulled report
+backfills whichever one is missing without re-deriving the other. Verified for real on
+Danceswtrees's full 10-kill 2026-07-07 night: every non-weapon slot (item ID,
+permanent enchant, temporary enchant, gems) is byte-identical across all 10 real
+snapshots — the only real difference is a mainhand/offhand swap on The Lurker Below
+specifically (mace → Fishing Pole, offhand orb unequipped), which is expected, benign
+behavior (some raiders fish during that pull) rather than a gearing problem. This also
+resolved two loose ends from the single-snapshot version: the gem count (13 non-meta +
+1 meta) is now confirmed stable rather than a one-off read, and the previously
+unidentified "empty" gear slot is now precisely the shirt slot (raw array index 3, id
+0 on every kill) — cosmetic, no stat impact, not a real gap.
  
 **Step 3 — Pull the character's full parse history** (for real WCL percentiles per
 fight, not just their all-time best):

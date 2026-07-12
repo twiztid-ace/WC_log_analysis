@@ -101,24 +101,38 @@ new ones get found — don't let it go stale.
       Solarian) with no death to account for either — flagged, not chased
       further. Percentile ranged from 23rd (Kael'thas, the weakest kill by
       nearly every metric) to 84th (Solarian, the strongest).
-- [x] *Mostly resolved:* **Gear audit regression.** Confirmed the `combatantinfo`
-      events pull (same mechanism as flask/food) works for getting real gear back
-      — pulled it live for Danceswtrees/Hydross and built a real gear audit
-      section in the v2 raid overview from it. Also discovered `parses/character`
-      responses already include a real average item level in the
-      `ilvlKeyOrPatch` field (verified: matched the combatantinfo-computed
-      average, 120, exactly) — a future boss page's header `{{ITEM_LEVEL}}` may
-      not need a fresh combatantinfo pull at all, just this field. Still open:
-      the audit is scoped to ONE fight's snapshot — WORKFLOW.md's "confirm gear
-      is identical across all kills before presenting one audit" rule hasn't
-      been satisfied yet, since the other 9 kills have no v2 combatantinfo pull.
-- [ ] **Two new real findings from that one gear snapshot, unresolved:** (1) a gem
-      recount directly from the raw data gives 13 non-meta gems, not the 12 v1's
-      original audit stated — a real discrepancy between v1's write-up and what
-      the data actually shows, not yet reconciled either direction. (2) one gear
-      slot shows no item equipped (generic empty-slot icon in the raw
-      `combatantinfo` response) — real, but which slot it is couldn't be
-      determined from the data alone this session.
+- [x] **Gear audit regression — fully resolved (2026-07-12).** Was scoped to one
+      fight's snapshot (Hydross only); now pulls and cross-checks all 10.
+      `pull_character_TEMPLATE.ps1` was restructured so gear-snapshot pulling is
+      a permanent, per-report pipeline step, not a one-off script — the user
+      explicitly asked for this ("this needs to be part of the pipeline for all
+      reports") after an initial one-off-script draft was rejected. The existing
+      `Get-ConsumablesSnapshot` function was generalized into
+      `Get-CombatantInfoSnapshot`, returning the full raw combatantinfo entry
+      instead of just flask/food booleans; the caller now writes two
+      independently-guarded output files (`*_consumables.json`, new
+      `*_gear.json`) from that one shared API call, so a re-run against an
+      already-pulled report backfills just the missing file without a wasted
+      second combatantinfo round-trip. New files:
+      `fight{fightID}_{bossSlug}_gear.json` per boss kill (real
+      `combatantinfo.gear[]`/`.talents`).
+      Backfilled for Danceswtrees's 10 already-pulled 2026-07-07 kills by
+      re-running the (now-updated) main script against the same report - it
+      correctly skipped every already-present file and only fetched the 10 new
+      gear snapshots. Programmatically diffed all 10: every non-weapon slot
+      (item ID, permanent enchant, temporary enchant, gems) is byte-identical
+      across the whole raid night. The only real difference is on The Lurker
+      Below - mainhand swapped from the real mace (28771) to a Fishing Pole
+      (25978), offhand orb (29170) unequipped - confirmed benign per the user:
+      some raiders fish during the Lurker Below pull specifically, a normal,
+      expected swap for that one boss, not a gearing issue. This also resolved
+      both prior open findings: the gem recount (13 non-meta + 1 meta) is now
+      confirmed stable across all 10 kills, not a one-snapshot fluke, and the
+      previously-unidentified "empty" slot is now precisely identified as the
+      shirt slot (raw index 3, id 0 on every kill) - cosmetic only, no stat
+      impact, not a real gearing gap. Raid overview's gear audit section
+      rewritten with all of the above, banner changed from "pending" to
+      confirmed.
 - [x] **"Union of both spell lists" requirement — now fully verified, not just
       exercised.** The Top100-avg switch (below) surfaced 2 real benchmark-only
       guids (Regrowth 9857/9858, ~0.9%/0.6% of the Top 100 average) that

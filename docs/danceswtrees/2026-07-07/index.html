@@ -103,6 +103,7 @@
   .check-item{
     display:grid;
     grid-template-columns: 22px 1fr auto;
+    grid-auto-rows: auto;
     align-items:center;
     gap: 12px;
     padding: 10px 0;
@@ -118,7 +119,13 @@
   .check-icon.ok{ background: var(--moss); color: var(--parchment); }
   .check-icon.bad{ background: var(--rust); color: var(--parchment); }
   .check-icon.note{ background: var(--gold); color: var(--ink); }
-  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; }
+  /* Short data tag only (item id, enchant id) - not a sentence. See
+     raid_overview_template.html's guidance comment for why. */
+  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; white-space:nowrap; }
+  /* Optional full-width explanation line for a check-item whose one-line label isn't
+     enough on its own - spans under the label+tag columns, left-aligned, wraps
+     normally. */
+  .check-detail{ grid-column: 2 / 4; font-size: 12px; color: rgba(19,42,44,0.6); line-height: 1.45; margin-top: 2px; }
 
   .coverage-note{
     margin-top: 14px;
@@ -194,40 +201,46 @@
     </div>
     <p class="section-desc">v2 methodology: real <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;">combatantinfo</span> snapshot, not the old healing table's embedded gear field.</p>
 
-    <div class="consistency-banner pending">
-      <div class="consistency-icon">i</div>
-      <div class="consistency-text">Based on <strong>one real combatantinfo snapshot (Hydross, fight 6 only)</strong> — not yet cross-checked against the other 9 kills the way a complete v2 audit requires. <a href="../2026-07-07-v1/index.html" style="color:var(--ink);">v1's independently-built audit</a> found gear consistent across 9 of 10 kills (one weapon swap on The Lurker Below) — this snapshot is consistent with that, but hasn't re-verified it kill-by-kill under the v2 method yet.</div>
+    <div class="consistency-banner">
+      <div class="consistency-icon">✓</div>
+      <div class="consistency-text">Built from <strong>10 real combatantinfo snapshots, one per boss kill</strong> — every slot's item, enchant, and gems were diffed kill-by-kill, not assumed from a single pull. Every non-weapon slot is byte-identical across all 10 kills. The only real difference found is a mainhand/offhand swap on The Lurker Below specifically (see below) — this independently confirms and sharpens <a href="../2026-07-07-v1/index.html" style="color:var(--ink);">v1's audit</a>, which reported the same "9 of 10 kills consistent, one Lurker weapon swap" pattern from a different methodology.</div>
     </div>
 
     <div class="check-list">
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>17 of 17 real equipment slots filled (excluding shirt/tabard)</div>
-        <div class="check-note">avg item level 120 — matches parses/character's own ilvlKeyOrPatch field exactly</div>
+        <div>17 of 17 real equipment slots filled, on every kill (excluding shirt/tabard)</div>
+        <div class="check-note">avg ilvl 120</div>
       </div>
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>Mainhand carries both a permanent enchant and an active temporary weapon oil</div>
-        <div class="check-note">item 28771, enchant 2343 + temp enchant 2629</div>
+        <div>Mainhand carries a permanent enchant and an active temporary weapon oil, on 9 of 10 kills</div>
+        <div class="check-note">item 28771 · ench 2343 + 2629</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon note">i</div>
+        <div>Mainhand was a Fishing Pole instead of the real weapon, offhand unequipped, on The Lurker Below only</div>
+        <div class="check-note">item 25978</div>
+        <div class="check-detail">Not a gearing issue — some raiders fish during the Lurker Below pull specifically; this is the expected, benign swap for that one kill, confirmed real from the same combatantinfo snapshot used for every other check on this page.</div>
       </div>
       <div class="check-item">
         <div class="check-icon bad">!</div>
-        <div>Back slot (item 28765) carries no permanent enchant</div>
-        <div class="check-note">confirmed independently — matches v1's finding for the same slot</div>
+        <div>Back slot carries no permanent enchant, on all 10 kills</div>
+        <div class="check-note">item 28765</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon ok">✓</div>
+        <div>The one "empty" slot is the shirt — cosmetic only, no stat impact</div>
+        <div class="check-note">slot index 3</div>
       </div>
       <div class="check-item">
         <div class="check-icon note">i</div>
-        <div>One gear slot shows no item equipped</div>
-        <div class="check-note">generic empty-slot icon in the raw data — can't identify which slot from this alone</div>
-      </div>
-      <div class="check-item">
-        <div class="check-icon note">i</div>
-        <div>Trinket 2 (item 25634) is quality 2 (uncommon) — every other equipped item is quality 3–4</div>
-        <div class="check-note">the one below-epic item in an otherwise epic-quality kit</div>
+        <div>Trinket 2 is quality 2 (uncommon), on all 10 kills — every other equipped item is quality 3–4</div>
+        <div class="check-note">item 25634</div>
       </div>
     </div>
 
-    <div class="coverage-note">Gem count came out slightly different from v1's write-up when recounted directly from this snapshot: 13 non-meta gems (all the same red gem, item 24029) plus 1 meta gem in the head slot, vs. v1's stated "12 non-meta sockets" — a minor discrepancy worth noting rather than silently picking one number, since it's a real difference between what v1 recorded and what this snapshot actually shows. Ring enchants aren't flagged, per this era's self-only Enchanting restriction. The empty slot and the sub-epic trinket are both real, verifiable-from-data findings that v1's original audit didn't call out — worth a closer look once the other 9 kills get their own v2 snapshots.</div>
+    <div class="coverage-note">Gem count: 13 non-meta gems (all the same red gem, item 24029) plus 1 meta gem in the head slot, confirmed identical on all 10 snapshots — differs slightly from v1's stated "12 non-meta sockets," a real discrepancy between the two write-ups' recounting, not a bug in either. Ring enchants aren't flagged, per this era's self-only Enchanting restriction.</div>
   </div>
 
   <!-- ===== PER-BOSS SUMMARY ===== -->
