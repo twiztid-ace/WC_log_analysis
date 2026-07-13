@@ -1332,6 +1332,30 @@ overview. Extensible — new raid nights get added as new dated entries.
     literal slot-name array in a throwaway script) before writing ANY gear-audit
     prose that names a specific slot** — never eyeball array position by counting
     entries in raw JSON output, the exact mistake made here.
+32. **Not every "same display name, different guid" situation means the same
+    thing — check which category it is before writing prose about it.** Gotcha
+    #20 already established the rule (never merge guids sharing a name), but
+    Shaman's real data (Vajomee, Lady Vashj, 2026-07-12/13) surfaced a genuinely
+    different CATEGORY of multi-guid spell from Druid's Lifebloom case, and it's
+    worth telling the two apart explicitly:
+    - **Lifebloom (Druid)**: one cast automatically produces events under TWO
+      guids (33763 the HoT tick, 33778 the bloom-burst on expiry) — not a player
+      choice, both always happen together from a single cast action.
+    - **Chain Heal / Lesser Healing Wave (Shaman, and likely any class with a
+      long level range)**: each guid is a genuinely different SPELL RANK, each
+      independently selectable and each with its own real, fixed mana cost —
+      confirmed by tracing `classResources[0].max` across the whole Top 100
+      Vashj sample: Chain Heal alone had 5 real guids with cleanly-scaling costs
+      (1064: 260, 10622: 315, 10623: 405, 25422: 435, 25423: 540 mana), Lesser
+      Healing Wave had 6 (145 through 440). A player's guid mix here reflects
+      which rank they're actually casting, not a fixed mechanical split.
+    Confirmed the real per-guid mana cost from `classResources` BEFORE writing
+    "rank" into any report page, per the "test against real data before writing
+    it down" discipline — don't assume a spell-rank explanation just because it
+    sounds plausible for a class with many spell ranks. Once confirmed, citing
+    the actual mana cost in report prose (not just "guid 25423") makes the
+    finding concrete and checkable rather than a bare guid number the reader
+    can't interpret on their own.
 
 ## Copyright / IP note
  

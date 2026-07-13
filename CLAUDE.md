@@ -10,7 +10,7 @@ GraphQL API** (Druid migrated 2026-07-12, Shaman ported the same day as its own
 use the original v1 REST API.
 
 **Read `WORKFLOW.md` first, in full, before touching anything.** It is the single
-source of truth for this project — API endpoints, file formats, known bugs, and 31
+source of truth for this project — API endpoints, file formats, known bugs, and 32
 numbered "gotchas" documenting real mistakes already made and fixed. Assume anything
 not in WORKFLOW.md is unverified. This file is just a map to get you oriented quickly;
 WORKFLOW.md has the actual depth.
