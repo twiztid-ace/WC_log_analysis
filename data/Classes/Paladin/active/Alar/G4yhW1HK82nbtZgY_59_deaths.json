@@ -1,0 +1,1326 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Tamilla",
+                        "id":  6,
+                        "guid":  53493769,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  8696790,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  15489,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34133,
+                                                             "name":  "Ember Blast",
+                                                             "total":  8895,
+                                                             "type":  4,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  34121,
+                                                             "name":  "Flame Buffet",
+                                                             "total":  4383,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fireball.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  2211,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Ember of Al\u0027ar",
+                                                           "total":  8895,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  4383,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  2211,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4114,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1770,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1446,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  898,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34121,
+                                                                    "name":  "Flame Buffet",
+                                                                    "total":  2219,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_fireball.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  3,
+                                                                    "name":  "Falling",
+                                                                    "total":  1895,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Preventiøn",
+                                                            "total":  1770,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Sleja",
+                                                            "total":  1446,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Tamilla",
+                                                            "total":  898,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15044,
+                        "overkill":  146,
+                        "events":  [
+                                       {
+                                           "timestamp":  8696764,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  8749,
+                                           "unmitigatedAmount":  8895,
+                                           "overkill":  146,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8689772,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2211,
+                                           "unmitigatedAmount":  2211,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8684972,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Buffet",
+                                                           "guid":  34121,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fireball.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2401,
+                                           "unmitigatedAmount":  2183,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34133,
+                                            "type":  4,
+                                            "abilityIcon":  "trade_engineering.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Yuckfoo",
+                        "id":  21,
+                        "guid":  54497388,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  8696805,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  14624,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34133,
+                                                             "name":  "Ember Blast",
+                                                             "total":  8121,
+                                                             "type":  4,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  34121,
+                                                             "name":  "Flame Buffet",
+                                                             "total":  4137,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fireball.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  1694,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32221,
+                                                             "name":  "Seal of Blood",
+                                                             "total":  513,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_sealofblood.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32220,
+                                                             "name":  "Judgement of Blood",
+                                                             "total":  159,
+                                                             "type":  2,
+                                                             "icon":  "spell_shadow_lifedrain.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Ember of Al\u0027ar",
+                                                           "total":  8121,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  4137,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1694,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Yuckfoo",
+                                                           "total":  672,
+                                                           "type":  "Paladin"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3333,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1931,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  975,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  427,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34121,
+                                                                    "name":  "Flame Buffet",
+                                                                    "total":  2358,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_fireball.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  3,
+                                                                    "name":  "Falling",
+                                                                    "total":  975,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sleja",
+                                                            "total":  2906,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Yuckfoo",
+                                                            "total":  427,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15023,
+                        "overkill":  624,
+                        "events":  [
+                                       {
+                                           "timestamp":  8696743,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  7497,
+                                           "unmitigatedAmount":  8121,
+                                           "overkill":  624,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8695447,
+                                           "type":  "damage",
+                                           "sourceID":  21,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Seal of Blood",
+                                                           "guid":  32221,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_sealofblood.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  138,
+                                           "unmitigatedAmount":  138,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8689269,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  1694,
+                                           "unmitigatedAmount":  1694,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34133,
+                                            "type":  4,
+                                            "abilityIcon":  "trade_engineering.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Dundudun",
+                        "id":  13,
+                        "guid":  54635891,
+                        "type":  "Druid",
+                        "icon":  "Druid-Feral",
+                        "timestamp":  8697418,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  15318,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34133,
+                                                             "name":  "Ember Blast",
+                                                             "total":  15318,
+                                                             "type":  4,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Ember of Al\u0027ar",
+                                                           "total":  15318,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  657,
+                        "overkill":  4520,
+                        "events":  [
+                                       {
+                                           "timestamp":  8697400,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2565,
+                                           "unmitigatedAmount":  7085,
+                                           "overkill":  4520,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8696743,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  8233,
+                                           "unmitigatedAmount":  8233,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34133,
+                                            "type":  4,
+                                            "abilityIcon":  "trade_engineering.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Egon",
+                        "id":  14,
+                        "guid":  55469284,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  8710498,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  12730,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1963,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  12730,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  12730,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  4197,
+                        "events":  [
+                                       {
+                                           "timestamp":  8710491,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  14,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  8533,
+                                           "mitigated":  1963,
+                                           "unmitigatedAmount":  14693,
+                                           "overkill":  4197,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Xoserino",
+                        "id":  4,
+                        "guid":  44796991,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  8712508,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  17665,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  4674,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34133,
+                                                             "name":  "Ember Blast",
+                                                             "total":  9253,
+                                                             "type":  4,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  7775,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  637,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Ember of Al\u0027ar",
+                                                           "total":  9253,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  7775,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  637,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2702,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  32546,
+                                                              "name":  "Binding Heal",
+                                                              "total":  2702,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_blindingheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34133,
+                                                                    "name":  "Ember Blast",
+                                                                    "total":  2065,
+                                                                    "type":  4,
+                                                                    "icon":  "trade_engineering.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  3,
+                                                                    "name":  "Falling",
+                                                                    "total":  637,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sleja",
+                                                            "total":  2702,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15756,
+                        "overkill":  3639,
+                        "events":  [
+                                       {
+                                           "timestamp":  8712499,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  4136,
+                                           "mitigated":  4674,
+                                           "unmitigatedAmount":  12449,
+                                           "overkill":  3639,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8699393,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  637,
+                                           "unmitigatedAmount":  637,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8696743,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  9253,
+                                           "unmitigatedAmount":  8412,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Deepythroat",
+                        "id":  19,
+                        "guid":  53454272,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  8715353,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  10243,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1652,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  10243,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  10243,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  1700,
+                        "events":  [
+                                       {
+                                           "timestamp":  8715345,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  8543,
+                                           "mitigated":  1652,
+                                           "unmitigatedAmount":  11895,
+                                           "overkill":  1700,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tamilla",
+                        "id":  6,
+                        "guid":  53493769,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  8831046,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  8230,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  35383,
+                                                             "name":  "Flame Patch",
+                                                             "total":  8230,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_lavaspawn.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  8230,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  3020,
+                        "overkill":  171,
+                        "events":  [
+                                       {
+                                           "timestamp":  8831036,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Patch",
+                                                           "guid":  35383,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2843,
+                                           "unmitigatedAmount":  2512,
+                                           "overkill":  171,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8830036,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Patch",
+                                                           "guid":  35383,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2943,
+                                           "unmitigatedAmount":  2675,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8828016,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Patch",
+                                                           "guid":  35383,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2273,
+                                           "unmitigatedAmount":  2273,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Flame Patch",
+                                            "guid":  35383,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Señormiau",
+                        "id":  1,
+                        "guid":  53598078,
+                        "type":  "Druid",
+                        "icon":  "Druid-Guardian",
+                        "timestamp":  8842001,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  39836,
+                                       "totalReduced":  37643,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  34001,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  39836,
+                                                             "totalReduced":  37643,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  39836,
+                                                           "totalReduced":  37643,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  21615,
+                                        "totalReduced":  19422,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  8981,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27136,
+                                                              "name":  "Holy Light",
+                                                              "total":  7288,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_holybolt.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2193,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1843,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  1310,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  21615,
+                                                                    "totalReduced":  19422,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sleja",
+                                                            "total":  11174,
+                                                            "totalReduced":  8981,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Preventiøn",
+                                                            "total":  7288,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Glødëätinä",
+                                                            "total":  1843,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Señormiau",
+                                                            "total":  1310,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14429,
+                        "overkill":  1847,
+                        "events":  [
+                                       {
+                                           "timestamp":  8842001,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  15,
+                                           "amount":  9922,
+                                           "mitigated":  1294,
+                                           "unmitigatedAmount":  13063,
+                                           "overkill":  1847,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8839581,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  6153,
+                                           "mitigated":  4091,
+                                           "unmitigatedAmount":  10244,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8834768,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2744,
+                                           "mitigated":  8195,
+                                           "unmitigatedAmount":  10939,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Mizsebolt",
+                        "id":  9,
+                        "guid":  54421951,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Affliction",
+                        "timestamp":  8879754,
+                        "fight":  59,
+                        "damage":  {
+                                       "total":  11239,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  35412,
+                                                             "name":  "Charge",
+                                                             "total":  5858,
+                                                             "type":  4,
+                                                             "icon":  "ability_warrior_charge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  35383,
+                                                             "name":  "Flame Patch",
+                                                             "total":  5381,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_lavaspawn.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  5858,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  5381,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4223,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27235,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2621,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1218,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  30911,
+                                                              "name":  "Siphon Life",
+                                                              "total":  384,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_requiem.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  35383,
+                                                                    "name":  "Flame Patch",
+                                                                    "total":  3005,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_lavaspawn.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Mizsebolt",
+                                                            "total":  3005,
+                                                            "type":  "Warlock"
+                                                        },
+                                                        {
+                                                            "name":  "Sleja",
+                                                            "total":  1218,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  13012,
+                        "overkill":  470,
+                        "events":  [
+                                       {
+                                           "timestamp":  8879736,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Charge",
+                                                           "guid":  35412,
+                                                           "type":  4,
+                                                           "abilityIcon":  "ability_warrior_charge.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  5388,
+                                           "unmitigatedAmount":  4882,
+                                           "overkill":  470,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8874326,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Patch",
+                                                           "guid":  35383,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2832,
+                                           "unmitigatedAmount":  2575,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8873315,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Patch",
+                                                           "guid":  35383,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_lavaspawn.jpg"
+                                                       },
+                                           "fight":  59,
+                                           "hitType":  1,
+                                           "amount":  2549,
+                                           "unmitigatedAmount":  2549,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Charge",
+                                            "guid":  35412,
+                                            "type":  4,
+                                            "abilityIcon":  "ability_warrior_charge.jpg"
+                                        }
+                    }
+                ]
+}

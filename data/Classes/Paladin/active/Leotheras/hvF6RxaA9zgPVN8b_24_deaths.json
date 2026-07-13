@@ -1,0 +1,180 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Milkysins",
+                        "id":  5,
+                        "guid":  68042196,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  3156385,
+                        "fight":  24,
+                        "damage":  {
+                                       "total":  10418,
+                                       "totalReduced":  8653,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2057,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  7918,
+                                                             "totalReduced":  6153,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  2500,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  7918,
+                                                           "totalReduced":  6153,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  2500,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2057,
+                                        "totalReduced":  292,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  1765,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  292,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  1961,
+                                                                    "totalReduced":  196,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  96,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Milkysins",
+                                                            "total":  2057,
+                                                            "totalReduced":  292,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  9011,
+                        "overkill":  718,
+                        "events":  [
+                                       {
+                                           "timestamp":  3156385,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  24,
+                                           "hitType":  1,
+                                           "amount":  1301,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  2375,
+                                           "overkill":  718,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  3153376,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  24,
+                                           "hitType":  1,
+                                           "amount":  2018,
+                                           "mitigated":  357,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  3152074,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  24,
+                                           "hitType":  1,
+                                           "amount":  2500,
+                                           "unmitigatedAmount":  2500,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    }
+                ]
+}

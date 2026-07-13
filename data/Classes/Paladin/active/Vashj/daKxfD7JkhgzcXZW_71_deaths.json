@@ -1,0 +1,632 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Fentbovine",
+                        "id":  24,
+                        "guid":  68741209,
+                        "type":  "Druid",
+                        "icon":  "Druid-Warden",
+                        "timestamp":  8291073,
+                        "fight":  71,
+                        "damage":  {
+                                       "total":  19286,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  16109,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38509,
+                                                             "name":  "Shock Blast",
+                                                             "total":  8777,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_wispheal.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  8769,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38281,
+                                                             "name":  "Static Charge",
+                                                             "total":  1740,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_lightningoverload.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  17546,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fentbovine",
+                                                           "total":  1740,
+                                                           "type":  "Druid"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1491,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  379,
+                                                              "name":  "Earth Shield",
+                                                              "total":  1491,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_skinofearth.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  1491,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Lebrent",
+                                                            "total":  1491,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3686,
+                        "overkill":  508,
+                        "events":  [
+                                       {
+                                           "timestamp":  8291057,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shock Blast",
+                                                           "guid":  38509,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_wispheal.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  8269,
+                                           "unmitigatedAmount":  8777,
+                                           "overkill":  508,
+                                           "isAoE":  false,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  8290584,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  15,
+                                           "amount":  4913,
+                                           "mitigated":  6514,
+                                           "unmitigatedAmount":  11427,
+                                           "isAoE":  false,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  8289837,
+                                           "type":  "damage",
+                                           "sourceID":  24,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Static Charge",
+                                                           "guid":  38281,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  1740,
+                                           "unmitigatedAmount":  1740,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shock Blast",
+                                            "guid":  38509,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_wispheal.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Adb",
+                        "id":  32,
+                        "guid":  65976353,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  8587509,
+                        "fight":  71,
+                        "damage":  {
+                                       "total":  12578,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2829,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38295,
+                                                             "name":  "Shoot",
+                                                             "total":  12578,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  12578,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  3145,
+                        "events":  [
+                                       {
+                                           "timestamp":  8587508,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  32,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  38295,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  9433,
+                                           "mitigated":  2829,
+                                           "unmitigatedAmount":  15407,
+                                           "overkill":  3145,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shoot",
+                                            "guid":  38295,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_marksmanship.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tacos",
+                        "id":  2,
+                        "guid":  73947438,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Justicar",
+                        "timestamp":  8598442,
+                        "fight":  71,
+                        "damage":  {
+                                       "total":  13546,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  10173,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13546,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  13546,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  1138,
+                        "overkill":  79,
+                        "events":  [
+                                       {
+                                           "timestamp":  8598414,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  2,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  15,
+                                           "amount":  6052,
+                                           "mitigated":  4612,
+                                           "unmitigatedAmount":  10743,
+                                           "overkill":  79,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8597276,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  2,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  15,
+                                           "amount":  7415,
+                                           "mitigated":  5561,
+                                           "unmitigatedAmount":  12976,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Nivolcm",
+                        "id":  71,
+                        "guid":  73051363,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Affliction",
+                        "timestamp":  8645137,
+                        "fight":  71,
+                        "damage":  {
+                                       "total":  9264,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  997,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38310,
+                                                             "name":  "Multi-Shot",
+                                                             "total":  6137,
+                                                             "type":  1,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  360327,
+                                                             "name":  "Toxic Spores",
+                                                             "total":  3127,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  6137,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  3127,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  6531,
+                        "overkill":  526,
+                        "events":  [
+                                       {
+                                           "timestamp":  8645124,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  71,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Multi-Shot",
+                                                           "guid":  38310,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  5611,
+                                           "mitigated":  997,
+                                           "unmitigatedAmount":  7134,
+                                           "overkill":  526,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8638593,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  71,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  3127,
+                                           "unmitigatedAmount":  3127,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Multi-Shot",
+                                            "guid":  38310,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Aitherapist",
+                        "id":  10,
+                        "guid":  77040255,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-BeastMastery",
+                        "timestamp":  8652448,
+                        "fight":  71,
+                        "damage":  {
+                                       "total":  14780,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  360327,
+                                                             "name":  "Toxic Spores",
+                                                             "total":  11342,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38281,
+                                                             "name":  "Static Charge",
+                                                             "total":  3438,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_lightningoverload.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  11342,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Aitherapist",
+                                                           "total":  3438,
+                                                           "type":  "Hunter"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3860,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  32546,
+                                                              "name":  "Binding Heal",
+                                                              "total":  2823,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_blindingheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1037,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  360327,
+                                                                    "name":  "Toxic Spores",
+                                                                    "total":  2116,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38281,
+                                                                    "name":  "Static Charge",
+                                                                    "total":  1744,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_lightningoverload.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Marxy",
+                                                            "total":  3860,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  2996,
+                        "overkill":  2408,
+                        "events":  [
+                                       {
+                                           "timestamp":  8652437,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  428,
+                                           "unmitigatedAmount":  2836,
+                                           "overkill":  2408,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  8651511,
+                                           "type":  "damage",
+                                           "sourceID":  10,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Static Charge",
+                                                           "guid":  38281,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  1694,
+                                           "unmitigatedAmount":  1694,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  8651445,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  71,
+                                           "hitType":  1,
+                                           "amount":  2835,
+                                           "unmitigatedAmount":  2835,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Toxic Spores",
+                                            "guid":  360327,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                        }
+                    }
+                ]
+}

@@ -1,0 +1,571 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Meganfoxlove",
+                        "id":  87,
+                        "guid":  54359718,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  7023931,
+                        "fight":  39,
+                        "damage":  {
+                                       "total":  10332,
+                                       "totalReduced":  8128,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37531,
+                                                             "name":  "Mind Blast",
+                                                             "total":  7500,
+                                                             "totalReduced":  5296,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_unholyfrenzy.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  1779,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30486,
+                                                             "name":  "Super Sapper Charge",
+                                                             "total":  1053,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Greyheart Spellbinder",
+                                                           "total":  7500,
+                                                           "totalReduced":  5296,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1779,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Meganfoxlove",
+                                                           "total":  1053,
+                                                           "type":  "Priest"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2256,
+                                        "totalReduced":  52,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2204,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  52,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37531,
+                                                                    "name":  "Mind Blast",
+                                                                    "total":  2204,
+                                                                    "totalReduced":  0,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_unholyfrenzy.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  30486,
+                                                                    "name":  "Super Sapper Charge",
+                                                                    "total":  52,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sakix",
+                                                            "total":  2204,
+                                                            "totalReduced":  0,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Meganfoxlove",
+                                                            "total":  52,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  2185,
+                        "overkill":  165,
+                        "events":  [
+                                       {
+                                           "timestamp":  7023931,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  1614,
+                                           "unmitigatedAmount":  1779,
+                                           "overkill":  165,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  7023370,
+                                           "type":  "damage",
+                                           "sourceID":  160,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Mind Blast",
+                                                           "guid":  37531,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_unholyfrenzy.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  3700,
+                                           "unmitigatedAmount":  3700,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  7021767,
+                                           "type":  "damage",
+                                           "sourceID":  87,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Super Sapper Charge",
+                                                           "guid":  30486,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  1053,
+                                           "unmitigatedAmount":  1053,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shadow Word: Death",
+                                            "guid":  32409,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Meganfoxlove",
+                        "id":  87,
+                        "guid":  54359718,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  7100818,
+                        "fight":  39,
+                        "damage":  {
+                                       "total":  7732,
+                                       "totalReduced":  7546,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1068,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  6057,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37675,
+                                                             "name":  "Chaos Blast",
+                                                             "total":  1675,
+                                                             "totalReduced":  1489,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_felflamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  7732,
+                                                           "totalReduced":  7546,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  341,
+                                        "totalReduced":  155,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  186,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  155,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37675,
+                                                                    "name":  "Chaos Blast",
+                                                                    "total":  186,
+                                                                    "totalReduced":  0,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_felflamebolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  155,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sakix",
+                                                            "total":  186,
+                                                            "totalReduced":  0,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Meganfoxlove",
+                                                            "total":  155,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  6538,
+                        "overkill":  80,
+                        "events":  [
+                                       {
+                                           "timestamp":  7100818,
+                                           "type":  "damage",
+                                           "sourceID":  163,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  1939,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  2375,
+                                           "overkill":  80,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  7097802,
+                                           "type":  "damage",
+                                           "sourceID":  163,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  2019,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  7094808,
+                                           "type":  "damage",
+                                           "sourceID":  163,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  87,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  2019,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Hugyosgizi",
+                        "id":  24,
+                        "guid":  53659734,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  7151482,
+                        "fight":  39,
+                        "damage":  {
+                                       "total":  15555,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  7676,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  6156,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  27173,
+                                                             "name":  "Consecration",
+                                                             "total":  2415,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_innerfire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  12723,
+                                                             "name":  "Sweeping Strikes",
+                                                             "total":  2114,
+                                                             "type":  1,
+                                                             "icon":  "ability_rogue_slicedice.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  26988,
+                                                             "name":  "Moonfire",
+                                                             "total":  1561,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  25530,
+                                                             "name":  "Attack",
+                                                             "total":  757,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "zzOLDSearing Totem VII"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Inner Demon",
+                                                           "total":  6156,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Bazsa",
+                                                           "total":  3282,
+                                                           "type":  "Warrior"
+                                                       },
+                                                       {
+                                                           "name":  "Gløriä",
+                                                           "total":  2537,
+                                                           "type":  "Paladin"
+                                                       },
+                                                       {
+                                                           "name":  "Housingodx",
+                                                           "total":  1561,
+                                                           "type":  "Druid"
+                                                       },
+                                                       {
+                                                           "name":  "Dzsem",
+                                                           "total":  705,
+                                                           "type":  "Shaman"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  5746,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  2532,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1640,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1574,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  5746,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Sakix",
+                                                            "total":  2532,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Shamous",
+                                                            "total":  1640,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Akrol",
+                                                            "total":  1574,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  23634,
+                        "overkill":  220,
+                        "events":  [
+                                       {
+                                           "timestamp":  7151473,
+                                           "type":  "damage",
+                                           "sourceID":  16,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sweeping Strikes",
+                                                           "guid":  12723,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_rogue_slicedice.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  950,
+                                           "unmitigatedAmount":  1170,
+                                           "overkill":  220,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7151402,
+                                           "type":  "damage",
+                                           "sourceID":  16,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sweeping Strikes",
+                                                           "guid":  12723,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_rogue_slicedice.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  944,
+                                           "unmitigatedAmount":  944,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7150783,
+                                           "type":  "damage",
+                                           "sourceID":  49,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Consecration",
+                                                           "guid":  27173,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_innerfire.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  302,
+                                           "unmitigatedAmount":  302,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Sweeping Strikes",
+                                            "guid":  12723,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_rogue_slicedice.jpg"
+                                        }
+                    }
+                ]
+}

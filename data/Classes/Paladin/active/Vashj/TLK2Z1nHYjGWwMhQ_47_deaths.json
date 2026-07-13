@@ -1,0 +1,340 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Venina",
+                        "id":  88,
+                        "guid":  44796977,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  6210085,
+                        "fight":  47,
+                        "damage":  {
+                                       "total":  18446,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38145,
+                                                             "name":  "Forked Lightning",
+                                                             "total":  9872,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_chainlightning.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38253,
+                                                             "name":  "Poison Bolt",
+                                                             "total":  6092,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_corrosivebreath.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38259,
+                                                             "name":  "Mind Blast",
+                                                             "total":  2482,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_unholyfrenzy.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  9872,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Tainted Elemental",
+                                                           "total":  6092,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Strider",
+                                                           "total":  2482,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  8380,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  6905,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1475,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38145,
+                                                                    "name":  "Forked Lightning",
+                                                                    "total":  3951,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_chainlightning.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38259,
+                                                                    "name":  "Mind Blast",
+                                                                    "total":  2323,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_unholyfrenzy.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38253,
+                                                                    "name":  "Poison Bolt",
+                                                                    "total":  2106,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_corrosivebreath.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Bálintpog",
+                                                            "total":  6905,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Amonshi",
+                                                            "total":  1475,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  52561,
+                        "overkill":  1291,
+                        "events":  [
+                                       {
+                                           "timestamp":  6210079,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  88,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Forked Lightning",
+                                                           "guid":  38145,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  1208,
+                                           "unmitigatedAmount":  2499,
+                                           "overkill":  1291,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  6198819,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  88,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Forked Lightning",
+                                                           "guid":  38145,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  2466,
+                                           "unmitigatedAmount":  2466,
+                                           "isAoE":  true,
+                                           "targetMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  6195228,
+                                           "type":  "damage",
+                                           "sourceID":  180,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  88,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Poison Bolt",
+                                                           "guid":  38253,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_corrosivebreath.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  1993,
+                                           "unmitigatedAmount":  1993,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Forked Lightning",
+                                            "guid":  38145,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Antisocialxx",
+                        "id":  5,
+                        "guid":  54883526,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  6289824,
+                        "fight":  47,
+                        "damage":  {
+                                       "total":  16555,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  16555,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Elite",
+                                                           "total":  16555,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  7564,
+                        "events":  [
+                                       {
+                                           "timestamp":  6274786,
+                                           "type":  "damage",
+                                           "sourceID":  182,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  2,
+                                           "amount":  8991,
+                                           "unmitigatedAmount":  10968,
+                                           "overkill":  7564,
+                                           "isAoE":  false
+                                       }
+                                   ]
+                    },
+                    {
+                        "name":  "Troybe",
+                        "id":  9,
+                        "guid":  53978929,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  6289826,
+                        "fight":  47,
+                        "damage":  {
+                                       "total":  13894,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3547,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13894,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Strider",
+                                                           "total":  13894,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  5371,
+                        "events":  [
+                                       {
+                                           "timestamp":  6289788,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  8523,
+                                           "mitigated":  3547,
+                                           "unmitigatedAmount":  17441,
+                                           "overkill":  5371,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

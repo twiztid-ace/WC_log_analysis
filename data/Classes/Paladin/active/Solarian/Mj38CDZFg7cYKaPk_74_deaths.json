@@ -1,0 +1,286 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Bronzerker",
+                        "id":  113,
+                        "guid":  42892784,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  11875297,
+                        "fight":  74,
+                        "damage":  {
+                                       "total":  15785,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  379,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13016,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2769,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  15785,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  2034,
+                        "overkill":  2651,
+                        "events":  [
+                                       {
+                                           "timestamp":  11875296,
+                                           "type":  "damage",
+                                           "sourceID":  255,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  113,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  15,
+                                           "amount":  3607,
+                                           "mitigated":  345,
+                                           "unmitigatedAmount":  6603,
+                                           "overkill":  2651,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  11874083,
+                                           "type":  "damage",
+                                           "sourceID":  255,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  113,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  1,
+                                           "amount":  2769,
+                                           "unmitigatedAmount":  2398,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11873262,
+                                           "type":  "damage",
+                                           "sourceID":  255,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  113,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  15,
+                                           "amount":  6758,
+                                           "mitigated":  34,
+                                           "unmitigatedAmount":  6792,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Shamous",
+                        "id":  23,
+                        "guid":  45679226,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  11890277,
+                        "fight":  74,
+                        "damage":  {
+                                       "total":  11210,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2864,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  5616,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  39414,
+                                                             "name":  "Arcane Missiles",
+                                                             "total":  3750,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  1844,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Shamous",
+                                                           "total":  5616,
+                                                           "type":  "Shaman"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  5594,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2496,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27237,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2496,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  42787,
+                                                                    "name":  "Wrath of the Astromancer",
+                                                                    "total":  2496,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_wispsplode.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Shamous",
+                                                            "total":  2496,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  16192,
+                        "overkill":  235,
+                        "events":  [
+                                       {
+                                           "timestamp":  11890275,
+                                           "type":  "damage",
+                                           "sourceID":  255,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  16,
+                                           "amount":  2015,
+                                           "mitigated":  750,
+                                           "unmitigatedAmount":  3000,
+                                           "resisted":  750,
+                                           "overkill":  235,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  11889293,
+                                           "type":  "damage",
+                                           "sourceID":  255,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  16,
+                                           "amount":  1500,
+                                           "mitigated":  1500,
+                                           "unmitigatedAmount":  3000,
+                                           "resisted":  1500,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  11879254,
+                                           "type":  "damage",
+                                           "sourceID":  23,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  74,
+                                           "hitType":  1,
+                                           "amount":  5616,
+                                           "unmitigatedAmount":  5616,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcane Missiles",
+                                            "guid":  39414,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_starfall.jpg"
+                                        }
+                    }
+                ]
+}

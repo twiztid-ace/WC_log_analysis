@@ -1,0 +1,490 @@
+{
+    "entries":  [
+                    {
+                        "name":  "매직션",
+                        "id":  24,
+                        "guid":  16984020,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  11864124,
+                        "fight":  77,
+                        "damage":  {
+                                       "total":  11520,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36721,
+                                                             "name":  "Burn",
+                                                             "total":  9531,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36834,
+                                                             "name":  "Arcane Disruption",
+                                                             "total":  1989,
+                                                             "type":  64,
+                                                             "icon":  "spell_arcane_massdispel.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Phoenix",
+                                                           "total":  9531,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Kael\u0027thas Sunstrider",
+                                                           "total":  1989,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  13717,
+                        "overkill":  2087,
+                        "events":  [
+                                       {
+                                           "timestamp":  11864093,
+                                           "type":  "damage",
+                                           "sourceID":  234,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  2975,
+                                           "unmitigatedAmount":  5062,
+                                           "overkill":  2087,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11862076,
+                                           "type":  "damage",
+                                           "sourceID":  234,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  4469,
+                                           "unmitigatedAmount":  4469,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11850376,
+                                           "type":  "damage",
+                                           "sourceID":  224,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Disruption",
+                                                           "guid":  36834,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_arcane_massdispel.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  1989,
+                                           "unmitigatedAmount":  1989,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Burn",
+                                            "guid":  36721,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_fire.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "블랑쉬토끼",
+                        "id":  4,
+                        "guid":  31403602,
+                        "type":  "Priest",
+                        "icon":  "Priest-Discipline",
+                        "timestamp":  11868103,
+                        "fight":  77,
+                        "damage":  {
+                                       "total":  19510,
+                                       "totalReduced":  17300,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  933,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36721,
+                                                             "name":  "Burn",
+                                                             "total":  9539,
+                                                             "totalReduced":  7329,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36985,
+                                                             "name":  "Holy Nova",
+                                                             "total":  5233,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_holybolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36979,
+                                                             "name":  "Multi-Shot",
+                                                             "total":  2798,
+                                                             "type":  64,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36834,
+                                                             "name":  "Arcane Disruption",
+                                                             "total":  1940,
+                                                             "type":  64,
+                                                             "icon":  "spell_arcane_massdispel.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Phoenix",
+                                                           "total":  9539,
+                                                           "totalReduced":  7329,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Cosmic Infuser",
+                                                           "total":  5233,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Netherstrand Longbow",
+                                                           "total":  2798,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Kael\u0027thas Sunstrider",
+                                                           "total":  1940,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  9892,
+                                        "totalReduced":  7682,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25222,
+                                                              "name":  "Renew",
+                                                              "total":  3805,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_renew.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25308,
+                                                              "name":  "Prayer of Healing",
+                                                              "total":  2214,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofhealing02.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2210,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1663,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  36985,
+                                                                    "name":  "Holy Nova",
+                                                                    "total":  4884,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_holybolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36979,
+                                                                    "name":  "Multi-Shot",
+                                                                    "total":  2798,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_upgrademoonglaive.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36721,
+                                                                    "name":  "Burn",
+                                                                    "total":  2210,
+                                                                    "totalReduced":  0,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_fire.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "현쨩",
+                                                            "total":  6019,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "블랑쉬토끼",
+                                                            "total":  2210,
+                                                            "totalReduced":  0,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "유메리",
+                                                            "total":  1663,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  193732,
+                        "overkill":  128,
+                        "events":  [
+                                       {
+                                           "timestamp":  11868091,
+                                           "type":  "damage",
+                                           "sourceID":  234,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  2551,
+                                           "unmitigatedAmount":  4889,
+                                           "overkill":  128,
+                                           "absorbed":  2210,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11866074,
+                                           "type":  "damage",
+                                           "sourceID":  234,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  4650,
+                                           "unmitigatedAmount":  4650,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11850376,
+                                           "type":  "damage",
+                                           "sourceID":  224,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Disruption",
+                                                           "guid":  36834,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_arcane_massdispel.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  1940,
+                                           "unmitigatedAmount":  1940,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Burn",
+                                            "guid":  36721,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_fire.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "왁뀨",
+                        "id":  22,
+                        "guid":  18112910,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  11945900,
+                        "fight":  77,
+                        "damage":  {
+                                       "total":  1585,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1584,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  35859,
+                                                             "name":  "Nether Vapor",
+                                                             "total":  1585,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_gathershadows.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Nether Vapor",
+                                                           "total":  1585,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  40,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  40,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  35859,
+                                                                    "name":  "Nether Vapor",
+                                                                    "total":  40,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_gathershadows.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "왁뀨",
+                                                            "total":  40,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  2018,
+                        "overkill":  304,
+                        "events":  [
+                                       {
+                                           "timestamp":  11945899,
+                                           "type":  "damage",
+                                           "sourceID":  237,
+                                           "sourceInstance":  4,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  22,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Vapor",
+                                                           "guid":  35859,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_gathershadows.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  242,
+                                           "mitigated":  547,
+                                           "unmitigatedAmount":  1093,
+                                           "overkill":  304,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11945876,
+                                           "type":  "damage",
+                                           "sourceID":  237,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  22,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Vapor",
+                                                           "guid":  35859,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_gathershadows.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  529,
+                                           "mitigated":  528,
+                                           "unmitigatedAmount":  1057,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11943881,
+                                           "type":  "damage",
+                                           "sourceID":  237,
+                                           "sourceInstance":  4,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  22,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Vapor",
+                                                           "guid":  35859,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_gathershadows.jpg"
+                                                       },
+                                           "fight":  77,
+                                           "hitType":  1,
+                                           "amount":  510,
+                                           "mitigated":  509,
+                                           "unmitigatedAmount":  1019,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Nether Vapor",
+                                            "guid":  35859,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_gathershadows.jpg"
+                                        }
+                    }
+                ]
+}

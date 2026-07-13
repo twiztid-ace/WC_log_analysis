@@ -1,0 +1,191 @@
+{
+    "entries":  [
+                    {
+                        "name":  "雷神永信",
+                        "id":  7,
+                        "guid":  81575577,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  7812143,
+                        "fight":  50,
+                        "damage":  {
+                                       "total":  12901,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  111,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37871,
+                                                             "name":  "Freeze",
+                                                             "total":  7327,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_glacier.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  4130,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  820,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  41932,
+                                                             "name":  "Carnivorous Bite",
+                                                             "total":  624,
+                                                             "type":  1,
+                                                             "icon":  "ability_druid_rake.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Water Globule",
+                                                           "total":  8147,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  4130,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  624,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2812,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1969,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  843,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  2603,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  209,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "有待",
+                                                            "total":  1969,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "雷神永信",
+                                                            "total":  843,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  32375,
+                        "overkill":  540,
+                        "events":  [
+                                       {
+                                           "timestamp":  7812124,
+                                           "type":  "damage",
+                                           "sourceID":  115,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  7,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Freeze",
+                                                           "guid":  37871,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_glacier.jpg"
+                                                       },
+                                           "fight":  50,
+                                           "hitType":  1,
+                                           "amount":  6787,
+                                           "unmitigatedAmount":  7327,
+                                           "overkill":  540,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  7811266,
+                                           "type":  "damage",
+                                           "sourceID":  115,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  7,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  50,
+                                           "hitType":  15,
+                                           "amount":  256,
+                                           "mitigated":  2,
+                                           "unmitigatedAmount":  258,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  7810437,
+                                           "type":  "damage",
+                                           "sourceID":  105,
+                                           "sourceInstance":  23,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  7,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Carnivorous Bite",
+                                                           "guid":  41932,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_druid_rake.jpg"
+                                                       },
+                                           "fight":  50,
+                                           "hitType":  1,
+                                           "amount":  416,
+                                           "unmitigatedAmount":  416,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Freeze",
+                                            "guid":  37871,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_glacier.jpg"
+                                        }
+                    }
+                ]
+}

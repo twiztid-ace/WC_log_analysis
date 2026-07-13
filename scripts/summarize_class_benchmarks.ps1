@@ -327,6 +327,31 @@ $cooldownGuidsByClass = @{
         "Fear Ward"          = @(6346)
         "Dark Rune"          = @(27869)
     }
+    # Confirmed against a real Crowns report (XJp8vAxzM4KtHYyb, 10 real boss
+    # kills, 2,253 real cast events) before this entry was added - see
+    # pull_top100_paladin.ps1's header for the full discovery writeup. Holy
+    # Shock's CAST (guid 33072) is tracked here with self-vs-other targeting
+    # like Swiftmend/Earth Shield/Power Word: Shield (real mixed targeting) -
+    # real finding, confirmed against the full Top 100 sample: the resulting
+    # HEAL lands under a genuinely different guid (33074, also named "Holy
+    # Shock"), so it's picked up automatically by the guid-grouping spell-
+    # composition logic elsewhere in this script, not this table. Divine
+    # Favor and Divine Shield are both self-only. Cleanse, Hand of
+    # Protection, and Blessing of Freedom are genuinely other-targeted. No
+    # Rebirth-equivalent exists for Paladin in this TBC ruleset's in-combat
+    # cast data (confirmed absent across all 2,253 real cast events despite
+    # real deaths occurring - Redemption exists but can't be cast in combat
+    # in this ruleset, so it was never going to appear here regardless) -
+    # not included here, not force-mapped.
+    "Paladin" = [ordered]@{
+        "Holy Shock"          = @(33072)
+        "Divine Favor"        = @(20216)
+        "Divine Shield"       = @(1020)
+        "Cleanse"             = @(4987)
+        "Hand of Protection"  = @(10278)
+        "Blessing of Freedom" = @(1044)
+        "Dark Rune"           = @(27869)
+    }
 }
 if (-not $cooldownGuidsByClass.ContainsKey($ClassName)) {
     Write-Host "ERROR: no cooldown/utility guid table defined for class '$ClassName' in"
@@ -346,9 +371,10 @@ $cooldownGuids = $cooldownGuidsByClass[$ClassName]
 # Priest's real cast data showed the same "Restore Mana" display name under TWO guids
 # (41617, 41618) - matching by name already handles this correctly, no new logic needed.
 $manaPotionNameByClass = @{
-    "Druid"  = "Restore Mana"
-    "Shaman" = "Restore Mana"
-    "Priest" = "Restore Mana"
+    "Druid"   = "Restore Mana"
+    "Shaman"  = "Restore Mana"
+    "Priest"  = "Restore Mana"
+    "Paladin" = "Restore Mana"
 }
 $manaPotionName = $manaPotionNameByClass[$ClassName]
 

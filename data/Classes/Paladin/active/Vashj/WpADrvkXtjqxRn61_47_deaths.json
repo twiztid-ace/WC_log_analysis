@@ -1,0 +1,112 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Imperogue",
+                        "id":  17,
+                        "guid":  76342218,
+                        "type":  "Rogue",
+                        "icon":  "Rogue-Combat",
+                        "timestamp":  12001796,
+                        "fight":  47,
+                        "damage":  {
+                                       "total":  14933,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  6110,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38260,
+                                                             "name":  "Cleave",
+                                                             "total":  7939,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  6994,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Elite",
+                                                           "total":  14933,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  2502,
+                        "overkill":  3929,
+                        "events":  [
+                                       {
+                                           "timestamp":  12001789,
+                                           "type":  "damage",
+                                           "sourceID":  149,
+                                           "sourceInstance":  4,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cleave",
+                                                           "guid":  38260,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  4010,
+                                           "mitigated":  3248,
+                                           "unmitigatedAmount":  11187,
+                                           "overkill":  3929,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  11999287,
+                                           "type":  "damage",
+                                           "sourceID":  149,
+                                           "sourceInstance":  4,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  47,
+                                           "hitType":  1,
+                                           "amount":  6994,
+                                           "mitigated":  2862,
+                                           "unmitigatedAmount":  9856,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cleave",
+                                            "guid":  38260,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    }
+                ]
+}

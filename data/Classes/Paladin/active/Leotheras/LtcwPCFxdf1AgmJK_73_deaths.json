@@ -1,0 +1,323 @@
+{
+    "entries":  [
+                    {
+                        "name":  "글로넷",
+                        "id":  34,
+                        "guid":  31154561,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  9296260,
+                        "fight":  73,
+                        "damage":  {
+                                       "total":  10687,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  963,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  9079,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37675,
+                                                             "name":  "Chaos Blast",
+                                                             "total":  1608,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_felflamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  10687,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  807,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  807,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  807,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "자유새술사",
+                                                            "total":  807,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  9006,
+                        "overkill":  567,
+                        "events":  [
+                                       {
+                                           "timestamp":  9296260,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  1,
+                                           "amount":  1808,
+                                           "unmitigatedAmount":  2375,
+                                           "overkill":  567,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9294204,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Chaos Blast",
+                                                           "guid":  37675,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  1,
+                                           "amount":  1608,
+                                           "mitigated":  67,
+                                           "unmitigatedAmount":  1675,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  9293256,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  1,
+                                           "amount":  2375,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "오크흑마법사",
+                        "id":  19,
+                        "guid":  15892464,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  9346006,
+                        "fight":  73,
+                        "damage":  {
+                                       "total":  13363,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13363,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  13363,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  1611,
+                        "events":  [
+                                       {
+                                           "timestamp":  9345988,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  2,
+                                           "amount":  11752,
+                                           "unmitigatedAmount":  7780,
+                                           "overkill":  1611,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "제베",
+                        "id":  23,
+                        "guid":  21712063,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  9350132,
+                        "fight":  73,
+                        "damage":  {
+                                       "total":  14305,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1360,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  14305,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  14305,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  900,
+                        "overkill":  3809,
+                        "events":  [
+                                       {
+                                           "timestamp":  9350106,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  15,
+                                           "amount":  1805,
+                                           "unmitigatedAmount":  4328,
+                                           "overkill":  3809,
+                                           "isAoE":  false,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  9349206,
+                                           "type":  "damage",
+                                           "sourceID":  216,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  73,
+                                           "hitType":  1,
+                                           "amount":  8691,
+                                           "mitigated":  1360,
+                                           "unmitigatedAmount":  10051,
+                                           "isAoE":  false,
+                                           "sourceMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

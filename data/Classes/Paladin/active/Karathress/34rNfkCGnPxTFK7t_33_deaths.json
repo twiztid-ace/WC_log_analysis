@@ -1,0 +1,550 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Noréx",
+                        "id":  25,
+                        "guid":  73387401,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  5097043,
+                        "fight":  33,
+                        "damage":  {
+                                       "total":  12449,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1641,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  7604,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  4845,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  7604,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  4845,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2513,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  2513,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  2513,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Noréx",
+                                                            "total":  2513,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  30772,
+                        "overkill":  220,
+                        "events":  [
+                                       {
+                                           "timestamp":  5097042,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  2562,
+                                           "mitigated":  309,
+                                           "unmitigatedAmount":  3091,
+                                           "overkill":  220,
+                                           "isAoE":  true,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  3
+                                       },
+                                       {
+                                           "timestamp":  5093395,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  4845,
+                                           "unmitigatedAmount":  4845,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  3
+                                       },
+                                       {
+                                           "timestamp":  5082446,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  16,
+                                           "amount":  2148,
+                                           "mitigated":  1034,
+                                           "unmitigatedAmount":  3182,
+                                           "resisted":  796,
+                                           "isAoE":  true,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  3
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Bolt Volley",
+                                            "guid":  38335,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tryna",
+                        "id":  5,
+                        "guid":  83819689,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  5139281,
+                        "fight":  33,
+                        "damage":  {
+                                       "total":  13010,
+                                       "totalReduced":  10810,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  6615,
+                                                             "totalReduced":  4415,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  6395,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6615,
+                                                           "totalReduced":  4415,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  6395,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4170,
+                                        "totalReduced":  1970,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2200,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1970,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  4170,
+                                                                    "totalReduced":  1970,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Boaryy",
+                                                            "total":  4170,
+                                                            "totalReduced":  1970,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  45928,
+                        "overkill":  1089,
+                        "events":  [
+                                       {
+                                           "timestamp":  5139263,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  5306,
+                                           "unmitigatedAmount":  6395,
+                                           "overkill":  1089,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5135952,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  2173,
+                                           "unmitigatedAmount":  2173,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  5114196,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  2242,
+                                           "unmitigatedAmount":  2242,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Shrimpxy",
+                        "id":  16,
+                        "guid":  78827388,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  5149689,
+                        "fight":  33,
+                        "damage":  {
+                                       "total":  12660,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1242,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  8198,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  3729,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32220,
+                                                             "name":  "Judgement of Blood",
+                                                             "total":  505,
+                                                             "type":  2,
+                                                             "icon":  "spell_shadow_lifedrain.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32221,
+                                                             "name":  "Seal of Blood",
+                                                             "total":  228,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_sealofblood.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  11927,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Shrimpxy",
+                                                           "total":  733,
+                                                           "type":  "Paladin"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  7049,
+                        "overkill":  2723,
+                        "events":  [
+                                       {
+                                           "timestamp":  5149689,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  5475,
+                                           "unmitigatedAmount":  8198,
+                                           "overkill":  2723,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5148685,
+                                           "type":  "damage",
+                                           "sourceID":  16,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Judgement of Blood",
+                                                           "guid":  32220,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_shadow_lifedrain.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  505,
+                                           "unmitigatedAmount":  505,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  5148170,
+                                           "type":  "damage",
+                                           "sourceID":  16,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Seal of Blood",
+                                                           "guid":  32221,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_sealofblood.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  53,
+                                           "unmitigatedAmount":  53,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Odilazer",
+                        "id":  4,
+                        "guid":  85020720,
+                        "type":  "Druid",
+                        "icon":  "Druid-Balance",
+                        "timestamp":  5173058,
+                        "fight":  33,
+                        "damage":  {
+                                       "total":  10882,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  10882,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  10882,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  1578,
+                        "events":  [
+                                       {
+                                           "timestamp":  5173038,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  33,
+                                           "hitType":  1,
+                                           "amount":  9304,
+                                           "unmitigatedAmount":  10882,
+                                           "overkill":  1578,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    }
+                ]
+}

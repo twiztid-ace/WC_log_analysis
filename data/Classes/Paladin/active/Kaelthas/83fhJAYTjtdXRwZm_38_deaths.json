@@ -1,0 +1,724 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Wallyfredo",
+                        "id":  6,
+                        "guid":  49691903,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  6513901,
+                        "fight":  38,
+                        "damage":  {
+                                       "total":  20074,
+                                       "totalReduced":  17914,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36971,
+                                                             "name":  "Fireball",
+                                                             "total":  12938,
+                                                             "totalReduced":  12562,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_flamebolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37018,
+                                                             "name":  "Conflagration",
+                                                             "total":  7136,
+                                                             "totalReduced":  5352,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_incinerate.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Grand Astromancer Capernian",
+                                                           "total":  20074,
+                                                           "totalReduced":  17914,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  7611,
+                                        "totalReduced":  5451,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  3097,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2354,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2160,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37018,
+                                                                    "name":  "Conflagration",
+                                                                    "total":  3849,
+                                                                    "totalReduced":  2065,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_incinerate.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36971,
+                                                                    "name":  "Fireball",
+                                                                    "total":  3762,
+                                                                    "totalReduced":  3386,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_flamebolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Kvold",
+                                                            "total":  4514,
+                                                            "totalReduced":  2354,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Ysae",
+                                                            "total":  3097,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  7115,
+                        "overkill":  1412,
+                        "events":  [
+                                       {
+                                           "timestamp":  6513900,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Fireball",
+                                                           "guid":  36971,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_flamebolt.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  4727,
+                                           "unmitigatedAmount":  6515,
+                                           "overkill":  1412,
+                                           "absorbed":  376,
+                                           "isAoE":  false,
+                                           "sourceMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  6513789,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Conflagration",
+                                                           "guid":  37018,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_incinerate.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  0,
+                                           "unmitigatedAmount":  892,
+                                           "absorbed":  892,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  6512783,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Conflagration",
+                                                           "guid":  37018,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_incinerate.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  0,
+                                           "unmitigatedAmount":  892,
+                                           "absorbed":  892,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  4
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Fireball",
+                                            "guid":  36971,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_flamebolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Blzd",
+                        "id":  24,
+                        "guid":  55637444,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Holy",
+                        "timestamp":  6674237,
+                        "fight":  38,
+                        "damage":  {
+                                       "total":  13223,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36971,
+                                                             "name":  "Fireball",
+                                                             "total":  6787,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_flamebolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36970,
+                                                             "name":  "Arcane Burst",
+                                                             "total":  4636,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37018,
+                                                             "name":  "Conflagration",
+                                                             "total":  1800,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_incinerate.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Grand Astromancer Capernian",
+                                                           "total":  13223,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  1812,
+                        "overkill":  3706,
+                        "events":  [
+                                       {
+                                           "timestamp":  6674213,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Burst",
+                                                           "guid":  36970,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  930,
+                                           "unmitigatedAmount":  4636,
+                                           "overkill":  3706,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  6673398,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Conflagration",
+                                                           "guid":  37018,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_incinerate.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  900,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  6672795,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Fireball",
+                                                           "guid":  36971,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_flamebolt.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  6787,
+                                           "unmitigatedAmount":  6787,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcane Burst",
+                                            "guid":  36970,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Cigarron",
+                        "id":  29,
+                        "guid":  43987681,
+                        "type":  "Rogue",
+                        "icon":  "Rogue-Combat",
+                        "timestamp":  6710506,
+                        "fight":  38,
+                        "damage":  {
+                                       "total":  12125,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  4122,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37036,
+                                                             "name":  "Bomb",
+                                                             "total":  12125,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Master Engineer Telonicus",
+                                                           "total":  12125,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1472,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1472,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37036,
+                                                                    "name":  "Bomb",
+                                                                    "total":  1472,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Kvold",
+                                                            "total":  1472,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3166,
+                        "overkill":  89,
+                        "events":  [
+                                       {
+                                           "timestamp":  6710499,
+                                           "type":  "damage",
+                                           "sourceID":  91,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  29,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  4033,
+                                           "mitigated":  4122,
+                                           "unmitigatedAmount":  8244,
+                                           "overkill":  89,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  6707333,
+                                           "type":  "damage",
+                                           "sourceID":  91,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  29,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  8003,
+                                           "unmitigatedAmount":  8003,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Bomb",
+                                            "guid":  37036,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Yuyitwo",
+                        "id":  27,
+                        "guid":  49451253,
+                        "type":  "Rogue",
+                        "icon":  "Rogue-Combat",
+                        "timestamp":  6710506,
+                        "fight":  38,
+                        "damage":  {
+                                       "total":  21100,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37036,
+                                                             "name":  "Bomb",
+                                                             "total":  14716,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37016,
+                                                             "name":  "Shield Spike",
+                                                             "total":  2863,
+                                                             "type":  1,
+                                                             "icon":  "inv_ammo_arrow_01.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36985,
+                                                             "name":  "Holy Nova",
+                                                             "total":  2033,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_holybolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36989,
+                                                             "name":  "Frost Nova",
+                                                             "total":  1488,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostnova.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Master Engineer Telonicus",
+                                                           "total":  14716,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Phaseshift Bulwark",
+                                                           "total":  2863,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Cosmic Infuser",
+                                                           "total":  2033,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Staff of Disintegration",
+                                                           "total":  1488,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  8886,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  4341,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  2656,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1889,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37016,
+                                                                    "name":  "Shield Spike",
+                                                                    "total":  2863,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_ammo_arrow_01.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37036,
+                                                                    "name":  "Bomb",
+                                                                    "total":  2656,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36985,
+                                                                    "name":  "Holy Nova",
+                                                                    "total":  1879,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_holybolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36989,
+                                                                    "name":  "Frost Nova",
+                                                                    "total":  1488,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostnova.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Ysae",
+                                                            "total":  5109,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Ajopringue",
+                                                            "total":  1889,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Kvold",
+                                                            "total":  1888,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  109663,
+                        "overkill":  1846,
+                        "events":  [
+                                       {
+                                           "timestamp":  6710488,
+                                           "type":  "damage",
+                                           "sourceID":  91,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  27,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  6100,
+                                           "unmitigatedAmount":  7946,
+                                           "overkill":  1846,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  6707333,
+                                           "type":  "damage",
+                                           "sourceID":  91,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  27,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  6770,
+                                           "unmitigatedAmount":  6770,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  6620514,
+                                           "type":  "damage",
+                                           "sourceID":  96,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  27,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shield Spike",
+                                                           "guid":  37016,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_ammo_arrow_01.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  1052,
+                                           "unmitigatedAmount":  1052,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Bomb",
+                                            "guid":  37036,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Kiath",
+                        "id":  23,
+                        "guid":  51924997,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  6978506,
+                        "fight":  38,
+                        "damage":  {
+                                       "total":  145382,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36731,
+                                                             "name":  "Flame Strike",
+                                                             "total":  145382,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  145382,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  135916,
+                        "events":  [
+                                       {
+                                           "timestamp":  6978484,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Strike",
+                                                           "guid":  36731,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  38,
+                                           "hitType":  1,
+                                           "amount":  9466,
+                                           "unmitigatedAmount":  132165,
+                                           "overkill":  135916,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Flame Strike",
+                                            "guid":  36731,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                        }
+                    }
+                ]
+}

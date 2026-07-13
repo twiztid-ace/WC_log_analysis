@@ -1,0 +1,132 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Athleet",
+                        "id":  17,
+                        "guid":  54205836,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  6746171,
+                        "fight":  18,
+                        "damage":  {
+                                       "total":  12298,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  401,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  39414,
+                                                             "name":  "Arcane Missiles",
+                                                             "total":  9529,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2769,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  12298,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  2110,
+                        "overkill":  874,
+                        "events":  [
+                                       {
+                                           "timestamp":  6746136,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  18,
+                                           "hitType":  1,
+                                           "amount":  1895,
+                                           "unmitigatedAmount":  2398,
+                                           "overkill":  874,
+                                           "isAoE":  true,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  6746031,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  18,
+                                           "hitType":  1,
+                                           "amount":  3465,
+                                           "unmitigatedAmount":  3000,
+                                           "isAoE":  false,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  6745034,
+                                           "type":  "damage",
+                                           "sourceID":  90,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  18,
+                                           "hitType":  16,
+                                           "amount":  2599,
+                                           "mitigated":  401,
+                                           "unmitigatedAmount":  3000,
+                                           "resisted":  750,
+                                           "isAoE":  false,
+                                           "targetMarker":  1
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Blinding Light",
+                                            "guid":  33009,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_starfall.jpg"
+                                        }
+                    }
+                ]
+}

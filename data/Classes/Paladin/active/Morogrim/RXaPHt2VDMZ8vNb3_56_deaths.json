@@ -1,0 +1,160 @@
+{
+    "entries":  [
+                    {
+                        "name":  "굿밤",
+                        "id":  19,
+                        "guid":  17989125,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  7099026,
+                        "fight":  56,
+                        "damage":  {
+                                       "total":  18646,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2910,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  8981,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37852,
+                                                             "name":  "Watery Grave Explosion",
+                                                             "total":  4826,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_arcticwinds.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  3893,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  946,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  8981,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "굿밤",
+                                                           "total":  4826,
+                                                           "type":  "Priest"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  3893,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  946,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  12589,
+                        "overkill":  769,
+                        "events":  [
+                                       {
+                                           "timestamp":  7084872,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  56,
+                                           "hitType":  1,
+                                           "amount":  946,
+                                           "unmitigatedAmount":  946,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  7084009,
+                                           "type":  "damage",
+                                           "sourceID":  543,
+                                           "sourceInstance":  21,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  56,
+                                           "hitType":  1,
+                                           "amount":  1533,
+                                           "mitigated":  496,
+                                           "unmitigatedAmount":  2029,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  7084009,
+                                           "type":  "damage",
+                                           "sourceID":  543,
+                                           "sourceInstance":  20,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  56,
+                                           "hitType":  1,
+                                           "amount":  1560,
+                                           "mitigated":  506,
+                                           "unmitigatedAmount":  2066,
+                                           "isAoE":  false
+                                       }
+                                   ]
+                    }
+                ]
+}

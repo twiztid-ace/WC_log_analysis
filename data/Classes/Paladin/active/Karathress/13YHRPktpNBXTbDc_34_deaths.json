@@ -1,0 +1,435 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Démomaniac",
+                        "id":  9,
+                        "guid":  59411882,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Affliction",
+                        "timestamp":  4455890,
+                        "fight":  34,
+                        "damage":  {
+                                       "total":  15178,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  6277,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  29436,
+                                                             "name":  "Leeching Throw",
+                                                             "total":  3150,
+                                                             "type":  8,
+                                                             "icon":  "ability_hunter_aimedshot.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  2979,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  2772,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  6277,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Sharkkis",
+                                                           "total":  3150,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  2979,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  2772,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  311,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  311,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38441,
+                                                                    "name":  "Cataclysmic Bolt",
+                                                                    "total":  311,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_shadowfury.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Missclic",
+                                                            "total":  311,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  25343,
+                        "overkill":  2313,
+                        "events":  [
+                                       {
+                                           "timestamp":  4455855,
+                                           "type":  "damage",
+                                           "sourceID":  125,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  666,
+                                           "unmitigatedAmount":  2979,
+                                           "overkill":  2313,
+                                           "isAoE":  true,
+                                           "sourceMarker":  5
+                                       },
+                                       {
+                                           "timestamp":  4453871,
+                                           "type":  "damage",
+                                           "sourceID":  122,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  6277,
+                                           "unmitigatedAmount":  6277,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  4440521,
+                                           "type":  "damage",
+                                           "sourceID":  124,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  9,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Leeching Throw",
+                                                           "guid":  29436,
+                                                           "type":  8,
+                                                           "abilityIcon":  "ability_hunter_aimedshot.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  525,
+                                           "unmitigatedAmount":  525,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  7
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Bolt Volley",
+                                            "guid":  38335,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Ðàn",
+                        "id":  37,
+                        "guid":  54956057,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Gladiator",
+                        "timestamp":  4514193,
+                        "fight":  34,
+                        "damage":  {
+                                       "total":  31525,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  61867,
+                                       "blocked":  1825,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  22580,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  5705,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38358,
+                                                             "name":  "Tidal Surge",
+                                                             "total":  3240,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_summonwaterelemental.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  31525,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  15992,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  6897,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  379,
+                                                              "name":  "Earth Shield",
+                                                              "total":  5600,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_skinofearth.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  3495,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  12029,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  2334,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38358,
+                                                                    "name":  "Tidal Surge",
+                                                                    "total":  1629,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_summonwaterelemental.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Jeanlàsalve",
+                                                            "total":  15992,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  29488,
+                        "overkill":  279,
+                        "events":  [
+                                       {
+                                           "timestamp":  4514182,
+                                           "type":  "damage",
+                                           "sourceID":  125,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  37,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  2169,
+                                           "mitigated":  5951,
+                                           "unmitigatedAmount":  8399,
+                                           "overkill":  279,
+                                           "isAoE":  false,
+                                           "sourceMarker":  5
+                                       },
+                                       {
+                                           "timestamp":  4512171,
+                                           "type":  "damage",
+                                           "sourceID":  125,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  37,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  2438,
+                                           "mitigated":  5924,
+                                           "unmitigatedAmount":  8362,
+                                           "isAoE":  false,
+                                           "sourceMarker":  5
+                                       },
+                                       {
+                                           "timestamp":  4510161,
+                                           "type":  "damage",
+                                           "sourceID":  125,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  37,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  1893,
+                                           "mitigated":  4602,
+                                           "unmitigatedAmount":  6495,
+                                           "isAoE":  false,
+                                           "sourceMarker":  5
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Jeanlàsalve",
+                        "id":  18,
+                        "guid":  57655926,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  4522541,
+                        "fight":  34,
+                        "damage":  {
+                                       "total":  9609,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  9609,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  9609,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  7375,
+                        "events":  [
+                                       {
+                                           "timestamp":  4522517,
+                                           "type":  "damage",
+                                           "sourceID":  122,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  2234,
+                                           "unmitigatedAmount":  9609,
+                                           "overkill":  7375,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    }
+                ]
+}

@@ -79,15 +79,49 @@ $cooldownGuidsByClass = @{
         "Fear Ward"          = @(6346)
         "Dark Rune"          = @(27869)
     }
+    # Confirmed against a real Crowns report (XJp8vAxzM4KtHYyb, 10 real boss
+    # kills, 2,253 real cast events) before this entry was added - see
+    # pull_top100_paladin.ps1's header for the full discovery writeup. Holy
+    # Shock's CAST (guid 33072) is tracked here with self-vs-other targeting
+    # like Swiftmend/Earth Shield/Power Word: Shield (mixed real targeting, 3
+    # self / 5 other) - real finding, confirmed against the full Top 100
+    # sample (not just Crowns): the resulting HEAL lands under a genuinely
+    # DIFFERENT guid (33074, also named "Holy Shock"), so it flows into
+    # SpellRows/BMSpells automatically via the existing guid-grouping logic
+    # below, not this table. Crowns's own 8 real casts never happened to land
+    # a recorded heal this raid (guid 33074 doesn't appear in her own
+    # healing_events.json), which is a real fact about her specific raid
+    # night, not a claim that Holy Shock can't heal. Divine Favor and Divine
+    # Shield are both
+    # self-only (no real other-actor target). Cleanse, Hand of Protection, and
+    # Blessing of Freedom are all genuinely other-targeted utility/dispel
+    # casts (the latter two rare - ~once per 10 fights each). No
+    # Rebirth-equivalent exists for Paladin in this TBC ruleset's in-combat
+    # cast data - confirmed absent across all 2,253 real cast events despite
+    # real deaths occurring (Paladins do have Redemption, their own
+    # resurrection spell, but it cannot be cast on an in-combat target in this
+    # ruleset, so it was never going to appear in a boss-kill-window pull
+    # regardless) - omitted here rather than force-mapped or left as a
+    # permanent zero row.
+    "Paladin" = [ordered]@{
+        "Holy Shock"          = @(33072)
+        "Divine Favor"        = @(20216)
+        "Divine Shield"       = @(1020)
+        "Cleanse"             = @(4987)
+        "Hand of Protection"  = @(10278)
+        "Blessing of Freedom" = @(1044)
+        "Dark Rune"           = @(27869)
+    }
 }
 $manaPotionNameByClass = @{
-    "Druid"  = "Restore Mana"
-    "Shaman" = "Restore Mana"
-    "Priest" = "Restore Mana"
+    "Druid"   = "Restore Mana"
+    "Shaman"  = "Restore Mana"
+    "Priest"  = "Restore Mana"
+    "Paladin" = "Restore Mana"
 }
 
 if (-not $cooldownGuidsByClass.ContainsKey($ClassName)) {
-    Write-Host "ERROR: '$ClassName' has no real cooldown-guid table in this script yet - only Druid, Shaman, and Priest are wired up today."
+    Write-Host "ERROR: '$ClassName' has no real cooldown-guid table in this script yet - only Druid, Shaman, Priest, and Paladin are wired up today."
     Write-Host "       Add a real, VERIFIED guid table for '$ClassName' (never guess at guids) before running this for that class."
     exit 1
 }

@@ -1,0 +1,318 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Kibu",
+                        "id":  17,
+                        "guid":  42831647,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  3683566,
+                        "fight":  39,
+                        "damage":  {
+                                       "total":  14294,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2796,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  7754,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  4226,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38366,
+                                                             "name":  "Multi-Toss",
+                                                             "total":  2314,
+                                                             "type":  1,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  7754,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  4226,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Sharkkis",
+                                                           "total":  2314,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4496,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  2547,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1949,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38366,
+                                                                    "name":  "Multi-Toss",
+                                                                    "total":  2314,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_upgrademoonglaive.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  2182,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Kibu",
+                                                            "total":  2547,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Quuii",
+                                                            "total":  1949,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  80057,
+                        "overkill":  399,
+                        "events":  [
+                                       {
+                                           "timestamp":  3683552,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  7355,
+                                           "unmitigatedAmount":  7754,
+                                           "overkill":  399,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  3622929,
+                                           "type":  "damage",
+                                           "sourceID":  147,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Multi-Toss",
+                                                           "guid":  38366,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  2314,
+                                           "mitigated":  1389,
+                                           "unmitigatedAmount":  3703,
+                                           "isAoE":  false,
+                                           "sourceMarker":  7,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  3610628,
+                                           "type":  "damage",
+                                           "sourceID":  143,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  16,
+                                           "amount":  2144,
+                                           "mitigated":  714,
+                                           "unmitigatedAmount":  2858,
+                                           "resisted":  714,
+                                           "isAoE":  true,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  1
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Glizzytwist",
+                        "id":  15,
+                        "guid":  58172702,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  3691097,
+                        "fight":  39,
+                        "damage":  {
+                                       "total":  13074,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  7614,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  5460,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  7614,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  5460,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2203,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2203,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38296,
+                                                                    "name":  "Scorch",
+                                                                    "total":  2203,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_searingtotem.jpg",
+                                                                    "petName":  "Spitfire Totem"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Quuii",
+                                                            "total":  2203,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  8999,
+                        "overkill":  1642,
+                        "events":  [
+                                       {
+                                           "timestamp":  3691075,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  5972,
+                                           "unmitigatedAmount":  7614,
+                                           "overkill":  1642,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  2
+                                       },
+                                       {
+                                           "timestamp":  3682076,
+                                           "type":  "damage",
+                                           "sourceID":  152,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  39,
+                                           "hitType":  1,
+                                           "amount":  5460,
+                                           "unmitigatedAmount":  5460,
+                                           "isAoE":  true,
+                                           "targetMarker":  2
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    }
+                ]
+}
