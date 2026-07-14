@@ -69,8 +69,9 @@ output carefully:
 - Note the resolved class from the "Found '<name>' in friendlies[]: <Class>, ..."
   line — this drives every step after this one. Check it against the class-support
   gate above before continuing.
-- Note the resolved raid date (used to construct `docs\{healer}\{date}\` paths
-  later).
+- Note the resolved raid date (used only for display text later — the actual
+  `data\Characters\{name}\{code}\` and `docs\{healer}\{code}\` folders are keyed
+  by report code, not date, since two raids can happen on the same calendar day).
 
 ### 3. Update the matching class's Top 100 benchmark data
 ```
@@ -97,7 +98,7 @@ parses — cheap, local, no API calls.
 ```
 powershell -ExecutionPolicy Bypass -File scripts\build_boss_report_data.ps1 -CharacterName "<name>" -ReportCode "<code>" -ClassName "<Class>"
 ```
-Writes `data\Characters\<name>\<date>\<code>_report_data.json` — one clean JSON with
+Writes `data\Characters\<name>\<code>\<code>_report_data.json` — one clean JSON with
 every real number needed for every boss page and the raid overview: HPS/overheal,
 spell composition (guid-grouped, ready to union against the benchmark), cooldown
 counts/self%/real per-cast targets, HPM, active time, target distribution,
@@ -129,7 +130,7 @@ everywhere else in this pipeline. Zero API calls, zero judgment calls of its own
 
 ### 7. Author findings.json (the only step touching an LLM)
 Read `<code>_report_data.json` **and** `<code>_analysis.json`. Write
-`data\Characters\<name>\<date>\<code>_findings.json` containing only the
+`data\Characters\<name>\<code>\<code>_findings.json` containing only the
 free-text strings the analysis script can't produce on its own — per boss slug,
 `SCORECARD_FINDING`, `SPELL_COMPOSITION_FINDING`, `COOLDOWN_FINDING`, and
 `TARGET_FINDING` (each 1-2 plain-text sentences, no markup), plus a
@@ -180,25 +181,44 @@ powershell -ExecutionPolicy Bypass -File scripts\render_healer_report.ps1 -Chara
 ```
 Merges `report_data.json` + `analysis.json` + `findings.json` + the class's boss
 template + `raid_overview_template.html` into
-`docs\<healer>\<date>\healer_audit_<bossSlug>.html` (one per boss) and
-`docs\<healer>\<date>\index.html` — deterministic, safe to re-run any time
-benchmark data shifts (new Top 100 parses, re-entries) since it always rebuilds
-from the current JSON. **Refuses to write into any `\<date>-v1\`-suffixed output
-folder** — that guard is enforced in code, not just documented here. If it exits
-with an "unfilled `{{TOKEN}}`" error, that means a required findings.json key is
+`docs\<healer>\<code>\healer_audit_<bossSlug>.html` (one per boss) and
+`docs\<healer>\<code>\index.html` — the output folder always mirrors whatever
+`data\Characters\<name>\` folder the input JSON was found in (a report code for
+anything pulled after the ReportCode-keyed folder change, or a legacy
+`yyyy-MM-dd` date for anything pulled before it), so this needs no `-date`
+parameter of its own. Deterministic, safe to re-run any time benchmark data
+shifts (new Top 100 parses, re-entries) since it always rebuilds from the
+current JSON. **Refuses to write into any `-v1`-suffixed output folder** — that
+guard is enforced in code, not just documented here. If it exits with an
+"unfilled `{{TOKEN}}`" error, that means a required findings.json key is
 missing or misspelled — fix `findings.json`, don't patch the rendered HTML by hand.
 
 ### 9. Update hub pages (script, no LLM)
 ```
 powershell -ExecutionPolicy Bypass -File scripts\update_hub_pages.ps1 -CharacterName "<name>" -RaidDate "<date>" -ReportCode "<code>" -ClassName "<Class>" -BossesKilled <N> -RaidTitle "<title>" [-IsNewHealer]
 ```
-Surgical upsert only — inserts one new raid-row into `docs\<healer>\index.html`
+`-RaidDate` is display text only (shown next to the raid title on the hub
+page) — the inserted row's link always points at `<code>/index.html`, matching
+step 8's report-code-named output folder exactly. Surgical upsert only —
+inserts one new raid-row into `docs\<healer>\index.html`
 (creating the file from `healer_raidlist_template.html` if this is a brand-new
 healer) and, only with `-IsNewHealer`, one new healer-row into `docs\index.html`.
-Every existing row in both files is left byte-for-byte untouched; re-running it
-for a report code that's already listed is a safe no-op (it detects the
-duplicate and skips). `-BossesKilled` is the boss count actually killed this
-raid night (e.g. `9` for a raid that downed 9 of 10 bosses) — don't hardcode 10.
+Every existing row in both files is preserved; re-running it for a report code
+that's already listed is a safe no-op (it detects the duplicate and skips).
+`-BossesKilled` is the boss count actually killed this raid night (e.g. `9` for
+a raid that downed 9 of 10 bosses) — don't hardcode 10.
+
+**The healer's raid-list is always re-sorted by real raid date, descending,
+after the insert** — never just prepended to the top. Report-code-keyed
+folders mean generation order no longer tracks raid-chronology order (a
+backfilled older raid generated after a newer one is real, not hypothetical),
+so relying on insertion order would silently produce a wrong-order list. If you
+ever need to re-sort an existing healer's list without inserting anything (e.g.
+after a manual edit), run the same script with just `-CharacterName` and
+`-ResortOnly` — it re-parses every existing row's own date text (tolerating the
+two real date-text formats seen across already-published pages) and rewrites
+the list in place. A row whose date can't be parsed sorts last with a
+`WARNING`, never silently dropped.
 
 ## Rules that came from real bugs
 
@@ -257,7 +277,7 @@ look if a rendered page looks wrong, rather than re-deriving the fix by hand.
   in `findings.json`'s prose (a stated number that doesn't match the real data)
   is the one class of error the scripts can't catch for you.
 - Confirm no `-v1` folder was touched (`git status` should show only new files
-  under the plain `\<date>\` folder, plus the two hub pages from step 9 if they
+  under the plain `\<code>\` folder, plus the two hub pages from step 9 if they
   changed).
 - Confirm the raid-night count in `docs\<healer>\index.html` (bumped
   automatically by step 9) matches the number of real boss pages actually built.

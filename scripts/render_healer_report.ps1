@@ -2,8 +2,12 @@
 #
 # Deterministic renderer: report_data.json + {code}_analysis.json +
 # {code}_findings.json + the class's boss template + raid_overview_template
-# -> docs\{healer}\{date}\healer_audit_*.html (one per boss) + index.html
-# (raid overview). Zero LLM involvement - every mechanical value (stat grids,
+# -> docs\{healer}\{outputFolder}\healer_audit_*.html (one per boss) + index.html
+# (raid overview). {outputFolder} always mirrors whatever the input data folder
+# under data\Characters\{healer}\ is named - a ReportCode for anything pulled
+# after the ReportCode-keyed folder change (see pull_character_TEMPLATE.ps1),
+# or a legacy yyyy-MM-dd date for anything pulled before it. Zero LLM involvement
+# - every mechanical value (stat grids,
 # spell-composition bars, cooldown tables, target-distribution bars, gear
 # checklist) is derived straight from data; the ONLY free-text content comes
 # from findings.json, which an LLM authors separately (see
@@ -85,13 +89,28 @@ $reportData = Get-Content $reportDataFile.FullName -Raw -Encoding UTF8 | Convert
 $analysis = Get-Content $analysisPath -Raw -Encoding UTF8 | ConvertFrom-Json
 $findings = Get-Content $findingsPath -Raw -Encoding UTF8 | ConvertFrom-Json
 
-# ----- Resolve raid date from the folder name (yyyy-MM-dd), same convention
-# every other script in this pipeline uses. -----
+# ----- Output folder name always mirrors the input data folder's own name,
+# whatever that happens to be - a ReportCode for anything pulled after the
+# ReportCode-keyed folder change, or a legacy yyyy-MM-dd date for anything
+# pulled before it. This is what lets an old, already-published date-named
+# docs\ folder keep getting refreshed in place rather than a re-run suddenly
+# forking off a second, report-code-named copy of the same report. -----
 $folderName = Split-Path $charDir -Leaf
-$raidDate = $null
-try { $raidDate = [datetime]::ParseExact($folderName, "yyyy-MM-dd", $null) } catch { $raidDate = $null }
-$raidDateDisplay = if ($raidDate) { $raidDate.ToString("MMMM d, yyyy") } else { $folderName }
 $raidDateFolder = $folderName
+
+# ----- Resolve the DISPLAY date. Prefer report_data.json's own RaidDate field
+# (present on everything built from a ReportCode-keyed pull); fall back to
+# parsing the folder name as a date for older report_data.json files that
+# predate that field, where the folder name IS the date. -----
+$raidDateDisplay = $null
+$rawRaidDate = if ($reportData.PSObject.Properties.Name -contains "RaidDate") { $reportData.RaidDate } else { $null }
+if ($rawRaidDate) {
+    try { $raidDateDisplay = ([datetime]::ParseExact($rawRaidDate, "yyyy-MM-dd", $null)).ToString("MMMM d, yyyy") }
+    catch { $raidDateDisplay = $rawRaidDate }
+} else {
+    try { $raidDateDisplay = ([datetime]::ParseExact($folderName, "yyyy-MM-dd", $null)).ToString("MMMM d, yyyy") }
+    catch { $raidDateDisplay = $folderName }
+}
 
 # Never write into a preserved v1 folder.
 if ($raidDateFolder.ToLower().EndsWith("-v1")) {

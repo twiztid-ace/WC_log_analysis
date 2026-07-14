@@ -121,9 +121,12 @@
 
   <div class="section">
     <div class="raid-list">
-      <!-- One entry per raid night analyzed. Copy this block for each new raid. -->
+      <!-- One entry per raid night analyzed. Copy this block for each new raid.
+           href is keyed by REPORT_CODE, not date - two raids can happen on the
+           same calendar date, and render_healer_report.ps1's output folder is
+           always named after the report code for exactly that reason. -->
       <!--@LOOP:RAID_ROW-->
-      <a class="raid-row" href="{{RAID_DATE}}/index.html">
+      <a class="raid-row" href="{{REPORT_CODE}}/index.html">
         <div>
           <div class="raid-title">{{RAID_TITLE}}</div>
           <div class="raid-meta">{{RAID_DATE_DISPLAY}} &nbsp;·&nbsp; report {{REPORT_CODE}}</div>

@@ -7,30 +7,70 @@ This is deliberately NOT a full rescan/rebuild of either file. Several existing
 healer folders have v1 raid nights with no report_data.json backing at all (v1
 predates this JSON pipeline), so a rescan keyed on report_data.json would silently
 drop those rows. Instead this script only ever inserts one new row - every
-existing row in both files is left byte-for-byte untouched.
+OTHER existing row in the healer's raid-list is preserved untouched. The one
+exception: the raid-list is always re-sorted by real raid date, descending,
+after the insert - see "Ordering" below for why this can't just be "always
+insert at the top."
+
+The inserted row links to {ReportCode}/index.html, NOT {RaidDate}/index.html -
+render_healer_report.ps1's output folder is keyed by ReportCode (not raid date,
+since two raids can happen on the same calendar date - see
+pull_character_TEMPLATE.ps1), so the link has to match that folder name exactly.
+-RaidDate is only ever used for the human-readable date text next to the link.
+
+Ordering: a healer's raid-list must always read newest-first. Folders are keyed
+by ReportCode now, not date, so insertion order no longer has any natural
+correlation with raid-chronology - generating an older report AFTER a newer one
+(e.g. backfilling a missed raid night) is a real, expected scenario, not just a
+hypothetical. So every insert re-parses EVERY existing row's own date text,
+combines it with the new row, and rewrites the whole list stably sorted by date
+descending - self-healing regardless of what order rows happen to already be in
+on disk. Existing real pages use two different date-text formats ("July 7,
+2026" and "07.10.2026" - both real, from earlier hand-authored/generated pages,
+never reconciled) - the parser tries both. A row whose date text can't be
+parsed at all is sorted last with a WARNING printed, never silently dropped.
 
 Usage:
   powershell -File scripts\update_hub_pages.ps1 -CharacterName "Crowns" -RaidDate "2026-07-07" `
       -ReportCode "XJp8vAxzM4KtHYyb" -ClassName "Paladin" -BossesKilled 10 -RaidTitle "SSC / TK"
   # add -IsNewHealer only the first time a healer is ever added to the site
+
+  # Re-sort an existing healer's raid-list without inserting anything (e.g. to
+  # verify/fix ordering after a manual edit, or after this script's own sort
+  # logic changes) - only -CharacterName is required:
+  powershell -File scripts\update_hub_pages.ps1 -CharacterName "Crowns" -ResortOnly
 #>
 
 param(
     [Parameter(Mandatory=$true)][string]$CharacterName,
-    [Parameter(Mandatory=$true)][string]$RaidDate,
-    [Parameter(Mandatory=$true)][string]$ReportCode,
-    [Parameter(Mandatory=$true)][string]$ClassName,
-    [Parameter(Mandatory=$true)][int]$BossesKilled,
-    [Parameter(Mandatory=$true)][string]$RaidTitle,
+    [string]$RaidDate,
+    [string]$ReportCode,
+    [string]$ClassName,
+    [int]$BossesKilled,
+    [string]$RaidTitle,
     [int]$TotalBosses = 10,
     [string]$Server = "Dreamscythe",
     [string]$Region = "US",
     [switch]$IsNewHealer,
+    [switch]$ResortOnly,
     [string]$DocsRoot = "docs",
     [string]$TemplatesRoot = "templates"
 )
 
 $ErrorActionPreference = "Stop"
+
+if (-not $ResortOnly) {
+    $missing = @()
+    if (-not $RaidDate)   { $missing += "-RaidDate" }
+    if (-not $ReportCode) { $missing += "-ReportCode" }
+    if (-not $ClassName)  { $missing += "-ClassName" }
+    if (-not $BossesKilled) { $missing += "-BossesKilled" }
+    if (-not $RaidTitle)  { $missing += "-RaidTitle" }
+    if ($missing.Count -gt 0) {
+        Write-Host "ERROR: missing required parameter(s): $($missing -join ', ') (all required unless -ResortOnly is passed)."
+        exit 1
+    }
+}
 
 $classSpecMap = @{
     "Druid"   = "Restoration Druid"
@@ -38,27 +78,102 @@ $classSpecMap = @{
     "Priest"  = "Holy Priest"
     "Paladin" = "Holy Paladin"
 }
-if (-not $classSpecMap.ContainsKey($ClassName)) {
+if ($ClassName -and -not $classSpecMap.ContainsKey($ClassName)) {
     Write-Host "ERROR: unrecognized ClassName '$ClassName' - must be Druid, Shaman, Priest, or Paladin."
     exit 1
 }
-$classSpec = $classSpecMap[$ClassName]
+$classSpec = if ($ClassName) { $classSpecMap[$ClassName] } else { $null }
 $healerSlug = $CharacterName.ToLower()
 
-$raidDateObj = [datetime]::ParseExact($RaidDate, "yyyy-MM-dd", $null)
-$raidDateDisplay = $raidDateObj.ToString("MMMM d, yyyy")
+$raidDateObj = $null
+$raidDateDisplay = $null
+if ($RaidDate) {
+    $raidDateObj = [datetime]::ParseExact($RaidDate, "yyyy-MM-dd", $null)
+    $raidDateDisplay = $raidDateObj.ToString("MMMM d, yyyy")
+}
 
 function Get-PluralizedCount {
     param([int]$Count, [string]$Singular, [string]$Plural)
     if ($Count -eq 1) { return "$Count $Singular" } else { return "$Count $Plural" }
 }
 
+# Tries every real date-text format seen across existing hub pages ("July 7,
+# 2026" and "07.10.2026" both occur on real, already-published pages). Returns
+# $null (never throws) if nothing matches, so a garbled/unexpected row can be
+# handled by the caller (sort last + warn) rather than crashing the whole script.
+function Get-RaidRowDate {
+    param([string]$DateText)
+    $DateText = $DateText.Trim()
+    foreach ($fmt in @("MMMM d, yyyy", "MM.dd.yyyy", "yyyy-MM-dd")) {
+        try { return [datetime]::ParseExact($DateText, $fmt, [System.Globalization.CultureInfo]::InvariantCulture) } catch {}
+    }
+    return $null
+}
+
+# Extracts every <a class="raid-row">...</a> block from the raid-list's raw
+# inner HTML, parses each one's own date text, appends $NewRowHtml (if any),
+# then returns the whole set stably re-joined in date-descending order. Ties
+# (including two rows sharing an identical date, e.g. a v1/v2 pair) keep their
+# relative input order - a newly-appended row is placed after any existing
+# same-date row for exactly that reason.
+function Get-SortedRaidListHtml {
+    param([string]$RowsRawHtml, [string]$NewRowHtml, [Nullable[datetime]]$NewRowDate)
+
+    $rowMatches = [regex]::Matches($RowsRawHtml, '<a class="raid-row".*?</a>', [System.Text.RegularExpressions.RegexOptions]::Singleline)
+    $rows = New-Object System.Collections.Generic.List[object]
+    foreach ($m in $rowMatches) {
+        $block = $m.Value
+        $middleDot = [char]0x00B7
+        $dateMatchPattern = '<div class="raid-meta">(.*?)\s*&nbsp;(?:&middot;|' + $middleDot + ')&nbsp;\s*report'
+        $dateMatch = [regex]::Match($block, $dateMatchPattern, [System.Text.RegularExpressions.RegexOptions]::Singleline)
+        $parsedDate = $null
+        if ($dateMatch.Success) { $parsedDate = Get-RaidRowDate -DateText $dateMatch.Groups[1].Value }
+        if (-not $parsedDate) {
+            $preview = $block.Substring(0, [Math]::Min(100, $block.Length)) -replace "`r?`n\s*", " "
+            Write-Host "  WARNING: could not parse a date out of an existing raid-row - it will sort last. Row starts: $preview..."
+            $parsedDate = [datetime]::MinValue
+        }
+        $rows.Add([PSCustomObject]@{ Html = $block; Date = $parsedDate })
+    }
+
+    if ($NewRowHtml) {
+        $rows.Add([PSCustomObject]@{ Html = $NewRowHtml.Trim(); Date = $NewRowDate })
+    }
+
+    # Sort-Object is a stable sort in Windows PowerShell 5.1 - ties preserve
+    # the order they were added in above, which is what makes the "new row
+    # sorts after an existing same-date row" behavior above actually hold.
+    $sorted = @($rows | Sort-Object -Property Date -Descending)
+    return ($sorted.Html -join "`r`n      ")
+}
+
+# Locates the raid-list container's raw inner HTML by its two guaranteed
+# neighboring markers (every real hub page has <div class="empty-note"> as the
+# very next sibling after raid-list's own rows) rather than a nested-div-aware
+# HTML parse - consistent with every other script in this pipeline (string/
+# regex based, no DOM library).
+function Get-RaidListBounds {
+    param([string]$Html)
+    $listMarker = '<div class="raid-list">'
+    $emptyNoteMarker = '<div class="empty-note">'
+    $listStart = $Html.IndexOf($listMarker)
+    if ($listStart -lt 0) { return $null }
+    $contentStart = $listStart + $listMarker.Length
+    $emptyNoteStart = $Html.IndexOf($emptyNoteMarker, $contentStart)
+    if ($emptyNoteStart -lt 0) { return $null }
+    $closingDivIdx = $Html.LastIndexOf("</div>", $emptyNoteStart)
+    if ($closingDivIdx -lt $contentStart) { return $null }
+    return [PSCustomObject]@{ ContentStart = $contentStart; ContentEnd = $closingDivIdx }
+}
+
 # ----- 1. This healer's own raid-list hub page -----
 $hubDir = Join-Path $DocsRoot $healerSlug
 $hubPath = Join-Path $hubDir "index.html"
 
-$newRowHtml = @"
-      <a class="raid-row" href="$RaidDate/index.html">
+$newRowHtml = $null
+if (-not $ResortOnly) {
+    $newRowHtml = @"
+      <a class="raid-row" href="$ReportCode/index.html">
         <div>
           <div class="raid-title">$RaidTitle</div>
           <div class="raid-meta">$raidDateDisplay &nbsp;&middot;&nbsp; report $ReportCode</div>
@@ -67,9 +182,15 @@ $newRowHtml = @"
         <div class="raid-arrow">$([char]0x2192)</div>
       </a>
 "@
-# &middot; renders as the same middle-dot glyph the existing pages use (&nbsp;·&nbsp; visually) -
+}
+# &middot; renders as the same middle-dot glyph the existing pages use (&nbsp;[middle dot]&nbsp; visually) -
 # written as an HTML entity here instead of a literal non-ASCII char, consistent with this
 # project's PowerShell-source-encoding rule (see ReportRenderLib.psm1's EmDash/RightArrow pattern).
+
+if ($ResortOnly -and -not (Test-Path $hubPath)) {
+    Write-Host "ERROR: -ResortOnly was passed but $hubPath doesn't exist - nothing to resort."
+    exit 1
+}
 
 if (-not (Test-Path $hubPath)) {
     Write-Host "No hub page yet for '$CharacterName' - creating from template."
@@ -100,37 +221,44 @@ if (-not (Test-Path $hubPath)) {
     Write-Host "Wrote $hubPath (new healer hub page, 1 raid night)"
 } else {
     $hub = [System.IO.File]::ReadAllText($hubPath, [System.Text.Encoding]::UTF8)
-    if ($hub.Contains("report $ReportCode")) {
+    if ((-not $ResortOnly) -and $hub.Contains("report $ReportCode")) {
         Write-Host "Report $ReportCode is already listed on $hubPath - skipping insert (no duplicate added)."
     } else {
-        $marker = '<div class="raid-list">'
-        $idx = $hub.IndexOf($marker)
-        if ($idx -lt 0) {
-            Write-Host "ERROR: could not find '<div class=`"raid-list`">' in $hubPath - refusing to guess where to insert."
+        $bounds = Get-RaidListBounds -Html $hub
+        if (-not $bounds) {
+            Write-Host "ERROR: could not locate the raid-list container in $hubPath (expected '<div class=`"raid-list`">' followed by '<div class=`"empty-note`">') - refusing to guess."
             exit 1
         }
-        $insertAt = $idx + $marker.Length
-        $hub = $hub.Substring(0, $insertAt) + "`r`n" + $newRowHtml.TrimEnd("`r", "`n") + $hub.Substring($insertAt)
+        $existingRowsRaw = $hub.Substring($bounds.ContentStart, $bounds.ContentEnd - $bounds.ContentStart)
+        $sortedRowsHtml = Get-SortedRaidListHtml -RowsRawHtml $existingRowsRaw -NewRowHtml $newRowHtml -NewRowDate $raidDateObj
+        $hub = $hub.Substring(0, $bounds.ContentStart) + "`r`n      " + $sortedRowsHtml + "`r`n    " + $hub.Substring($bounds.ContentEnd)
 
-        # Bump "N raid night(s) analyzed" - the only piece of existing text this script
-        # ever rewrites, since every real hub page's own row count must stay accurate.
-        $countMatch = [regex]::Match($hub, "(\d+) raid nights? analyzed")
-        if ($countMatch.Success) {
-            $oldCount = [int]$countMatch.Groups[1].Value
-            $newCount = $oldCount + 1
-            $newCountText = Get-PluralizedCount -Count $newCount -Singular "raid night analyzed" -Plural "raid nights analyzed"
-            $hub = $hub.Substring(0, $countMatch.Index) + $newCountText + $hub.Substring($countMatch.Index + $countMatch.Length)
-        } else {
-            Write-Host "  WARNING: could not find 'N raid night(s) analyzed' text in $hubPath to update the count."
+        if (-not $ResortOnly) {
+            # Bump "N raid night(s) analyzed" - the only piece of existing text
+            # (beyond row order) this script ever rewrites, since every real hub
+            # page's own row count must stay accurate.
+            $countMatch = [regex]::Match($hub, "(\d+) raid nights? analyzed")
+            if ($countMatch.Success) {
+                $oldCount = [int]$countMatch.Groups[1].Value
+                $newCount = $oldCount + 1
+                $newCountText = Get-PluralizedCount -Count $newCount -Singular "raid night analyzed" -Plural "raid nights analyzed"
+                $hub = $hub.Substring(0, $countMatch.Index) + $newCountText + $hub.Substring($countMatch.Index + $countMatch.Length)
+            } else {
+                Write-Host "  WARNING: could not find 'N raid night(s) analyzed' text in $hubPath to update the count."
+            }
         }
 
         [System.IO.File]::WriteAllText($hubPath, $hub, (New-Object System.Text.UTF8Encoding $false))
-        Write-Host "Updated $hubPath (inserted new raid-row for report $ReportCode)"
+        if ($ResortOnly) {
+            Write-Host "Re-sorted $hubPath by raid date (descending)."
+        } else {
+            Write-Host "Updated $hubPath (inserted new raid-row for report $ReportCode, list re-sorted by raid date descending)"
+        }
     }
 }
 
 # ----- 2. Site homepage healer list (only for a genuinely new healer) -----
-if ($IsNewHealer) {
+if ($IsNewHealer -and -not $ResortOnly) {
     $siteIndexPath = Join-Path $DocsRoot "index.html"
     $siteIndex = [System.IO.File]::ReadAllText($siteIndexPath, [System.Text.Encoding]::UTF8)
     if ($siteIndex.Contains("href=`"$healerSlug/index.html`"")) {

@@ -29,8 +29,13 @@
 # root (gitignored, same convention as apikey.txt) - see WclV2Api.psm1's header
 # for how to register a client if these don't exist yet.
 #
-# Result (SAME shape as v1): data\Characters\{CharacterName}\{date}\
-#           fights_{reportCode}.json          <- reshaped to v1's field names (see Step 1)
+# Result: data\Characters\{CharacterName}\{ReportCode}\
+#   (folder keyed by ReportCode, not raid date - two raids can happen on the same
+#   calendar date, and per-boss-kill files below carry no report code of their
+#   own, so a shared date folder would risk one report's data overwriting
+#   another's. The resolved raid date is instead persisted as fights_*.json's
+#   own "raidDate" field.)
+#           fights_{reportCode}.json          <- reshaped to v1's field names (see Step 1), plus "raidDate"
 #           fight{fightID}_{bossSlug}_healing_events.json   <- one per boss kill
 #           fight{fightID}_{bossSlug}_casts_events.json
 #           fight{fightID}_{bossSlug}_consumables.json
@@ -205,6 +210,7 @@ if ($DateOverride) {
     exit 1
 }
 Write-Host "  Raid date: $raidDate"
+$fightsData | Add-Member -NotePropertyName "raidDate" -NotePropertyValue $raidDate -Force
 
 # ===== STEP 3: Resolve class/server/region/ID from the actors list =====
 # v2's ReportActor.subType is the class name (equivalent to v1 friendlies[].type);
@@ -233,7 +239,13 @@ if ($friendly) {
 }
 
 # ===== Set up output folder =====
-$outDir = Join-Path (Join-Path $charactersRoot $CharacterName) $raidDate
+# Keyed by ReportCode, NOT raidDate - two different raids can happen on the same
+# calendar date (e.g. an afternoon SSC clear and a separate night TK clear), and
+# per-boss-kill filenames below (fight{ID}_{slug}_*.json) carry no report code
+# of their own, so a shared date folder would silently mix or overwrite one
+# report's files with another's. The resolved raidDate is still persisted onto
+# $fightsData (see above) since it's no longer recoverable from the folder name.
+$outDir = Join-Path (Join-Path $charactersRoot $CharacterName) $ReportCode
 New-Item -ItemType Directory -Force -Path $outDir | Out-Null
 Write-Host "  Output folder: $outDir"
 Write-Host ""

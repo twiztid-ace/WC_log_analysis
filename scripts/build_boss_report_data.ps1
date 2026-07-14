@@ -13,10 +13,12 @@
 # Usage (run from repo root, same convention as every other script here):
 #   powershell -ExecutionPolicy Bypass -File scripts\build_boss_report_data.ps1 -CharacterName "Danceswtrees" -ReportCode "XJp8vAxzM4KtHYyb" -ClassName "Druid"
 #
-# Output: data\Characters\{CharacterName}\{raidDate}\{ReportCode}_report_data.json
-# (raidDate isn't a parameter - it's resolved by finding the real fights_{ReportCode}.json
-# pull_character_TEMPLATE.ps1 already wrote, wherever under that character's folder it
-# landed, same lookup pattern that script itself uses for cache reuse).
+# Output: data\Characters\{CharacterName}\{ReportCode}\{ReportCode}_report_data.json
+# (the folder isn't a parameter - it's resolved by finding the real
+# fights_{ReportCode}.json pull_character_TEMPLATE.ps1 already wrote, wherever
+# under that character's folder it landed, same lookup pattern that script itself
+# uses for cache reuse - this also means it still works unmodified against older,
+# date-named folders from before the ReportCode-keyed folder change).
 
 param(
     [Parameter(Mandatory=$true)][string]$CharacterName,
@@ -173,6 +175,13 @@ $charDir = $fightsFile.DirectoryName
 Write-Host "Character data folder: $charDir"
 
 $fightsData = Get-Content $fightsFile.FullName -Raw -Encoding UTF8 | ConvertFrom-Json
+
+# Present on every fights_*.json written since the ReportCode-keyed folder change
+# (see pull_character_TEMPLATE.ps1) - absent on older pre-existing pulls, where the
+# raid date instead has to come from the (old-convention) date-named folder itself.
+# Propagated into report_data.json below so nothing downstream needs to re-derive
+# it from a folder name that may no longer even be a date.
+$raidDate = if ($fightsData.PSObject.Properties.Name -contains "raidDate") { $fightsData.raidDate } else { $null }
 
 # ===== Percentile/rank source (v2 migration, see the approved migration plan) =====
 # Was: {name}_all_parses.json (v1 /parses/character/), fuzzy-matched by
@@ -445,6 +454,7 @@ $output = [PSCustomObject]@{
     CharacterName = $CharacterName
     ClassName     = $ClassName
     ReportCode    = $ReportCode
+    RaidDate      = $raidDate
     Bosses        = $results
     GearDiff      = $gearDiff
 }

@@ -40,10 +40,20 @@ scripts\                     PowerShell pipeline scripts (see below)
 scripts\lib\                 Shared modules (WCL API client, template renderer)
 templates\                   HTML templates (per-class boss pages, raid overview, hub pages)
 data\Classes\{Class}\        Top 100 benchmark pulls (active/archived + manifest.json)
-data\Characters\{Name}\      Per-character pulled data + generated report_data.json/analysis.json/findings.json
-docs\                        The generated static site (served via GitHub Pages from /docs)
+data\Characters\{Name}\{ReportCode}\   Per-character pulled data + generated report_data.json/analysis.json/findings.json
+docs\{healer}\{ReportCode}\  The generated static site (served via GitHub Pages from /docs)
 .claude\skills\generate-healer-report\   The Claude Code skill that runs this pipeline end to end
 ```
+
+Both per-report folders are keyed by **report code**, not raid date — two raids
+can happen on the same calendar date, and the per-boss-kill files inside
+(`fight14_lurker_healing_events.json`, etc.) carry no report code of their own,
+so a shared date folder would risk one report's data silently overwriting
+another's. The raid date is still tracked (as `report_data.json`'s own
+`RaidDate` field) purely for display text on the generated pages. Folders
+pulled before this convention was introduced are still named with a
+`yyyy-MM-dd` date instead — the pipeline recognizes and keeps working with
+either, so nothing needs to be renamed retroactively.
 
 See `CLAUDE.md` for the full annotated tree.
 
@@ -89,8 +99,10 @@ Full manual sequence, run from the repo root:
 # 1. Pull the character's raid data for this report
 powershell -ExecutionPolicy Bypass -File scripts\pull_character_TEMPLATE.ps1 `
     -ReportCode "<code>" -CharacterName "<name>"
-# Note the resolved class and raid date printed in its output - both are
-# needed for every step below.
+# Note the resolved class and raid date printed in its output - the class is
+# needed for every step below; the raid date is only ever used for display text
+# (output folders are keyed by report code, not date, since two raids can
+# happen on the same calendar day).
 
 # 2. Refresh that class's Top 100 benchmark (diff-based, cheap to re-run)
 powershell -ExecutionPolicy Bypass -File scripts\pull_top100_druid.ps1
@@ -125,16 +137,42 @@ powershell -ExecutionPolicy Bypass -File scripts\render_healer_report.ps1 `
 powershell -ExecutionPolicy Bypass -File scripts\update_hub_pages.ps1 `
     -CharacterName "<name>" -RaidDate "<yyyy-MM-dd>" -ReportCode "<code>" `
     -ClassName "<Class>" -BossesKilled <N> -RaidTitle "<title>" [-IsNewHealer]
+# -RaidDate here is display text only - the inserted link always points at
+# <code>/index.html, matching step 7's report-code-named output folder. The
+# healer's raid-list is always re-sorted by real raid date (descending) after
+# the insert, so generating an older report after a newer one (a backfill)
+# still lands the new row in the correct chronological position, not just at
+# the top - see the next section.
 ```
 
-After step 8, `docs\<name-lowercase>\<date>\` has a full set of boss pages and a
+### Keeping a healer's raid-list ordered by date
+
+`update_hub_pages.ps1` always re-sorts a healer's entire raid-list by raid date,
+descending, after inserting a new row — never just prepends it. This matters
+because folders are keyed by report code (see above), so the order raids
+happen to get *generated* in no longer has any natural correlation with the
+order they actually happened in — backfilling an older raid after a newer one
+is a real, expected scenario, not just a hypothetical.
+
+To re-sort an existing healer's raid-list without inserting anything (e.g.
+after a manual edit, or just to double-check ordering), run:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\update_hub_pages.ps1 -CharacterName "<name>" -ResortOnly
+```
+
+This only requires `-CharacterName` — every other row is parsed straight out of
+the existing page and re-sorted in place, with a `WARNING` printed (and that row
+sorted last, never dropped) if a row's date text can't be parsed.
+
+After step 8, `docs\<name-lowercase>\<code>\` has a full set of boss pages and a
 raid overview — but every coverage-note on every page is the placeholder text
 from step 6, not a real finding. To turn this into a real, publishable report,
 either:
 - re-run `/generate-healer-report <name> <code>` in Claude Code (it will detect
   the existing `report_data.json`/`analysis.json` and just needs a real
   `findings.json` written and the render/hub steps re-run), or
-- hand-author a real `data\Characters\<name>\<date>\<code>_findings.json`
+- hand-author a real `data\Characters\<name>\<code>\<code>_findings.json`
   yourself, following the schema documented in `render_healer_report.ps1`'s own
   header comment and in `SKILL.md`, then re-run steps 7-8 above.
 
