@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Raid Audit — Vajomee — SSC/TK 07.03.2026</title>
+<title>Raid Audit — Vajomee — ATNF SSC/TK 07.03.2026</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
@@ -73,7 +73,6 @@
   .section-title{ font-family:'Cormorant Garamond', serif; font-weight: 600; font-size: 24px; margin: 0; }
   .section-desc{ font-size: 13px; color: rgba(19,42,44,0.6); margin: -12px 0 20px; }
 
-  /* ===== Consistency banner ===== */
   .consistency-banner{
     display:flex;
     align-items:center;
@@ -84,20 +83,22 @@
     padding: 14px 18px;
     margin-bottom: 22px;
   }
+  .consistency-banner.warn{ background: rgba(181,80,58,0.10); border-color: rgba(181,80,58,0.35); }
   .consistency-icon{
     width: 26px; height: 26px; border-radius: 50%;
     background: var(--moss); color: var(--parchment);
     display:flex; align-items:center; justify-content:center;
     font-weight: 700; font-size: 14px; flex-shrink:0;
   }
+  .consistency-banner.warn .consistency-icon{ background: var(--rust); }
   .consistency-text{ font-size: 13px; }
   .consistency-text strong{ font-family:'IBM Plex Mono', monospace; }
 
-  /* ===== Checklist ===== */
   .check-list{ display:flex; flex-direction:column; }
   .check-item{
     display:grid;
     grid-template-columns: 22px 1fr auto;
+    grid-auto-rows: auto;
     align-items:center;
     gap: 12px;
     padding: 10px 0;
@@ -112,7 +113,9 @@
   }
   .check-icon.ok{ background: var(--moss); color: var(--parchment); }
   .check-icon.bad{ background: var(--rust); color: var(--parchment); }
-  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; }
+  .check-icon.note{ background: var(--gold); color: var(--ink); }
+  .check-note{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: rgba(19,42,44,0.55); text-align:right; white-space:nowrap; }
+  .check-detail{ grid-column: 2 / 4; font-size: 12px; color: rgba(19,42,44,0.6); line-height: 1.45; margin-top: 2px; }
 
   .coverage-note{
     margin-top: 14px;
@@ -122,7 +125,6 @@
     padding-left: 12px;
   }
 
-  /* ===== Boss table ===== */
   .boss-table{ width:100%; border-collapse: collapse; font-size: 13px; }
   .boss-table th{
     text-align:left;
@@ -153,7 +155,6 @@
     background: var(--parchment-dim);
   }
   .pctl-pill.has-data{ background: rgba(201,122,61,0.15); color: var(--ink); font-weight:600; }
-  .pctl-pill.pending{ color: rgba(19,42,44,0.4); font-style: italic; font-weight:400; }
   .overheal-cell.high{ color: var(--rust); font-weight:600; }
   .link-arrow{ font-family:'IBM Plex Mono', monospace; font-size: 11px; color: var(--copper); }
 
@@ -171,14 +172,12 @@
 
 <div class="page">
 
-  <!-- ===== HEADER ===== -->
   <div class="header">
-    <p class="eyebrow"><a href="../index.html" style="color:var(--copper); text-decoration:none;">← All raids</a> &nbsp;·&nbsp; Raid Audit — ATNF SSC / TK — 07.03.2026</p>
+    <p class="eyebrow"><a href="../index.html" style="color:var(--copper); text-decoration:none;">← All raids</a> &nbsp;·&nbsp; Raid Audit — ATNF SSC/TK — 07.03.2026</p>
     <h1>Vajomee</h1>
     <p class="subline">Restoration Shaman &nbsp;·&nbsp; ilvl 120 &nbsp;·&nbsp; report <span>Mfz4kW6JpjFPArat</span> &nbsp;·&nbsp; 10/10 bosses killed</p>
   </div>
 
-  <!-- ===== GEAR AUDIT (RAID-WIDE, SINGLE CHECK) ===== -->
   <div class="section">
     <div class="section-head">
       <span class="section-num">01</span>
@@ -188,56 +187,56 @@
 
     <div class="consistency-banner">
       <div class="consistency-icon">✓</div>
-      <div class="consistency-text">Loadout is <strong>identical across all 10 boss kills</strong> — no enchant, gem, or item swaps detected mid-raid. This audit applies to the entire night.</div>
+      <div class="consistency-text">Loadout is <strong>identical across all 10 boss kills</strong>, with one exception: a temporary weapon enchant (oil) on the mainhand was active for 9 of the 10 kills but missing specifically on Kael'thas Sunstrider, the raid's final and longest pull — confirmed by diffing real combatant-info snapshots kill-by-kill, not assumed from one fight.</div>
     </div>
 
     <div class="check-list">
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>Weapon enchant present</div>
-        <div class="check-note">+43 Spell Power (Light's Justice)</div>
+        <div>18 of 19 real equipment slots filled on every kill (shirt is the one genuinely empty cosmetic slot, no stat impact)</div>
+        <div class="check-note">avg ilvl 120</div>
       </div>
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>Weapon oil applied</div>
-        <div class="check-note">Brilliant Mana Oil</div>
+        <div>A real guild tabard is equipped, on every kill — cosmetic only, no stat impact either way</div>
+        <div class="check-note">item 5976</div>
       </div>
       <div class="check-item">
-        <div class="check-icon bad">!</div>
-        <div>Boots unenchanted</div>
-        <div class="check-note">Forestlord Striders — no enchant</div>
+        <div class="check-icon note">i</div>
+        <div>Mainhand's temporary weapon enchant (oil) was missing on Kael'thas Sunstrider only</div>
+        <div class="check-note">item 28771</div>
+        <div class="check-detail">A real, benign gap, not a gearing problem — the permanent enchant (item 2343) is present on every kill; the temporary oil (item 2629) is present on the first 9 kills and absent only on Kael'thas, the raid's final and longest pull (526s), consistent with the oil's limited real duration expiring late in a long raid night and not being reapplied before the last pull.</div>
       </div>
       <div class="check-item">
-        <div class="check-icon bad">!</div>
-        <div>Cloak unenchanted</div>
-        <div class="check-note">Stainless Cloak of the Pure Hearted — no enchant</div>
+        <div class="check-icon bad">✗</div>
+        <div>Boots carry no permanent enchant, on all 10 kills</div>
+        <div class="check-note">item 28752</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon bad">✗</div>
+        <div>Cloak carries no permanent enchant, on all 10 kills</div>
+        <div class="check-note">item 28765</div>
       </div>
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>Meta gem active &amp; requirement met</div>
-        <div class="check-note">Bracing Earthstorm Diamond (+26 Healing) — 9 red vs 6 blue gems, condition satisfied</div>
-      </div>
-      <div class="check-item">
-        <div class="check-icon ok">✓</div>
-        <div>Head / Shoulder / Chest / Legs / Wrist / Hands enchanted</div>
-        <div class="check-note">6 of 6 armor slots covered</div>
+        <div>Food buff (Well Fed) active at pull start on all 10 kills; Flask/Elixir active on 9 of 10 (missing only on Al'ar)</div>
+        <div class="check-note">9/10 flask</div>
       </div>
     </div>
 
-    <div class="coverage-note">Weapon note: Vajomee is running Light's Justice (ilvl 125, Karazhan) — a full raid tier behind the Lightfathom Scepter (ilvl 141, Lady Vashj) available in this raid's own loot pool. Worth flagging to loot council, since this is a recurring pattern across multiple healers we've audited.</div>
+    <div class="coverage-note">Both boots and cloak are standard, real TBC enchant categories on epic-quality items — a real, fixable gap, not a slot that's mechanically ineligible for enchanting the way rings, trinkets, neck, or waist are in this era. Every other enchantable slot (head, shoulder, chest, legs, wrist, hands, mainhand weapon) carries a real permanent enchant on every kill. This same boots/cloak gap was also present on Vajomee's other analyzed raid night (2026-07-10) — a real, recurring gap across both raid nights, not a one-off.</div>
   </div>
 
-  <!-- ===== PER-BOSS SUMMARY ===== -->
   <div class="section">
     <div class="section-head">
       <span class="section-num">02</span>
       <h2 class="section-title">Per-boss summary</h2>
     </div>
-    <p class="section-desc">HPS and overheal are real, computed from Vajomee's own fight logs. Percentile is only shown where we've pulled the real WCL ranking for that exact pull — click a boss name for the full audit.</p>
+    <p class="section-desc">HPS and overheal are real, computed from Vajomee's own events-based fight logs. Percentile is the exact report/fight rank pulled from WCL's v2 API — click a boss name for the full audit.</p>
 
-    <div class="consistency-banner" style="background: rgba(181,80,58,0.10); border-color: rgba(181,80,58,0.35);">
-      <div class="consistency-icon" style="background: var(--rust);">!</div>
-      <div class="consistency-text"><strong>Zero Healing Stream Totem casts across all 10 boss kills.</strong> Every Top 100 parse on every boss uses it — averaging 4.2% of total healing (as high as 9.9% on Void Reaver) — for what's essentially free, passive healing once dropped. This is the single most consistent, easiest-to-fix gap across the whole raid night, and it shows up on every individual boss page below.</div>
+    <div class="consistency-banner warn">
+      <div class="consistency-icon">!</div>
+      <div class="consistency-text"><strong>Overheal exceeds the Top 100 sample's single worst real parse on 7 of 10 kills</strong> (Hydross, The Lurker Below, Morogrim Tidewalker, Lady Vashj, Al'ar, Void Reaver, High Astromancer Solarian) — the most consistent, raid-wide finding of the night, and consistent with the same pattern already documented on Vajomee's other raid night (2026-07-10, 6 of 9 kills there). <strong>Ancestral Swiftness went completely uncast on 5 of 10 kills</strong> (Hydross, Leotheras, Karathress, Lady Vashj, Void Reaver), each a boss where 80-96% of the Top 100 sample casts it at least once — the second most consistent gap this raid. <strong>Healing Stream Totem was never cast on any of the 10 kills</strong>, despite a real, if modest, Top 100 share on every boss (1.4%-9.3%, highest on Void Reaver) — a complete absence across the entire raid night, and an even more total version of the same gap already flagged on the 07-10 raid night (where it appeared on 1 of 9 kills). <strong>Vajomee died in 3 of the 10 kills</strong> (Lady Vashj, High Astromancer Solarian, Kael'thas Sunstrider) — a real, checkable fact that plausibly explains part of the below-average final output on at least two of those (Vashj and Solarian, where the death lands late/mid-cascade); see each page's own scorecard for the exact timing.</div>
     </div>
 
     <table class="boss-table">
@@ -251,84 +250,24 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_hydross.html">Hydross the Unstable</a></td>
-          <td class="num-cell">368</td>
-          <td class="num-cell overheal-cell high">76.9%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">13.3th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_lurker.html">The Lurker Below</a></td>
-          <td class="num-cell">771</td>
-          <td class="num-cell">43.2%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">53.8th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_leotheras.html">Leotheras the Blind</a></td>
-          <td class="num-cell">772</td>
-          <td class="num-cell">39.7%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">47.4th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_karathress.html">Fathom-Lord Karathress</a></td>
-          <td class="num-cell">1,127</td>
-          <td class="num-cell">22.7%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">68.3th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_morogrim.html">Morogrim Tidewalker</a></td>
-          <td class="num-cell">788</td>
-          <td class="num-cell overheal-cell high">50.1%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">51.4th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_vashj.html">Lady Vashj</a></td>
-          <td class="num-cell">625</td>
-          <td class="num-cell">44.6%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">57.4th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_alar.html">Al'ar</a></td>
-          <td class="num-cell">395</td>
-          <td class="num-cell overheal-cell high">52.6%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">28.1th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_voidreaver.html">Void Reaver</a></td>
-          <td class="num-cell">1,497</td>
-          <td class="num-cell">28.4%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">50.3th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_solarian.html">High Astromancer Solarian</a></td>
-          <td class="num-cell">517</td>
-          <td class="num-cell overheal-cell high">59.7%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">22.7th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
-        <tr>
-          <td class="boss-name"><a href="healer_audit_kaelthas.html">Kael'thas Sunstrider</a></td>
-          <td class="num-cell">595</td>
-          <td class="num-cell">37.1%</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">60.0th</span></td>
-          <td class="link-arrow">→</td>
-        </tr>
+        <tr><td class="boss-name"><a href="healer_audit_hydross.html">Hydross the Unstable</a></td><td class="num-cell">368</td><td class="num-cell overheal-cell high">76.9%</td><td class="pctl-cell"><span class="pctl-pill has-data">13th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_lurker.html">The Lurker Below</a></td><td class="num-cell">771</td><td class="num-cell overheal-cell high">43.2%</td><td class="pctl-cell"><span class="pctl-pill has-data">53rd</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_leotheras.html">Leotheras the Blind</a></td><td class="num-cell">772</td><td class="num-cell">39.7%</td><td class="pctl-cell"><span class="pctl-pill has-data">46th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_karathress.html">Fathom-Lord Karathress</a></td><td class="num-cell">1127</td><td class="num-cell">22.7%</td><td class="pctl-cell"><span class="pctl-pill has-data">67th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_morogrim.html">Morogrim Tidewalker</a></td><td class="num-cell">788</td><td class="num-cell overheal-cell high">50.1%</td><td class="pctl-cell"><span class="pctl-pill has-data">50th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_vashj.html">Lady Vashj</a></td><td class="num-cell">625</td><td class="num-cell overheal-cell high">44.6%</td><td class="pctl-cell"><span class="pctl-pill has-data">57th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_alar.html">Al'ar</a></td><td class="num-cell">395</td><td class="num-cell overheal-cell high">52.6%</td><td class="pctl-cell"><span class="pctl-pill has-data">27th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_voidreaver.html">Void Reaver</a></td><td class="num-cell">1497</td><td class="num-cell overheal-cell high">28.4%</td><td class="pctl-cell"><span class="pctl-pill has-data">49th</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_solarian.html">High Astromancer Solarian</a></td><td class="num-cell">517</td><td class="num-cell overheal-cell high">59.7%</td><td class="pctl-cell"><span class="pctl-pill has-data">22nd</span></td><td class="link-arrow">→</td></tr>
+        <tr><td class="boss-name"><a href="healer_audit_kaelthas.html">Kael'thas Sunstrider</a></td><td class="num-cell">595</td><td class="num-cell">37.1%</td><td class="pctl-cell"><span class="pctl-pill has-data">59th</span></td><td class="link-arrow">→</td></tr>
       </tbody>
     </table>
 
-    <div class="coverage-note">All 10 bosses now have real WCL percentiles. Lowest: Hydross (13.3rd) and Solarian (22.7th) — the clearest priorities for a full breakdown next. Note: Morogrim and Solarian's percentiles came from a duplicate raid upload under a different report code (same pull, matched by exact timestamp + duration) — a recurring quirk when multiple raiders log the same night.</div>
+    <div class="coverage-note">Percentile priorities for a closer look: Hydross (13th), Solarian (22nd), and Al'ar (27th) are the three real soft spots, each also showing the raid's steepest HPM shortfalls (all under 55% of their own Top 100 average). Leotheras the Blind stands apart as the deadliest kill of the night (22 real deaths, more than double any other kill) despite a middling 46th percentile — a genuinely chaotic pull for the whole raid, not a healing-specific failure. Karathress (67th) and Kael'thas (59th) are the two real bright spots. All 10 percentiles are exact report+fight WCL rankings, not fuzzy-matched.</div>
   </div>
 
   <div class="footer">
-    <span>All data real: Vajomee's fight logs (report Mfz4kW6JpjFPArat) + WCL rankings where pulled</span>
+    <span>All data real: Vajomee's fight logs (report Mfz4kW6JpjFPArat) + WCL rankings for all 10 kills</span>
     <span>tbc-audit style reference · healer variant · raid overview</span>
   </div>
 

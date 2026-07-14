@@ -54,12 +54,13 @@ WORKFLOW.md without checking which axis it's on.
 
 - **v1 (simple)**: gear check + basic spell composition + a couple of other checks,
   built on the old `/report/tables/` healing view (5-entry truncation bug and all —
-  see WORKFLOW.md gotcha #4/#15). This is what produced the 4 fully-built healer
-  sites currently sitting at the repo root (`crowns/`, `danceswtrees/`, `lippies/`,
-  `vajomee/`, plus the root `index.html` homepage). Treat these as a finished
-  snapshot of the *old* methodology, not a template for new output — regenerating
-  them with the v2 pipeline is future work, not done per healer (see "Current
-  state" for which healers already have a real v2 site).
+  see WORKFLOW.md gotcha #4/#15). This is what originally produced the 4
+  fully-built healer sites, moved to `docs/` on 2026-07-12 (see "Hosting" below —
+  they're no longer at the repo root). Treat these as a finished snapshot of the
+  *old* methodology, not a template for new output. As of 2026-07-13 every one of
+  the 4 healers also has a real v2 site for at least one raid night (see "Current
+  state") — the v1 pages remain only as historical reference, moved aside to
+  `-v1`/`_v1`-suffixed sibling folders rather than deleted where superseded.
 - **v2 (enhanced)**: events-based healing/casts (no truncation), cooldown/utility
   tracking with self-vs-other targets (Druid: Innervate/Nature's Swiftness/
   Swiftmend/Rebirth/Dark Rune, real buff uptime via Tree of Life interval
@@ -70,10 +71,10 @@ WORKFLOW.md without checking which axis it's on.
   self-buff-uptime concept exists for Shaman, Priest, OR Paladin in this TBC
   ruleset, confirmed against real data for all three, not assumed), Top 100
   benchmarking, CSV summarization. **Resto Druid, Resto Shaman, Holy Priest, and
-  Holy Paladin** all have this now (see "Current state" below). Three full v2
+  Holy Paladin** all have this now (see "Current state" below). All four full v2
   healer sites have been generated end-to-end (Danceswtrees/Druid,
-  Vajomee/Shaman, and Lippies/Priest) — Paladin's Top 100 pipeline is wired up
-  but a full Crowns site regen hasn't been done yet (see "Current state").
+  Vajomee/Shaman, Lippies/Priest, and Crowns/Paladin as of 2026-07-13) — every
+  healer this project tracks now has a real v2 site (see "Current state").
   `examples/` has one older reference page but it's out of date (see below).
 
 ## Data model — active/archived + manifest.json (all four classes now)
@@ -276,12 +277,14 @@ GraphQL OAuth credentials used by `WclV2Api.psm1`, now shared by
   `lippies/`, `vajomee/` under `docs/`), each with all 10 SSC/TK boss kills for
   one raid night. This is the old gear-check + basic-spell-composition
   methodology — not being extended further, kept only as historical reference
-  now that all four classes have a v2 pipeline. Danceswtrees's and Lippies's own
-  v1 pages have already been superseded by real v2 pages for the same raid night
-  (moved aside to a `-v1`/`_v1`-suffixed sibling folder, not deleted); Crowns's
-  and Vajomee's v1 pages are still live pending their own v2 regen (Vajomee's
-  Top 100 data is v2, but no full site regen has been run for her yet either —
-  don't assume "class is v2" means "this healer's site is v2").
+  now that all four classes have a v2 pipeline. Danceswtrees's, Lippies's, and
+  Crowns's own v1 pages have already been superseded by real v2 pages for the
+  same raid night (moved aside to a `-v1`/`_v1`-suffixed sibling folder, not
+  deleted — Crowns's move happened 2026-07-13). Vajomee's earliest raid night
+  (2026-07-03) still has only a v1 page, but that's a genuinely separate raid
+  night from her v2 raid nights (2026-07-10, 2026-07-12), not the same night
+  pending a regen — don't assume "class is v2" means every historical raid
+  night for that healer has been regenerated.
 - `data\Classes\{Shaman,Priest,Paladin}\2026-07-10\` (or 2026-07-07, check the
   actual folder) still exist as the old v1-generation Top 100 pulls, preserved
   untouched on disk, same convention as keeping `*_v1.ps1` scripts around — none
@@ -359,29 +362,33 @@ GraphQL OAuth credentials used by `WclV2Api.psm1`, now shared by
   for the full writeup and the lesson it draws (a discovery pass scoped to one
   character's report needs checking against the full Top 100 sample before a
   "never does X" claim goes into permanent documentation).
-- Three full v2 healer sites have been generated end-to-end: Danceswtrees/Druid
-  (`docs\danceswtrees\2026-06-30\`), Vajomee/Shaman (`docs\vajomee\2026-07-10\`),
-  and Lippies/Priest (`docs\lippies\2026-07-07\`) — each a real raid overview +
+- **All four full v2 healer sites have been generated end-to-end**: Danceswtrees/
+  Druid (`docs\danceswtrees\2026-06-30\`), Vajomee/Shaman (`docs\vajomee\2026-07-10\`),
+  Lippies/Priest (`docs\lippies\2026-07-07\`), and Crowns/Paladin
+  (`docs\crowns\2026-07-07\`, generated 2026-07-13) — each a real raid overview +
   one page per boss kill, built from real `build_boss_report_data.ps1` output,
-  not templated filler. **Paladin's Top 100 pipeline (pull + benchmark +
-  template) is now wired up the same way, but a full Crowns site regen has NOT
-  been done yet** — this is a real, separate next step (see "Explicitly open"
-  below), not implied by the pull script being ready.
+  not templated filler. Crowns's v1 pages for the same raid night were moved
+  aside to `docs\crowns\2026-07-07-v1\` (not deleted) once the v2 pages were
+  confirmed. **There is no more open per-healer v2 site regen work on the
+  original four-healer scope.**
+
+**Recently closed (2026-07-13):**
+- Crowns's v2 site regen — done. `docs\crowns\2026-07-07\` has a full raid
+  overview + all 10 boss pages, committed (`e463b9f6`, `a1633da6`) and pushed to
+  `master`. Every one of the 4 existing healer sites now has a real v2 version —
+  this closes what used to be open item #2 on this list.
+- The GitHub Pages toggle — done. Confirmed live 2026-07-13 by fetching
+  `https://twiztid-ace.github.io/WC_log_analysis/` directly: it serves the real
+  site homepage listing all 4 healers (Crowns, Danceswtrees, Lippies, Vajomee).
+  See the "Hosting" section below — this closes what used to be open item #2
+  there too.
 
 **Explicitly open, in priority-ish order:**
 1. Tranquility's guid is unknown/unobserved (Druid-only concept) —
    `$cooldownGuids["Tranquility"]` is an empty array in both Druid-touching
    scripts and will silently show 0 forever until someone adds the real guid once
    it's actually seen in a pull.
-2. **A full Crowns v2 site regen hasn't been done yet.** Paladin's Top 100
-   pipeline is fully ported and proven (pull + benchmark + template), but nobody
-   has run `build_boss_report_data.ps1` + the generate-healer-report skill
-   against Crowns's real report (`XJp8vAxzM4KtHYyb`) to produce a real v2 raid
-   overview + 10 boss pages the way Danceswtrees/Vajomee/Lippies already have.
-   This is the natural next step now that the pipeline itself is ready — and,
-   with it done, every one of the 4 existing healer sites would have a real v2
-   version.
-3. **Every class this project tracks (Druid, Shaman, Priest, Paladin) is now on
+2. **Every class this project tracks (Druid, Shaman, Priest, Paladin) is now on
    the v2 pipeline** — there is no more "port a class" work left on the
    original four-class scope. If a fifth class is ever added, the playbook is
    proven four times over now: (a) a real-data discovery pass BEFORE writing any
@@ -396,16 +403,16 @@ GraphQL OAuth credentials used by `WclV2Api.psm1`, now shared by
    `boss_page_template_{class}.html` from the existing templates' section
    *shape*, not their specific content, (e) extend the generate-healer-report
    skill's class gate once proven end-to-end.
-4. One narrow, accepted gap, reconfirmed with real Shaman, Priest, and Paladin
+3. One narrow, accepted gap, reconfirmed with real Shaman, Priest, and Paladin
    data at a broadly similar rate: no `combatantinfo` snapshot even within the
    2-minute backward buffer, likely a late-joining player — 1 case for Druid
    (~0.1%), ~5 for Shaman (~0.5%), 11 for Priest (~1.1%), 11 for Paladin
    (~1.1%, matching Priest almost exactly) — currently just reported as a
    failure for that one player's consumables data, not chased further.
-5. **Power Word: Shield's Top 100 benchmark is a real but misleading ~0%** (9 of
+4. **Power Word: Shield's Top 100 benchmark is a real but misleading ~0%** (9 of
    10 bosses) — see the "v2" bullets above. Any coverage-note on a Priest boss
    page must name this caveat rather than reading it as a norm.
-6. **Holy Shock's cast and heal use two different real guids** (33072 cast,
+5. **Holy Shock's cast and heal use two different real guids** (33072 cast,
    33074 heal) — see the "v2" bullets above. Any coverage-note on a Paladin boss
    page must reflect this, not assume Holy Shock never heals.
 
@@ -468,38 +475,36 @@ folder**, not a dedicated `gh-pages` branch. GitHub Pages supports serving from
 SourceTree — a plain commit+push to `docs/` is enough to publish, no branch
 switching required.
 
-**Migration done (2026-07-12).** The live v1 site output (`index.html`, `crowns/`,
-`danceswtrees/`, `lippies/`, `vajomee/`) now lives under `docs/` at repo root,
-moved as one whole tree (not piecemeal) specifically so the pages' relative links
-(`../index.html`, etc.) kept resolving correctly — spot-checked after the move:
-`docs/index.html`'s healer links, `docs/danceswtrees/index.html`'s `../index.html`
-back-link, and its raid-date subfolder link all still resolve. `scripts/`, `data/`,
-`templates/`, `reference/`, `examples/`, `WORKFLOW.md`, `CLAUDE.md`, `TODO.md` stay
-at repo root — Pages only serves what's inside `docs/`, so keeping them at root
-just means they're not web-served (still visible in the repo browser itself, since
+**Migration done (2026-07-12), committed and pushed since.** The live v1 site
+output (`index.html`, `crowns/`, `danceswtrees/`, `lippies/`, `vajomee/`) now
+lives under `docs/` at repo root, moved as one whole tree (not piecemeal)
+specifically so the pages' relative links (`../index.html`, etc.) kept resolving
+correctly — spot-checked after the move: `docs/index.html`'s healer links,
+`docs/danceswtrees/index.html`'s `../index.html` back-link, and its raid-date
+subfolder link all still resolve. `scripts/`, `data/`, `templates/`,
+`reference/`, `examples/`, `WORKFLOW.md`, `CLAUDE.md`, `TODO.md` stay at repo
+root — Pages only serves what's inside `docs/`, so keeping them at root just
+means they're not web-served (still visible in the repo browser itself, since
 the repo is public — Pages scoping doesn't hide them, it just keeps them out of
-the served site). This was a working-tree-only change — nothing staged/committed,
-that's still the person's to do via SourceTree.
+the served site). This has since been committed and pushed to `master` via
+SourceTree (confirmed by real commit history and by the live Pages site itself,
+which can only be serving `docs/` content that's actually on `master`).
 
-**Still open — one-time setup on github.com (not doable via git/API from here):**
-1. Confirm repo visibility: Settings → General → Danger Zone → should already say
-   Public.
-2. Once the `docs/` migration is committed/pushed to `master`: Settings → Pages →
-   Source → "Deploy from a branch" → Branch: `master`, folder: `/docs` → Save.
-   **Not done yet** — the folder move is real, but the GitHub Pages toggle itself
-   hasn't been flipped, so nothing is actually being served yet.
-3. Resulting URL: `https://twiztid-ace.github.io/WC_log_analysis/` — a **project
-   site**, served from a subpath, not domain root. Smoke-test the first deploy
-   specifically for any accidentally-absolute (`/index.html`-style) links; the
-   site already uses relative links throughout per WORKFLOW.md's zip-delivery
-   convention, so this should already be fine, but hasn't been verified live.
+**One-time setup on github.com — done.** The GitHub Pages toggle has been
+flipped (Settings → Pages → Source → "Deploy from a branch" → Branch: `master`,
+folder: `/docs`), and the site is confirmed live: fetched
+`https://twiztid-ace.github.io/WC_log_analysis/` directly on 2026-07-13 and it
+serves the real homepage, listing all 4 healers (Crowns, Danceswtrees, Lippies,
+Vajomee) with working links. It's a **project site**, served from a subpath, not
+domain root — no accidentally-absolute-link problems observed, consistent with
+the site's relative-link convention.
 
-**Ongoing publish workflow once set up:** regenerate/edit the static pages under
-`docs/`, commit, push via SourceTree — GitHub rebuilds Pages automatically
-(typically under a minute), no separate build step, since this has always been
-plain static HTML/CSS with no bundler.
+**Ongoing publish workflow:** regenerate/edit the static pages under `docs/`,
+commit, push via SourceTree — GitHub rebuilds Pages automatically (typically
+under a minute), no separate build step, since this has always been plain
+static HTML/CSS with no bundler.
 
-**Status: folder migration done, Pages toggle still not flipped.** The GitHub
-Pages setting itself is a real, visible change (exposes a public URL) — confirm
-before flipping it on github.com rather than assuming this documentation update
-means it's live.
+**Status: folder migration done, Pages toggle flipped, site confirmed live.**
+Any future doc-audit should still re-check the live URL rather than trust this
+line indefinitely — hosting config is a real, external piece of state this file
+can't observe automatically.
