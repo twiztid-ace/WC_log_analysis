@@ -408,6 +408,54 @@ if ($reportData.GearDiff -and $reportData.GearDiff.BaselineGear) {
     Write-Host "  WARNING: no GearDiff.BaselineGear in report_data.json - gear analysis will be empty."
 }
 
+# ----- Consumable setup check (added 2026-07-15) - the real TBC rule (patch
+# 2.1+): a character has EITHER a real Flask (occupies both slots at once) OR
+# a real Battle Elixir + Guardian Elixir together - never a partial combo.
+# Same static name lists as WclV2Api.psm1's Get-ConsumableClassification
+# (duplicated, not imported - that module also handles OAuth/API calls this
+# purely-local analysis script has no reason to depend on). Needed to
+# reclassify FlaskActive/FlaskName on report_data.json generated BEFORE the
+# 2026-07-15 elixir-classification fix: those still show FlaskActive=true
+# whenever ANY elixir matched the old buggy regex first (confirmed real on
+# Danceswtrees's own report - "Elixir of Draenic Wisdom", a Guardian Elixir,
+# shows as FlaskActive=true, FlaskName="Elixir of Draenic Wisdom" on every
+# kill) - trusting that at face value would wrongly report a "complete"
+# consumable setup based on mislabeled data. Old-format data (no separate
+# BattleElixirActive/GuardianElixirActive at all) can only ever confirm ONE
+# elixir slot this way (the old bug captured just the first match), so it can
+# prove "real flask" (when FlaskName matches a real flask) but can never prove
+# a genuine GAP - anything else from old data is Unknown, not Incomplete, since
+# the other elixir slot's real status was never captured at all. Only new-
+# format data (both fields real, non-null booleans) can prove a confirmed gap.
+$tbcFlaskNames = @(
+    "Flask of Blinding Light", "Flask of Pure Death", "Flask of Mighty Restoration",
+    "Flask of Relentless Assault", "Flask of Fortification", "Flask of Chromatic Wonder",
+    "Flask of Petrification"
+)
+$consumableRows = @()
+foreach ($slug in $reportData.Bosses.PSObject.Properties.Name) {
+    $b = $reportData.Bosses.$slug
+    $isRealFlask = ($b.FlaskActive -eq $true) -and $b.FlaskName -and ($tbcFlaskNames -contains $b.FlaskName)
+    $hasNewFormatData = ($b.PSObject.Properties.Name -contains "BattleElixirActive") -and ($null -ne $b.BattleElixirActive) -and
+                        ($b.PSObject.Properties.Name -contains "GuardianElixirActive") -and ($null -ne $b.GuardianElixirActive)
+    $isComplete = $false
+    $isUnknown = $false
+    if ($isRealFlask) {
+        $isComplete = $true
+    } elseif ($hasNewFormatData) {
+        $isComplete = ($b.BattleElixirActive -eq $true) -and ($b.GuardianElixirActive -eq $true)
+    } else {
+        $isUnknown = $true
+    }
+    $consumableRows += [PSCustomObject]@{ Slug = $slug; Display = $b.Display; IsComplete = $isComplete; IsUnknown = $isUnknown }
+}
+$gearAnalysis["ConsumableSetup"] = [PSCustomObject]@{
+    TotalBosses = $consumableRows.Count
+    CompleteCount = @($consumableRows | Where-Object { $_.IsComplete }).Count
+    UnknownCount = @($consumableRows | Where-Object { $_.IsUnknown }).Count
+    IncompleteBosses = @($consumableRows | Where-Object { -not $_.IsComplete -and -not $_.IsUnknown } | ForEach-Object { $_.Display })
+}
+
 # ----- Raid-wide rollups -----
 $deathCountRows = @($deathCountRows | Sort-Object -Property DeathCount -Descending)
 $rank = 1

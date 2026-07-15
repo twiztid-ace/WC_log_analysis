@@ -215,10 +215,21 @@ $script:TbcFlaskNames = @(
     "Flask of Relentless Assault", "Flask of Fortification", "Flask of Chromatic Wonder",
     "Flask of Petrification"
 )
+# "Healing Power" (not "Elixir of Healing Power") confirmed 2026-07-15 against
+# real live combatantinfo data on Danceswtrees's own report - the real combat-
+# log buff aura name drops the "Elixir of" prefix for this one, even though
+# "Elixir of Draenic Wisdom" (the Guardian list below) keeps its full item
+# name. This was a real, live bug: it silently classified Danceswtrees as
+# never running a Battle Elixir all raid, when she was actually running
+# Elixir of Healing Power on every kill - only caught because the player
+# herself knew the real loadout and the mismatch didn't match lived
+# experience. The rest of this list's entries have NOT been individually
+# re-verified the same way yet - treat any of them as unconfirmed until
+# checked against a real aura list like this one, not as equally solid.
 $script:TbcBattleElixirNames = @(
     "Elixir of Major Agility", "Elixir of Major Strength", "Elixir of Major Frost Power",
     "Elixir of Major Shadow Power", "Elixir of Major Firepower", "Adept's Elixir",
-    "Elixir of Healing Power", "Elixir of Demonslaying", "Onslaught Elixir",
+    "Healing Power", "Elixir of Demonslaying", "Onslaught Elixir",
     "Elixir of the Mongoose", "Elixir of Camouflage", "Elixir of Major Fire Power"
 )
 $script:TbcGuardianElixirNames = @(

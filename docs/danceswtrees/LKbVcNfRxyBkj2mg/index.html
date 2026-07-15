@@ -230,6 +230,13 @@
       </div>
       
       <div class="check-item">
+        <div class="check-icon ok">✓</div>
+        <div>12 of 12 kills had a complete consumable setup (Flask, or Battle + Guardian Elixir together)</div>
+        <div class="check-note"></div>
+        <div class="check-detail"></div>
+      </div>
+      
+      <div class="check-item">
         <div class="check-icon bad">✗</div>
         <div>Back carries no permanent enchant</div>
         <div class="check-note">item 28765</div>
@@ -245,9 +252,9 @@
       
       <div class="check-item">
         <div class="check-icon ok">✓</div>
-        <div>Guardian Elixir (Elixir of Draenic Wisdom) and Well Fed food buff both active on all 12 kills</div>
+        <div>Elixir of Healing Power (Battle) and Elixir of Draenic Wisdom (Guardian) both active on all 12 kills, plus Well Fed food buff</div>
         <div class="check-note">12/12 kills</div>
-        <div class="check-detail">This was mislabeled as a Flask in the original render - Elixir of Draenic Wisdom is a Guardian Elixir, not a flask (a real pull-script bug fixed 2026-07-15, see TODO.md). Whether a Battle Elixir was also active is unknown for this report - the older pull only ever captured one elixir/flask match total, so a second real elixir slot could exist but wasn't recorded.</div>
+        <div class="check-detail">A real, complete consumable setup all raid night - the Battle + Guardian Elixir pairing is a fully valid alternative to a Flask under the real TBC rule. Confirmed via a real re-pull (2026-07-15) after fixing two pull-script bugs: the original Flask-vs-elixir classification mislabeled Elixir of Draenic Wisdom as a flask, and a second bug used the wrong combat-log buff name for Elixir of Healing Power (logged simply as "Healing Power", not "Elixir of Healing Power") - caught only because the player's own real memory of her loadout didn't match what the data first showed.</div>
       </div>
       
       
@@ -310,7 +317,7 @@
           <td class="num-cell">56.7%</td>
           <td class="pctl-cell th-help" title="Rank among the other healers in this same raid on this same fight, using WCL's own real HPS Performance Comparison (By Item Level) percentile per healer - not the Top 100 sample.">4th/5</td>
           <td class="pctl-cell th-help" title="Rank among the same healers in this same raid on this same fight, using real raw total healing done instead of an item-level-adjusted percentile - a genuinely independent ranking from iLvl Healing Rank, not the same number relabeled.">3rd/5</td>
-          <td class="pctl-cell"><span class="pctl-pill has-data">59th</span></td>
+          <td class="pctl-cell"><span class="pctl-pill has-data">58th</span></td>
           <td class="link-arrow">→</td>
         </tr>
         

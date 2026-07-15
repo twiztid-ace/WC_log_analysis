@@ -607,6 +607,33 @@ if ($analysis.GearAnalysis.PSObject.Properties.Name -contains "EnchantableSlotCo
         Detail = ""; LongDetail = ""
     }
 }
+# Real TBC rule: either a real Flask, or a real Battle Elixir + Guardian Elixir
+# together - never a partial combo (see build_boss_analysis.ps1's
+# ConsumableSetup comment for the full reasoning, including why old
+# report_data.json predating the 2026-07-15 elixir-classification fix can only
+# ever show "complete" (real flask) or "unknown", never a false "incomplete").
+if ($analysis.GearAnalysis.PSObject.Properties.Name -contains "ConsumableSetup" -and $analysis.GearAnalysis.ConsumableSetup) {
+    $cs = $analysis.GearAnalysis.ConsumableSetup
+    if ($cs.IncompleteBosses.Count -gt 0) {
+        $gearItems += [PSCustomObject]@{
+            Icon = "bad"; Glyph = [char]0x2717
+            Description = "$($cs.CompleteCount) of $($cs.TotalBosses) kills had a complete consumable setup (Flask, or Battle + Guardian Elixir together)"
+            Detail = ""; LongDetail = "Missing on: $($cs.IncompleteBosses -join ', ')."
+        }
+    } elseif ($cs.UnknownCount -gt 0) {
+        $gearItems += [PSCustomObject]@{
+            Icon = "note"; Glyph = "i"
+            Description = "Consumable setup (Flask, or Battle + Guardian Elixir) could only be confirmed on $($cs.CompleteCount) of $($cs.TotalBosses) kills"
+            Detail = ""; LongDetail = "The remaining $($cs.UnknownCount) kill(s) were pulled before the elixir-classification fix and can't be verified either way from the data on disk - not a real gap, just an unresolved data gap. Re-pull to resolve."
+        }
+    } else {
+        $gearItems += [PSCustomObject]@{
+            Icon = "ok"; Glyph = [char]0x2713
+            Description = "$($cs.CompleteCount) of $($cs.TotalBosses) kills had a complete consumable setup (Flask, or Battle + Guardian Elixir together)"
+            Detail = ""; LongDetail = ""
+        }
+    }
+}
 foreach ($flag in @($analysis.GearAnalysis.MissingEnchantFlags)) {
     $gearItems += [PSCustomObject]@{
         Icon = "bad"; Glyph = [char]0x2717
