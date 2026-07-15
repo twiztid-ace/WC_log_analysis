@@ -207,7 +207,7 @@ if (-not $ResortOnly) {
     # killed", no "/M". Replaces an earlier hardcoded "-TotalBosses" (default
     # 10) that produced a nonsensical "12/10 bosses" once Gruul's Lair bosses
     # started appearing alongside SSC/TK in the same report.
-    $bossesLabel = if ($BossesAttempted -gt $BossesKilled) { "$BossesKilled/$BossesAttempted bosses" } else { "$BossesKilled bosses killed" }
+    $bossesLabel = if ($BossesAttempted -gt $BossesKilled) { "$BossesKilled/$BossesAttempted bosses" } else { Get-PluralizedCount -Count $BossesKilled -Singular "boss killed" -Plural "bosses killed" }
     $newRowHtml = @"
       <a class="raid-row" href="$ReportCode/index.html">
         <div>
