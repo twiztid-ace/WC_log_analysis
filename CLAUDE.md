@@ -623,15 +623,23 @@ GraphQL OAuth credentials used by `WclV2Api.psm1`, now shared by
   added on top — the point was filling in earlier attunement-chain bosses
   healers may still have logs for, not tracking new current content.
 - **The local-scripting pipeline's first real production use (2026-07-15)**:
-  Danceswtrees's report `LKbVcNfRxyBkj2mg` (12 real boss kills — the 10 usual
-  SSC/TK bosses plus Maulgar and Gruul from the newly-added tier, all real
-  kills, no wipes) was pulled, analyzed, and rendered end-to-end through
+  report `LKbVcNfRxyBkj2mg` (12 real boss kills — the 10 usual SSC/TK bosses
+  plus Maulgar and Gruul from the newly-added tier, all real kills, no wipes)
+  was pulled, analyzed, and rendered end-to-end through
   `render_healer_report.ps1` for the first time ever on brand-new data (every
   prior real v2 site was hand-written by Claude — see "Local-scripting
-  pipeline" above). It was initially rendered and **published with
-  `build_placeholder_findings.ps1`'s placeholder text still in it** — a real
-  mistake, caught and fixed the same session by authoring a real
-  `LKbVcNfRxyBkj2mg_findings.json` via the generate-healer-report skill and
+  pipeline" above). **This is a shared raid log — both Danceswtrees (Druid,
+  `data\Characters\Danceswtrees\LKbVcNfRxyBkj2mg\`) and Vajomee (Shaman,
+  `data\Characters\Vajomee\LKbVcNfRxyBkj2mg\`) were pulled and rendered from
+  this same report code the same day**, each with their own real
+  `_analysis.json`/`_findings.json` and all 12 `docs\{healer}\LKbVcNfRxyBkj2mg\
+  healer_audit_*.html` pages (confirmed on disk 2026-07-16, both hub pages
+  link it) — this was not a Druid-only run. It was initially rendered and
+  **published with `build_placeholder_findings.ps1`'s placeholder text still
+  in it** — a real mistake, caught and fixed the same session by authoring a
+  real `LKbVcNfRxyBkj2mg_findings.json` (for at least Danceswtrees; not
+  independently reconfirmed whether Vajomee's findings.json went through the
+  same placeholder-then-fix cycle) via the generate-healer-report skill and
   re-rendering. Two real, previously-undiscovered bugs surfaced during this
   first real run, both fixed and unlikely to be class- or report-specific:
   - **The raid overview's "bosses killed" line used to be a hardcoded
@@ -700,14 +708,26 @@ GraphQL OAuth credentials used by `WclV2Api.psm1`, now shared by
    page must reflect this, not assume Holy Shock never heals. `build_boss_analysis.ps1`
    auto-tags this as the `paladin_holy_shock_guid_split` canned caveat for any
    report built through the new pipeline.
-6. **Gruul's Lair/Magtheridon's Lair rollout is Druid-only so far in terms of a
-   real rendered report** — only Danceswtrees (Druid) has an actual raid night
-   pulled and rendered against the expanded boss list (see "Recently closed"
-   above). Vajomee (Shaman), Lippies (Priest), and Crowns (Paladin) haven't had
-   a new raid night generated since the tier was added — nothing to migrate by
-   hand (the next `generate-healer-report` run for any of them will pick up
-   the new boss IDs automatically), but don't assume their sites already
-   reflect this.
+6. **Gruul's Lair/Magtheridon's Lair rollout has a real rendered report for
+   Danceswtrees (Druid) AND Vajomee (Shaman) now — corrected 2026-07-16,
+   see below.** Both were pulled/analyzed/rendered from the same shared raid
+   log (report `LKbVcNfRxyBkj2mg`, see "Recently closed" above) the same day
+   (2026-07-15); an earlier version of this file said the rollout was
+   "Druid-only," which was checked against real files on disk (2026-07-16)
+   and found to be wrong — Vajomee's `data\Characters\Vajomee\LKbVcNfRxyBkj2mg\`
+   and `docs\vajomee\LKbVcNfRxyBkj2mg\` both exist in full (12 boss pages
+   including Maulgar/Gruul, real findings.json, linked from Vajomee's hub
+   page). **Lippies (Priest) and Crowns (Paladin) still only have their
+   original `XJp8vAxzM4KtHYyb` report on disk** (confirmed 2026-07-16, no
+   second report-code folder exists for either) — they genuinely haven't had
+   a new raid night generated since the tier was added. Nothing to migrate by
+   hand for either — the next `generate-healer-report` run for them will pick
+   up the new boss IDs automatically — but don't assume their sites already
+   reflect this the way Danceswtrees's and Vajomee's now do. **Lesson from
+   this correction: verify "which healers have X" claims against the actual
+   report-code folders on disk before trusting this file's phrasing — a
+   shared raid log means one pull session can silently cover more than one
+   healer, and this file didn't say so the first time.**
 
 ## Ground rules (condensed from WORKFLOW.md — read the real thing for why)
 
