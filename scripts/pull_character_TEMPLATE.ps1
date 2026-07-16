@@ -54,6 +54,13 @@ param(
     [string]$Server,        # optional override - only matters if the character isn't in this report
     [string]$Region,        # optional override - only matters if the character isn't in this report
     [string]$Class,         # optional override - only matters if the character isn't in this report
+    [string]$Spec,          # optional - which real per-fight spec (e.g. "Restoration", "Dreamstate") to
+                             # analyze as a healer, when this character plays more than one spec across
+                             # this report's boss kills (a real, confirmed case - see the "STEP 3b" comment
+                             # below). Omit when every fight agrees on one spec (true for every character
+                             # analyzed by this pipeline so far) - auto-resolved and logged either way.
+                             # Required (script hard-stops and tells you the real per-fight breakdown) if
+                             # fights disagree and this wasn't supplied - never silently guesses.
     [string]$DateOverride,  # optional override - only used if the date can't be parsed from the report title
     [int]$MaxThreads = 10,  # per-boss-kill pulls run concurrently, bounded by this
     [string]$CharactersRoot = "data\Characters"  # override for equivalence-testing into a scratch folder without
@@ -237,12 +244,14 @@ if ($friendly) {
         exit 1
     }
     Write-Host "  '$CharacterName' not in actors[] - using supplied overrides: $Class, $Server-$Region"
-    Write-Host "  WARNING: no report-local actor ID available for '$CharacterName' - Step 4 (fight-level"
-    Write-Host "           healing/casts/buffs/deaths pulls) will be SKIPPED. Only Step 5 (rankings) will run."
-    Write-Host "           This is expected if the character truly isn't in this report."
+    Write-Host "  WARNING: no report-local actor ID available for '$CharacterName' - rankings/spec"
+    Write-Host "           resolution and all fight-level (healing/casts/buffs/deaths) pulls will be"
+    Write-Host "           SKIPPED. This is expected if the character truly isn't in this report."
 }
 
-# ===== Set up output folder =====
+# ===== Set up output folder (moved up from its old post-rankings spot - STEP 3b
+# below needs $outDir to exist so it can write {code}_v2_rankings.json and the
+# new {code}_spec_coverage.json) =====
 # Keyed by ReportCode, NOT raidDate - two different raids can happen on the same
 # calendar date (e.g. an afternoon SSC clear and a separate night TK clear), and
 # per-boss-kill filenames below (fight{ID}_{slug}_*.json) carry no report code
@@ -259,6 +268,154 @@ if (-not (Test-Path $fightsOutFile)) {
     $jsonText = $fightsData | ConvertTo-Json -Depth 10
     [System.IO.File]::WriteAllText($fightsOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
 }
+
+# ===== STEP 3b: Real per-fight rankings + spec resolution (moved up from the old
+# Step 5 - the SAME single rankings() call now does double duty: it's still the
+# source of each kill's real percentile, written unchanged to
+# {code}_v2_rankings.json below, AND it's the only real source of per-fight SPEC
+# for this character (v2's masterData.actors[].subType only ever had CLASS, never
+# spec, so single-spec was silently assumed for every character pulled before
+# this). Confirmed via a real case, not hypothetical: report XJp8vAxzM4KtHYyb has
+# a real Druid, Turkeykin, who plays Balance (DPS role) on all 6 SSC bosses and
+# Dreamstate (healer role) on all 4 TK bosses in the SAME report - the old
+# single-global-$Class assumption would have silently pulled all 10 kills as if
+# they were the same spec's healing data. =====
+Write-Host "=== Step 2: Real per-fight rankings + spec resolution for $CharacterName ==="
+$allBossFights = @($fightsData.fights | Where-Object { $_.boss -ne 0 -and $_.kill -eq $true })
+$rankingsOutFile = Join-Path $outDir "$($ReportCode)_v2_rankings.json"
+$specCoverage = $null
+
+if (-not $CharacterID -or -not $allBossFights -or $allBossFights.Count -eq 0) {
+    Write-Host "  Skipping - no report-local actor ID or no boss kills in this report."
+    $bossFights = @()
+} else {
+    $rankingsData = $null
+    if (Test-Path $rankingsOutFile) {
+        Write-Host "  $($ReportCode)_v2_rankings.json - already have it, reusing for spec resolution."
+        # The file on disk is already shaped {data: [...]} (it's a direct dump of
+        # $rankingsResult.Data.reportData.report.rankings, which itself already
+        # has a top-level "data" array - confirmed against the real file). Do NOT
+        # re-wrap it in another {data: ...} here - that produced a real, confirmed
+        # double-wrap bug (every fightEntry became the whole {data:[...]} object
+        # instead of a per-fight entry, so .roles was always missing and every
+        # fight silently showed "not found in any role list").
+        $rankingsData = Get-Content $rankingsOutFile -Raw -Encoding UTF8 | ConvertFrom-Json
+    } else {
+        $fightIDList = ($allBossFights | ForEach-Object { $_.id }) -join ','
+        $rankingsQuery = "query { reportData { report(code: `"$ReportCode`") { rankings(fightIDs: [$fightIDList], playerMetric: hps) } } }"
+        $rankingsResult = Invoke-WclGraphQL -Query $rankingsQuery -AccessToken $token
+        if ($rankingsResult.Errors) {
+            # This call is now load-bearing for spec resolution, not just percentile
+            # display - a failure here means we have no real basis for which fights
+            # belong to which spec, so this must hard-stop, not silently degrade to
+            # "zero fights matched" (which the filter below would otherwise produce
+            # with no explanation).
+            Write-Host "ERROR: rankings fetch failed - $($rankingsResult.Errors | ConvertTo-Json -Compress)"
+            Write-Host "       This call is required for per-fight spec resolution (STEP 3b), not optional -"
+            Write-Host "       refusing to guess which fights belong to which spec. Re-run once the API is"
+            Write-Host "       reachable again."
+            exit 1
+        } else {
+            $rankingsData = $rankingsResult.Data.reportData.report.rankings
+            $jsonText = $rankingsData | ConvertTo-Json -Depth 20
+            [System.IO.File]::WriteAllText($rankingsOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
+            Write-Host "  $($ReportCode)_v2_rankings.json - OK ($($allBossFights.Count) fight(s) looked up)"
+        }
+    }
+
+    # Resolve this character's own real (class, spec, role) for each boss-kill
+    # fight, by name-matching across roles.{tanks,healers,dps}.characters[] -
+    # confirmed real field shape (id/name/server/class/spec/amount/...) against
+    # Turkeykin's own real entries in this exact report.
+    # Plain hashtable, NOT [ordered] - a real PowerShell/.NET gotcha confirmed live:
+    # System.Collections.Specialized.OrderedDictionary (what [ordered]@{} creates)
+    # implements IOrderedDictionary, which exposes a SEPARATE this[int index]
+    # POSITIONAL indexer alongside the normal this[object key] one. Indexing it
+    # with an actual [int] value (like a fightID) resolves to the positional
+    # overload, not a key lookup - throws ArgumentOutOfRangeException the moment
+    # the int exceeds the dictionary's current Count. A plain @{} Hashtable has no
+    # such ambiguity (object-key indexer only) and is all this needs - order was
+    # never relied on here.
+    $perFightSpec = @{}
+    if ($rankingsData -and $rankingsData.data) {
+        foreach ($fightEntry in $rankingsData.data) {
+            $found = $null
+            foreach ($roleName in @("tanks", "healers", "dps")) {
+                $roleObj = $fightEntry.roles.$roleName
+                if ($roleObj -and $roleObj.characters) {
+                    $match = $roleObj.characters | Where-Object { $_.name -eq $CharacterName } | Select-Object -First 1
+                    if ($match) { $found = [PSCustomObject]@{ Class = $match.class; Spec = $match.spec; Role = $roleName }; break }
+                }
+            }
+            $perFightSpec[[int]$fightEntry.fightID] = $found
+        }
+    }
+
+    $distinctSpecs = @($perFightSpec.Values | Where-Object { $_ } | ForEach-Object { $_.Spec } | Select-Object -Unique)
+    $notFoundFights = @($allBossFights | Where-Object { -not $perFightSpec[[int]$_.id] })
+
+    if ($notFoundFights.Count -gt 0) {
+        foreach ($f in $notFoundFights) {
+            Write-Host "  NOTE: '$CharacterName' not found in any role list for fight $($f.id) ('$($f.name)') - treating as not-present this fight (bench/sat out), excluding."
+        }
+    }
+
+    if ($distinctSpecs.Count -gt 1 -and -not $Spec) {
+        Write-Host "ERROR: '$CharacterName' plays more than one real spec across this report's boss kills - real per-fight breakdown:"
+        foreach ($f in $allBossFights) {
+            $entry = $perFightSpec[[int]$f.id]
+            $specLabel = if ($entry) { "$($entry.Class) / $($entry.Spec) ($($entry.Role))" } else { "not found in any role this fight" }
+            Write-Host "         fight $($f.id) ('$($f.name)'): $specLabel"
+        }
+        Write-Host "       Pass -Spec '<one of the specs above>' to analyze only the fights where '$CharacterName' played that spec."
+        exit 1
+    }
+
+    $resolvedSpec = if ($Spec) { $Spec } elseif ($distinctSpecs.Count -eq 1) { $distinctSpecs[0] } else { $null }
+    if ($resolvedSpec -and -not $Spec) {
+        Write-Host "  Confirmed real spec for every boss kill this character appears in: $resolvedSpec"
+    } elseif ($resolvedSpec) {
+        Write-Host "  Analyzing only fights where '$CharacterName' played spec: $resolvedSpec"
+    }
+
+    $bossFights = @($allBossFights | Where-Object {
+        $entry = $perFightSpec[[int]$_.id]
+        $entry -and $entry.Spec -eq $resolvedSpec
+    })
+    $excludedFights = @($allBossFights | Where-Object { $_.id -notin @($bossFights | ForEach-Object { $_.id }) })
+    foreach ($f in $excludedFights) {
+        $entry = $perFightSpec[[int]$f.id]
+        $otherSpecLabel = if ($entry) { $entry.Spec } else { "unknown (not found in any role list)" }
+        Write-Host "  SKIP: fight $($f.id) ('$($f.name)') - '$CharacterName' was playing $otherSpecLabel, not $resolvedSpec, this fight."
+    }
+
+    $specCoverage = [PSCustomObject]@{
+        CharacterName    = $CharacterName
+        AnalyzedClass    = $Class
+        AnalyzedSpec     = $resolvedSpec
+        TotalBossesInReport = $allBossFights.Count
+        BossesAnalyzed   = $bossFights.Count
+        Bosses           = @($allBossFights | ForEach-Object {
+            $entry = $perFightSpec[[int]$_.id]
+            [PSCustomObject]@{
+                FightID       = $_.id
+                BossName      = $_.name
+                BossSlug      = Get-BossSlug $_.boss $_.name
+                ResolvedClass = if ($entry) { $entry.Class } else { $null }
+                ResolvedSpec  = if ($entry) { $entry.Spec } else { $null }
+                Included      = ($_.id -in @($bossFights | ForEach-Object { $_.id }))
+            }
+        })
+    }
+    $specCoverageOutFile = Join-Path $outDir "$($ReportCode)_spec_coverage.json"
+    $jsonText = $specCoverage | ConvertTo-Json -Depth 10
+    [System.IO.File]::WriteAllText($specCoverageOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
+    Write-Host "  $($ReportCode)_spec_coverage.json - OK ($($bossFights.Count) of $($allBossFights.Count) boss kills in spec '$resolvedSpec')"
+}
+Write-Host ""
+
+# (Output folder + fights_{code}.json are now written earlier, right after Step 3
+# - see the comment above STEP 3b - since that step needs $outDir to exist.)
 
 # Resolves an ability guid to its real display name, via gameData.ability(id) -
 # cached so a re-seen guid within this run costs no extra API call. Ability NAME
@@ -368,23 +525,26 @@ function Get-TreeOfLifeUptimePct {
 }
 
 # ===== STEP 4: Pull healing/casts events, consumables snapshot, deaths per boss kill =====
-Write-Host "=== Step 2: Fight data per boss kill (healing events, casts events, consumables, deaths) ==="
+Write-Host "=== Step 3: Fight data per boss kill (healing events, casts events, consumables, deaths) ==="
 
 if ($CharacterID) {
     $treeOfLifeIntervals = Get-TreeOfLifeIntervals
 }
 
+# $bossFights was already resolved in STEP 3b above - already filtered down to
+# only the fights where this character's real per-fight spec matched
+# $resolvedSpec (or, when no CharacterID, is still $null/unset - guard for that).
 if (-not $CharacterID) {
     Write-Host "  SKIPPED - no report-local actor ID for '$CharacterName' (see warning above)."
     $bossFights = @()
-} else {
-    $bossFights = @($fightsData.fights | Where-Object { $_.boss -ne 0 -and $_.kill -eq $true })
+} elseif (-not $bossFights) {
+    $bossFights = @()
 }
 
 if ($CharacterID -and (-not $bossFights -or $bossFights.Count -eq 0)) {
-    Write-Host "  No boss kills (boss != 0 && kill == true) found in this report - nothing to pull here."
+    Write-Host "  No boss kills in the analyzed spec found in this report - nothing to pull here."
 } elseif ($CharacterID) {
-    Write-Host "  $($bossFights.Count) boss kill(s) found."
+    Write-Host "  $($bossFights.Count) boss kill(s) found in the analyzed spec."
 }
 
 $totalDone = 0
@@ -398,7 +558,7 @@ $workerScript = {
     param(
         $fightID, $bossSlug, $startTime, $endTime, $reportCode,
         $characterID, $characterName, $actorNames, $treeOfLifeIntervals, $outDir,
-        $accessToken, $moduleAbsolutePath, $abilityNameCacheShared
+        $accessToken, $moduleAbsolutePath, $abilityNameCacheShared, $computeImprovedFaerieFire
     )
 
     Import-Module $moduleAbsolutePath -Force
@@ -558,6 +718,34 @@ $workerScript = {
         return [math]::Round(($overlap / $duration) * 100, 1)
     }
 
+    # Improved Faerie Fire uptime (Dreamstate only, gated by $computeImprovedFaerieFire
+    # - true only when this whole run's resolved spec is Dreamstate, see STEP 3b
+    # above). Same real mechanism as pull_top100_dreamstate.ps1's own
+    # Get-ImprovedFaerieFireUptimeLocal (see that script's header for the full
+    # discovery writeup) - table(dataType: Casts, sourceID:)'s own real "uptime"
+    # field for the Faerie Fire entry (guid 26993), NOT an event-interval
+    # reconstruction. This was originally missed here (only added to the Top 100
+    # script), caught during Turkeykin's own real end-to-end verification when
+    # her report_data.json showed a blank ImprovedFaerieFireUptimePct despite the
+    # Top 100 benchmark data having real values.
+    function Get-ImprovedFaerieFireUptimeLocal {
+        $faerieFireGuid = 26993
+        $q = "query { reportData { report(code: `"$reportCode`") { table(fightIDs: [$fightID], dataType: Casts, sourceID: $characterID, startTime: $startTime, endTime: $endTime) } } }"
+        $r = Invoke-WclGraphQL -Query $q -AccessToken $accessToken
+        if ($r.Errors) {
+            $result.Messages.Add("  $label - FAILED improved-faerie-fire casts-table - $($r.Errors | ConvertTo-Json -Compress)")
+            return $null
+        }
+        $entries = @($r.Data.reportData.report.table.data.entries)
+        $ffEntry = $entries | Where-Object { $_.guid -eq $faerieFireGuid } | Select-Object -First 1
+        if (-not $ffEntry -or -not $ffEntry.uptime) {
+            return 0
+        }
+        $duration = $endTime - $startTime
+        if ($duration -le 0) { return 0 }
+        return [math]::Round(($ffEntry.uptime / $duration) * 100, 1)
+    }
+
     $fightOk = $true
 
     $healingOutFile = Join-Path $outDir "$($label)_healing_events.json"
@@ -598,9 +786,16 @@ $workerScript = {
                         foodName             = if ($food) { $food.name } else { $null }
                         treeOfLifeUptimePct  = $treeOfLifePct
                     }
+                    $iffMsg = ""
+                    if ($computeImprovedFaerieFire) {
+                        $iffPct = Get-ImprovedFaerieFireUptimeLocal
+                        if ($null -eq $iffPct) { $iffPct = 0; $fightOk = $false }
+                        $out | Add-Member -NotePropertyName "improvedFaerieFireUptimePct" -NotePropertyValue $iffPct
+                        $iffMsg = " improvedFaerieFire=$iffPct%"
+                    }
                     $jsonText = $out | ConvertTo-Json -Depth 5
                     [System.IO.File]::WriteAllText($consumablesOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
-                    $result.Messages.Add("  $($label)_consumables.json - OK (flask=$([bool]$flask) battleElixir=$([bool]$battleElixir) guardianElixir=$([bool]$guardianElixir) food=$([bool]$food) treeOfLife=$treeOfLifePct%)")
+                    $result.Messages.Add("  $($label)_consumables.json - OK (flask=$([bool]$flask) battleElixir=$([bool]$battleElixir) guardianElixir=$([bool]$guardianElixir) food=$([bool]$food) treeOfLife=$treeOfLifePct%$iffMsg)")
                 }
             }
             if ($needsGear) {
@@ -726,7 +921,8 @@ if ($bossFights -and $bossFights.Count -gt 0) {
             AddArgument($outDir).
             AddArgument($token).
             AddArgument($moduleAbsolutePath).
-            AddArgument($null)
+            AddArgument($null).
+            AddArgument($resolvedSpec -eq "Dreamstate")
         $handle = $ps.BeginInvoke()
         $jobs.Add([PSCustomObject]@{ Pipe = $ps; Handle = $handle })
     }
@@ -749,34 +945,9 @@ if ($bossFights -and $bossFights.Count -gt 0) {
 }
 Write-Host ""
 
-# ===== STEP 5: Pull real per-fight rankings (REPLACES the old all_parses.json step) =====
-# Old v1 approach pulled the character's ENTIRE parse history and fuzzy-matched by
-# reportID+fightID - confirmed buggy/incomplete (only ~7 entries per encounter
-# total, missing 8 of 9 kills in a real report even on a fresh re-pull with a
-# stable connection). v2's report-scoped rankings(fightIDs:[...]) is exact by
-# construction: every fight ID requested either has a healer entry in the
-# response or it doesn't, no fuzzy matching against a separately-fetched blob at
-# all. One call for the whole report, not one per boss kill.
-Write-Host "=== Step 3: Real per-fight rankings for $CharacterName ==="
-$rankingsOutFile = Join-Path $outDir "$($ReportCode)_v2_rankings.json"
-
-if (Test-Path $rankingsOutFile) {
-    Write-Host "  $($ReportCode)_v2_rankings.json - already have it, skipping"
-} elseif (-not $bossFights -or $bossFights.Count -eq 0) {
-    Write-Host "  No boss kills to look up rankings for - skipping."
-} else {
-    $fightIDList = ($bossFights | ForEach-Object { $_.id }) -join ','
-    $rankingsQuery = "query { reportData { report(code: `"$ReportCode`") { rankings(fightIDs: [$fightIDList], playerMetric: hps) } } }"
-    $rankingsResult = Invoke-WclGraphQL -Query $rankingsQuery -AccessToken $token
-    if ($rankingsResult.Errors) {
-        Write-Host "  $($ReportCode)_v2_rankings.json - FAILED: $($rankingsResult.Errors | ConvertTo-Json -Compress)"
-        $totalFailed++
-    } else {
-        $jsonText = $rankingsResult.Data.reportData.report.rankings | ConvertTo-Json -Depth 20
-        [System.IO.File]::WriteAllText($rankingsOutFile, $jsonText, (New-Object System.Text.UTF8Encoding $false))
-        Write-Host "  $($ReportCode)_v2_rankings.json - OK ($($bossFights.Count) fight(s) looked up)"
-    }
-}
+# (Real per-fight rankings are now pulled earlier, in STEP 3b - both
+# {code}_v2_rankings.json and the per-fight spec resolution come from that same
+# single call. Nothing left to do here.)
 
 Write-Host ""
 Write-Host "=================================="

@@ -67,13 +67,14 @@ $ErrorActionPreference = "Stop"
 Import-Module (Join-Path $PSScriptRoot "lib\ReportRenderLib.psm1") -Force
 
 $classSpecByClass = @{
-    "Druid"   = "Restoration Druid"
-    "Shaman"  = "Restoration Shaman"
-    "Priest"  = "Holy Priest"
-    "Paladin" = "Holy Paladin"
+    "Druid"      = "Restoration Druid"
+    "Shaman"     = "Restoration Shaman"
+    "Priest"     = "Holy Priest"
+    "Paladin"    = "Holy Paladin"
+    "Dreamstate" = "Dreamstate Druid"
 }
 if (-not $classSpecByClass.ContainsKey($ClassName)) {
-    Write-Host "ERROR: '$ClassName' is not a supported class (Druid, Shaman, Priest, Paladin only)."
+    Write-Host "ERROR: '$ClassName' is not a supported class (Druid, Shaman, Priest, Paladin, Dreamstate only)."
     exit 1
 }
 $classSpec = $classSpecByClass[$ClassName]
@@ -476,6 +477,15 @@ foreach ($slug in $bossSlugs) {
         $page = Set-TemplateToken $page "TREE_OF_LIFE_PCT" $treeOfLifePct
         $treeBm = if ($bmBuffs -and ($bmBuffs.PSObject.Properties.Name -contains "Top100TreeOfLifeAvgUptimePct")) { $bmBuffs.Top100TreeOfLifeAvgUptimePct } else { "?" }
         $page = Set-TemplateToken $page "TREE_OF_LIFE_BENCHMARK_PCT" $treeBm
+    } elseif ($ClassName -eq "Dreamstate") {
+        # Source-scoped uptime (this character's own Faerie Fire application),
+        # not a raid-wide "was the debuff up from anyone" stat - see
+        # pull_top100_dreamstate.ps1's header for the real discovery behind
+        # this scoping choice.
+        $iffPct = if ($null -ne $boss.ImprovedFaerieFireUptimePct) { $boss.ImprovedFaerieFireUptimePct } else { 0 }
+        $page = Set-TemplateToken $page "IMPROVED_FAERIE_FIRE_PCT" $iffPct
+        $iffBm = if ($bmBuffs -and ($bmBuffs.PSObject.Properties.Name -contains "Top100ImprovedFaerieFireAvgUptimePct")) { $bmBuffs.Top100ImprovedFaerieFireAvgUptimePct } else { "?" }
+        $page = Set-TemplateToken $page "IMPROVED_FAERIE_FIRE_BENCHMARK_PCT" $iffBm
     }
 
     $manaPotionCount = 0
@@ -581,6 +591,24 @@ $overview = Set-TemplateToken $overview "N_KILLS" $bossSlugs.Count
 $bossesAttempted = if ($reportData.PSObject.Properties.Name -contains "BossesAttempted" -and $reportData.BossesAttempted) { $reportData.BossesAttempted } else { $bossSlugs.Count }
 $bossesKilledLabel = if ($bossesAttempted -gt $bossSlugs.Count) { "$($bossSlugs.Count)/$bossesAttempted bosses killed" } else { "$($bossSlugs.Count) bosses killed" }
 $overview = Set-TemplateToken $overview "BOSSES_KILLED_LABEL" $bossesKilledLabel
+
+# ===== Spec coverage note (general, class-agnostic - not Dreamstate-specific).
+# Fully mechanical, no LLM involvement - report_data.json's SpecCoverage is
+# absent for the common case (every class before this fix, and any future
+# character who plays one spec all raid), so this whole block is omitted then,
+# not an empty paragraph. See pull_character_TEMPLATE.ps1's header for the
+# real Turkeykin/XJp8vAxzM4KtHYyb case that drove this. =====
+$specCoverageNote = ""
+if ($reportData.PSObject.Properties.Name -contains "SpecCoverage" -and $reportData.SpecCoverage) {
+    $sc = $reportData.SpecCoverage
+    $excludedCount = @($sc.ExcludedBosses).Count
+    if ($excludedCount -gt 0) {
+        $excludedSpecs = @($sc.ExcludedBosses | ForEach-Object { $_.Spec } | Select-Object -Unique)
+        $otherSpecLabel = if ($excludedSpecs.Count -eq 1) { $excludedSpecs[0] } else { ($excludedSpecs -join "/") }
+        $specCoverageNote = "$CharacterName played a different spec ($otherSpecLabel) on $excludedCount of $($sc.TotalBossesInReport) bosses this raid - only the $($sc.BossesAnalyzed) kill(s) where they were in their healing spec ($($sc.AnalyzedSpec)) are analyzed below."
+    }
+}
+$overview = Set-TemplateOptional -TemplateText $overview -OptionalName "SPEC_COVERAGE_NOTE" -SlotName "SPEC_COVERAGE_NOTE" -Value $specCoverageNote
 
 $overview = Set-TemplateSlot $overview "GEAR_CONSISTENCY_FINDING" $findings.RaidOverview.GEAR_CONSISTENCY_FINDING
 

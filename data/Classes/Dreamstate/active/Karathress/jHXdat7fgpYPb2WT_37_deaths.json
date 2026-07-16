@@ -1,0 +1,126 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Gordos",
+                        "id":  15,
+                        "guid":  54048413,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  4258896,
+                        "fight":  37,
+                        "damage":  {
+                                       "total":  11743,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  7277,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  4466,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  7277,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  4466,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  442,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  26980,
+                                                              "name":  "Regrowth",
+                                                              "total":  442,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_resistnature.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38296,
+                                                                    "name":  "Scorch",
+                                                                    "total":  442,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_searingtotem.jpg",
+                                                                    "petName":  "Spitfire Totem"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Shamrockg",
+                                                            "total":  442,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  4035,
+                        "overkill":  2480,
+                        "events":  [
+                                       {
+                                           "timestamp":  4243879,
+                                           "type":  "damage",
+                                           "sourceID":  133,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  37,
+                                           "hitType":  1,
+                                           "amount":  4797,
+                                           "unmitigatedAmount":  7277,
+                                           "overkill":  2480,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  4239844,
+                                           "type":  "damage",
+                                           "sourceID":  139,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  37,
+                                           "hitType":  1,
+                                           "amount":  4466,
+                                           "unmitigatedAmount":  4466,
+                                           "isAoE":  true
+                                       }
+                                   ]
+                    }
+                ]
+}

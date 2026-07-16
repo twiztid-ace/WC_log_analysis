@@ -1,0 +1,38 @@
+{
+  "CharacterName": "Turkeykin",
+  "ReportCode": "XJp8vAxzM4KtHYyb",
+  "BossFindings": {
+    "alar": {
+      "SCORECARD_FINDING": "7th percentile, the lowest of this raid's four real Dreamstate healing kills — HPS (235) sits at just 30% of the Top 100 average (784), and overheal (79.4%) exceeds even the single worst real Dreamstate parse on this boss (67.1%). HPM (1.8) is also well under a third of the Top 100 average (5.38), a real efficiency gap alongside the throughput one.",
+      "SPELL_COMPOSITION_FINDING": "Lifebloom (66.1%) leads as usual, but Rejuvenation here is cast almost entirely under a different real rank (guid 26981, 19.7% of output) than the Top 100 sample's own dominant Rejuvenation rank (guid 26982, 10.7% — a different guid, not double-counted). Regrowth similarly splits into a real rank (guid 9858) the benchmark barely uses.",
+      "COOLDOWN_FINDING": "Innervate went uncast this kill despite 95% of the Top 100 Dreamstate sample using it at least once here — the clearest single cooldown gap of the raid. Mana Potion was used twice (self), close to the Top 100 norm (89%). Zero real deaths this kill, so no cooldown/death correlation to check.",
+      "TARGET_FINDING": "Coverage (91%) runs well above the Top 100 average (75.2%) — real, broad healing spread on this kill. Top target share (36.6%) sits close to the Top 100 norm (39.4%), so this isn't concentrated on one recipient, just spread wider overall than typical."
+    },
+    "voidreaver": {
+      "SCORECARD_FINDING": "55th percentile, the best of this raid's four real Dreamstate kills by a wide margin. HPS (1072) still trails the Top 100 average (1791) at 60% of it, and HPM (5.93) is 73% of the Top 100 average (8.09) — a real gap, but the smallest of the raid. This was also the deadliest of the four kills, with 6 real deaths.",
+      "SPELL_COMPOSITION_FINDING": "The Top 100 sample leans heavily on one real Regrowth rank (guid 26980, 45% of output) that Turkeykin barely touches (11.2%) — she instead casts mostly a different real rank (guid 9858, 32.7%) the benchmark almost never uses. Lifebloom itself splits across two real ranks in both her own mix and the benchmark's (guid 33763/33778), in broadly similar relative proportions.",
+      "COOLDOWN_FINDING": "Innervate was cast once, self, in line with the Top 100 norm (96% usage). Six real deaths this kill — the raid's deadliest — but Rebirth was never cast despite all 6 being real, checkable candidates; none of the other cooldowns land close enough in time to read as a missed save (the nearest is Churbert's and Purehentai's simultaneous death, 3.9 seconds after an Innervate cast — Innervate doesn't heal or resurrect, so not a plausible correlation).",
+      "TARGET_FINDING": "Coverage (55.7%) runs a bit above the Top 100 average (47.6%) — modestly broader spread than typical, though top target share (12.9%) matches the norm closely (13.9%), so this isn't a dramatic targeting shift, just a somewhat wider real spread.",
+      "IncludeRebirthRow": true
+    },
+    "solarian": {
+      "SCORECARD_FINDING": "30th percentile on the raid's shortest kill (143s). HPS (282) sits at 34% of the Top 100 average (839), and overheal (79.7%) again exceeds the sample's single worst real parse (72.8%) — the widest such gap of the raid. HPM (2.02) is also low, just over half the Top 100 average (3.83).",
+      "SPELL_COMPOSITION_FINDING": "The largest single spell-composition gap of the raid: the Top 100 sample's dominant Regrowth rank (guid 26980) makes up 55.2% of the benchmark average here and 0% of Turkeykin's own output — she replaces it almost entirely with Lifebloom (65.8%, well above the Top 100 average of 24%) and a different real Regrowth rank (guid 9858, 19%) the benchmark doesn't use at all.",
+      "COOLDOWN_FINDING": "Innervate was cast once, on Lippies (the other real healer in this raid) — a genuinely other-targeted use, close to the Top 100 norm (75% usage). Zero real deaths this kill, so no cooldown/death correlation to check.",
+      "TARGET_FINDING": "Coverage (51.3%) and top target share (12%) both trail the Top 100 average (57.4% / 18.5%) modestly — within normal variance, not a real targeting gap on this kill."
+    },
+    "kaelthas": {
+      "SCORECARD_FINDING": "34th percentile on the raid's longest kill (476s) — the second-lowest percentile of the raid. HPS (410) sits at 54% of the Top 100 average (763), and overheal (64.5%) again exceeds the sample's worst real parse (62.6%), though by the smallest margin of the raid's four kills. HPM (3.38) is 63% of the Top 100 average (5.33).",
+      "SPELL_COMPOSITION_FINDING": "Lifebloom (53.2%) tracks the Top 100 average closely (50.3%) — the closest spell-composition match of the raid — though the same Regrowth-rank substitution seen all raid continues: guid 9858 (17.7%) in place of the benchmark's dominant guid 26980 (22.7%, 0% for Turkeykin here).",
+      "COOLDOWN_FINDING": "Innervate was cast once, self, close to the Top 100 norm (98% usage). Rebirth (58% typical usage) went uncast against 4 real deaths this kill — the clearest Rebirth gap of the raid, though the deaths themselves don't line up with any spent cooldown: Banepain's and Sackajaweeba's deaths sit 24-60 seconds from her Mana Potion casts, and the simultaneous Deepbowlz/Vinnyvoss death is 90 seconds from her Innervate — too far to read as related in either case.",
+      "TARGET_FINDING": "Coverage (48.6%) and top target share (14.4%) both trail the Top 100 average (58.2% / 22%) — a real but modest gap, within the raid's broader pattern of somewhat more spread-out healing than typical.",
+      "IncludeRebirthRow": true
+    }
+  },
+  "RaidOverview": {
+    "GEAR_CONSISTENCY_FINDING": "identical across all 4 real combatantinfo snapshots",
+    "GEAR_FINDING_NOTE": "The Back slot (item 27448) carries no permanent enchant across all 4 kills this raid night - the one real gear gap. Ring enchants aren't flagged, per this era's self-only Enchanting restriction.",
+    "RAID_WARNING_BANNER": "<strong>Overheal exceeds the Top 100 sample's single worst real parse on 3 of 4 kills</strong> (Al'ar, Solarian, Kael'thas) - a consistent pattern across most of this healer's real Dreamstate kills this raid, alongside HPS sitting well under the Top 100 average on every single kill (30-60% of average). Void Reaver, the raid's best kill by percentile (55th), is the one exception on both counts.",
+    "RAID_SUMMARY_FINDING": "Percentile ranges from 7th (Al'ar, the low point) to 55th (Void Reaver, the one real bright spot and also the raid's deadliest kill at 6 real deaths). HPS sits under the Top 100 average on every kill, the most consistent finding of the raid - ranging from 30% of average (Al'ar) to 60% (Void Reaver). Rebirth went uncast on both real death-heavy kills (Void Reaver, 6 deaths; Kael'thas, 4 deaths), the clearest cooldown gap of the raid alongside Al'ar's uncast Innervate. All 4 percentiles are exact report+fight WCL rankings, not fuzzy-matched. Note: Turkeykin also played Balance on 6 other bosses this raid, not analyzed here as healer data - see the note above."
+  }
+}

@@ -1,0 +1,172 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Catgifs",
+                        "id":  24,
+                        "guid":  72162246,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  10419045,
+                        "fight":  34,
+                        "damage":  {
+                                       "total":  9198,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  226,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  4520,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  4054,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  41932,
+                                                             "name":  "Carnivorous Bite",
+                                                             "total":  624,
+                                                             "type":  1,
+                                                             "icon":  "ability_druid_rake.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  5144,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  4054,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4156,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  2175,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1981,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  4054,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  41932,
+                                                                    "name":  "Carnivorous Bite",
+                                                                    "total":  102,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_druid_rake.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Mooiamatree",
+                                                            "total":  4156,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  37834,
+                        "overkill":  1557,
+                        "events":  [
+                                       {
+                                           "timestamp":  10419026,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  20,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  2,
+                                           "amount":  1648,
+                                           "unmitigatedAmount":  1879,
+                                           "overkill":  1557,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  10418327,
+                                           "type":  "damage",
+                                           "sourceID":  193,
+                                           "sourceInstance":  22,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  1315,
+                                           "mitigated":  226,
+                                           "unmitigatedAmount":  1541,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  10400849,
+                                           "type":  "damage",
+                                           "sourceID":  192,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Earthquake",
+                                                           "guid":  37764,
+                                                           "type":  1,
+                                                           "abilityIcon":  "spell_nature_earthquake.jpg"
+                                                       },
+                                           "fight":  34,
+                                           "hitType":  1,
+                                           "amount":  4054,
+                                           "unmitigatedAmount":  4054,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

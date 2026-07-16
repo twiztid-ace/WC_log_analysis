@@ -1,0 +1,123 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Toothbreaker",
+                        "id":  18,
+                        "guid":  43190872,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  7693606,
+                        "fight":  46,
+                        "damage":  {
+                                       "total":  13441,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  10141,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  39414,
+                                                             "name":  "Arcane Missiles",
+                                                             "total":  3300,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  13441,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  449,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  449,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  449,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Toothbreaker",
+                                                            "total":  449,
+                                                            "type":  "Warrior"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  1133,
+                        "overkill":  2469,
+                        "events":  [
+                                       {
+                                           "timestamp":  7693579,
+                                           "type":  "damage",
+                                           "sourceID":  185,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  46,
+                                           "hitType":  1,
+                                           "amount":  831,
+                                           "unmitigatedAmount":  3000,
+                                           "overkill":  2469,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  7692446,
+                                           "type":  "damage",
+                                           "sourceID":  185,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  46,
+                                           "hitType":  2,
+                                           "amount":  10141,
+                                           "unmitigatedAmount":  8557,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcane Missiles",
+                                            "guid":  39414,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_starfall.jpg"
+                                        }
+                    }
+                ]
+}

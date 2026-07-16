@@ -1,0 +1,119 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Thorlan",
+                        "id":  16,
+                        "guid":  43480478,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-BeastMastery",
+                        "timestamp":  9124133,
+                        "fight":  72,
+                        "damage":  {
+                                       "total":  16500,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  9977,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  6523,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  9977,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Itsmort",
+                                                           "total":  6523,
+                                                           "type":  "Hunter"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  6575,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  9124132,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  72,
+                                           "hitType":  1,
+                                           "amount":  9977,
+                                           "unmitigatedAmount":  9977,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  9117557,
+                                           "type":  "damage",
+                                           "sourceID":  3,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  72,
+                                           "hitType":  1,
+                                           "amount":  6523,
+                                           "unmitigatedAmount":  6523,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

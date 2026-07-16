@@ -1,0 +1,1673 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Rothesh",
+                        "id":  29,
+                        "guid":  76887799,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  8261431,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  7366,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  872,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37770,
+                                                             "name":  "Shoot",
+                                                             "total":  5119,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37284,
+                                                             "name":  "Scalding Water",
+                                                             "total":  1500,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_masterofelements.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  27869,
+                                                             "name":  "Dark Rune",
+                                                             "total":  747,
+                                                             "type":  32,
+                                                             "icon":  "inv_misc_rune_04.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Ambusher",
+                                                           "total":  5119,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1500,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Rothesh",
+                                                           "total":  747,
+                                                           "type":  "Warlock"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2932,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  2932,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37284,
+                                                                    "name":  "Scalding Water",
+                                                                    "total":  1500,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_masterofelements.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  27869,
+                                                                    "name":  "Dark Rune",
+                                                                    "total":  747,
+                                                                    "type":  32,
+                                                                    "icon":  "inv_misc_rune_04.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  2932,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  54231,
+                        "overkill":  369,
+                        "events":  [
+                                       {
+                                           "timestamp":  8261417,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  29,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  37770,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  2228,
+                                           "mitigated":  443,
+                                           "unmitigatedAmount":  3040,
+                                           "overkill":  369,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8259873,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  29,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  37770,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  2522,
+                                           "mitigated":  429,
+                                           "unmitigatedAmount":  2951,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8224868,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  29,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scalding Water",
+                                                           "guid":  37284,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_masterofelements.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  500,
+                                           "unmitigatedAmount":  500,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shoot",
+                                            "guid":  37770,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_marksmanship.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Cliffhanger",
+                        "id":  21,
+                        "guid":  50936423,
+                        "type":  "Priest",
+                        "icon":  "Priest-Discipline",
+                        "timestamp":  8264388,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  11188,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  4003,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  28168,
+                                                             "name":  "Arcing Smash",
+                                                             "total":  8181,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37770,
+                                                             "name":  "Shoot",
+                                                             "total":  1748,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  1259,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Guardian",
+                                                           "total":  8181,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Ambusher",
+                                                           "total":  1748,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1259,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  22881,
+                        "overkill":  2797,
+                        "events":  [
+                                       {
+                                           "timestamp":  8264387,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  5384,
+                                           "mitigated":  3298,
+                                           "unmitigatedAmount":  11479,
+                                           "overkill":  2797,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8263699,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  37770,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  1748,
+                                           "mitigated":  705,
+                                           "unmitigatedAmount":  2453,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8241506,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  1259,
+                                           "unmitigatedAmount":  1259,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcing Smash",
+                                            "guid":  28168,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Googsz",
+                        "id":  23,
+                        "guid":  78793971,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  8270566,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  22338,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  7120,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  28168,
+                                                             "name":  "Arcing Smash",
+                                                             "total":  7594,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37284,
+                                                             "name":  "Scalding Water",
+                                                             "total":  6500,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_masterofelements.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37363,
+                                                             "name":  "Whirl",
+                                                             "total":  5629,
+                                                             "type":  1,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37478,
+                                                             "name":  "Geyser",
+                                                             "total":  2615,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostblast.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  8244,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Guardian",
+                                                           "total":  7594,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6500,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  10397,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  4038,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  2260,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1641,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  19941,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1397,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  1061,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37284,
+                                                                    "name":  "Scalding Water",
+                                                                    "total":  5219,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_masterofelements.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37363,
+                                                                    "name":  "Whirl",
+                                                                    "total":  5178,
+                                                                    "type":  1,
+                                                                    "icon":  "trade_engineering.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  4038,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Tamatori",
+                                                            "total":  3901,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Snays",
+                                                            "total":  1397,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Googsz",
+                                                            "total":  1061,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  57006,
+                        "overkill":  3092,
+                        "events":  [
+                                       {
+                                           "timestamp":  8270556,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  4502,
+                                           "mitigated":  2826,
+                                           "unmitigatedAmount":  10420,
+                                           "overkill":  3092,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8269559,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scalding Water",
+                                                           "guid":  37284,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_masterofelements.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  500,
+                                           "unmitigatedAmount":  500,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8251196,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scalding Water",
+                                                           "guid":  37284,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_masterofelements.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  500,
+                                           "unmitigatedAmount":  500,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcing Smash",
+                                            "guid":  28168,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Auretardin",
+                        "id":  38,
+                        "guid":  54555504,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  8275729,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  29475,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  13290,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  28168,
+                                                             "name":  "Arcing Smash",
+                                                             "total":  9669,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37363,
+                                                             "name":  "Whirl",
+                                                             "total":  5185,
+                                                             "type":  1,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37284,
+                                                             "name":  "Scalding Water",
+                                                             "total":  4000,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_masterofelements.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37478,
+                                                             "name":  "Geyser",
+                                                             "total":  3582,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostblast.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37770,
+                                                             "name":  "Shoot",
+                                                             "total":  2771,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Guardian",
+                                                           "total":  9669,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  8767,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Auretardin",
+                                                           "total":  4268,
+                                                           "type":  "Paladin"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  4000,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Ambusher",
+                                                           "total":  2771,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  17705,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  8900,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  3276,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  3013,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  2516,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37363,
+                                                                    "name":  "Whirl",
+                                                                    "total":  5185,
+                                                                    "type":  1,
+                                                                    "icon":  "trade_engineering.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37478,
+                                                                    "name":  "Geyser",
+                                                                    "total":  3582,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostblast.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37284,
+                                                                    "name":  "Scalding Water",
+                                                                    "total":  3468,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_masterofelements.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  351761,
+                                                                    "name":  "Judgement of the Martyr",
+                                                                    "total":  1774,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_shadow_lifedrain.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  348703,
+                                                                    "name":  "Seal of the Martyr",
+                                                                    "total":  1575,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_sealofblood.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  8900,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Tamatori",
+                                                            "total":  6289,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Auretardin",
+                                                            "total":  2516,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  60809,
+                        "overkill":  2793,
+                        "events":  [
+                                       {
+                                           "timestamp":  8275717,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  38,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  2180,
+                                           "mitigated":  3888,
+                                           "unmitigatedAmount":  8861,
+                                           "overkill":  2793,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8275234,
+                                           "type":  "damage",
+                                           "sourceID":  38,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  38,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Seal of the Martyr",
+                                                           "guid":  348703,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_sealofblood.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  68,
+                                           "unmitigatedAmount":  68,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8270555,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  38,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  4696,
+                                           "mitigated":  3584,
+                                           "unmitigatedAmount":  8280,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcing Smash",
+                                            "guid":  28168,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Searingtotem",
+                        "id":  25,
+                        "guid":  78385667,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  8275730,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  22032,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  14309,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  28168,
+                                                             "name":  "Arcing Smash",
+                                                             "total":  9115,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37363,
+                                                             "name":  "Whirl",
+                                                             "total":  6369,
+                                                             "type":  1,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37478,
+                                                             "name":  "Geyser",
+                                                             "total":  3548,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostblast.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37284,
+                                                             "name":  "Scalding Water",
+                                                             "total":  3000,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_masterofelements.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  9917,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Guardian",
+                                                           "total":  9115,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  3000,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  11733,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  4947,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  2690,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1638,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1506,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  19941,
+                                                              "name":  "Flash of Light",
+                                                              "total":  952,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37363,
+                                                                    "name":  "Whirl",
+                                                                    "total":  6369,
+                                                                    "type":  1,
+                                                                    "icon":  "trade_engineering.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37478,
+                                                                    "name":  "Geyser",
+                                                                    "total":  2525,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostblast.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37284,
+                                                                    "name":  "Scalding Water",
+                                                                    "total":  2454,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_masterofelements.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  28168,
+                                                                    "name":  "Arcing Smash",
+                                                                    "total":  385,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_warrior_cleave.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  4947,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Tamatori",
+                                                            "total":  3144,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Searingtotem",
+                                                            "total":  2690,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Snays",
+                                                            "total":  952,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  62302,
+                        "overkill":  690,
+                        "events":  [
+                                       {
+                                           "timestamp":  8275718,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  4503,
+                                           "mitigated":  6346,
+                                           "unmitigatedAmount":  11539,
+                                           "overkill":  690,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8270555,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3922,
+                                           "mitigated":  4691,
+                                           "unmitigatedAmount":  8613,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8249157,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirl",
+                                                           "guid":  37363,
+                                                           "type":  1,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3008,
+                                           "mitigated":  1475,
+                                           "unmitigatedAmount":  4483,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcing Smash",
+                                            "guid":  28168,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Credd",
+                        "id":  12,
+                        "guid":  51000530,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Arms",
+                        "timestamp":  8275730,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  29938,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  12358,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  28168,
+                                                             "name":  "Arcing Smash",
+                                                             "total":  13405,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37284,
+                                                             "name":  "Scalding Water",
+                                                             "total":  6000,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_masterofelements.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37363,
+                                                             "name":  "Whirl",
+                                                             "total":  5917,
+                                                             "type":  1,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37478,
+                                                             "name":  "Geyser",
+                                                             "total":  3696,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostblast.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30486,
+                                                             "name":  "Super Sapper Charge",
+                                                             "total":  920,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Guardian",
+                                                           "total":  13405,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  9613,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6000,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Credd",
+                                                           "total":  920,
+                                                           "type":  "Warrior"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  15695,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  6997,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  3012,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  2905,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  2781,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37363,
+                                                                    "name":  "Whirl",
+                                                                    "total":  5917,
+                                                                    "type":  1,
+                                                                    "icon":  "trade_engineering.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37284,
+                                                                    "name":  "Scalding Water",
+                                                                    "total":  4484,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_masterofelements.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37478,
+                                                                    "name":  "Geyser",
+                                                                    "total":  3696,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostblast.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  30486,
+                                                                    "name":  "Super Sapper Charge",
+                                                                    "total":  920,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  28168,
+                                                                    "name":  "Arcing Smash",
+                                                                    "total":  678,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_warrior_cleave.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Tamatori",
+                                                            "total":  10009,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  2905,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Credd",
+                                                            "total":  2781,
+                                                            "type":  "Warrior"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  63292,
+                        "overkill":  1700,
+                        "events":  [
+                                       {
+                                           "timestamp":  8275719,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  12,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  4800,
+                                           "mitigated":  4391,
+                                           "unmitigatedAmount":  10891,
+                                           "overkill":  1700,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8270556,
+                                           "type":  "damage",
+                                           "sourceID":  168,
+                                           "sourceInstance":  3,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  12,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcing Smash",
+                                                           "guid":  28168,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  6905,
+                                           "mitigated":  4509,
+                                           "unmitigatedAmount":  11414,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8268856,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  12,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scalding Water",
+                                                           "guid":  37284,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_masterofelements.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  500,
+                                           "unmitigatedAmount":  500,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcing Smash",
+                                            "guid":  28168,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Desdinova",
+                        "id":  10,
+                        "guid":  84706034,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Affliction",
+                        "timestamp":  8282641,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  6316,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1143,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37770,
+                                                             "name":  "Shoot",
+                                                             "total":  3353,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37790,
+                                                             "name":  "Spread Shot",
+                                                             "total":  2963,
+                                                             "type":  1,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Coilfang Ambusher",
+                                                           "total":  6316,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1027,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1027,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Thorbir",
+                                                            "total":  1027,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  23018,
+                        "overkill":  268,
+                        "events":  [
+                                       {
+                                           "timestamp":  8282634,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  4,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spread Shot",
+                                                           "guid":  37790,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  2695,
+                                           "mitigated":  537,
+                                           "unmitigatedAmount":  3500,
+                                           "overkill":  268,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8268586,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  37770,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  1674,
+                                           "mitigated":  302,
+                                           "unmitigatedAmount":  1976,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8264705,
+                                           "type":  "damage",
+                                           "sourceID":  169,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shoot",
+                                                           "guid":  37770,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_marksmanship.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  1679,
+                                           "mitigated":  304,
+                                           "unmitigatedAmount":  1983,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Spread Shot",
+                                            "guid":  37790,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Snays",
+                        "id":  28,
+                        "guid":  65190968,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Holy",
+                        "timestamp":  8299398,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  11964,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1262,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37433,
+                                                             "name":  "Spout",
+                                                             "total":  10999,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_chillingblast.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37770,
+                                                             "name":  "Shoot",
+                                                             "total":  965,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  10999,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Coilfang Ambusher",
+                                                           "total":  965,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1814,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1814,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37433,
+                                                                    "name":  "Spout",
+                                                                    "total":  1814,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_chillingblast.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Cliffhanger",
+                                                            "total":  1814,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15735,
+                        "overkill":  943,
+                        "events":  [
+                                       {
+                                           "timestamp":  8299356,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  28,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  2809,
+                                           "unmitigatedAmount":  3752,
+                                           "overkill":  943,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8299162,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  28,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3656,
+                                           "unmitigatedAmount":  3656,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8298963,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  28,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3591,
+                                           "unmitigatedAmount":  3591,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Spout",
+                                            "guid":  37433,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Exmal",
+                        "id":  31,
+                        "guid":  51474657,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  8308571,
+                        "fight":  54,
+                        "damage":  {
+                                       "total":  10546,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37433,
+                                                             "name":  "Spout",
+                                                             "total":  10546,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_chillingblast.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "The Lurker Below",
+                                                           "total":  10546,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  412,
+                        "overkill":  2363,
+                        "events":  [
+                                       {
+                                           "timestamp":  8308564,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  31,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  1347,
+                                           "unmitigatedAmount":  3710,
+                                           "overkill":  2363,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8308360,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  31,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3464,
+                                           "unmitigatedAmount":  3464,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8308152,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  31,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spout",
+                                                           "guid":  37433,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                                       },
+                                           "fight":  54,
+                                           "hitType":  1,
+                                           "amount":  3372,
+                                           "unmitigatedAmount":  3372,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Spout",
+                                            "guid":  37433,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_chillingblast.jpg"
+                                        }
+                    }
+                ]
+}

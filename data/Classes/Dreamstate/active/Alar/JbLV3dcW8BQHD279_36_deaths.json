@@ -1,0 +1,164 @@
+{
+    "entries":  [
+                    {
+                        "name":  "呆瓜的小熊",
+                        "id":  21,
+                        "guid":  96126489,
+                        "type":  "Druid",
+                        "icon":  "Druid-Warden",
+                        "timestamp":  6046885,
+                        "fight":  36,
+                        "damage":  {
+                                       "total":  22732,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  9826,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  20642,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  34121,
+                                                             "name":  "Flame Buffet",
+                                                             "total":  2090,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fireball.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  22732,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2232,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  1215,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1017,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34121,
+                                                                    "name":  "Flame Buffet",
+                                                                    "total":  1215,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_fireball.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  1017,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "呆瓜的小熊",
+                                                            "total":  1215,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "甲匪之虎",
+                                                            "total":  1017,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14015,
+                        "overkill":  5306,
+                        "events":  [
+                                       {
+                                           "timestamp":  6046869,
+                                           "type":  "damage",
+                                           "sourceID":  186,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  36,
+                                           "hitType":  1,
+                                           "amount":  4535,
+                                           "mitigated":  4684,
+                                           "unmitigatedAmount":  14525,
+                                           "overkill":  5306,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  6044871,
+                                           "type":  "damage",
+                                           "sourceID":  186,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  36,
+                                           "hitType":  1,
+                                           "amount":  10801,
+                                           "mitigated":  5142,
+                                           "unmitigatedAmount":  15943,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  6032854,
+                                           "type":  "damage",
+                                           "sourceID":  186,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Buffet",
+                                                           "guid":  34121,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fireball.jpg"
+                                                       },
+                                           "fight":  36,
+                                           "hitType":  1,
+                                           "amount":  2090,
+                                           "unmitigatedAmount":  2090,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

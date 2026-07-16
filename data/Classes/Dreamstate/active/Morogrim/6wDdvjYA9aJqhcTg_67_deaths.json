@@ -1,0 +1,229 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Hopsy",
+                        "id":  13,
+                        "guid":  48089020,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  10081645,
+                        "fight":  67,
+                        "damage":  {
+                                       "total":  14681,
+                                       "totalReduced":  14281,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3011,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  10583,
+                                                             "totalReduced":  10183,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  4098,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  10583,
+                                                           "totalReduced":  10183,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  4098,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3494,
+                                        "totalReduced":  3094,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1668,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1426,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  42137,
+                                                              "name":  "Greater Rune of Warding",
+                                                              "total":  400,
+                                                              "totalReduced":  0,
+                                                              "type":  1,
+                                                              "icon":  "trade_engineering.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  3094,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  400,
+                                                                    "totalReduced":  0,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Evaniel",
+                                                            "total":  3094,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Hopsy",
+                                                            "total":  400,
+                                                            "totalReduced":  0,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  16355,
+                        "overkill":  1566,
+                        "events":  [
+                                       {
+                                           "timestamp":  10081623,
+                                           "type":  "damage",
+                                           "sourceID":  431,
+                                           "sourceInstance":  35,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  67,
+                                           "hitType":  1,
+                                           "amount":  73,
+                                           "mitigated":  487,
+                                           "unmitigatedAmount":  2126,
+                                           "overkill":  1566,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  10080744,
+                                           "type":  "damage",
+                                           "sourceID":  431,
+                                           "sourceInstance":  34,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  67,
+                                           "hitType":  1,
+                                           "amount":  1384,
+                                           "mitigated":  260,
+                                           "unmitigatedAmount":  1644,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  10080744,
+                                           "type":  "damage",
+                                           "sourceID":  431,
+                                           "sourceInstance":  33,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  67,
+                                           "hitType":  1,
+                                           "amount":  1697,
+                                           "mitigated":  319,
+                                           "unmitigatedAmount":  2016,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Hopsy",
+                        "id":  13,
+                        "guid":  48089020,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  10095611,
+                        "fight":  67,
+                        "damage":  {
+                                       "total":  0,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  0,
+                        "events":  [
+
+                                   ]
+                    }
+                ]
+}

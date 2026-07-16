@@ -104,6 +104,12 @@ $script:CooldownTargetMode = @{
         "Cleanse" = "other"; "Hand of Protection" = "other"; "Blessing of Freedom" = "other"
         "Dark Rune" = "self"; "Mana Potion" = "self"
     }
+    # Dreamstate shares Innervate/Rebirth/Dark Rune's real guids with
+    # Druid-Restoration - same spell, same real targeting mechanics, so the
+    # same mode values apply (not re-derived, no reason they'd differ).
+    "Dreamstate" = @{
+        "Innervate" = "other"; "Rebirth" = "other"; "Dark Rune" = "self"; "Mana Potion" = "self"
+    }
 }
 
 # Parses a BM/BMSpells/BMCooldowns/BMBuffs CSV-string field (all-string once
@@ -245,6 +251,7 @@ function Get-CannedCaveats {
 function Get-ActiveStatBlocks {
     param([Parameter(Mandatory=$true)][string]$ClassName)
     if ($ClassName -eq "Druid") { return @("Flask", "Food", "TreeOfLife", "ManaConsumable", "HPM") }
+    if ($ClassName -eq "Dreamstate") { return @("Flask", "Food", "ImprovedFaerieFire", "ManaConsumable", "HPM") }
     return @("Flask", "Food", "ManaConsumable", "HPM")
 }
 

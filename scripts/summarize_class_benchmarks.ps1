@@ -357,6 +357,19 @@ $cooldownGuidsByClass = @{
         "Blessing of Freedom" = @(1044)
         "Dark Rune"           = @(27869)
     }
+    # Druid-Dreamstate (WCL classID 2 / specID 6) - see
+    # pull_top100_dreamstate.ps1's header for the full discovery writeup
+    # (confirmed against a real Turkeykin report, XJp8vAxzM4KtHYyb). Innervate
+    # carries over from Druid-Restoration (real, confirmed casts). CONFIRMED
+    # ABSENT: Nature's Swiftness, Swiftmend, Tranquility - zero real casts
+    # across all 4 real Dreamstate fights, not assumed. Rebirth and Dark Rune
+    # kept per explicit instruction even with no real cast this specific
+    # report (same reasoning as build_boss_report_data.ps1's own entry).
+    "Dreamstate" = [ordered]@{
+        "Innervate" = @(29166)
+        "Rebirth"   = @(26994)
+        "Dark Rune" = @(27869)
+    }
 }
 if (-not $cooldownGuidsByClass.ContainsKey($ClassName)) {
     Write-Host "ERROR: no cooldown/utility guid table defined for class '$ClassName' in"
@@ -376,10 +389,11 @@ $cooldownGuids = $cooldownGuidsByClass[$ClassName]
 # Priest's real cast data showed the same "Restore Mana" display name under TWO guids
 # (41617, 41618) - matching by name already handles this correctly, no new logic needed.
 $manaPotionNameByClass = @{
-    "Druid"   = "Restore Mana"
-    "Shaman"  = "Restore Mana"
-    "Priest"  = "Restore Mana"
-    "Paladin" = "Restore Mana"
+    "Druid"      = "Restore Mana"
+    "Shaman"     = "Restore Mana"
+    "Priest"     = "Restore Mana"
+    "Paladin"    = "Restore Mana"
+    "Dreamstate" = "Restore Mana"
 }
 $manaPotionName = $manaPotionNameByClass[$ClassName]
 
@@ -396,6 +410,18 @@ $manaPotionName = $manaPotionNameByClass[$ClassName]
 # *_consumables.json when the class has them. =====
 $classesWithBuffUptime = @("Druid")
 $hasBuffUptime = $classesWithBuffUptime -contains $ClassName
+
+# ===== Debuff-on-boss uptime (Improved Faerie Fire): Dreamstate-only, a
+# DIFFERENT flag from $classesWithBuffUptime above, deliberately not merged
+# into it - the underlying data shape genuinely differs (a source-scoped
+# uptime read off table(dataType: Casts)'s own "uptime" field, not a
+# reconstructed self-buff interval) - see pull_top100_dreamstate.ps1's header
+# for the full discovery writeup on why this needed its own mechanism instead
+# of reusing Tree of Life's. Adds a separate
+# Top100ImprovedFaerieFireAvgUptimePct column to benchmark_buffs.csv, only for
+# classes listed here. =====
+$classesWithDebuffUptime = @("Dreamstate")
+$hasDebuffUptime = $classesWithDebuffUptime -contains $ClassName
 
 function Test-IsAscii($s) {
     if ($null -eq $s) { return $false }
@@ -667,6 +693,9 @@ foreach ($bossFolder in $bosses.Keys) {
                 if ($hasBuffUptime) {
                     $buffUptimes | Add-Member -NotePropertyName "TreeOfLifePct" -NotePropertyValue $consumablesData.treeOfLifeUptimePct
                 }
+                if ($hasDebuffUptime) {
+                    $buffUptimes | Add-Member -NotePropertyName "ImprovedFaerieFirePct" -NotePropertyValue $consumablesData.improvedFaerieFireUptimePct
+                }
             } catch {
                 $consumablesFailCount++
             }
@@ -872,6 +901,10 @@ foreach ($bossFolder in $bosses.Keys) {
         if ($hasBuffUptime) {
             $treeAvg = ($sampleWithBuffs | ForEach-Object { $_.BuffUptimes.TreeOfLifePct } | Measure-Object -Average).Average
             $buffRow | Add-Member -NotePropertyName "Top100TreeOfLifeAvgUptimePct" -NotePropertyValue ([math]::Round($treeAvg, 1))
+        }
+        if ($hasDebuffUptime) {
+            $iffAvg = ($sampleWithBuffs | ForEach-Object { $_.BuffUptimes.ImprovedFaerieFirePct } | Measure-Object -Average).Average
+            $buffRow | Add-Member -NotePropertyName "Top100ImprovedFaerieFireAvgUptimePct" -NotePropertyValue ([math]::Round($iffAvg, 1))
         }
         $buffRow | Add-Member -NotePropertyName "SampleUsed" -NotePropertyValue $buffSampleUsed
         $buffRows += $buffRow

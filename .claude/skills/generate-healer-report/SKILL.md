@@ -26,27 +26,44 @@ context on this project** — this skill assumes familiarity with the active/arc
 data model, the events-vs-tables history, and the v1/v2 split. This file is the
 runbook for *this specific task*, not a replacement for those.
 
-## Before starting: confirm the class is supported
+## Before starting: confirm the class AND spec are supported
 
-Step 2 resolves the character's class. **Druid, Shaman, Priest (Holy), and
-Paladin (Holy) are all on the real v2 pipeline today**
+Step 2 resolves the character's class (and, since 2026-07-16, spec — see
+below). **Druid-Restoration, Shaman-Restoration, Priest-Holy, Paladin-Holy,
+and Druid-Dreamstate are all on the real v2 pipeline today**
 (`pull_top100_druid.ps1`/`pull_top100_shaman.ps1`/`pull_top100_priest_holy.ps1`/
-`pull_top100_paladin.ps1`,
+`pull_top100_paladin.ps1`/`pull_top100_dreamstate.ps1`,
 `boss_page_template_druid.html`/`boss_page_template_shaman.html`/
-`boss_page_template_priest.html`/`boss_page_template_paladin.html`, and the
-cooldown-guid tables in `build_boss_report_data.ps1` cover all four — Priest
-added 2026-07-13, Paladin added the same day right after, both ported the same
-way Shaman was: real-data discovery pass against a real report (Lippies for
-Priest, Crowns for Paladin) before writing any guid table, see
-`pull_top100_priest_holy.ps1`'s and `pull_top100_paladin.ps1`'s headers). Every
-Fresh SSC/TK healer class is now on the v2 pipeline.
+`boss_page_template_priest.html`/`boss_page_template_paladin.html`/
+`boss_page_template_dreamstate.html`, and the cooldown-guid tables in
+`build_boss_report_data.ps1` cover all five — Priest added 2026-07-13, Paladin
+added the same day right after, both ported the same way Shaman was;
+Dreamstate added 2026-07-16, ported the same way but with one real wrinkle:
+it's a SPEC of the already-tracked Druid class (WCL classID 2 / specID 6), not
+a new class of its own — `-ClassName "Dreamstate"` is still the correct
+pipeline value end-to-end (own `data\Classes\Dreamstate\` folder/manifest,
+own cooldown table), it just maps to the real WCL `className: "Druid",
+specName: "Dreamstate"` internally (see `pull_top100_dreamstate.ps1`'s header
+for the full split). Real-data discovery pass against a real report before
+writing any guid table for every one of these (Lippies for Priest, Crowns for
+Paladin, Turkeykin for Dreamstate — see each script's own header).
 
-**If the resolved class isn't Druid, Shaman, Priest, or Paladin: stop and tell
-the user clearly** — name the class, say it isn't on the v2 pipeline yet, and
-don't proceed past step 2. Don't attempt a "best effort" fallback (e.g. quietly
-reusing another class's cooldown list or template for an unsupported class) —
-that would produce a report with fabricated-looking numbers for abilities that
-class doesn't even have.
+**If the resolved class/spec combination isn't one of the five above: stop and
+tell the user clearly** — name the class and spec, say it isn't on the v2
+pipeline yet, and don't proceed past step 2. Don't attempt a "best effort"
+fallback (e.g. quietly reusing another class's cooldown list or template for
+an unsupported class/spec, or assuming a Druid pulled here is Restoration just
+because that's the only Druid build this pipeline used to track) — that would
+produce a report with fabricated-looking numbers for abilities that build
+doesn't even have.
+
+**A character can play more than one spec across a single report's boss
+kills** — confirmed real, not hypothetical (Turkeykin plays Balance DPS on 6
+SSC bosses and Dreamstate healer on 4 TK bosses in the same real report,
+`XJp8vAxzM4KtHYyb`). Step 2 below now resolves spec per real boss kill, not
+once globally — if fights disagree, it asks for an explicit `-Spec` and pulls
+only the fights where the character was actually in that spec, never blending
+a DPS off-spec fight into a healer report.
 
 ## Pipeline
 
@@ -59,16 +76,28 @@ the code the same way `pull_character_TEMPLATE.ps1` does:
 ```
 powershell -ExecutionPolicy Bypass -File scripts\pull_character_TEMPLATE.ps1 -ReportCode "<code>" -CharacterName "<name>"
 ```
-This resolves class/server/region from the report's own `friendlies[]`, derives the
-raid date from the report title, and pulls healing/casts/consumables/gear/
-activetime/deaths per boss kill plus the character's full parse history. Read its
-output carefully:
+This resolves class from the report's own `actors[]`, derives the raid date
+from the report title, resolves real per-fight SPEC from the report's own
+rankings data (added 2026-07-16 — see "Before starting" above), and pulls
+healing/casts/consumables/gear/activetime/deaths per boss kill (only for
+fights matching the resolved spec) plus the character's full parse history.
+Read its output carefully:
 - If it reports `0 boss kill(s) found` or the character wasn't found in
-  `friendlies[]`, **stop here** — don't proceed to build pages from nothing. Tell
+  `actors[]`, **stop here** — don't proceed to build pages from nothing. Tell
   the user what went wrong (wrong report code, character not in this report, etc.).
-- Note the resolved class from the "Found '<name>' in friendlies[]: <Class>, ..."
-  line — this drives every step after this one. Check it against the class-support
-  gate above before continuing.
+- **If it hard-stops with "plays more than one real spec across this report's
+  boss kills"**, it will print the real per-fight breakdown (which spec on
+  which boss). Re-run with `-Spec "<the healing spec>"` added — don't guess
+  which one to pick, ask the user if it's not obvious from the breakdown
+  (e.g. which spec has the `healers` role vs. `dps`/`tanks`).
+- Note the resolved class (and spec, once step 2 finishes) — this drives every
+  step after this one. Check it against the class/spec-support gate above
+  before continuing. A resolved class of "Druid" is NOT enough on its own
+  since 2026-07-16 — confirm whether the real spec is Restoration or
+  Dreamstate before picking `-ClassName` for steps 3-9 below (`"Druid"` for
+  Restoration, `"Dreamstate"` for Dreamstate — never `"Druid"` for a
+  Dreamstate healer, see the real WCL-className-vs-pipeline-key split in
+  `pull_top100_dreamstate.ps1`'s header).
 - Note the resolved raid date (used only for display text later — the actual
   `data\Characters\{name}\{code}\` and `docs\{healer}\{code}\` folders are keyed
   by report code, not date, since two raids can happen on the same calendar day).
@@ -79,12 +108,14 @@ powershell -ExecutionPolicy Bypass -File scripts\pull_top100_druid.ps1
 powershell -ExecutionPolicy Bypass -File scripts\pull_top100_shaman.ps1
 powershell -ExecutionPolicy Bypass -File scripts\pull_top100_priest_holy.ps1
 powershell -ExecutionPolicy Bypass -File scripts\pull_top100_paladin.ps1
+powershell -ExecutionPolicy Bypass -File scripts\pull_top100_dreamstate.ps1
 ```
-Dispatch to whichever script matches the resolved class from step 2 (Druid,
-Shaman, Priest, or Paladin today — see the gate above). This is diff-based
-against `manifest.json` — it only makes real API calls for parses that are
-genuinely new or have re-entered the Top 100 since the last run, so running it
-here is cheap even if it was run recently.
+Dispatch to whichever script matches the resolved class/spec from step 2
+(Druid-Restoration → `pull_top100_druid.ps1`, Druid-Dreamstate →
+`pull_top100_dreamstate.ps1`, Shaman, Priest, or Paladin today — see the gate
+above). This is diff-based against `manifest.json` — it only makes real API
+calls for parses that are genuinely new or have re-entered the Top 100 since
+the last run, so running it here is cheap even if it was run recently.
 
 ### 4. Run the summarization
 ```
@@ -121,8 +152,11 @@ arithmetic: per-boss HPS/overheal/HPM/active-time deviation flags vs. the Top 10
 `BM` row, spell-composition gaps, per-cooldown `Deviates` flags (cast it while
 ≤20% of the sample does, or didn't cast it while ≥50% did — this generalizes the
 Tranquility rule below to every tracked cooldown for every class),
-`TranquilityInclude` (Druid only, `null` otherwise), `RebirthCandidates` (raw
-death/cast facts only, no include/omit decision — Druid only), `SelfDeaths`,
+`TranquilityInclude` (Druid-Restoration only, `null` otherwise —
+Druid-Dreamstate has NOT been confirmed to have this ability, checked against
+real data, so it's excluded here too), `RebirthCandidates` (raw death/cast
+facts only, no include/omit decision — Druid-Restoration AND Druid-Dreamstate
+both, since Dreamstate keeps Rebirth in its own cooldown table), `SelfDeaths`,
 nearest-cooldown-to-each-death lookups, canned-caveat tags (see below), and a
 gear analysis (missing-enchant flags, differing-slot annotations) built from the
 same 19-slot/enchantable-slot tables `scripts\lib\ReportRenderLib.psm1` uses
@@ -141,10 +175,11 @@ tags — this is the one field the renderer doesn't escape), and an optional
 LongDetail?}` for **interpretive** gear notes only (a deliberate weapon/trinket
 swap, a positive "all consumables active every kill" confirmation) — never
 duplicate the mechanical slot-fill-count or missing-enchant rows the renderer
-already generates from `GearAnalysis` on its own. Druid pages may also need
-`IncludeRebirthRow: true` on a boss slug (omit or `false` otherwise) — this is
-the one include/omit call `analysis.json` deliberately leaves to judgment, since
-no numeric threshold exists for "a real death Rebirth could plausibly answer."
+already generates from `GearAnalysis` on its own. Druid-Restoration AND
+Druid-Dreamstate pages may also need `IncludeRebirthRow: true` on a boss slug
+(omit or `false` otherwise) — this is the one include/omit call `analysis.json`
+deliberately leaves to judgment, since no numeric threshold exists for "a real
+death Rebirth could plausibly answer."
 
 The analysis file's `Flag`/`GapPoints`/`Deviates` fields tell you *where* to look
 and *whether* something is a real deviation; you still decide what's worth
@@ -249,6 +284,13 @@ look if a rendered page looks wrong, rather than re-deriving the fix by hand.
   in this TBC ruleset's in-combat cast data — Paladin's Redemption exists but
   can't target an in-combat ally) — the renderer already skips this row entirely
   for those three classes regardless of what `findings.json` says.
+  **Druid-Dreamstate is the one non-"Druid"-named class that DOES keep this
+  concept** (real guid 26994, same as Druid-Restoration's) — don't lump it in
+  with Shaman/Priest/Paladin's "no such concept" treatment; `build_boss_analysis.ps1`
+  computes real `RebirthCandidates` for Dreamstate too (fixed 2026-07-16 — this
+  used to be gated on a single `$ClassName -eq "Druid"` check covering both
+  Tranquility and Rebirth together, which would have silently left Dreamstate's
+  `RebirthCandidates` permanently `$null`).
 - **No letter grades, ever** — percentile numbers only. Nothing in the template
   or renderer produces a letter grade, so this only matters for findings.json prose.
 - **No gendered pronouns anywhere in generated prose** — use the character's name

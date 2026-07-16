@@ -1,0 +1,702 @@
+{
+    "entries":  [
+                    {
+                        "name":  "真爱永恒",
+                        "id":  13,
+                        "guid":  370559230,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-BeastMastery",
+                        "timestamp":  3744052,
+                        "fight":  20,
+                        "damage":  {
+                                       "total":  10110,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37852,
+                                                             "name":  "Watery Grave Explosion",
+                                                             "total":  4927,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_arcticwinds.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  4100,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  1083,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "真爱永恒",
+                                                           "total":  4927,
+                                                           "type":  "Hunter"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  4100,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1083,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  100,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  19579,
+                                                              "name":  "Spirit Bond",
+                                                              "total":  100,
+                                                              "type":  8,
+                                                              "icon":  "classic_ability_druid_demoralizingroar.jpg",
+                                                              "petName":  "神话情话"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  3,
+                                                                    "name":  "Falling",
+                                                                    "total":  100,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "神话情话",
+                                                            "total":  100,
+                                                            "type":  "Pet"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  6949,
+                        "overkill":  2,
+                        "events":  [
+                                       {
+                                           "timestamp":  3744026,
+                                           "type":  "damage",
+                                           "sourceID":  117,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Earthquake",
+                                                           "guid":  37764,
+                                                           "type":  1,
+                                                           "abilityIcon":  "spell_nature_earthquake.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  4098,
+                                           "unmitigatedAmount":  4100,
+                                           "overkill":  2,
+                                           "isAoE":  true,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  3739982,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  1083,
+                                           "unmitigatedAmount":  1083,
+                                           "overkill":  0,
+                                           "isAoE":  false,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  3737077,
+                                           "type":  "damage",
+                                           "sourceID":  13,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Watery Grave Explosion",
+                                                           "guid":  37852,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_arcticwinds.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  4927,
+                                           "unmitigatedAmount":  4927,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Earthquake",
+                                            "guid":  37764,
+                                            "type":  1,
+                                            "abilityIcon":  "spell_nature_earthquake.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "御前带棍侍卫",
+                        "id":  33,
+                        "guid":  389121265,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  3813529,
+                        "fight":  20,
+                        "damage":  {
+                                       "total":  18335,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1172,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  8119,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37852,
+                                                             "name":  "Watery Grave Explosion",
+                                                             "total":  5371,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_arcticwinds.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  2774,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  41932,
+                                                             "name":  "Carnivorous Bite",
+                                                             "total":  2071,
+                                                             "type":  1,
+                                                             "icon":  "ability_druid_rake.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  8119,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "御前带棍侍卫",
+                                                           "total":  5371,
+                                                           "type":  "Shaman"
+                                                       },
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  4845,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  7660,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  15290,
+                                                              "name":  "Vampiric Embrace",
+                                                              "total":  3427,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  2546,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34864,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1687,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  3041,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  2548,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  41932,
+                                                                    "name":  "Carnivorous Bite",
+                                                                    "total":  2071,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_druid_rake.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "一方神牧",
+                                                            "total":  4233,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "小芹菜",
+                                                            "total":  3427,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  69478,
+                        "overkill":  986,
+                        "events":  [
+                                       {
+                                           "timestamp":  3813502,
+                                           "type":  "damage",
+                                           "sourceID":  33,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  33,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Watery Grave Explosion",
+                                                           "guid":  37852,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_arcticwinds.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  4385,
+                                           "unmitigatedAmount":  5371,
+                                           "overkill":  986,
+                                           "isAoE":  true,
+                                           "sourceMarker":  1,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  3796171,
+                                           "type":  "damage",
+                                           "sourceID":  117,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  33,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Earthquake",
+                                                           "guid":  37764,
+                                                           "type":  1,
+                                                           "abilityIcon":  "spell_nature_earthquake.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  4029,
+                                           "unmitigatedAmount":  4029,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  3772360,
+                                           "type":  "damage",
+                                           "sourceID":  130,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  33,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Carnivorous Bite",
+                                                           "guid":  41932,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_druid_rake.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  414,
+                                           "unmitigatedAmount":  414,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Watery Grave Explosion",
+                                            "guid":  37852,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_arcticwinds.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Littlecase",
+                        "id":  48,
+                        "guid":  370165092,
+                        "type":  "Druid",
+                        "icon":  "Druid-Warden",
+                        "timestamp":  3825903,
+                        "fight":  20,
+                        "damage":  {
+                                       "total":  25033,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  33218,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  20669,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37730,
+                                                             "name":  "Tidal Wave",
+                                                             "total":  4364,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_chillingblast.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  25033,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4005,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  3815,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27163,
+                                                              "name":  "Judgement of Light",
+                                                              "total":  190,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_healingaura.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  3468,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37730,
+                                                                    "name":  "Tidal Wave",
+                                                                    "total":  537,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_chillingblast.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "晨曦归来",
+                                                            "total":  3815,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Littlecase",
+                                                            "total":  190,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  5896,
+                        "overkill":  4054,
+                        "events":  [
+                                       {
+                                           "timestamp":  3825897,
+                                           "type":  "damage",
+                                           "sourceID":  117,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  48,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  481,
+                                           "mitigated":  10108,
+                                           "unmitigatedAmount":  14643,
+                                           "overkill":  4054,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3825865,
+                                           "type":  "damage",
+                                           "sourceID":  117,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  48,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  15,
+                                           "amount":  5754,
+                                           "mitigated":  6646,
+                                           "unmitigatedAmount":  12400,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3821606,
+                                           "type":  "damage",
+                                           "sourceID":  117,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  48,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  15,
+                                           "amount":  6419,
+                                           "mitigated":  7476,
+                                           "unmitigatedAmount":  13895,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "小洁萸呀",
+                        "id":  25,
+                        "guid":  370207020,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  3900768,
+                        "fight":  20,
+                        "damage":  {
+                                       "total":  14670,
+                                       "totalReduced":  12665,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3047,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  10665,
+                                                             "totalReduced":  8660,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  4005,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  10665,
+                                                           "totalReduced":  8660,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  4005,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4813,
+                                        "totalReduced":  2808,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  28495,
+                                                              "name":  "Healing Potion",
+                                                              "total":  2319,
+                                                              "type":  1,
+                                                              "icon":  "inv_potion_131.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2005,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  489,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  4813,
+                                                                    "totalReduced":  2808,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "小洁萸呀",
+                                                            "total":  4324,
+                                                            "totalReduced":  2319,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "晨曦归来",
+                                                            "total":  489,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  17115,
+                        "overkill":  713,
+                        "events":  [
+                                       {
+                                           "timestamp":  3885714,
+                                           "type":  "damage",
+                                           "sourceID":  130,
+                                           "sourceInstance":  34,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  958,
+                                           "mitigated":  477,
+                                           "unmitigatedAmount":  2148,
+                                           "overkill":  713,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3885708,
+                                           "type":  "damage",
+                                           "sourceID":  130,
+                                           "sourceInstance":  36,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  1304,
+                                           "mitigated":  373,
+                                           "unmitigatedAmount":  1677,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3885708,
+                                           "type":  "damage",
+                                           "sourceID":  130,
+                                           "sourceInstance":  32,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  20,
+                                           "hitType":  1,
+                                           "amount":  1590,
+                                           "mitigated":  455,
+                                           "unmitigatedAmount":  2045,
+                                           "isAoE":  false
+                                       }
+                                   ]
+                    }
+                ]
+}

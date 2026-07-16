@@ -196,6 +196,13 @@
     <p class="eyebrow"><a href="../index.html" style="color:var(--copper); text-decoration:none;">← All raids</a> &nbsp;·&nbsp; Raid Audit — {{RAID_TITLE}} — {{RAID_DATE_DISPLAY}}</p>
     <h1>{{HEALER_NAME}}</h1>
     <p class="subline">{{HEALER_CLASS_SPEC}} &nbsp;·&nbsp; ilvl {{ITEM_LEVEL}} &nbsp;·&nbsp; report <span>{{REPORT_CODE}}</span> &nbsp;·&nbsp; {{BOSSES_KILLED_LABEL}}</p>
+    <!-- Fully mechanical, no LLM - present only when this character played a
+         different (non-healing) spec on part of this raid, e.g. a real DPS
+         off-spec on earlier bosses before switching to their healing spec.
+         Omitted entirely for the common case (one spec all raid). -->
+    <!--@OPTIONAL:SPEC_COVERAGE_NOTE-->
+    <p class="section-desc" style="margin:8px 0 0;"><!--@SLOT:SPEC_COVERAGE_NOTE-->{{SPEC_COVERAGE_NOTE}}<!--@ENDSLOT--></p>
+    <!--@ENDOPTIONAL:SPEC_COVERAGE_NOTE-->
   </div>
  
   <!-- ===== GEAR AUDIT (RAID-WIDE, SINGLE CHECK) ===== -->

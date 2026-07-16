@@ -1,0 +1,160 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Likmytotem",
+                        "id":  41,
+                        "guid":  72901027,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  13509033,
+                        "fight":  9,
+                        "damage":  {
+                                       "total":  10143,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34342,
+                                                             "name":  "Rebirth",
+                                                             "total":  5050,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_burnout.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  34121,
+                                                             "name":  "Flame Buffet",
+                                                             "total":  4209,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fireball.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  884,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Al\u0027ar",
+                                                           "total":  9259,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  884,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1381,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  1381,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34121,
+                                                                    "name":  "Flame Buffet",
+                                                                    "total":  1381,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_fireball.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Likmytotem",
+                                                            "total":  1381,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  41373,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  13509032,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  41,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  187,
+                                           "unmitigatedAmount":  187,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  13507978,
+                                           "type":  "damage",
+                                           "sourceID":  69,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  41,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Flame Buffet",
+                                                           "guid":  34121,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fireball.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  2058,
+                                           "unmitigatedAmount":  2058,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  13504741,
+                                           "type":  "damage",
+                                           "sourceID":  69,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  41,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Rebirth",
+                                                           "guid":  34342,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_burnout.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  5050,
+                                           "unmitigatedAmount":  5050,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

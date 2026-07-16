@@ -1,0 +1,110 @@
+{
+    "entries":  [
+                    {
+                        "name":  "티몬과",
+                        "id":  1,
+                        "guid":  28524807,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-Survival",
+                        "timestamp":  2865605,
+                        "fight":  29,
+                        "damage":  {
+                                       "total":  10756,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  344,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  8339,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2417,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  10756,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  9848,
+                        "overkill":  1185,
+                        "events":  [
+                                       {
+                                           "timestamp":  2865589,
+                                           "type":  "damage",
+                                           "sourceID":  102,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  29,
+                                           "hitType":  15,
+                                           "amount":  7154,
+                                           "mitigated":  243,
+                                           "unmitigatedAmount":  8582,
+                                           "overkill":  1185,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2855741,
+                                           "type":  "damage",
+                                           "sourceID":  102,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  29,
+                                           "hitType":  1,
+                                           "amount":  2417,
+                                           "mitigated":  101,
+                                           "unmitigatedAmount":  2518,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

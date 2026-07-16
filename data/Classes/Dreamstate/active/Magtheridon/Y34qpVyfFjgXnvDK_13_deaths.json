@@ -1,0 +1,454 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Balonienn",
+                        "id":  20,
+                        "guid":  69564463,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  3564509,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  14631,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  6611,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  30619,
+                                                             "name":  "Cleave",
+                                                             "total":  10962,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30757,
+                                                             "name":  "Conflagration",
+                                                             "total":  3669,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_incinerate.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Magtheridon",
+                                                           "total":  10962,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Past Self",
+                                                           "total":  3669,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2332,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1754,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  458,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  30340,
+                                                              "name":  "Bloodthirst",
+                                                              "total":  120,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_bloodlust.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  30757,
+                                                                    "name":  "Conflagration",
+                                                                    "total":  2332,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_incinerate.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Tommyb",
+                                                            "total":  1754,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Brysontbc",
+                                                            "total":  458,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Balonienn",
+                                                            "total":  120,
+                                                            "type":  "Warrior"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  4681,
+                        "overkill":  985,
+                        "events":  [
+                                       {
+                                           "timestamp":  3564475,
+                                           "type":  "damage",
+                                           "sourceID":  250,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cleave",
+                                                           "guid":  30619,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  9977,
+                                           "mitigated":  6355,
+                                           "unmitigatedAmount":  17317,
+                                           "overkill":  985,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  3564194,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Past Self",
+                                                          "id":  268,
+                                                          "guid":  181832,
+                                                          "type":  "NPC",
+                                                          "icon":  "NPC"
+                                                      },
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Conflagration",
+                                                           "guid":  30757,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_incinerate.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  815,
+                                           "unmitigatedAmount":  740,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  3563207,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Past Self",
+                                                          "id":  268,
+                                                          "guid":  181832,
+                                                          "type":  "NPC",
+                                                          "icon":  "NPC"
+                                                      },
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Conflagration",
+                                                           "guid":  30757,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_incinerate.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  16,
+                                           "amount":  612,
+                                           "mitigated":  128,
+                                           "unmitigatedAmount":  740,
+                                           "resisted":  185,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cleave",
+                                            "guid":  30619,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Negzor",
+                        "id":  39,
+                        "guid":  77585529,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  3564510,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  17033,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  7090,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  30619,
+                                                             "name":  "Cleave",
+                                                             "total":  17033,
+                                                             "type":  1,
+                                                             "icon":  "ability_warrior_cleave.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Magtheridon",
+                                                           "total":  17033,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  6579,
+                        "events":  [
+                                       {
+                                           "timestamp":  3564484,
+                                           "type":  "damage",
+                                           "sourceID":  250,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  39,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cleave",
+                                                           "guid":  30619,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_warrior_cleave.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  10454,
+                                           "mitigated":  7090,
+                                           "unmitigatedAmount":  24123,
+                                           "overkill":  6579,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cleave",
+                                            "guid":  30619,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_warrior_cleave.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tauntandrun",
+                        "id":  5,
+                        "guid":  76892959,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Protection",
+                        "timestamp":  3646179,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  22032,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  70360,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  30631,
+                                                             "name":  "Debris",
+                                                             "total":  22032,
+                                                             "type":  1,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  22032,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  10522,
+                        "events":  [
+                                       {
+                                           "timestamp":  3646178,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Debris",
+                                                           "guid":  30631,
+                                                           "type":  1,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  11510,
+                                           "mitigated":  70360,
+                                           "unmitigatedAmount":  92392,
+                                           "overkill":  10522,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Debris",
+                                            "guid":  30631,
+                                            "type":  1,
+                                            "abilityIcon":  "trade_engineering.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Dedest",
+                        "id":  1,
+                        "guid":  62378203,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  3650552,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  17025,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  11951,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  17025,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Magtheridon",
+                                                           "total":  17025,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  1423,
+                        "overkill":  5421,
+                        "events":  [
+                                       {
+                                           "timestamp":  3650521,
+                                           "type":  "damage",
+                                           "sourceID":  250,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2988,
+                                           "mitigated":  5903,
+                                           "unmitigatedAmount":  14312,
+                                           "overkill":  5421,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3649098,
+                                           "type":  "damage",
+                                           "sourceID":  250,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  8616,
+                                           "mitigated":  6048,
+                                           "unmitigatedAmount":  14664,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

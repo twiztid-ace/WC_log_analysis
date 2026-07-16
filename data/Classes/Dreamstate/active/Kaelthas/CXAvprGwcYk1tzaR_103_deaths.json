@@ -1,0 +1,1424 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Porkypoon",
+                        "id":  43,
+                        "guid":  77955676,
+                        "type":  "Druid",
+                        "icon":  "Druid-Feral",
+                        "timestamp":  17080344,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  16020,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37036,
+                                                             "name":  "Bomb",
+                                                             "total":  16020,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Master Engineer Telonicus",
+                                                           "total":  16020,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4347,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  2442,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  1905,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37036,
+                                                                    "name":  "Bomb",
+                                                                    "total":  4347,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Draeman",
+                                                            "total":  2442,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Utilitypolè",
+                                                            "total":  1905,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3146,
+                        "overkill":  2479,
+                        "events":  [
+                                       {
+                                           "timestamp":  17080313,
+                                           "type":  "damage",
+                                           "sourceID":  241,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  43,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  4865,
+                                           "unmitigatedAmount":  7344,
+                                           "overkill":  2479,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17077167,
+                                           "type":  "damage",
+                                           "sourceID":  241,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  43,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  8676,
+                                           "unmitigatedAmount":  8676,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Bomb",
+                                            "guid":  37036,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Draeman",
+                        "id":  40,
+                        "guid":  72929374,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  17094121,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  10698,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  9437,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  9232,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36980,
+                                                             "name":  "Shoot",
+                                                             "total":  1466,
+                                                             "type":  1,
+                                                             "icon":  "ability_marksmanship.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Infinity Blades",
+                                                           "total":  6969,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Warp Slicer",
+                                                           "total":  2263,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Netherstrand Longbow",
+                                                           "total":  1466,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1011,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  31616,
+                                                              "name":  "Nature\u0027s Guardian",
+                                                              "total":  1011,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_natureguardian.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  1011,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Draeman",
+                                                            "total":  1011,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3690,
+                        "overkill":  488,
+                        "events":  [
+                                       {
+                                           "timestamp":  17094079,
+                                           "type":  "damage",
+                                           "sourceID":  256,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  1845,
+                                           "mitigated":  2072,
+                                           "unmitigatedAmount":  4405,
+                                           "overkill":  488,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17093565,
+                                           "type":  "damage",
+                                           "sourceID":  256,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  4636,
+                                           "mitigated":  4077,
+                                           "unmitigatedAmount":  8713,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17092347,
+                                           "type":  "damage",
+                                           "sourceID":  246,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  2263,
+                                           "mitigated":  2012,
+                                           "unmitigatedAmount":  4275,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Negzor",
+                        "id":  42,
+                        "guid":  77585529,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  17099612,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  13097,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  9246,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  12132,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36985,
+                                                             "name":  "Holy Nova",
+                                                             "total":  965,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_holybolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Infinity Blades",
+                                                           "total":  12132,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Cosmic Infuser",
+                                                           "total":  965,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  150,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  30340,
+                                                              "name":  "Bloodthirst",
+                                                              "total":  150,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_bloodlust.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  90,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36985,
+                                                                    "name":  "Holy Nova",
+                                                                    "total":  60,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_holybolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Negzor",
+                                                            "total":  150,
+                                                            "type":  "Warrior"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  8924,
+                        "overkill":  943,
+                        "events":  [
+                                       {
+                                           "timestamp":  17099581,
+                                           "type":  "damage",
+                                           "sourceID":  256,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  42,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  3675,
+                                           "mitigated":  3519,
+                                           "unmitigatedAmount":  8137,
+                                           "overkill":  943,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17097576,
+                                           "type":  "damage",
+                                           "sourceID":  256,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  42,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  5201,
+                                           "mitigated":  3964,
+                                           "unmitigatedAmount":  9165,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17096059,
+                                           "type":  "damage",
+                                           "sourceID":  256,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  42,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  2313,
+                                           "mitigated":  1763,
+                                           "unmitigatedAmount":  4076,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Gørilla",
+                        "id":  16,
+                        "guid":  78237424,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  17170361,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  19222,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  5063,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36982,
+                                                             "name":  "Whirlwind",
+                                                             "total":  8973,
+                                                             "type":  1,
+                                                             "icon":  "ability_whirlwind.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37016,
+                                                             "name":  "Shield Spike",
+                                                             "total":  6374,
+                                                             "type":  1,
+                                                             "icon":  "inv_ammo_arrow_01.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36979,
+                                                             "name":  "Multi-Shot",
+                                                             "total":  3875,
+                                                             "type":  64,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Devastation",
+                                                           "total":  8973,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Phaseshift Bulwark",
+                                                           "total":  6374,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Netherstrand Longbow",
+                                                           "total":  3875,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  9391,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  3533,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27237,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2496,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25422,
+                                                              "name":  "Chain Heal",
+                                                              "total":  2320,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  30340,
+                                                              "name":  "Bloodthirst",
+                                                              "total":  630,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_bloodlust.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  412,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37016,
+                                                                    "name":  "Shield Spike",
+                                                                    "total":  6374,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_ammo_arrow_01.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36979,
+                                                                    "name":  "Multi-Shot",
+                                                                    "total":  2601,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_upgrademoonglaive.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Gørilla",
+                                                            "total":  3538,
+                                                            "type":  "Warrior"
+                                                        },
+                                                        {
+                                                            "name":  "Tommyb",
+                                                            "total":  3533,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Draeman",
+                                                            "total":  2320,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  50008,
+                        "overkill":  258,
+                        "events":  [
+                                       {
+                                           "timestamp":  17170329,
+                                           "type":  "damage",
+                                           "sourceID":  247,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  36982,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_whirlwind.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  8715,
+                                           "mitigated":  5063,
+                                           "unmitigatedAmount":  14036,
+                                           "overkill":  258,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17144398,
+                                           "type":  "damage",
+                                           "sourceID":  252,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Multi-Shot",
+                                                           "guid":  36979,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_upgrademoonglaive.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  3875,
+                                           "unmitigatedAmount":  3523,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17140410,
+                                           "type":  "damage",
+                                           "sourceID":  248,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shield Spike",
+                                                           "guid":  37016,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_ammo_arrow_01.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  1180,
+                                           "unmitigatedAmount":  1072,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  36982,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_whirlwind.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Porkypoon",
+                        "id":  43,
+                        "guid":  77955676,
+                        "type":  "Druid",
+                        "icon":  "Druid-Feral",
+                        "timestamp":  17234193,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  8411,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37036,
+                                                             "name":  "Bomb",
+                                                             "total":  8411,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Master Engineer Telonicus",
+                                                           "total":  8411,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  977,
+                        "events":  [
+                                       {
+                                           "timestamp":  17234192,
+                                           "type":  "damage",
+                                           "sourceID":  241,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  43,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Bomb",
+                                                           "guid":  37036,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  7434,
+                                           "unmitigatedAmount":  8411,
+                                           "overkill":  977,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Bomb",
+                                            "guid":  37036,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Brightshield",
+                        "id":  20,
+                        "guid":  65721121,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Holy",
+                        "timestamp":  17263665,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  20811,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36805,
+                                                             "name":  "Fireball",
+                                                             "total":  20811,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_flamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Kael\u0027thas Sunstrider",
+                                                           "total":  20811,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  11754,
+                        "events":  [
+                                       {
+                                           "timestamp":  17263641,
+                                           "type":  "damage",
+                                           "sourceID":  245,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Fireball",
+                                                           "guid":  36805,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_flamebolt.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  9057,
+                                           "unmitigatedAmount":  20811,
+                                           "overkill":  11754,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Fireball",
+                                            "guid":  36805,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_flamebolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tommyb",
+                        "id":  10,
+                        "guid":  54644749,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  17391655,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  18067,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1342,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  36721,
+                                                             "name":  "Burn",
+                                                             "total":  9093,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_fire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  34341,
+                                                             "name":  "Ember Blast",
+                                                             "total":  8974,
+                                                             "type":  4,
+                                                             "icon":  "ability_warlock_inferno.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Phoenix",
+                                                           "total":  18067,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  2673,
+                        "overkill":  8696,
+                        "events":  [
+                                       {
+                                           "timestamp":  17391649,
+                                           "type":  "damage",
+                                           "sourceID":  259,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34341,
+                                                           "type":  4,
+                                                           "abilityIcon":  "ability_warlock_inferno.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  278,
+                                           "unmitigatedAmount":  8974,
+                                           "overkill":  8696,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17390980,
+                                           "type":  "damage",
+                                           "sourceID":  259,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  16,
+                                           "amount":  4026,
+                                           "mitigated":  1342,
+                                           "unmitigatedAmount":  5368,
+                                           "resisted":  1342,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17388976,
+                                           "type":  "damage",
+                                           "sourceID":  259,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Burn",
+                                                           "guid":  36721,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_fire.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  5067,
+                                           "unmitigatedAmount":  5067,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34341,
+                                            "type":  4,
+                                            "abilityIcon":  "ability_warlock_inferno.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Draeman",
+                        "id":  40,
+                        "guid":  72929374,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  17391676,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  10093,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34341,
+                                                             "name":  "Ember Blast",
+                                                             "total":  10093,
+                                                             "type":  4,
+                                                             "icon":  "ability_warlock_inferno.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Phoenix",
+                                                           "total":  10093,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  7055,
+                        "events":  [
+                                       {
+                                           "timestamp":  17391643,
+                                           "type":  "damage",
+                                           "sourceID":  259,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34341,
+                                                           "type":  4,
+                                                           "abilityIcon":  "ability_warlock_inferno.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  3038,
+                                           "unmitigatedAmount":  10093,
+                                           "overkill":  7055,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34341,
+                                            "type":  4,
+                                            "abilityIcon":  "ability_warlock_inferno.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Tommyb",
+                        "id":  10,
+                        "guid":  54644749,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  17396428,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  242,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  242,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  242,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  17394241,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  242,
+                                           "unmitigatedAmount":  242,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Sïñs",
+                        "id":  26,
+                        "guid":  78335483,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  17420160,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  10156,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  35873,
+                                                             "name":  "Nether Beam",
+                                                             "total":  8174,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_chainlightning.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  35859,
+                                                             "name":  "Nether Vapor",
+                                                             "total":  1982,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_gathershadows.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Kael\u0027thas Sunstrider",
+                                                           "total":  8174,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Nether Vapor",
+                                                           "total":  1982,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  16218,
+                        "overkill":  2032,
+                        "events":  [
+                                       {
+                                           "timestamp":  17420132,
+                                           "type":  "damage",
+                                           "sourceID":  245,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  26,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Beam",
+                                                           "guid":  35873,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  63,
+                                           "unmitigatedAmount":  2095,
+                                           "overkill":  2032,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17416488,
+                                           "type":  "damage",
+                                           "sourceID":  245,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  26,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Beam",
+                                                           "guid":  35873,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  2089,
+                                           "unmitigatedAmount":  2089,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17409919,
+                                           "type":  "damage",
+                                           "sourceID":  262,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  26,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Vapor",
+                                                           "guid":  35859,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_gathershadows.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  1007,
+                                           "unmitigatedAmount":  1007,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Nether Beam",
+                                            "guid":  35873,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Bétty",
+                        "id":  25,
+                        "guid":  76540844,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-BeastMastery",
+                        "timestamp":  17448670,
+                        "fight":  103,
+                        "damage":  {
+                                       "total":  17036,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1108,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  35873,
+                                                             "name":  "Nether Beam",
+                                                             "total":  8281,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_chainlightning.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36834,
+                                                             "name":  "Arcane Disruption",
+                                                             "total":  3802,
+                                                             "type":  64,
+                                                             "icon":  "spell_arcane_massdispel.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  2814,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  36822,
+                                                             "name":  "Shock Barrier",
+                                                             "total":  2086,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_lightningshield.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  26992,
+                                                             "name":  "Thorns",
+                                                             "total":  53,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_thorns.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Kael\u0027thas Sunstrider",
+                                                           "total":  14169,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  2814,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Thrashtolive",
+                                                           "total":  53,
+                                                           "type":  "Druid"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  6331,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  3268,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  41620,
+                                                              "name":  "Healing Potion",
+                                                              "total":  2244,
+                                                              "type":  1,
+                                                              "icon":  "trade_engineering.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  819,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  35873,
+                                                                    "name":  "Nether Beam",
+                                                                    "total":  2972,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_chainlightning.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36834,
+                                                                    "name":  "Arcane Disruption",
+                                                                    "total":  1693,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_arcane_massdispel.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  36822,
+                                                                    "name":  "Shock Barrier",
+                                                                    "total":  1613,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_lightningshield.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  26992,
+                                                                    "name":  "Thorns",
+                                                                    "total":  53,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_thorns.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Bétty",
+                                                            "total":  5512,
+                                                            "type":  "Hunter"
+                                                        },
+                                                        {
+                                                            "name":  "Draeman",
+                                                            "total":  819,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  129866,
+                        "overkill":  496,
+                        "events":  [
+                                       {
+                                           "timestamp":  17448666,
+                                           "type":  "damage",
+                                           "sourceID":  245,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Disruption",
+                                                           "guid":  36834,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_arcane_massdispel.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  1488,
+                                           "unmitigatedAmount":  1984,
+                                           "overkill":  496,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  17431050,
+                                           "type":  "damage",
+                                           "sourceID":  245,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Nether Beam",
+                                                           "guid":  35873,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_chainlightning.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  2039,
+                                           "unmitigatedAmount":  2039,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  17428041,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  103,
+                                           "hitType":  1,
+                                           "amount":  2814,
+                                           "unmitigatedAmount":  2814,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Arcane Disruption",
+                                            "guid":  36834,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_arcane_massdispel.jpg"
+                                        }
+                    }
+                ]
+}

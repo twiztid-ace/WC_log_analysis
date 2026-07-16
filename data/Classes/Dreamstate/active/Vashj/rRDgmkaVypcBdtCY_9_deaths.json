@@ -1,0 +1,529 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Flotovinho",
+                        "id":  10,
+                        "guid":  51436429,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  6105934,
+                        "fight":  9,
+                        "damage":  {
+                                       "total":  9333,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  360327,
+                                                             "name":  "Toxic Spores",
+                                                             "total":  6022,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38281,
+                                                             "name":  "Static Charge",
+                                                             "total":  3311,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_lightningoverload.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6022,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Maløya",
+                                                           "total":  3311,
+                                                           "type":  "Warrior"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  524,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  471,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  53,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38281,
+                                                                    "name":  "Static Charge",
+                                                                    "total":  288,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_lightningoverload.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  360327,
+                                                                    "name":  "Toxic Spores",
+                                                                    "total":  236,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Nuptiale",
+                                                            "total":  471,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Flotovinho",
+                                                            "total":  53,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  2022,
+                        "overkill":  558,
+                        "events":  [
+                                       {
+                                           "timestamp":  6105931,
+                                           "type":  "damage",
+                                           "sourceID":  59,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Static Charge",
+                                                           "guid":  38281,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  1109,
+                                           "unmitigatedAmount":  1667,
+                                           "overkill":  558,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  6105835,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  3011,
+                                           "unmitigatedAmount":  3011,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  6104839,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  3011,
+                                           "unmitigatedAmount":  3011,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Static Charge",
+                                            "guid":  38281,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Maløya",
+                        "id":  59,
+                        "guid":  60743664,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  6105954,
+                        "fight":  9,
+                        "damage":  {
+                                       "total":  11820,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  360327,
+                                                             "name":  "Toxic Spores",
+                                                             "total":  6798,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38281,
+                                                             "name":  "Static Charge",
+                                                             "total":  3922,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_lightningoverload.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38316,
+                                                             "name":  "Entangle",
+                                                             "total":  1100,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_stranglevines.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6798,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Maløya",
+                                                           "total":  3922,
+                                                           "type":  "Warrior"
+                                                       },
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  1100,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  3231,
+                        "overkill":  1426,
+                        "events":  [
+                                       {
+                                           "timestamp":  6105887,
+                                           "type":  "damage",
+                                           "sourceID":  59,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  59,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Static Charge",
+                                                           "guid":  38281,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  505,
+                                           "unmitigatedAmount":  1755,
+                                           "overkill":  1426,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  6105835,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  59,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  3399,
+                                           "unmitigatedAmount":  3090,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  6104850,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  59,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  3399,
+                                           "unmitigatedAmount":  3090,
+                                           "isAoE":  false,
+                                           "tick":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Static Charge",
+                                            "guid":  38281,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_lightningoverload.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Brysõn",
+                        "id":  11,
+                        "guid":  53966281,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  6107851,
+                        "fight":  9,
+                        "damage":  {
+                                       "total":  14544,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  360327,
+                                                             "name":  "Toxic Spores",
+                                                             "total":  11776,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38281,
+                                                             "name":  "Static Charge",
+                                                             "total":  1774,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_lightningoverload.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38316,
+                                                             "name":  "Entangle",
+                                                             "total":  994,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_stranglevines.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  11776,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Maløya",
+                                                           "total":  1774,
+                                                           "type":  "Warrior"
+                                                       },
+                                                       {
+                                                           "name":  "Lady Vashj",
+                                                           "total":  994,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3382,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27237,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2496,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  886,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38281,
+                                                                    "name":  "Static Charge",
+                                                                    "total":  1774,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_lightningoverload.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  360327,
+                                                                    "name":  "Toxic Spores",
+                                                                    "total":  1608,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Brysõn",
+                                                            "total":  2496,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Dräke",
+                                                            "total":  886,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3213,
+                        "overkill":  1163,
+                        "events":  [
+                                       {
+                                           "timestamp":  6107851,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  1781,
+                                           "unmitigatedAmount":  2944,
+                                           "overkill":  1163,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  6106834,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Toxic Spores",
+                                                           "guid":  360327,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  2944,
+                                           "unmitigatedAmount":  2944,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  6106644,
+                                           "type":  "damage",
+                                           "sourceID":  110,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Entangle",
+                                                           "guid":  38316,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_stranglevines.jpg"
+                                                       },
+                                           "fight":  9,
+                                           "hitType":  1,
+                                           "amount":  497,
+                                           "unmitigatedAmount":  497,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Toxic Spores",
+                                            "guid":  360327,
+                                            "type":  8,
+                                            "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                        }
+                    }
+                ]
+}

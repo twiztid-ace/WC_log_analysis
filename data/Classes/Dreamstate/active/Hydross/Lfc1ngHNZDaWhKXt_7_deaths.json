@@ -1,0 +1,1240 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Wynand",
+                        "id":  30,
+                        "guid":  43817421,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  1699038,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  11958,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  6583,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  5375,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  6583,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  5375,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3089,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2537,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  552,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38235,
+                                                                    "name":  "Water Tomb",
+                                                                    "total":  2716,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_manarecharge.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  373,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Bootyheal",
+                                                            "total":  2537,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Wynand",
+                                                            "total":  552,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  20360,
+                        "overkill":  518,
+                        "events":  [
+                                       {
+                                           "timestamp":  1699038,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3565,
+                                           "unmitigatedAmount":  4083,
+                                           "overkill":  518,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1693543,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  1344,
+                                           "unmitigatedAmount":  895,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1692536,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  1343,
+                                           "unmitigatedAmount":  895,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shadow Word: Death",
+                                            "guid":  32409,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Sealesol",
+                        "id":  19,
+                        "guid":  50816800,
+                        "type":  "Rogue",
+                        "icon":  "Rogue-Combat",
+                        "timestamp":  1721960,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  11915,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  11181,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30486,
+                                                             "name":  "Super Sapper Charge",
+                                                             "total":  734,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  11181,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Sealesol",
+                                                           "total":  734,
+                                                           "type":  "Rogue"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  235,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25566,
+                                                              "name":  "Healing Stream",
+                                                              "total":  235,
+                                                              "type":  8,
+                                                              "icon":  "inv_spear_04.jpg",
+                                                              "petName":  "zzOLDHealing Stream Totem VI"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  30486,
+                                                                    "name":  "Super Sapper Charge",
+                                                                    "total":  176,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38235,
+                                                                    "name":  "Water Tomb",
+                                                                    "total":  59,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_manarecharge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "zzOLDHealing Stream Totem VI",
+                                                            "total":  235,
+                                                            "type":  "Pet"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  8930,
+                        "overkill":  1248,
+                        "events":  [
+                                       {
+                                           "timestamp":  1721955,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  1883,
+                                           "unmitigatedAmount":  894,
+                                           "overkill":  1248,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1720929,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3130,
+                                           "unmitigatedAmount":  894,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1719937,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3131,
+                                           "unmitigatedAmount":  894,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Tomb",
+                                            "guid":  38235,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Beauxjangles",
+                        "id":  15,
+                        "guid":  46421916,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Arms",
+                        "timestamp":  1721963,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  12993,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  12993,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  12993,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  58,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25566,
+                                                              "name":  "Healing Stream",
+                                                              "total":  58,
+                                                              "type":  8,
+                                                              "icon":  "inv_spear_04.jpg",
+                                                              "petName":  "zzOLDHealing Stream Totem VI"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38235,
+                                                                    "name":  "Water Tomb",
+                                                                    "total":  58,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_manarecharge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "zzOLDHealing Stream Totem VI",
+                                                            "total":  58,
+                                                            "type":  "Pet"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3018,
+                        "overkill":  1721,
+                        "events":  [
+                                       {
+                                           "timestamp":  1721953,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  1917,
+                                           "unmitigatedAmount":  900,
+                                           "overkill":  1721,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1720929,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3638,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1719936,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3638,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Tomb",
+                                            "guid":  38235,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Nbahungboi",
+                        "id":  36,
+                        "guid":  43896499,
+                        "type":  "Rogue",
+                        "icon":  "Rogue-Combat",
+                        "timestamp":  1721965,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  11250,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  11250,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  11250,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  3016,
+                        "overkill":  1116,
+                        "events":  [
+                                       {
+                                           "timestamp":  1721951,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  36,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  2034,
+                                           "unmitigatedAmount":  900,
+                                           "overkill":  1116,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1720929,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  36,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3150,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1719936,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  36,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3150,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Tomb",
+                                            "guid":  38235,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Oznem",
+                        "id":  34,
+                        "guid":  46197473,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  1721967,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  12955,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  12955,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  12955,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  3023,
+                        "overkill":  1301,
+                        "events":  [
+                                       {
+                                           "timestamp":  1721958,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  2327,
+                                           "unmitigatedAmount":  897,
+                                           "overkill":  1301,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1720929,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3627,
+                                           "unmitigatedAmount":  897,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1719936,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3627,
+                                           "unmitigatedAmount":  897,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Tomb",
+                                            "guid":  38235,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Jynxedpally",
+                        "id":  51,
+                        "guid":  54730704,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Protection",
+                        "timestamp":  1724880,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  36937,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2723,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  -16,
+                                                             "name":  "Melee",
+                                                             "total":  36937,
+                                                             "type":  16,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  36937,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  14132,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  5620,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  3668,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1977,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1010,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26982,
+                                                              "name":  "Rejuvenation",
+                                                              "total":  930,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_rejuvenation.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  -16,
+                                                                    "name":  "Melee",
+                                                                    "total":  14132,
+                                                                    "type":  16,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Elrønd",
+                                                            "total":  5620,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Koana",
+                                                            "total":  5525,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Bootyheal",
+                                                            "total":  2987,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  4527,
+                        "overkill":  6078,
+                        "events":  [
+                                       {
+                                           "timestamp":  1724852,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  51,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  16,
+                                           "amount":  4753,
+                                           "unmitigatedAmount":  6664,
+                                           "resisted":  3292,
+                                           "overkill":  6078,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1723336,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  51,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  16,
+                                           "amount":  5427,
+                                           "mitigated":  1251,
+                                           "unmitigatedAmount":  6678,
+                                           "resisted":  4949,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1721830,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  51,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  16,
+                                           "amount":  14225,
+                                           "unmitigatedAmount":  8727,
+                                           "resisted":  4324,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  -16,
+                                            "type":  16,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Dacdruid",
+                        "id":  11,
+                        "guid":  42984050,
+                        "type":  "Druid",
+                        "icon":  "Druid-Feral",
+                        "timestamp":  1727424,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  22790,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  -16,
+                                                             "name":  "Melee",
+                                                             "total":  22790,
+                                                             "type":  16,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  22790,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  9508,
+                        "events":  [
+                                       {
+                                           "timestamp":  1727409,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  13282,
+                                           "unmitigatedAmount":  6511,
+                                           "overkill":  9508,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  -16,
+                                            "type":  16,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Clucknorrís",
+                        "id":  1,
+                        "guid":  47954324,
+                        "type":  "Druid",
+                        "icon":  "Druid-Feral",
+                        "timestamp":  1728235,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  15124,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  -16,
+                                                             "name":  "Melee",
+                                                             "total":  15124,
+                                                             "type":  16,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  15124,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  4809,
+                        "events":  [
+                                       {
+                                           "timestamp":  1728190,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  16,
+                                           "amount":  10315,
+                                           "unmitigatedAmount":  8641,
+                                           "resisted":  4321,
+                                           "overkill":  4809,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  -16,
+                                            "type":  16,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Docbraune",
+                        "id":  3,
+                        "guid":  43425164,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  1731325,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  26749,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  -16,
+                                                             "name":  "Melee",
+                                                             "total":  26749,
+                                                             "type":  16,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  26749,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  16924,
+                        "events":  [
+                                       {
+                                           "timestamp":  1731308,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  -16,
+                                                           "type":  16,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  9825,
+                                           "unmitigatedAmount":  7642,
+                                           "overkill":  16924,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  -16,
+                                            "type":  16,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Bootyheal",
+                        "id":  10,
+                        "guid":  44375279,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  1731771,
+                        "fight":  7,
+                        "damage":  {
+                                       "total":  12600,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38235,
+                                                             "name":  "Water Tomb",
+                                                             "total":  12600,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_manarecharge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Hydross the Unstable",
+                                                           "total":  12600,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1869,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1869,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38235,
+                                                                    "name":  "Water Tomb",
+                                                                    "total":  1869,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_manarecharge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Elrønd",
+                                                            "total":  1869,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3013,
+                        "overkill":  2080,
+                        "events":  [
+                                       {
+                                           "timestamp":  1731771,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  1070,
+                                           "unmitigatedAmount":  900,
+                                           "overkill":  2080,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1730770,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3150,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  1729765,
+                                           "type":  "damage",
+                                           "sourceID":  84,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  10,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Tomb",
+                                                           "guid":  38235,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                                       },
+                                           "fight":  7,
+                                           "hitType":  1,
+                                           "amount":  3150,
+                                           "unmitigatedAmount":  900,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Tomb",
+                                            "guid":  38235,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_manarecharge.jpg"
+                                        }
+                    }
+                ]
+}

@@ -1,0 +1,159 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Font",
+                        "id":  3,
+                        "guid":  53196885,
+                        "type":  "Druid",
+                        "icon":  "Druid-Dreamstate",
+                        "timestamp":  1567624,
+                        "fight":  14,
+                        "damage":  {
+                                       "total":  11437,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  58,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37871,
+                                                             "name":  "Freeze",
+                                                             "total":  7368,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_glacier.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  3845,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  224,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Water Globule",
+                                                           "total":  7592,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  3845,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1698,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  1698,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  1698,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Falcourn",
+                                                            "total":  1698,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  22649,
+                        "overkill":  169,
+                        "events":  [
+                                       {
+                                           "timestamp":  1567605,
+                                           "type":  "damage",
+                                           "sourceID":  103,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Freeze",
+                                                           "guid":  37871,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_glacier.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  7199,
+                                           "unmitigatedAmount":  7368,
+                                           "overkill":  169,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1566976,
+                                           "type":  "damage",
+                                           "sourceID":  103,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  224,
+                                           "mitigated":  58,
+                                           "unmitigatedAmount":  282,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1544956,
+                                           "type":  "damage",
+                                           "sourceID":  101,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Earthquake",
+                                                           "guid":  37764,
+                                                           "type":  1,
+                                                           "abilityIcon":  "spell_nature_earthquake.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  3845,
+                                           "unmitigatedAmount":  3845,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Freeze",
+                                            "guid":  37871,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_glacier.jpg"
+                                        }
+                    }
+                ]
+}

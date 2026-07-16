@@ -1,0 +1,297 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Onirica",
+                        "id":  24,
+                        "guid":  82365278,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  4500158,
+                        "fight":  44,
+                        "damage":  {
+                                       "total":  10486,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37852,
+                                                             "name":  "Watery Grave Explosion",
+                                                             "total":  4683,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_arcticwinds.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37764,
+                                                             "name":  "Earthquake",
+                                                             "total":  3853,
+                                                             "type":  1,
+                                                             "icon":  "spell_nature_earthquake.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  1204,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  27869,
+                                                             "name":  "Dark Rune",
+                                                             "total":  746,
+                                                             "type":  32,
+                                                             "icon":  "inv_misc_rune_04.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Onirica",
+                                                           "total":  5429,
+                                                           "type":  "Shaman"
+                                                       },
+                                                       {
+                                                           "name":  "Morogrim Tidewalker",
+                                                           "total":  3853,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1204,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  809,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25422,
+                                                              "name":  "Chain Heal",
+                                                              "total":  809,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37764,
+                                                                    "name":  "Earthquake",
+                                                                    "total":  809,
+                                                                    "type":  1,
+                                                                    "icon":  "spell_nature_earthquake.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Willbuffs",
+                                                            "total":  809,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  25976,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  4500144,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  1204,
+                                           "unmitigatedAmount":  1204,
+                                           "overkill":  0,
+                                           "isAoE":  false,
+                                           "targetMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  4497184,
+                                           "type":  "damage",
+                                           "sourceID":  24,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Watery Grave Explosion",
+                                                           "guid":  37852,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_arcticwinds.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  4683,
+                                           "unmitigatedAmount":  4683,
+                                           "isAoE":  true,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  4476606,
+                                           "type":  "damage",
+                                           "sourceID":  164,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Earthquake",
+                                                           "guid":  37764,
+                                                           "type":  1,
+                                                           "abilityIcon":  "spell_nature_earthquake.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  3853,
+                                           "unmitigatedAmount":  3853,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Pushlock",
+                        "id":  19,
+                        "guid":  56969274,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  4503318,
+                        "fight":  44,
+                        "damage":  {
+                                       "total":  11340,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1491,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  11340,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Tidewalker Lurker",
+                                                           "total":  11340,
+                                                           "type":  "NPC"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  1998,
+                        "overkill":  150,
+                        "events":  [
+                                       {
+                                           "timestamp":  4503289,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceInstance":  9,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  1841,
+                                           "mitigated":  326,
+                                           "unmitigatedAmount":  2167,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  4503289,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceInstance":  12,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  1605,
+                                           "mitigated":  284,
+                                           "unmitigatedAmount":  1889,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  4503289,
+                                           "type":  "damage",
+                                           "sourceID":  166,
+                                           "sourceInstance":  11,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  19,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  44,
+                                           "hitType":  1,
+                                           "amount":  1159,
+                                           "mitigated":  232,
+                                           "unmitigatedAmount":  1541,
+                                           "overkill":  150,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

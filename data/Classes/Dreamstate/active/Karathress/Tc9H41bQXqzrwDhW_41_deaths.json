@@ -1,0 +1,805 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Dorîz",
+                        "id":  15,
+                        "guid":  55677202,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  5504035,
+                        "fight":  41,
+                        "damage":  {
+                                       "total":  19412,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2817,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  9781,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  6165,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38366,
+                                                             "name":  "Multi-Toss",
+                                                             "total":  3466,
+                                                             "type":  1,
+                                                             "icon":  "ability_upgrademoonglaive.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  9781,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  6165,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Sharkkis",
+                                                           "total":  3466,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  10180,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  3146,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  2708,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  2199,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  2127,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  7981,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38366,
+                                                                    "name":  "Multi-Toss",
+                                                                    "total":  2199,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_upgrademoonglaive.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Bearbatov",
+                                                            "total":  4835,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Mujgan",
+                                                            "total":  3146,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Mindfiend",
+                                                            "total":  2199,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  52452,
+                        "overkill":  355,
+                        "events":  [
+                                       {
+                                           "timestamp":  5504034,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  5810,
+                                           "unmitigatedAmount":  6165,
+                                           "overkill":  355,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  5493939,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  2817,
+                                           "unmitigatedAmount":  2817,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5474257,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  16,
+                                           "amount":  1411,
+                                           "mitigated":  1411,
+                                           "unmitigatedAmount":  2822,
+                                           "resisted":  1411,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Brajägare",
+                        "id":  23,
+                        "guid":  47718361,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-Survival",
+                        "timestamp":  5542301,
+                        "fight":  41,
+                        "damage":  {
+                                       "total":  26034,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  2543,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  18962,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  4357,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  2715,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  18962,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  4357,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  2715,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  16666,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  7097,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  3183,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27237,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2496,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  2144,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1746,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  13951,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38296,
+                                                                    "name":  "Scorch",
+                                                                    "total":  2715,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_searingtotem.jpg",
+                                                                    "petName":  "Spitfire Totem"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Erigon",
+                                                            "total":  7097,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Slínký",
+                                                            "total":  3183,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Brajägare",
+                                                            "total":  2496,
+                                                            "type":  "Hunter"
+                                                        },
+                                                        {
+                                                            "name":  "Mujgan",
+                                                            "total":  2144,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Mindfiend",
+                                                            "total":  1746,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  90854,
+                        "overkill":  291,
+                        "events":  [
+                                       {
+                                           "timestamp":  5542285,
+                                           "type":  "damage",
+                                           "sourceID":  145,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  4066,
+                                           "mitigated":  181,
+                                           "unmitigatedAmount":  4538,
+                                           "overkill":  291,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  5537342,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  2819,
+                                           "mitigated":  118,
+                                           "unmitigatedAmount":  2937,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5521288,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  3008,
+                                           "mitigated":  125,
+                                           "unmitigatedAmount":  3133,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Mbuzi",
+                        "id":  18,
+                        "guid":  53687875,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  5551365,
+                        "fight":  41,
+                        "damage":  {
+                                       "total":  14009,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  705,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  4967,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38419,
+                                                             "name":  "Spore Explosion",
+                                                             "total":  4500,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg",
+                                                             "petName":  "Fathom Lurker"
+                                                         },
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  2876,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38358,
+                                                             "name":  "Tidal Surge",
+                                                             "total":  1666,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_summonwaterelemental.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  6633,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom Lurker",
+                                                           "total":  4500,
+                                                           "type":  "Pet"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  2876,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2798,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2798,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38335,
+                                                                    "name":  "Water Bolt Volley",
+                                                                    "total":  1823,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_frostbolt.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38419,
+                                                                    "name":  "Spore Explosion",
+                                                                    "total":  975,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg",
+                                                                    "petName":  "Fathom Lurker"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Erigon",
+                                                            "total":  1971,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Mujgan",
+                                                            "total":  827,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15953,
+                        "overkill":  782,
+                        "events":  [
+                                       {
+                                           "timestamp":  5551343,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  2068,
+                                           "unmitigatedAmount":  2850,
+                                           "overkill":  782,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5547846,
+                                           "type":  "damage",
+                                           "sourceID":  148,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spore Explosion",
+                                                           "guid":  38419,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  4500,
+                                           "unmitigatedAmount":  4500,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  5544705,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Tidal Surge",
+                                                           "guid":  38358,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_summonwaterelemental.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  1666,
+                                           "unmitigatedAmount":  1666,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Bolt Volley",
+                                            "guid":  38335,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Sanctifíed",
+                        "id":  84,
+                        "guid":  47982219,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  5551388,
+                        "fight":  41,
+                        "damage":  {
+                                       "total":  15162,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38335,
+                                                             "name":  "Water Bolt Volley",
+                                                             "total":  6111,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_frostbolt.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38419,
+                                                             "name":  "Spore Explosion",
+                                                             "total":  4500,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg",
+                                                             "petName":  "Fathom Lurker"
+                                                         },
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  2864,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38358,
+                                                             "name":  "Tidal Surge",
+                                                             "total":  1687,
+                                                             "type":  16,
+                                                             "icon":  "spell_frost_summonwaterelemental.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Guard Caribdis",
+                                                           "total":  7798,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom Lurker",
+                                                           "total":  4500,
+                                                           "type":  "Pet"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  2864,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3996,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1746,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1237,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1013,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38445,
+                                                                    "name":  "Sear Nova",
+                                                                    "total":  1746,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_sealoffire.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38358,
+                                                                    "name":  "Tidal Surge",
+                                                                    "total":  1508,
+                                                                    "type":  16,
+                                                                    "icon":  "spell_frost_summonwaterelemental.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38419,
+                                                                    "name":  "Spore Explosion",
+                                                                    "total":  742,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg",
+                                                                    "petName":  "Fathom Lurker"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Mindfiend",
+                                                            "total":  1746,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Bearbatov",
+                                                            "total":  1237,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Erigon",
+                                                            "total":  1013,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  15976,
+                        "overkill":  2239,
+                        "events":  [
+                                       {
+                                           "timestamp":  5551367,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Water Bolt Volley",
+                                                           "guid":  38335,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  865,
+                                           "unmitigatedAmount":  3104,
+                                           "overkill":  2239,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  5547847,
+                                           "type":  "damage",
+                                           "sourceID":  148,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Spore Explosion",
+                                                           "guid":  38419,
+                                                           "type":  8,
+                                                           "abilityIcon":  "spell_nature_abolishmagic.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  4500,
+                                           "unmitigatedAmount":  4500,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  5544705,
+                                           "type":  "damage",
+                                           "sourceID":  146,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Tidal Surge",
+                                                           "guid":  38358,
+                                                           "type":  16,
+                                                           "abilityIcon":  "spell_frost_summonwaterelemental.jpg"
+                                                       },
+                                           "fight":  41,
+                                           "hitType":  1,
+                                           "amount":  1687,
+                                           "unmitigatedAmount":  1687,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Water Bolt Volley",
+                                            "guid":  38335,
+                                            "type":  16,
+                                            "abilityIcon":  "spell_frost_frostbolt.jpg"
+                                        }
+                    }
+                ]
+}

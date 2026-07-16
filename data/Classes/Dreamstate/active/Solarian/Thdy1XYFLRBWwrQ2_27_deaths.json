@@ -1,0 +1,144 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Shannin",
+                        "id":  84,
+                        "guid":  45844520,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  3663218,
+                        "fight":  27,
+                        "damage":  {
+                                       "total":  18949,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  7281,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  39414,
+                                                             "name":  "Arcane Missiles",
+                                                             "total":  6000,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  5668,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  7281,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  6000,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Shannin",
+                                                           "total":  5668,
+                                                           "type":  "Priest"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  6115,
+                        "overkill":  2666,
+                        "events":  [
+                                       {
+                                           "timestamp":  3652653,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  27,
+                                           "hitType":  1,
+                                           "amount":  7281,
+                                           "unmitigatedAmount":  7281,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3648181,
+                                           "type":  "damage",
+                                           "sourceID":  94,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  27,
+                                           "hitType":  1,
+                                           "amount":  334,
+                                           "unmitigatedAmount":  3000,
+                                           "overkill":  2666,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3647004,
+                                           "type":  "damage",
+                                           "sourceID":  94,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  84,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Arcane Missiles",
+                                                           "guid":  39414,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  27,
+                                           "hitType":  1,
+                                           "amount":  3000,
+                                           "unmitigatedAmount":  3000,
+                                           "isAoE":  false
+                                       }
+                                   ]
+                    }
+                ]
+}

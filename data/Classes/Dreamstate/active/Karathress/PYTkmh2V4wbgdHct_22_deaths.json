@@ -1,0 +1,831 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Stuge",
+                        "id":  11,
+                        "guid":  43438434,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Arms",
+                        "timestamp":  4631051,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  16216,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3902,
+                                       "blocked":  108,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  16216,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  16216,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  882,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  882,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  882,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Cynapsetwo",
+                                                            "total":  882,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  1339,
+                        "overkill":  1086,
+                        "events":  [
+                                       {
+                                           "timestamp":  4631032,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  4,
+                                           "amount":  3095,
+                                           "mitigated":  3902,
+                                           "unmitigatedAmount":  8083,
+                                           "overkill":  1086,
+                                           "blocked":  108,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  4629693,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  15,
+                                           "amount":  12035,
+                                           "unmitigatedAmount":  10745,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Td",
+                        "id":  8,
+                        "guid":  53665913,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Protection",
+                        "timestamp":  4672520,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  30019,
+                                       "totalReduced":  27235,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  71786,
+                                       "blocked":  1896,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  30019,
+                                                             "totalReduced":  27235,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  30019,
+                                                           "totalReduced":  27235,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  13885,
+                                        "totalReduced":  11101,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  3505,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2259,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  2089,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1982,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25222,
+                                                              "name":  "Renew",
+                                                              "total":  1742,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_renew.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  13885,
+                                                                    "totalReduced":  11101,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Argolone",
+                                                            "total":  5983,
+                                                            "totalReduced":  3724,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Cynapsetwo",
+                                                            "total":  4030,
+                                                            "totalReduced":  3505,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Friktion",
+                                                            "total":  3872,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  5604,
+                        "overkill":  1037,
+                        "events":  [
+                                       {
+                                           "timestamp":  4672506,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  8,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  4,
+                                           "amount":  3532,
+                                           "mitigated":  10152,
+                                           "unmitigatedAmount":  14721,
+                                           "overkill":  1037,
+                                           "blocked":  316,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  4671765,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  8,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  4,
+                                           "amount":  5247,
+                                           "mitigated":  12555,
+                                           "unmitigatedAmount":  18327,
+                                           "blocked":  316,
+                                           "absorbed":  525,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  4670543,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  8,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  4,
+                                           "amount":  6071,
+                                           "mitigated":  13153,
+                                           "unmitigatedAmount":  19224,
+                                           "blocked":  316,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  1
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Miilkytwo",
+                        "id":  24,
+                        "guid":  54059157,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  4673892,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  12743,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1290,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  7993,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  3871,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         },
+                                                         {
+                                                             "guid":  27869,
+                                                             "name":  "Dark Rune",
+                                                             "total":  879,
+                                                             "type":  32,
+                                                             "icon":  "inv_misc_rune_04.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  7993,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  3871,
+                                                           "type":  "Pet"
+                                                       },
+                                                       {
+                                                           "name":  "Miilkytwo",
+                                                           "total":  879,
+                                                           "type":  "Shaman"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  14544,
+                        "overkill":  3033,
+                        "events":  [
+                                       {
+                                           "timestamp":  4673889,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  4960,
+                                           "unmitigatedAmount":  7993,
+                                           "overkill":  3033,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6,
+                                           "targetMarker":  3
+                                       },
+                                       {
+                                           "timestamp":  4668279,
+                                           "type":  "damage",
+                                           "sourceID":  156,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  16,
+                                           "amount":  3871,
+                                           "mitigated":  1290,
+                                           "unmitigatedAmount":  5161,
+                                           "resisted":  1290,
+                                           "isAoE":  true,
+                                           "targetMarker":  3
+                                       },
+                                       {
+                                           "timestamp":  4659345,
+                                           "type":  "damage",
+                                           "sourceID":  24,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Dark Rune",
+                                                           "guid":  27869,
+                                                           "type":  32,
+                                                           "abilityIcon":  "inv_misc_rune_04.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  879,
+                                           "unmitigatedAmount":  879,
+                                           "isAoE":  false,
+                                           "sourceMarker":  3,
+                                           "targetMarker":  3
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Novisax",
+                        "id":  21,
+                        "guid":  52192391,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  4695780,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  5603,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  79,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  5603,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  5603,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  330,
+                        "events":  [
+                                       {
+                                           "timestamp":  4695766,
+                                           "type":  "damage",
+                                           "sourceID":  156,
+                                           "sourceInstance":  2,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  21,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  5273,
+                                           "mitigated":  79,
+                                           "unmitigatedAmount":  5682,
+                                           "overkill":  330,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Scorch",
+                                            "guid":  38296,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Grubbankh",
+                        "id":  17,
+                        "guid":  44042812,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  4702439,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  21482,
+                                       "totalReduced":  21337,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  884,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  9982,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  7000,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38419,
+                                                             "name":  "Spore Explosion",
+                                                             "total":  4500,
+                                                             "totalReduced":  4355,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg",
+                                                             "petName":  "Fathom Lurker"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  16982,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom Lurker",
+                                                           "total":  4500,
+                                                           "totalReduced":  4355,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  6613,
+                                        "totalReduced":  6468,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  2904,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2220,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1344,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26470,
+                                                              "name":  "Persistent Shield",
+                                                              "total":  145,
+                                                              "totalReduced":  0,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_spiritarmor.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38419,
+                                                                    "name":  "Spore Explosion",
+                                                                    "total":  4067,
+                                                                    "totalReduced":  3922,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg",
+                                                                    "petName":  "Fathom Lurker"
+                                                                },
+                                                                {
+                                                                    "guid":  38445,
+                                                                    "name":  "Sear Nova",
+                                                                    "total":  2062,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_sealoffire.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38441,
+                                                                    "name":  "Cataclysmic Bolt",
+                                                                    "total":  484,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_shadowfury.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Grubbankh",
+                                                            "total":  2904,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Argolone",
+                                                            "total":  2220,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Cynapsetwo",
+                                                            "total":  1489,
+                                                            "totalReduced":  1344,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  45791,
+                        "overkill":  2770,
+                        "events":  [
+                                       {
+                                           "timestamp":  4702423,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sear Nova",
+                                                           "guid":  38445,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_sealoffire.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  2168,
+                                           "unmitigatedAmount":  4938,
+                                           "overkill":  2770,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  4698946,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  9982,
+                                           "unmitigatedAmount":  9982,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       },
+                                       {
+                                           "timestamp":  4665193,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sear Nova",
+                                                           "guid":  38445,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_sealoffire.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  2062,
+                                           "mitigated":  884,
+                                           "unmitigatedAmount":  2946,
+                                           "isAoE":  true,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Sear Nova",
+                                            "guid":  38445,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_sealoffire.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Argolone",
+                        "id":  6,
+                        "guid":  43724452,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  4712708,
+                        "fight":  22,
+                        "damage":  {
+                                       "total":  9460,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  9460,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  9460,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  1393,
+                        "events":  [
+                                       {
+                                           "timestamp":  4712707,
+                                           "type":  "damage",
+                                           "sourceID":  150,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  6,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  22,
+                                           "hitType":  1,
+                                           "amount":  8067,
+                                           "unmitigatedAmount":  9460,
+                                           "overkill":  1393,
+                                           "isAoE":  false,
+                                           "sourceMarker":  6
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    }
+                ]
+}

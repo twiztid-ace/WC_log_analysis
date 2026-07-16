@@ -1,0 +1,170 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Prendar",
+                        "id":  5,
+                        "guid":  73809015,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  4813516,
+                        "fight":  28,
+                        "damage":  {
+                                       "total":  10636,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  5587,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  5049,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  5587,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  5049,
+                                                           "type":  "Pet"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  1271,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  15290,
+                                                              "name":  "Vampiric Embrace",
+                                                              "total":  972,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  299,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  1271,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Prendar",
+                                                            "total":  1271,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  12016,
+                        "overkill":  164,
+                        "events":  [
+                                       {
+                                           "timestamp":  4813491,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  28,
+                                           "hitType":  1,
+                                           "amount":  2201,
+                                           "unmitigatedAmount":  2365,
+                                           "overkill":  164,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  4813380,
+                                           "type":  "damage",
+                                           "sourceID":  140,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  28,
+                                           "hitType":  1,
+                                           "amount":  5049,
+                                           "unmitigatedAmount":  5049,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  4801475,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  28,
+                                           "hitType":  1,
+                                           "amount":  3222,
+                                           "unmitigatedAmount":  3222,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shadow Word: Death",
+                                            "guid":  32409,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                        }
+                    }
+                ]
+}

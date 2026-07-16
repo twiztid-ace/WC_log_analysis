@@ -1,0 +1,1343 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Baltia",
+                        "id":  40,
+                        "guid":  43972480,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  7173556,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  16210,
+                                       "totalReduced":  14013,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  758,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  10217,
+                                                             "totalReduced":  8020,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  5993,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  10217,
+                                                           "totalReduced":  8020,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  5993,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  7407,
+                                        "totalReduced":  5210,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  4330,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  2197,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  880,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  5759,
+                                                                    "totalReduced":  3562,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  1648,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  6527,
+                                                            "totalReduced":  4330,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Cazzet",
+                                                            "total":  880,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  18397,
+                        "overkill":  412,
+                        "events":  [
+                                       {
+                                           "timestamp":  7173494,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  3432,
+                                           "unmitigatedAmount":  3844,
+                                           "overkill":  412,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  7173274,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1619,
+                                           "unmitigatedAmount":  1619,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7172272,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  2221,
+                                           "unmitigatedAmount":  2221,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Shadow Word: Death",
+                                            "guid":  32409,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Baltia",
+                        "id":  40,
+                        "guid":  43972480,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  7215387,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  12132,
+                                       "totalReduced":  10358,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  11691,
+                                                             "totalReduced":  9917,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  13241,
+                                                             "name":  "Goblin Sapper Charge",
+                                                             "total":  441,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  11691,
+                                                           "totalReduced":  9917,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Baltia",
+                                                           "total":  441,
+                                                           "type":  "Priest"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4310,
+                                        "totalReduced":  2536,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2536,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  1774,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  3869,
+                                                                    "totalReduced":  2095,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  13241,
+                                                                    "name":  "Goblin Sapper Charge",
+                                                                    "total":  441,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  2536,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Baltia",
+                                                            "total":  1774,
+                                                            "totalReduced":  0,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  16588,
+                        "overkill":  1101,
+                        "events":  [
+                                       {
+                                           "timestamp":  7215379,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1103,
+                                           "unmitigatedAmount":  2204,
+                                           "overkill":  1101,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7214357,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1842,
+                                           "unmitigatedAmount":  1842,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7213368,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  40,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  2044,
+                                           "unmitigatedAmount":  2044,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Cazzet",
+                        "id":  16,
+                        "guid":  53377583,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  7279701,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  12335,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  12335,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  12335,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3037,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  3037,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  3037,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  3037,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  25925,
+                        "overkill":  610,
+                        "events":  [
+                                       {
+                                           "timestamp":  7279699,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1301,
+                                           "unmitigatedAmount":  1911,
+                                           "overkill":  610,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7268717,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1547,
+                                           "unmitigatedAmount":  1547,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7267744,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  2092,
+                                           "unmitigatedAmount":  2092,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Sebicute",
+                        "id":  30,
+                        "guid":  46530649,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  7280764,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  35946,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  4324,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  35946,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  35946,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  26995,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  15681,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  4980,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  4585,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1749,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  26995,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  15681,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Thafatcow",
+                                                            "total":  9565,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Cazzet",
+                                                            "total":  1749,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  94878,
+                        "overkill":  118,
+                        "events":  [
+                                       {
+                                           "timestamp":  7280691,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1893,
+                                           "unmitigatedAmount":  2011,
+                                           "overkill":  118,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7279700,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  16,
+                                           "amount":  1162,
+                                           "mitigated":  387,
+                                           "unmitigatedAmount":  1549,
+                                           "resisted":  387,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7268718,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  30,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  16,
+                                           "amount":  1440,
+                                           "mitigated":  479,
+                                           "unmitigatedAmount":  1919,
+                                           "resisted":  480,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Herrsham",
+                        "id":  34,
+                        "guid":  54021795,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  7281768,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  43204,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  7949,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  43204,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  43204,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  33160,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  6905,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  6534,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25420,
+                                                              "name":  "Lesser Healing Wave",
+                                                              "total":  6120,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavelesser.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  5580,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25292,
+                                                              "name":  "Holy Light",
+                                                              "total":  3712,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_holybolt.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  33160,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Herrsham",
+                                                            "total":  14196,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  8718,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Cazzet",
+                                                            "total":  6534,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Smexi",
+                                                            "total":  3712,
+                                                            "type":  "Paladin"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  126591,
+                        "overkill":  745,
+                        "events":  [
+                                       {
+                                           "timestamp":  7281687,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  16,
+                                           "amount":  656,
+                                           "mitigated":  467,
+                                           "unmitigatedAmount":  1868,
+                                           "resisted":  467,
+                                           "overkill":  745,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7280689,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  2240,
+                                           "unmitigatedAmount":  2240,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7279696,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  34,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1598,
+                                           "unmitigatedAmount":  1598,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Liwin",
+                        "id":  2,
+                        "guid":  42613622,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  7281775,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  31733,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  4113,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  31733,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  31733,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  20810,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  15195,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  3833,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1782,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  20810,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  15195,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Liwin",
+                                                            "total":  3833,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Cazzet",
+                                                            "total":  1782,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  82910,
+                        "overkill":  834,
+                        "events":  [
+                                       {
+                                           "timestamp":  7281700,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  2,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1217,
+                                           "unmitigatedAmount":  2051,
+                                           "overkill":  834,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7280689,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  2,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1830,
+                                           "unmitigatedAmount":  1830,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7279696,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  2,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  16,
+                                           "amount":  1069,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  1425,
+                                           "resisted":  356,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Zasupala",
+                        "id":  20,
+                        "guid":  53780382,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  7281886,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  58758,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3463,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  51946,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32221,
+                                                             "name":  "Seal of Blood",
+                                                             "total":  5022,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_sealofblood.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32220,
+                                                             "name":  "Judgement of Blood",
+                                                             "total":  1223,
+                                                             "type":  2,
+                                                             "icon":  "spell_shadow_lifedrain.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30486,
+                                                             "name":  "Super Sapper Charge",
+                                                             "total":  567,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  51946,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Zasupala",
+                                                           "total":  6812,
+                                                           "type":  "Paladin"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  47090,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  30692,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  5412,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  5302,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27237,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  2496,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1660,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  40860,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32221,
+                                                                    "name":  "Seal of Blood",
+                                                                    "total":  4785,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_sealofblood.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32220,
+                                                                    "name":  "Judgement of Blood",
+                                                                    "total":  878,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_shadow_lifedrain.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  30486,
+                                                                    "name":  "Super Sapper Charge",
+                                                                    "total":  567,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  30692,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Zasupala",
+                                                            "total":  7908,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Cazzet",
+                                                            "total":  5302,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Thafatcow",
+                                                            "total":  3188,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  126605,
+                        "overkill":  2001,
+                        "events":  [
+                                       {
+                                           "timestamp":  7281702,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  242,
+                                           "unmitigatedAmount":  2243,
+                                           "overkill":  2001,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7280689,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  2164,
+                                           "unmitigatedAmount":  2164,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7280507,
+                                           "type":  "damage",
+                                           "sourceID":  20,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Judgement of Blood",
+                                                           "guid":  32220,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_shadow_lifedrain.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  345,
+                                           "unmitigatedAmount":  345,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Winterlock",
+                        "id":  15,
+                        "guid":  42688169,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  7281888,
+                        "fight":  53,
+                        "damage":  {
+                                       "total":  14578,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34164,
+                                                             "name":  "Pounding",
+                                                             "total":  14578,
+                                                             "type":  64,
+                                                             "icon":  "ability_thunderclap.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Void Reaver",
+                                                           "total":  14578,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  3767,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  3767,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  34164,
+                                                                    "name":  "Pounding",
+                                                                    "total":  3767,
+                                                                    "type":  64,
+                                                                    "icon":  "ability_thunderclap.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Wooshlol",
+                                                            "total":  3767,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  26936,
+                        "overkill":  959,
+                        "events":  [
+                                       {
+                                           "timestamp":  7281705,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1279,
+                                           "unmitigatedAmount":  2238,
+                                           "overkill":  959,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7280692,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1893,
+                                           "unmitigatedAmount":  1893,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  7279700,
+                                           "type":  "damage",
+                                           "sourceID":  184,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Pounding",
+                                                           "guid":  34164,
+                                                           "type":  64,
+                                                           "abilityIcon":  "ability_thunderclap.jpg"
+                                                       },
+                                           "fight":  53,
+                                           "hitType":  1,
+                                           "amount":  1970,
+                                           "unmitigatedAmount":  1970,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Pounding",
+                                            "guid":  34164,
+                                            "type":  64,
+                                            "abilityIcon":  "ability_thunderclap.jpg"
+                                        }
+                    }
+                ]
+}

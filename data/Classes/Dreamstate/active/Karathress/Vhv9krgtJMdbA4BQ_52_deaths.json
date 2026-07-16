@@ -1,0 +1,145 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Zauronix",
+                        "id":  13,
+                        "guid":  53707426,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  8055435,
+                        "fight":  52,
+                        "damage":  {
+                                       "total":  10733,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38296,
+                                                             "name":  "Scorch",
+                                                             "total":  5592,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_searingtotem.jpg",
+                                                             "petName":  "Spitfire Totem"
+                                                         },
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  4975,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32221,
+                                                             "name":  "Seal of Blood",
+                                                             "total":  166,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_sealofblood.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Spitfire Totem",
+                                                           "total":  5592,
+                                                           "type":  "Pet"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  4975,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Zauronix",
+                                                           "total":  166,
+                                                           "type":  "Paladin"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  2044,
+                        "overkill":  1576,
+                        "events":  [
+                                       {
+                                           "timestamp":  8055434,
+                                           "type":  "damage",
+                                           "sourceID":  225,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Scorch",
+                                                           "guid":  38296,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                                       },
+                                           "fight":  52,
+                                           "hitType":  1,
+                                           "amount":  4016,
+                                           "unmitigatedAmount":  5592,
+                                           "overkill":  1576,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  8053524,
+                                           "type":  "damage",
+                                           "sourceID":  13,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Seal of Blood",
+                                                           "guid":  32221,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_sealofblood.jpg"
+                                                       },
+                                           "fight":  52,
+                                           "hitType":  1,
+                                           "amount":  166,
+                                           "unmitigatedAmount":  166,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  8053390,
+                                           "type":  "damage",
+                                           "sourceID":  218,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  13,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sear Nova",
+                                                           "guid":  38445,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_sealoffire.jpg"
+                                                       },
+                                           "fight":  52,
+                                           "hitType":  1,
+                                           "amount":  4975,
+                                           "unmitigatedAmount":  4975,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Scorch",
+                                            "guid":  38296,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_searingtotem.jpg"
+                                        }
+                    }
+                ]
+}

@@ -114,16 +114,40 @@ $cooldownGuidsByClass = @{
         "Blessing of Freedom" = @(1044)
         "Dark Rune"           = @(27869)
     }
+    # Druid-Dreamstate (WCL classID 2 / specID 6) - a distinct real spec from
+    # Druid-Restoration, NOT a real retail/Classic talent tree (this custom
+    # "Fresh" realm's own homebrew hybrid design - see
+    # pull_top100_dreamstate.ps1's header for the full discovery writeup).
+    # Confirmed against a real Turkeykin report (XJp8vAxzM4KtHYyb, the same
+    # report already used for Crowns/Lippies/Paladin/Priest - 4 real Dreamstate
+    # healer fights, since Turkeykin plays Balance DPS on the other 6 SSC
+    # bosses in this same report) before this entry was added. Innervate
+    # carries over unchanged from Druid-Restoration (real, confirmed casts).
+    # CONFIRMED ABSENT, not guessed: Nature's Swiftness, Swiftmend,
+    # Tranquility - zero real casts across all 4 real fights, not assumed from
+    # Druid-Restoration's own kit just because it's the same base class.
+    # Rebirth and Dark Rune are kept anyway per explicit instruction (matching
+    # Druid-Restoration's own precedent - Rebirth is already a
+    # conditionally-shown row regardless of class, and Dark Rune is a
+    # class-agnostic consumable choice) even though neither had a real cast in
+    # these 4 specific fights - a real 0% this report isn't evidence either
+    # belongs to a different class.
+    "Dreamstate" = [ordered]@{
+        "Innervate" = @(29166)
+        "Rebirth"   = @(26994)
+        "Dark Rune" = @(27869)
+    }
 }
 $manaPotionNameByClass = @{
-    "Druid"   = "Restore Mana"
-    "Shaman"  = "Restore Mana"
-    "Priest"  = "Restore Mana"
-    "Paladin" = "Restore Mana"
+    "Druid"      = "Restore Mana"
+    "Shaman"     = "Restore Mana"
+    "Priest"     = "Restore Mana"
+    "Paladin"    = "Restore Mana"
+    "Dreamstate" = "Restore Mana"
 }
 
 if (-not $cooldownGuidsByClass.ContainsKey($ClassName)) {
-    Write-Host "ERROR: '$ClassName' has no real cooldown-guid table in this script yet - only Druid, Shaman, Priest, and Paladin are wired up today."
+    Write-Host "ERROR: '$ClassName' has no real cooldown-guid table in this script yet - only Druid, Shaman, Priest, Paladin, and Dreamstate are wired up today."
     Write-Host "       Add a real, VERIFIED guid table for '$ClassName' (never guess at guids) before running this for that class."
     exit 1
 }
@@ -203,6 +227,28 @@ $rankingsData = if (Test-Path $rankingsPath) { Get-Content $rankingsPath -Raw -E
     $null
 }
 
+# ===== Spec coverage (general, class-agnostic - not Dreamstate-specific) =====
+# Present only when pull_character_TEMPLATE.ps1 (or the -Spec-aware version of
+# it) found a real character who plays more than one spec across this report's
+# boss kills - the common case (every class before Dreamstate) has no such
+# file, or a file where every boss agrees, and $specCoverage stays $null so
+# report_data.json omits the field entirely rather than an always-empty
+# object. See that script's own header for the real Turkeykin/XJp8vAxzM4KtHYyb
+# case that drove this.
+$specCoveragePath = Join-Path $charDir "$($ReportCode)_spec_coverage.json"
+$specCoverageData = if (Test-Path $specCoveragePath) { Get-Content $specCoveragePath -Raw -Encoding UTF8 | ConvertFrom-Json } else { $null }
+$specCoverage = $null
+if ($specCoverageData -and $specCoverageData.TotalBossesInReport -gt $specCoverageData.BossesAnalyzed) {
+    $specCoverage = [PSCustomObject]@{
+        AnalyzedSpec        = $specCoverageData.AnalyzedSpec
+        TotalBossesInReport = $specCoverageData.TotalBossesInReport
+        BossesAnalyzed      = $specCoverageData.BossesAnalyzed
+        ExcludedBosses      = @($specCoverageData.Bosses | Where-Object { -not $_.Included } | ForEach-Object {
+            [PSCustomObject]@{ BossName = $_.BossName; Spec = $_.ResolvedSpec }
+        })
+    }
+}
+
 $benchDir = Join-Path (Join-Path "data\Classes" $ClassName) "active"
 if (-not (Test-Path $benchDir)) {
     Write-Host "ERROR: $benchDir not found - run pull_top100_$($ClassName.ToLower()).ps1 then summarize_class_benchmarks.ps1 -ClassName $ClassName first."
@@ -229,7 +275,20 @@ $bmManaCostByGuid = if (Test-Path $manaCostPath) {
     @{}
 }
 
-$allBossPulls = @($fightsData.fights | Where-Object { $_.boss -ne 0 })
+# fights_{code}.json is a report-wide, cross-character CACHE (shared/reused by
+# whichever character pulls this report first) - it always carries the FULL
+# fight list, never filtered by any one character's spec. When $specCoverage
+# is present (this character played more than one real spec across this
+# report), narrow to just the fight IDs pull_character_TEMPLATE.ps1 actually
+# pulled full data for (spec-matching ones) BEFORE computing anything below -
+# don't rely on the missing-file WARNING/skip further down as the only thing
+# keeping a DPS off-spec fight out of "bosses attempted"/the boss loop.
+$allFights = $fightsData.fights
+if ($specCoverage) {
+    $includedFightIDs = @($specCoverageData.Bosses | Where-Object { $_.Included } | ForEach-Object { $_.FightID })
+    $allFights = @($fightsData.fights | Where-Object { $includedFightIDs -contains $_.id })
+}
+$allBossPulls = @($allFights | Where-Object { $_.boss -ne 0 })
 $bossFights = @($allBossPulls | Where-Object { $_.kill -eq $true })
 # Distinct boss IDs, NOT total pull count - a wipe on a boss followed by a
 # real kill of that SAME boss is one boss attempted, not two. The previous
@@ -572,6 +631,7 @@ foreach ($fight in $bossFights) {
         FoodActive          = if ($consumablesData) { [bool]$consumablesData.foodActive } else { $null }
         FoodName            = if ($consumablesData) { $consumablesData.foodName } else { $null }
         TreeOfLifePct       = if ($consumablesData) { $consumablesData.treeOfLifeUptimePct } else { $null }
+        ImprovedFaerieFireUptimePct = if ($consumablesData -and ($consumablesData.PSObject.Properties.Name -contains "improvedFaerieFireUptimePct")) { $consumablesData.improvedFaerieFireUptimePct } else { $null }
         BM                  = $bmRow
         BMSpells            = $bmSpellRows
         BMCooldowns         = $bmCdRows
@@ -663,6 +723,7 @@ $output = [PSCustomObject]@{
     Bosses           = $results
     GearDiff         = $gearDiff
     BossesAttempted  = $distinctBossesAttempted
+    SpecCoverage     = $specCoverage
     RaidWideIlvlHealingRankSummary = $raidWideIlvlHealingRankSummary
     RaidWideRawHealingRankSummary  = $raidWideRawHealingRankSummary
     BenchmarkManaCostByGuid        = $bmManaCostByGuid

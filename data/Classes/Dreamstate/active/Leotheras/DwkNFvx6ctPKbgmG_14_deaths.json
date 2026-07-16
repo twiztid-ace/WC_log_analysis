@@ -1,0 +1,400 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Tigglesp",
+                        "id":  15,
+                        "guid":  54818891,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  2578912,
+                        "fight":  14,
+                        "damage":  {
+                                       "total":  16109,
+                                       "totalReduced":  14281,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  712,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  8973,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  4038,
+                                                             "totalReduced":  2210,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  3098,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  13011,
+                                                           "totalReduced":  11183,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  3098,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2446,
+                                        "totalReduced":  618,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25218,
+                                                              "name":  "Power Word: Shield",
+                                                              "total":  1828,
+                                                              "totalReduced":  0,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_powerwordshield.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  15290,
+                                                              "name":  "Vampiric Embrace",
+                                                              "total":  618,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  1946,
+                                                                    "totalReduced":  118,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  500,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Tigglesp",
+                                                            "total":  2051,
+                                                            "totalReduced":  223,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Encryptsp",
+                                                            "total":  395,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3060,
+                        "overkill":  4282,
+                        "events":  [
+                                       {
+                                           "timestamp":  2578898,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  2,
+                                           "amount":  4691,
+                                           "unmitigatedAmount":  6846,
+                                           "overkill":  4282,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2578848,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  191,
+                                           "mitigated":  356,
+                                           "unmitigatedAmount":  2375,
+                                           "absorbed":  1828,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  2576583,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  15,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  3098,
+                                           "unmitigatedAmount":  3098,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Holoviik",
+                        "id":  18,
+                        "guid":  77258565,
+                        "type":  "Hunter",
+                        "icon":  "Hunter-Survival",
+                        "timestamp":  2579855,
+                        "fight":  14,
+                        "damage":  {
+                                       "total":  15749,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  5626,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  15749,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  15749,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4500,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  4500,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  4500,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Fungs",
+                                                            "total":  4500,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14016,
+                        "overkill":  944,
+                        "events":  [
+                                       {
+                                           "timestamp":  2579852,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  1336,
+                                           "mitigated":  95,
+                                           "unmitigatedAmount":  2375,
+                                           "overkill":  944,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  2576832,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  2280,
+                                           "mitigated":  95,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  2573847,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  1,
+                                           "amount":  2280,
+                                           "mitigated":  95,
+                                           "unmitigatedAmount":  2375,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Biddness",
+                        "id":  57,
+                        "guid":  74574485,
+                        "type":  "Priest",
+                        "icon":  "Priest-Holy",
+                        "timestamp":  2595678,
+                        "fight":  14,
+                        "damage":  {
+                                       "total":  9680,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  9680,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  9680,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  789,
+                        "events":  [
+                                       {
+                                           "timestamp":  2580637,
+                                           "type":  "damage",
+                                           "sourceID":  174,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  57,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  14,
+                                           "hitType":  15,
+                                           "amount":  8891,
+                                           "unmitigatedAmount":  8412,
+                                           "overkill":  789,
+                                           "isAoE":  false
+                                       }
+                                   ]
+                    }
+                ]
+}

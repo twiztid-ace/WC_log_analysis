@@ -1,0 +1,120 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Typside",
+                        "id":  5,
+                        "guid":  57037888,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  9040442,
+                        "fight":  57,
+                        "damage":  {
+                                       "total":  9995,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  34133,
+                                                             "name":  "Ember Blast",
+                                                             "total":  8982,
+                                                             "type":  4,
+                                                             "icon":  "trade_engineering.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  1013,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Ember of Al\u0027ar",
+                                                           "total":  8982,
+                                                           "type":  "NPC"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  1013,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  63,
+                        "overkill":  966,
+                        "events":  [
+                                       {
+                                           "timestamp":  9040417,
+                                           "type":  "damage",
+                                           "sourceID":  793,
+                                           "sourceInstance":  1,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Ember Blast",
+                                                           "guid":  34133,
+                                                           "type":  4,
+                                                           "abilityIcon":  "trade_engineering.jpg"
+                                                       },
+                                           "fight":  57,
+                                           "hitType":  1,
+                                           "amount":  8016,
+                                           "unmitigatedAmount":  8982,
+                                           "overkill":  966,
+                                           "isAoE":  true
+                                       },
+                                       {
+                                           "timestamp":  9040354,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  57,
+                                           "hitType":  1,
+                                           "amount":  1013,
+                                           "unmitigatedAmount":  1013,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Ember Blast",
+                                            "guid":  34133,
+                                            "type":  4,
+                                            "abilityIcon":  "trade_engineering.jpg"
+                                        }
+                    }
+                ]
+}

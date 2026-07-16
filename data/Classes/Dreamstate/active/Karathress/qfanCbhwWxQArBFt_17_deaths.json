@@ -1,0 +1,558 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Aeinix",
+                        "id":  1,
+                        "guid":  93669943,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Protection",
+                        "timestamp":  1586270,
+                        "fight":  17,
+                        "damage":  {
+                                       "total":  26226,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  25872,
+                                       "blocked":  626,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  13188,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13038,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  26226,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  6686,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25235,
+                                                              "name":  "Flash Heal",
+                                                              "total":  2686,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  8005,
+                                                              "name":  "Healing Wave",
+                                                              "total":  2580,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_magicimmunity.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  379,
+                                                              "name":  "Earth Shield",
+                                                              "total":  959,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_skinofearth.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26980,
+                                                              "name":  "Regrowth",
+                                                              "total":  461,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_resistnature.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  1,
+                                                                    "name":  "Melee",
+                                                                    "total":  6686,
+                                                                    "type":  1,
+                                                                    "icon":  "inv_axe_02.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Ariiana",
+                                                            "total":  2686,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Runespark",
+                                                            "total":  2580,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Rawr",
+                                                            "total":  959,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Edym",
+                                                            "total":  461,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  3561,
+                        "overkill":  2533,
+                        "events":  [
+                                       {
+                                           "timestamp":  1586244,
+                                           "type":  "damage",
+                                           "sourceID":  126,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  10655,
+                                           "mitigated":  842,
+                                           "unmitigatedAmount":  14030,
+                                           "overkill":  2533,
+                                           "isAoE":  false,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  1583902,
+                                           "type":  "damage",
+                                           "sourceID":  126,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  4,
+                                           "amount":  6372,
+                                           "mitigated":  12253,
+                                           "unmitigatedAmount":  18625,
+                                           "blocked":  313,
+                                           "isAoE":  false,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  1
+                                       },
+                                       {
+                                           "timestamp":  1582683,
+                                           "type":  "damage",
+                                           "sourceID":  126,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  1,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  4,
+                                           "amount":  6666,
+                                           "mitigated":  12777,
+                                           "unmitigatedAmount":  19443,
+                                           "blocked":  313,
+                                           "isAoE":  false,
+                                           "sourceMarker":  4,
+                                           "targetMarker":  1
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Karsie",
+                        "id":  3,
+                        "guid":  57002249,
+                        "type":  "Priest",
+                        "icon":  "Priest-Shadow",
+                        "timestamp":  1601470,
+                        "fight":  17,
+                        "damage":  {
+                                       "total":  9968,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38441,
+                                                             "name":  "Cataclysmic Bolt",
+                                                             "total":  7484,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_shadowfury.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32409,
+                                                             "name":  "Shadow Word: Death",
+                                                             "total":  2484,
+                                                             "type":  32,
+                                                             "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  7484,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  2484,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  629,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  39373,
+                                                              "name":  "Shadowmend",
+                                                              "total":  629,
+                                                              "type":  32,
+                                                              "icon":  "spell_shadow_unsummonbuilding.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  32409,
+                                                                    "name":  "Shadow Word: Death",
+                                                                    "total":  629,
+                                                                    "type":  32,
+                                                                    "icon":  "spell_shadow_demonicfortitude.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Karsie",
+                                                            "total":  629,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  19255,
+                        "overkill":  268,
+                        "events":  [
+                                       {
+                                           "timestamp":  1601466,
+                                           "type":  "damage",
+                                           "sourceID":  126,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Cataclysmic Bolt",
+                                                           "guid":  38441,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  7216,
+                                           "unmitigatedAmount":  7484,
+                                           "overkill":  268,
+                                           "isAoE":  false,
+                                           "sourceMarker":  4
+                                       },
+                                       {
+                                           "timestamp":  1582211,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  3,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Shadow Word: Death",
+                                                           "guid":  32409,
+                                                           "type":  32,
+                                                           "abilityIcon":  "spell_shadow_demonicfortitude.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  2484,
+                                           "unmitigatedAmount":  2484,
+                                           "isAoE":  false,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Cataclysmic Bolt",
+                                            "guid":  38441,
+                                            "type":  32,
+                                            "abilityIcon":  "spell_shadow_shadowfury.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Charrsie",
+                        "id":  4,
+                        "guid":  54785419,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Retribution",
+                        "timestamp":  1625331,
+                        "fight":  17,
+                        "damage":  {
+                                       "total":  21668,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1434,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  38445,
+                                                             "name":  "Sear Nova",
+                                                             "total":  12763,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_sealoffire.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  38419,
+                                                             "name":  "Spore Explosion",
+                                                             "total":  4500,
+                                                             "type":  8,
+                                                             "icon":  "spell_nature_abolishmagic.jpg",
+                                                             "petName":  "Fathom Lurker"
+                                                         },
+                                                         {
+                                                             "guid":  32221,
+                                                             "name":  "Seal of Blood",
+                                                             "total":  1825,
+                                                             "type":  2,
+                                                             "icon":  "spell_holy_sealofblood.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  32220,
+                                                             "name":  "Judgement of Blood",
+                                                             "total":  1530,
+                                                             "type":  2,
+                                                             "icon":  "spell_shadow_lifedrain.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  29436,
+                                                             "name":  "Leeching Throw",
+                                                             "total":  1050,
+                                                             "type":  8,
+                                                             "icon":  "ability_hunter_aimedshot.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Fathom-Lord Karathress",
+                                                           "total":  12763,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom Lurker",
+                                                           "total":  4500,
+                                                           "type":  "Pet"
+                                                       },
+                                                       {
+                                                           "name":  "Charrsie",
+                                                           "total":  3355,
+                                                           "type":  "Paladin"
+                                                       },
+                                                       {
+                                                           "name":  "Fathom-Guard Sharkkis",
+                                                           "total":  1050,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  12232,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  5704,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  4058,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26980,
+                                                              "name":  "Regrowth",
+                                                              "total":  2470,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_resistnature.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  38445,
+                                                                    "name":  "Sear Nova",
+                                                                    "total":  5978,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_sealoffire.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  38419,
+                                                                    "name":  "Spore Explosion",
+                                                                    "total":  3493,
+                                                                    "type":  8,
+                                                                    "icon":  "spell_nature_abolishmagic.jpg",
+                                                                    "petName":  "Fathom Lurker"
+                                                                },
+                                                                {
+                                                                    "guid":  32221,
+                                                                    "name":  "Seal of Blood",
+                                                                    "total":  1154,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_holy_sealofblood.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  32220,
+                                                                    "name":  "Judgement of Blood",
+                                                                    "total":  1013,
+                                                                    "type":  2,
+                                                                    "icon":  "spell_shadow_lifedrain.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  29436,
+                                                                    "name":  "Leeching Throw",
+                                                                    "total":  594,
+                                                                    "type":  8,
+                                                                    "icon":  "ability_hunter_aimedshot.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Ariiana",
+                                                            "total":  5704,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Runespark",
+                                                            "total":  2770,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Edym",
+                                                            "total":  2470,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Rawr",
+                                                            "total":  1288,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  59066,
+                        "overkill":  99,
+                        "events":  [
+                                       {
+                                           "timestamp":  1625316,
+                                           "type":  "damage",
+                                           "sourceID":  4,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Judgement of Blood",
+                                                           "guid":  32220,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_shadow_lifedrain.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  91,
+                                           "unmitigatedAmount":  190,
+                                           "overkill":  99,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1624573,
+                                           "type":  "damage",
+                                           "sourceID":  4,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Seal of Blood",
+                                                           "guid":  32221,
+                                                           "type":  2,
+                                                           "abilityIcon":  "spell_holy_sealofblood.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  67,
+                                           "unmitigatedAmount":  67,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  1623586,
+                                           "type":  "damage",
+                                           "sourceID":  126,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  4,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Sear Nova",
+                                                           "guid":  38445,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_sealoffire.jpg"
+                                                       },
+                                           "fight":  17,
+                                           "hitType":  1,
+                                           "amount":  6542,
+                                           "unmitigatedAmount":  6542,
+                                           "isAoE":  true,
+                                           "sourceMarker":  4
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Judgement of Blood",
+                                            "guid":  32220,
+                                            "type":  2,
+                                            "abilityIcon":  "spell_shadow_lifedrain.jpg"
+                                        }
+                    }
+                ]
+}

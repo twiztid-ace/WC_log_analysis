@@ -313,10 +313,18 @@ foreach ($bossProp in $reportData.Bosses.PSObject.Properties) {
             $tqUsedPct = if ($tqBm) { ConvertTo-BMNumber $tqBm.Top100UsedPct } else { $null }
             $tranquilityInclude = Test-TranquilityInclude -Count $tqRow.Count -Top100UsedPct $tqUsedPct
         }
-        if ($boss.CooldownRows.PSObject.Properties.Name -contains "Rebirth") {
-            $rbRow = $boss.CooldownRows."Rebirth"
-            $rebirthCandidates = [ordered]@{ Deaths = $boss.DeathList; RebirthCasts = $rbRow.Targets }
-        }
+    }
+    # Rebirth is a SEPARATE check from Tranquility above, gated on "Druid OR
+    # Dreamstate" - not folded into the Druid-only block above. Dreamstate
+    # carries Rebirth in its own cooldown table (real guid 26994, same as
+    # Druid-Restoration's) but has NOT been confirmed to have Tranquility -
+    # gating both on the same Druid-only check would have silently left
+    # RebirthCandidates permanently $null for Dreamstate, blocking its Rebirth
+    # row from ever being includable via findings.json's IncludeRebirthRow,
+    # even though the ability is explicitly meant to be kept for this class.
+    if (($ClassName -eq "Druid" -or $ClassName -eq "Dreamstate") -and $boss.CooldownRows.PSObject.Properties.Name -contains "Rebirth") {
+        $rbRow = $boss.CooldownRows."Rebirth"
+        $rebirthCandidates = [ordered]@{ Deaths = $boss.DeathList; RebirthCasts = $rbRow.Targets }
     }
 
     # ----- Self-deaths (mechanical string-match, no time-window judgment) -----

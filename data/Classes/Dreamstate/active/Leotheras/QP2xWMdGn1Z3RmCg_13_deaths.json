@@ -1,0 +1,683 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Goodstaff",
+                        "id":  23,
+                        "guid":  54121095,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  9381902,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  13605,
+                                       "totalReduced":  13205,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  1039,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  11930,
+                                                             "totalReduced":  11530,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37675,
+                                                             "name":  "Chaos Blast",
+                                                             "total":  1675,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_felflamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  13605,
+                                                           "totalReduced":  13205,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  2922,
+                                        "totalReduced":  2522,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2036,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  42137,
+                                                              "name":  "Greater Rune of Warding",
+                                                              "total":  400,
+                                                              "totalReduced":  0,
+                                                              "type":  1,
+                                                              "icon":  "trade_engineering.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  391,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  27163,
+                                                              "name":  "Judgement of Light",
+                                                              "total":  95,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_healingaura.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  2922,
+                                                                    "totalReduced":  2522,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Innate",
+                                                            "total":  2036,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Goodstaff",
+                                                            "total":  886,
+                                                            "totalReduced":  486,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  10028,
+                        "overkill":  914,
+                        "events":  [
+                                       {
+                                           "timestamp":  9381901,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  1578,
+                                           "unmitigatedAmount":  2492,
+                                           "overkill":  914,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9378894,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2493,
+                                           "unmitigatedAmount":  2493,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9378857,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Chaos Blast",
+                                                           "guid":  37675,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  1675,
+                                           "unmitigatedAmount":  1675,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Notwistx",
+                        "id":  5,
+                        "guid":  62438719,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  9381903,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  9604,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  896,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  9604,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  9604,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  9014,
+                        "overkill":  155,
+                        "events":  [
+                                       {
+                                           "timestamp":  9381887,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2345,
+                                           "unmitigatedAmount":  2500,
+                                           "overkill":  155,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9378894,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2500,
+                                           "unmitigatedAmount":  2500,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9375888,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  5,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2500,
+                                           "unmitigatedAmount":  2500,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Whirlwind",
+                                            "guid":  37641,
+                                            "type":  1,
+                                            "abilityIcon":  "ability_gouge.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Weawer",
+                        "id":  18,
+                        "guid":  47482210,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Enhancement",
+                        "timestamp":  9382088,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  23423,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3085,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  13373,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37675,
+                                                             "name":  "Chaos Blast",
+                                                             "total":  10050,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_felflamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  23423,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  11961,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  5624,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33110,
+                                                              "name":  "Prayer of Mending",
+                                                              "total":  1982,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_prayerofmendingtga.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1666,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33763,
+                                                              "name":  "Lifebloom",
+                                                              "total":  965,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  790,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  8173,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37675,
+                                                                    "name":  "Chaos Blast",
+                                                                    "total":  3788,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_felflamebolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Innate",
+                                                            "total":  7606,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Notwistx",
+                                                            "total":  1666,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Mirok",
+                                                            "total":  1424,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Weawer",
+                                                            "total":  1265,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14204,
+                        "overkill":  1583,
+                        "events":  [
+                                       {
+                                           "timestamp":  9382084,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Chaos Blast",
+                                                           "guid":  37675,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  3442,
+                                           "unmitigatedAmount":  1675,
+                                           "overkill":  1583,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  9381885,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2486,
+                                           "unmitigatedAmount":  2486,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9378894,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  18,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2486,
+                                           "unmitigatedAmount":  2486,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Chaos Blast",
+                                            "guid":  37675,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Cassxd",
+                        "id":  11,
+                        "guid":  54610627,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  9385327,
+                        "fight":  13,
+                        "damage":  {
+                                       "total":  38292,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  7262,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  37641,
+                                                             "name":  "Whirlwind",
+                                                             "total":  27238,
+                                                             "type":  1,
+                                                             "icon":  "ability_gouge.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  37675,
+                                                             "name":  "Chaos Blast",
+                                                             "total":  11054,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_felflamebolt.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Leotheras the Blind",
+                                                           "total":  38292,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  25310,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  25423,
+                                                              "name":  "Chain Heal",
+                                                              "total":  8032,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_healingwavegreater.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  7238,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26980,
+                                                              "name":  "Regrowth",
+                                                              "total":  2986,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_resistnature.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  1711,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  33778,
+                                                              "name":  "Lifebloom",
+                                                              "total":  1698,
+                                                              "type":  8,
+                                                              "icon":  "inv_misc_herb_felblossom.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  37641,
+                                                                    "name":  "Whirlwind",
+                                                                    "total":  22662,
+                                                                    "type":  1,
+                                                                    "icon":  "ability_gouge.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  37675,
+                                                                    "name":  "Chaos Blast",
+                                                                    "total":  2126,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_felflamebolt.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Innate",
+                                                            "total":  7238,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Mirok",
+                                                            "total":  6374,
+                                                            "type":  "Druid"
+                                                        },
+                                                        {
+                                                            "name":  "Balotem",
+                                                            "total":  4676,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Cassxd",
+                                                            "total":  3666,
+                                                            "type":  "Warrior"
+                                                        },
+                                                        {
+                                                            "name":  "Notwistx",
+                                                            "total":  3356,
+                                                            "type":  "Shaman"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  30825,
+                        "overkill":  2999,
+                        "events":  [
+                                       {
+                                           "timestamp":  9385326,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Chaos Blast",
+                                                           "guid":  37675,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2528,
+                                           "unmitigatedAmount":  1675,
+                                           "overkill":  2999,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  9383883,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Whirlwind",
+                                                           "guid":  37641,
+                                                           "type":  1,
+                                                           "abilityIcon":  "ability_gouge.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  2750,
+                                           "unmitigatedAmount":  2500,
+                                           "isAoE":  true,
+                                           "tick":  true
+                                       },
+                                       {
+                                           "timestamp":  9382084,
+                                           "type":  "damage",
+                                           "sourceID":  131,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Chaos Blast",
+                                                           "guid":  37675,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                                       },
+                                           "fight":  13,
+                                           "hitType":  1,
+                                           "amount":  3685,
+                                           "unmitigatedAmount":  1675,
+                                           "isAoE":  false
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Chaos Blast",
+                                            "guid":  37675,
+                                            "type":  4,
+                                            "abilityIcon":  "spell_fire_felflamebolt.jpg"
+                                        }
+                    }
+                ]
+}

@@ -1,0 +1,157 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Antidoties",
+                        "id":  11,
+                        "guid":  60076486,
+                        "type":  "Warrior",
+                        "icon":  "Warrior-Fury",
+                        "timestamp":  3288113,
+                        "fight":  2,
+                        "damage":  {
+                                       "total":  14447,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  3372,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  1,
+                                                             "name":  "Melee",
+                                                             "total":  13295,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  30486,
+                                                             "name":  "Super Sapper Charge",
+                                                             "total":  1152,
+                                                             "type":  4,
+                                                             "icon":  "spell_fire_selfdestruct.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  13295,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Antidoties",
+                                                           "total":  1152,
+                                                           "type":  "Warrior"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  627,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34299,
+                                                              "name":  "Leader of the Pack",
+                                                              "total":  462,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_unyeildingstamina.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  30340,
+                                                              "name":  "Bloodthirst",
+                                                              "total":  165,
+                                                              "type":  1,
+                                                              "icon":  "spell_nature_bloodlust.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  30486,
+                                                                    "name":  "Super Sapper Charge",
+                                                                    "total":  627,
+                                                                    "type":  4,
+                                                                    "icon":  "spell_fire_selfdestruct.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Antidoties",
+                                                            "total":  627,
+                                                            "type":  "Warrior"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14235,
+                        "overkill":  2246,
+                        "events":  [
+                                       {
+                                           "timestamp":  3288057,
+                                           "type":  "damage",
+                                           "sourceID":  55,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  2,
+                                           "hitType":  1,
+                                           "amount":  2664,
+                                           "mitigated":  3372,
+                                           "unmitigatedAmount":  8282,
+                                           "overkill":  2246,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3286851,
+                                           "type":  "damage",
+                                           "sourceID":  55,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Melee",
+                                                           "guid":  1,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  2,
+                                           "hitType":  15,
+                                           "amount":  8385,
+                                           "unmitigatedAmount":  7857,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  3273822,
+                                           "type":  "damage",
+                                           "sourceID":  11,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  11,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Super Sapper Charge",
+                                                           "guid":  30486,
+                                                           "type":  4,
+                                                           "abilityIcon":  "spell_fire_selfdestruct.jpg"
+                                                       },
+                                           "fight":  2,
+                                           "hitType":  16,
+                                           "amount":  1152,
+                                           "unmitigatedAmount":  1107,
+                                           "resisted":  277,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Melee",
+                                            "guid":  1,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    }
+                ]
+}

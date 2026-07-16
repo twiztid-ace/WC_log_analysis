@@ -1,0 +1,1080 @@
+{
+    "entries":  [
+                    {
+                        "name":  "Lavenna",
+                        "id":  17,
+                        "guid":  72875619,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Elemental",
+                        "timestamp":  2038805,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  17854,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  9419,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  6091,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2344,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  9419,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  6091,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  2344,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  13813,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  2038805,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  9419,
+                                           "unmitigatedAmount":  9419,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  6091,
+                                           "unmitigatedAmount":  6091,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2024992,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  17,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  2344,
+                                           "unmitigatedAmount":  2344,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Hukussy",
+                        "id":  23,
+                        "guid":  77890027,
+                        "type":  "Paladin",
+                        "icon":  "Paladin-Holy",
+                        "timestamp":  2038806,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  18348,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  591,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  10057,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  6517,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  1774,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  10057,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  6517,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  1774,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  981,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  981,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  33009,
+                                                                    "name":  "Blinding Light",
+                                                                    "total":  981,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_starfall.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Jeong",
+                                                            "total":  981,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  13783,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  2038783,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  10057,
+                                           "unmitigatedAmount":  10057,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  6517,
+                                           "unmitigatedAmount":  6517,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2025000,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  23,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  16,
+                                           "amount":  1774,
+                                           "mitigated":  591,
+                                           "unmitigatedAmount":  2365,
+                                           "resisted":  591,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Earlweezy",
+                        "id":  16,
+                        "guid":  76971914,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  2039053,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  19679,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  11196,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  6030,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2453,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  11196,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  6030,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  2453,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  14053,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  2039053,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  11196,
+                                           "unmitigatedAmount":  11196,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  6030,
+                                           "unmitigatedAmount":  6030,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2025000,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  16,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  2453,
+                                           "unmitigatedAmount":  2453,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Teamnopants",
+                        "id":  24,
+                        "guid":  63962457,
+                        "type":  "Warlock",
+                        "icon":  "Warlock-Destruction",
+                        "timestamp":  2039126,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  18968,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  11083,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  5553,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2332,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  11083,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  5553,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  2332,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  5245,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27137,
+                                                              "name":  "Flash of Light",
+                                                              "total":  2136,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_flashheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  1064,
+                                                              "name":  "Chain Heal",
+                                                              "total":  1879,
+                                                              "type":  8,
+                                                              "icon":  "inv_1115_shaman_chainheal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  1230,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  33009,
+                                                                    "name":  "Blinding Light",
+                                                                    "total":  2332,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_starfall.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Hukussy",
+                                                            "total":  2136,
+                                                            "type":  "Paladin"
+                                                        },
+                                                        {
+                                                            "name":  "Bonifacio",
+                                                            "total":  1879,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Jeong",
+                                                            "total":  1230,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  19099,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  2039124,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  11083,
+                                           "unmitigatedAmount":  11083,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  5553,
+                                           "unmitigatedAmount":  5553,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2025000,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  24,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  2332,
+                                           "unmitigatedAmount":  2332,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Bonifacio",
+                        "id":  25,
+                        "guid":  58525109,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  2039255,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  17841,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "overheal":  591,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  3,
+                                                             "name":  "Falling",
+                                                             "total":  10079,
+                                                             "type":  1,
+                                                             "icon":  "inv_axe_02.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  5988,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  1774,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Environment",
+                                                           "total":  10079,
+                                                           "type":  "Boss"
+                                                       },
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  5988,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  1774,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  4088,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  27235,
+                                                              "name":  "Master Healthstone",
+                                                              "total":  3120,
+                                                              "type":  1,
+                                                              "icon":  "inv_stone_04.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  968,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  42787,
+                                                                    "name":  "Wrath of the Astromancer",
+                                                                    "total":  3120,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_wispsplode.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  33009,
+                                                                    "name":  "Blinding Light",
+                                                                    "total":  968,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_starfall.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Bonifacio",
+                                                            "total":  3120,
+                                                            "type":  "Shaman"
+                                                        },
+                                                        {
+                                                            "name":  "Jeong",
+                                                            "total":  968,
+                                                            "type":  "Priest"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  14243,
+                        "overkill":  0,
+                        "events":  [
+                                       {
+                                           "timestamp":  2039243,
+                                           "type":  "damage",
+                                           "source":  {
+                                                          "name":  "Environment",
+                                                          "id":  -1,
+                                                          "guid":  0,
+                                                          "type":  "Boss",
+                                                          "icon":  "Boss"
+                                                      },
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Falling",
+                                                           "guid":  3,
+                                                           "type":  1,
+                                                           "abilityIcon":  "inv_axe_02.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  10079,
+                                           "unmitigatedAmount":  10079,
+                                           "overkill":  0,
+                                           "isAoE":  false
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  5988,
+                                           "unmitigatedAmount":  5988,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2025000,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  16,
+                                           "amount":  1774,
+                                           "mitigated":  591,
+                                           "unmitigatedAmount":  2365,
+                                           "resisted":  591,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Falling",
+                                            "guid":  3,
+                                            "type":  1,
+                                            "abilityIcon":  "inv_axe_02.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Slinkÿ",
+                        "id":  20,
+                        "guid":  56004211,
+                        "type":  "Mage",
+                        "icon":  "Mage-Arcane",
+                        "timestamp":  2046570,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  14865,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  12461,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         },
+                                                         {
+                                                             "guid":  33009,
+                                                             "name":  "Blinding Light",
+                                                             "total":  2404,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_starfall.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Pedromage",
+                                                           "total":  6596,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "Slinkÿ",
+                                                           "total":  5865,
+                                                           "type":  "Mage"
+                                                       },
+                                                       {
+                                                           "name":  "High Astromancer Solarian",
+                                                           "total":  2404,
+                                                           "type":  "Boss"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  5299,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+                                                          {
+                                                              "guid":  34866,
+                                                              "name":  "Circle of Healing",
+                                                              "total":  2837,
+                                                              "type":  2,
+                                                              "icon":  "spell_holy_circleofrenewal.jpg"
+                                                          },
+                                                          {
+                                                              "guid":  26980,
+                                                              "name":  "Regrowth",
+                                                              "total":  2462,
+                                                              "type":  8,
+                                                              "icon":  "spell_nature_resistnature.jpg"
+                                                          }
+                                                      ],
+                                        "damageAbilities":  [
+                                                                {
+                                                                    "guid":  42787,
+                                                                    "name":  "Wrath of the Astromancer",
+                                                                    "total":  4334,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_wispsplode.jpg"
+                                                                },
+                                                                {
+                                                                    "guid":  33009,
+                                                                    "name":  "Blinding Light",
+                                                                    "total":  965,
+                                                                    "type":  64,
+                                                                    "icon":  "spell_nature_starfall.jpg"
+                                                                }
+                                                            ],
+                                        "sources":  [
+                                                        {
+                                                            "name":  "Jeong",
+                                                            "total":  2837,
+                                                            "type":  "Priest"
+                                                        },
+                                                        {
+                                                            "name":  "Camwise",
+                                                            "total":  2462,
+                                                            "type":  "Druid"
+                                                        }
+                                                    ]
+                                    },
+                        "deathWindow":  21568,
+                        "overkill":  263,
+                        "events":  [
+                                       {
+                                           "timestamp":  2046560,
+                                           "type":  "damage",
+                                           "sourceID":  20,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  5602,
+                                           "unmitigatedAmount":  5865,
+                                           "overkill":  263,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2032657,
+                                           "type":  "damage",
+                                           "sourceID":  28,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  6596,
+                                           "unmitigatedAmount":  6596,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8
+                                       },
+                                       {
+                                           "timestamp":  2024992,
+                                           "type":  "damage",
+                                           "sourceID":  86,
+                                           "sourceIsFriendly":  false,
+                                           "targetID":  20,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Blinding Light",
+                                                           "guid":  33009,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_starfall.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  2404,
+                                           "unmitigatedAmount":  2404,
+                                           "isAoE":  true
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Wrath of the Astromancer",
+                                            "guid":  42787,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                        }
+                    },
+                    {
+                        "name":  "Bonifacio",
+                        "id":  25,
+                        "guid":  58525109,
+                        "type":  "Shaman",
+                        "icon":  "Shaman-Restoration",
+                        "timestamp":  2057569,
+                        "fight":  15,
+                        "damage":  {
+                                       "total":  6047,
+                                       "activeTime":  0,
+                                       "activeTimeReduced":  0,
+                                       "abilities":  [
+                                                         {
+                                                             "guid":  42787,
+                                                             "name":  "Wrath of the Astromancer",
+                                                             "total":  6047,
+                                                             "type":  64,
+                                                             "icon":  "spell_nature_wispsplode.jpg"
+                                                         }
+                                                     ],
+                                       "damageAbilities":  [
+
+                                                           ],
+                                       "sources":  [
+                                                       {
+                                                           "name":  "Bonifacio",
+                                                           "total":  6047,
+                                                           "type":  "Shaman"
+                                                       }
+                                                   ]
+                                   },
+                        "healing":  {
+                                        "total":  0,
+                                        "activeTime":  0,
+                                        "activeTimeReduced":  0,
+                                        "abilities":  [
+
+                                                      ],
+                                        "damageAbilities":  [
+
+                                                            ],
+                                        "sources":  [
+
+                                                    ]
+                                    },
+                        "deathWindow":  0,
+                        "overkill":  398,
+                        "events":  [
+                                       {
+                                           "timestamp":  2057552,
+                                           "type":  "damage",
+                                           "sourceID":  25,
+                                           "sourceIsFriendly":  true,
+                                           "targetID":  25,
+                                           "targetIsFriendly":  true,
+                                           "ability":  {
+                                                           "name":  "Wrath of the Astromancer",
+                                                           "guid":  42787,
+                                                           "type":  64,
+                                                           "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                                       },
+                                           "fight":  15,
+                                           "hitType":  1,
+                                           "amount":  5649,
+                                           "unmitigatedAmount":  6047,
+                                           "overkill":  398,
+                                           "isAoE":  true,
+                                           "sourceMarker":  8,
+                                           "targetMarker":  8
+                                       }
+                                   ],
+                        "killingBlow":  {
+                                            "name":  "Wrath of the Astromancer",
+                                            "guid":  42787,
+                                            "type":  64,
+                                            "abilityIcon":  "spell_nature_wispsplode.jpg"
+                                        }
+                    }
+                ]
+}
