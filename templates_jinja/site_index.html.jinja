@@ -114,34 +114,15 @@
   <div class="section">
     <p class="section-desc">Each healer's page lists every raid night analyzed, broken down boss by boss.</p>
     <div class="healer-list">
-      <a class="healer-row" href="crowns/index.html">
+      {% for healer in healers %}
+      <a class="healer-row" href="{{ healer.healer_slug }}/index.html">
         <div>
-          <div class="healer-name">Crowns</div>
+          <div class="healer-name">{{ healer.character_name }}</div>
         </div>
-        <div class="healer-class">Holy Paladin</div>
+        <div class="healer-class">{{ healer.display_name }}</div>
         <div class="healer-arrow">→</div>
       </a>
-      <a class="healer-row" href="danceswtrees/index.html">
-        <div>
-          <div class="healer-name">Danceswtrees</div>
-        </div>
-        <div class="healer-class">Restoration Druid</div>
-        <div class="healer-arrow">→</div>
-      </a>
-      <a class="healer-row" href="lippies/index.html">
-        <div>
-          <div class="healer-name">Lippies</div>
-        </div>
-        <div class="healer-class">Holy Priest</div>
-        <div class="healer-arrow">→</div>
-      </a>
-      <a class="healer-row" href="vajomee/index.html">
-        <div>
-          <div class="healer-name">Vajomee</div>
-        </div>
-        <div class="healer-class">Restoration Shaman</div>
-        <div class="healer-arrow">→</div>
-      </a>
+      {% endfor %}
     </div>
   </div>
 
