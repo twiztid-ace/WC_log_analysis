@@ -1,0 +1,618 @@
+{
+  "entries": [
+    {
+      "name": "Svinøblast",
+      "id": 311,
+      "guid": 57122015,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 1385070,
+      "fight": 13,
+      "damage": {
+        "total": 11235,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 4152,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 11235,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "The Lurker Below",
+            "total": 11235,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 2386,
+      "events": [
+        {
+          "timestamp": 1385051,
+          "type": "damage",
+          "sourceID": 369,
+          "sourceIsFriendly": false,
+          "targetID": 311,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 8849,
+          "mitigated": 4152,
+          "unmitigatedAmount": 15387,
+          "overkill": 2386,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "Äzure",
+      "id": 315,
+      "guid": 57313553,
+      "type": "Paladin",
+      "icon": "Paladin-Retribution",
+      "timestamp": 1450025,
+      "fight": 13,
+      "damage": {
+        "total": 11201,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 1569,
+        "abilities": [
+          {
+            "guid": 37478,
+            "name": "Geyser",
+            "total": 3662,
+            "type": 16,
+            "icon": "spell_frost_frostblast.jpg"
+          },
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 3500,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          },
+          {
+            "guid": 37363,
+            "name": "Whirl",
+            "total": 2919,
+            "type": 1,
+            "icon": "trade_engineering.jpg"
+          },
+          {
+            "guid": 351761,
+            "name": "Judgement of the Martyr",
+            "total": 637,
+            "type": 2,
+            "icon": "spell_shadow_lifedrain.jpg"
+          },
+          {
+            "guid": 348703,
+            "name": "Seal of the Martyr",
+            "total": 483,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "The Lurker Below",
+            "total": 6581,
+            "type": "Boss"
+          },
+          {
+            "name": "Environment",
+            "total": 3500,
+            "type": "Boss"
+          },
+          {
+            "name": "Äzure",
+            "total": 1120,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "healing": {
+        "total": 1827,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25423,
+            "name": "Chain Heal",
+            "total": 1352,
+            "type": 8,
+            "icon": "spell_nature_healingwavegreater.jpg"
+          },
+          {
+            "guid": 27163,
+            "name": "Judgement of Light",
+            "total": 475,
+            "type": 2,
+            "icon": "spell_holy_healingaura.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 1508,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          },
+          {
+            "guid": 348703,
+            "name": "Seal of the Martyr",
+            "total": 319,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Murêna",
+            "total": 1352,
+            "type": "Shaman"
+          },
+          {
+            "name": "Äzure",
+            "total": 475,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "deathWindow": 21422,
+      "overkill": 127,
+      "events": [
+        {
+          "timestamp": 1450013,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 315,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 373,
+          "unmitigatedAmount": 500,
+          "overkill": 127,
+          "isAoE": false
+        },
+        {
+          "timestamp": 1448230,
+          "type": "damage",
+          "sourceID": 369,
+          "sourceIsFriendly": false,
+          "targetID": 315,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Geyser",
+            "guid": 37478,
+            "type": 16,
+            "abilityIcon": "spell_frost_frostblast.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 3662,
+          "unmitigatedAmount": 3662,
+          "isAoE": true
+        },
+        {
+          "timestamp": 1447606,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 315,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 500,
+          "unmitigatedAmount": 500,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Scalding Water",
+        "guid": 37284,
+        "type": 4,
+        "abilityIcon": "spell_fire_masterofelements.jpg"
+      }
+    },
+    {
+      "name": "Gestiya",
+      "id": 265,
+      "guid": 59391783,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 1485495,
+      "fight": 13,
+      "damage": {
+        "total": 10768,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3322,
+        "abilities": [
+          {
+            "guid": 28168,
+            "name": "Arcing Smash",
+            "total": 9268,
+            "type": 1,
+            "icon": "ability_warrior_cleave.jpg"
+          },
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 1500,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Coilfang Guardian",
+            "total": 9268,
+            "type": "NPC"
+          },
+          {
+            "name": "Environment",
+            "total": 1500,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 847,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 26980,
+            "name": "Regrowth",
+            "total": 847,
+            "type": 8,
+            "icon": "spell_nature_resistnature.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 847,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Luchikidobra",
+            "total": 847,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 4889,
+      "overkill": 302,
+      "events": [
+        {
+          "timestamp": 1485482,
+          "type": "damage",
+          "sourceID": 370,
+          "sourceInstance": 2,
+          "sourceIsFriendly": false,
+          "targetID": 265,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Arcing Smash",
+            "guid": 28168,
+            "type": 1,
+            "abilityIcon": "ability_warrior_cleave.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 8966,
+          "mitigated": 3322,
+          "unmitigatedAmount": 12590,
+          "overkill": 302,
+          "isAoE": true,
+          "sourceMarker": 6
+        },
+        {
+          "timestamp": 1481679,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 265,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 500,
+          "unmitigatedAmount": 500,
+          "isAoE": false
+        },
+        {
+          "timestamp": 1481257,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 265,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 500,
+          "unmitigatedAmount": 500,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Arcing Smash",
+        "guid": 28168,
+        "type": 1,
+        "abilityIcon": "ability_warrior_cleave.jpg"
+      }
+    },
+    {
+      "name": "Fiénd",
+      "id": 109,
+      "guid": 57613706,
+      "type": "Priest",
+      "icon": "Priest-Shadow",
+      "timestamp": 1554692,
+      "fight": 13,
+      "damage": {
+        "total": 17533,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 37478,
+            "name": "Geyser",
+            "total": 7153,
+            "type": 16,
+            "icon": "spell_frost_frostblast.jpg"
+          },
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 5880,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          },
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 4500,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 10380,
+            "type": "Boss"
+          },
+          {
+            "name": "The Lurker Below",
+            "total": 7153,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 8382,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25292,
+            "name": "Holy Light",
+            "total": 7749,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 39373,
+            "name": "Shadowmend",
+            "total": 633,
+            "type": 32,
+            "icon": "spell_shadow_unsummonbuilding.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 3579,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          },
+          {
+            "guid": 37478,
+            "name": "Geyser",
+            "total": 3387,
+            "type": 16,
+            "icon": "spell_frost_frostblast.jpg"
+          },
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 1416,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Luminklad",
+            "total": 7749,
+            "type": "Paladin"
+          },
+          {
+            "name": "Fiénd",
+            "total": 633,
+            "type": "Priest"
+          }
+        ]
+      },
+      "deathWindow": 24694,
+      "overkill": 480,
+      "events": [
+        {
+          "timestamp": 1554674,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 109,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 20,
+          "unmitigatedAmount": 500,
+          "overkill": 480,
+          "isAoE": false
+        },
+        {
+          "timestamp": 1553026,
+          "type": "damage",
+          "sourceID": 369,
+          "sourceIsFriendly": false,
+          "targetID": 109,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Geyser",
+            "guid": 37478,
+            "type": 16,
+            "abilityIcon": "spell_frost_frostblast.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 3615,
+          "unmitigatedAmount": 3615,
+          "isAoE": true
+        },
+        {
+          "timestamp": 1551930,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 109,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shadow Word: Death",
+            "guid": 32409,
+            "type": 32,
+            "abilityIcon": "spell_shadow_demonicfortitude.jpg"
+          },
+          "fight": 13,
+          "hitType": 1,
+          "amount": 2377,
+          "unmitigatedAmount": 2377,
+          "isAoE": false,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Scalding Water",
+        "guid": 37284,
+        "type": 4,
+        "abilityIcon": "spell_fire_masterofelements.jpg"
+      }
+    }
+  ]
+}

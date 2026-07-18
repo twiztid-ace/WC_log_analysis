@@ -1,0 +1,1572 @@
+{
+  "entries": [
+    {
+      "name": "Lilpoundcake",
+      "id": 26,
+      "guid": 80074055,
+      "type": "Druid",
+      "icon": "Druid-Restoration",
+      "timestamp": 5313650,
+      "fight": 41,
+      "damage": {
+        "total": 15539,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 15539,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Infinity Blades",
+            "total": 15539,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 5434,
+      "events": [
+        {
+          "timestamp": 5313622,
+          "type": "damage",
+          "sourceID": 144,
+          "sourceIsFriendly": false,
+          "targetID": 26,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 41,
+          "hitType": 2,
+          "amount": 10105,
+          "unmitigatedAmount": 9683,
+          "overkill": 5434,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "Ecstasyxp",
+      "id": 4,
+      "guid": 53979001,
+      "type": "Mage",
+      "icon": "Mage-Arcane",
+      "timestamp": 5325045,
+      "fight": 41,
+      "damage": {
+        "total": 9997,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 1867,
+        "abilities": [
+          {
+            "guid": 36982,
+            "name": "Whirlwind",
+            "total": 9997,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Devastation",
+            "total": 9997,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 1736,
+      "events": [
+        {
+          "timestamp": 5325035,
+          "type": "damage",
+          "sourceID": 133,
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 36982,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 8261,
+          "mitigated": 1867,
+          "unmitigatedAmount": 11864,
+          "overkill": 1736,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Whirlwind",
+        "guid": 36982,
+        "type": 1,
+        "abilityIcon": "ability_whirlwind.jpg"
+      }
+    },
+    {
+      "name": "Kxiros",
+      "id": 11,
+      "guid": 54631638,
+      "type": "Paladin",
+      "icon": "Paladin-Retribution",
+      "timestamp": 5372392,
+      "fight": 41,
+      "damage": {
+        "total": 12316,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 6052,
+        "abilities": [
+          {
+            "guid": 36982,
+            "name": "Whirlwind",
+            "total": 8890,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          },
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 1822,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 32220,
+            "name": "Judgement of Blood",
+            "total": 1040,
+            "type": 2,
+            "icon": "spell_shadow_lifedrain.jpg"
+          },
+          {
+            "guid": 32221,
+            "name": "Seal of Blood",
+            "total": 564,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Devastation",
+            "total": 8890,
+            "type": "NPC"
+          },
+          {
+            "name": "Cosmic Infuser",
+            "total": 1822,
+            "type": "NPC"
+          },
+          {
+            "name": "Kxiros",
+            "total": 1604,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "healing": {
+        "total": 2081,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 1149,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          },
+          {
+            "guid": 33763,
+            "name": "Lifebloom",
+            "total": 932,
+            "type": 8,
+            "icon": "inv_misc_herb_felblossom.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 821,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 32220,
+            "name": "Judgement of Blood",
+            "total": 696,
+            "type": 2,
+            "icon": "spell_shadow_lifedrain.jpg"
+          },
+          {
+            "guid": 32221,
+            "name": "Seal of Blood",
+            "total": 564,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Kxiros",
+            "total": 1149,
+            "type": "Paladin"
+          },
+          {
+            "name": "Lilpoundcake",
+            "total": 932,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 27476,
+      "overkill": 658,
+      "events": [
+        {
+          "timestamp": 5372375,
+          "type": "damage",
+          "sourceID": 133,
+          "sourceIsFriendly": false,
+          "targetID": 11,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 36982,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 8232,
+          "mitigated": 6052,
+          "unmitigatedAmount": 14942,
+          "overkill": 658,
+          "isAoE": true
+        },
+        {
+          "timestamp": 5369440,
+          "type": "damage",
+          "sourceID": 11,
+          "sourceIsFriendly": true,
+          "targetID": 11,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Judgement of Blood",
+            "guid": 32220,
+            "type": 2,
+            "abilityIcon": "spell_shadow_lifedrain.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 362,
+          "unmitigatedAmount": 362,
+          "isAoE": false
+        },
+        {
+          "timestamp": 5368790,
+          "type": "damage",
+          "sourceID": 11,
+          "sourceIsFriendly": true,
+          "targetID": 11,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Seal of Blood",
+            "guid": 32221,
+            "type": 2,
+            "abilityIcon": "spell_holy_sealofblood.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 136,
+          "unmitigatedAmount": 136,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Whirlwind",
+        "guid": 36982,
+        "type": 1,
+        "abilityIcon": "ability_whirlwind.jpg"
+      }
+    },
+    {
+      "name": "Pachurgreg",
+      "id": 15,
+      "guid": 51875371,
+      "type": "Druid",
+      "icon": "Druid-Feral",
+      "timestamp": 5372403,
+      "fight": 41,
+      "damage": {
+        "total": 13679,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3781,
+        "abilities": [
+          {
+            "guid": 36982,
+            "name": "Whirlwind",
+            "total": 9222,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          },
+          {
+            "guid": 37016,
+            "name": "Shield Spike",
+            "total": 2535,
+            "type": 1,
+            "icon": "inv_ammo_arrow_01.jpg"
+          },
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 1922,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Devastation",
+            "total": 9222,
+            "type": "NPC"
+          },
+          {
+            "name": "Phaseshift Bulwark",
+            "total": 2535,
+            "type": "NPC"
+          },
+          {
+            "name": "Cosmic Infuser",
+            "total": 1922,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 2127,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25422,
+            "name": "Chain Heal",
+            "total": 1684,
+            "type": 8,
+            "icon": "spell_nature_healingwavegreater.jpg"
+          },
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 443,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 37016,
+            "name": "Shield Spike",
+            "total": 1684,
+            "type": 1,
+            "icon": "inv_ammo_arrow_01.jpg"
+          },
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 443,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Zuurra",
+            "total": 1684,
+            "type": "Shaman"
+          },
+          {
+            "name": "Pachurgreg",
+            "total": 443,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 45686,
+      "overkill": 481,
+      "events": [
+        {
+          "timestamp": 5372371,
+          "type": "damage",
+          "sourceID": 133,
+          "sourceIsFriendly": false,
+          "targetID": 15,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 36982,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 8741,
+          "mitigated": 3781,
+          "unmitigatedAmount": 13003,
+          "overkill": 481,
+          "isAoE": true
+        },
+        {
+          "timestamp": 5363694,
+          "type": "damage",
+          "sourceID": 141,
+          "sourceIsFriendly": false,
+          "targetID": 15,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shield Spike",
+            "guid": 37016,
+            "type": 1,
+            "abilityIcon": "inv_ammo_arrow_01.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 861,
+          "unmitigatedAmount": 861,
+          "isAoE": false
+        },
+        {
+          "timestamp": 5363494,
+          "type": "damage",
+          "sourceID": 141,
+          "sourceIsFriendly": false,
+          "targetID": 15,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shield Spike",
+            "guid": 37016,
+            "type": 1,
+            "abilityIcon": "inv_ammo_arrow_01.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 783,
+          "unmitigatedAmount": 783,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Whirlwind",
+        "guid": 36982,
+        "type": 1,
+        "abilityIcon": "ability_whirlwind.jpg"
+      }
+    },
+    {
+      "name": "Beanmachine",
+      "id": 19,
+      "guid": 45601848,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 5377861,
+      "fight": 41,
+      "damage": {
+        "total": 17877,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 5372,
+        "abilities": [
+          {
+            "guid": 36982,
+            "name": "Whirlwind",
+            "total": 9485,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          },
+          {
+            "guid": 36979,
+            "name": "Multi-Shot",
+            "total": 3998,
+            "type": 64,
+            "icon": "ability_upgrademoonglaive.jpg"
+          },
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 2825,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 36989,
+            "name": "Frost Nova",
+            "total": 1569,
+            "type": 16,
+            "icon": "spell_frost_frostnova.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Devastation",
+            "total": 9485,
+            "type": "NPC"
+          },
+          {
+            "name": "Netherstrand Longbow",
+            "total": 3998,
+            "type": "NPC"
+          },
+          {
+            "name": "Cosmic Infuser",
+            "total": 2825,
+            "type": "NPC"
+          },
+          {
+            "name": "Staff of Disintegration",
+            "total": 1569,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 5986,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 2496,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          },
+          {
+            "guid": 25423,
+            "name": "Chain Heal",
+            "total": 1820,
+            "type": 8,
+            "icon": "spell_nature_healingwavegreater.jpg"
+          },
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 1670,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 36982,
+            "name": "Whirlwind",
+            "total": 2496,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          },
+          {
+            "guid": 36985,
+            "name": "Holy Nova",
+            "total": 1921,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 36989,
+            "name": "Frost Nova",
+            "total": 1569,
+            "type": 16,
+            "icon": "spell_frost_frostnova.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Beanmachine",
+            "total": 4166,
+            "type": "Shaman"
+          },
+          {
+            "name": "Zuurra",
+            "total": 1820,
+            "type": "Shaman"
+          }
+        ]
+      },
+      "deathWindow": 39019,
+      "overkill": 1385,
+      "events": [
+        {
+          "timestamp": 5377852,
+          "type": "damage",
+          "sourceID": 138,
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Multi-Shot",
+            "guid": 36979,
+            "type": 64,
+            "abilityIcon": "ability_upgrademoonglaive.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 2613,
+          "unmitigatedAmount": 3998,
+          "overkill": 1385,
+          "isAoE": true
+        },
+        {
+          "timestamp": 5372376,
+          "type": "damage",
+          "sourceID": 133,
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 36982,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 9485,
+          "mitigated": 5372,
+          "unmitigatedAmount": 14857,
+          "isAoE": true
+        },
+        {
+          "timestamp": 5350963,
+          "type": "damage",
+          "sourceID": 140,
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Holy Nova",
+            "guid": 36985,
+            "type": 2,
+            "abilityIcon": "spell_holy_holybolt.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 877,
+          "unmitigatedAmount": 877,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Multi-Shot",
+        "guid": 36979,
+        "type": 64,
+        "abilityIcon": "ability_upgrademoonglaive.jpg"
+      }
+    },
+    {
+      "name": "Penançenvy",
+      "id": 16,
+      "guid": 65990043,
+      "type": "Priest",
+      "icon": "Priest-Shadow",
+      "timestamp": 5485897,
+      "fight": 41,
+      "damage": {
+        "total": 21579,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 36805,
+            "name": "Fireball",
+            "total": 21579,
+            "type": 4,
+            "icon": "spell_fire_flamebolt.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Kael'thas Sunstrider",
+            "total": 21579,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 12318,
+      "events": [
+        {
+          "timestamp": 5485897,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 16,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Fireball",
+            "guid": 36805,
+            "type": 4,
+            "abilityIcon": "spell_fire_flamebolt.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 9261,
+          "unmitigatedAmount": 21579,
+          "overkill": 12318,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Fireball",
+        "guid": 36805,
+        "type": 4,
+        "abilityIcon": "spell_fire_flamebolt.jpg"
+      }
+    },
+    {
+      "name": "Hopefall",
+      "id": 12,
+      "guid": 51469521,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 5545229,
+      "fight": 41,
+      "damage": {
+        "total": 15169,
+        "totalReduced": 13123,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 1811,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 10133,
+            "totalReduced": 9492,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          },
+          {
+            "guid": 26654,
+            "name": "Sweeping Strikes",
+            "total": 1406,
+            "type": 1,
+            "icon": "ability_rogue_slicedice.jpg"
+          },
+          {
+            "guid": 12721,
+            "name": "Deep Wounds",
+            "total": 1405,
+            "totalReduced": 0,
+            "type": 1,
+            "icon": "ability_backstab.jpg"
+          },
+          {
+            "guid": 1680,
+            "name": "Whirlwind",
+            "total": 1321,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          },
+          {
+            "guid": 44949,
+            "name": "Whirlwind Off-Hand",
+            "total": 904,
+            "type": 1,
+            "icon": "ability_whirlwind.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Thanaz",
+            "total": 8633,
+            "totalReduced": 7992,
+            "type": "Warrior"
+          },
+          {
+            "name": "Zugspeedman",
+            "total": 5131,
+            "type": "Warrior"
+          },
+          {
+            "name": "Kael'thas Sunstrider",
+            "total": 1405,
+            "totalReduced": 0,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 4209,
+        "totalReduced": 2163,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25218,
+            "name": "Power Word: Shield",
+            "total": 2046,
+            "totalReduced": 0,
+            "type": 2,
+            "icon": "spell_holy_powerwordshield.jpg"
+          },
+          {
+            "guid": 27137,
+            "name": "Flash of Light",
+            "total": 1665,
+            "type": 2,
+            "icon": "spell_holy_flashheal.jpg"
+          },
+          {
+            "guid": 33763,
+            "name": "Lifebloom",
+            "total": 498,
+            "type": 8,
+            "icon": "inv_misc_herb_felblossom.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 2804,
+            "totalReduced": 2163,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          },
+          {
+            "guid": 12721,
+            "name": "Deep Wounds",
+            "total": 1405,
+            "totalReduced": 0,
+            "type": 1,
+            "icon": "ability_backstab.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Laventi",
+            "total": 2046,
+            "totalReduced": 0,
+            "type": "Priest"
+          },
+          {
+            "name": "Dillusionz",
+            "total": 1665,
+            "type": "Paladin"
+          },
+          {
+            "name": "Lilpoundcake",
+            "total": 498,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 4939,
+      "overkill": 230,
+      "events": [
+        {
+          "timestamp": 5545216,
+          "type": "damage",
+          "sourceID": 5,
+          "sourceIsFriendly": true,
+          "targetID": 12,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind Off-Hand",
+            "guid": 44949,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 674,
+          "mitigated": 451,
+          "unmitigatedAmount": 1355,
+          "overkill": 230,
+          "isAoE": true,
+          "sourceMarker": 7
+        },
+        {
+          "timestamp": 5545215,
+          "type": "damage",
+          "sourceID": 5,
+          "sourceIsFriendly": true,
+          "targetID": 12,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 1680,
+            "type": 1,
+            "abilityIcon": "ability_whirlwind.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1321,
+          "mitigated": 659,
+          "unmitigatedAmount": 1980,
+          "isAoE": true,
+          "sourceMarker": 7
+        },
+        {
+          "timestamp": 5545214,
+          "type": "damage",
+          "sourceID": 5,
+          "sourceIsFriendly": true,
+          "targetID": 12,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Sweeping Strikes",
+            "guid": 26654,
+            "type": 1,
+            "abilityIcon": "ability_rogue_slicedice.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1406,
+          "mitigated": 701,
+          "unmitigatedAmount": 2107,
+          "isAoE": true,
+          "sourceMarker": 7
+        }
+      ],
+      "killingBlow": {
+        "name": "Whirlwind Off-Hand",
+        "guid": 44949,
+        "type": 1,
+        "abilityIcon": "ability_whirlwind.jpg"
+      }
+    },
+    {
+      "name": "Zugspeedman",
+      "id": 20,
+      "guid": 90699994,
+      "type": "Warrior",
+      "icon": "Warrior-Arms",
+      "timestamp": 5644460,
+      "fight": 41,
+      "damage": {
+        "total": 11917,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3582,
+        "abilities": [
+          {
+            "guid": 35873,
+            "name": "Nether Beam",
+            "total": 6382,
+            "type": 64,
+            "icon": "spell_nature_chainlightning.jpg"
+          },
+          {
+            "guid": 35859,
+            "name": "Nether Vapor",
+            "total": 2984,
+            "type": 32,
+            "icon": "spell_shadow_gathershadows.jpg"
+          },
+          {
+            "guid": 36822,
+            "name": "Shock Barrier",
+            "total": 1621,
+            "type": 1,
+            "icon": "spell_nature_lightningshield.jpg"
+          },
+          {
+            "guid": 3,
+            "name": "Falling",
+            "total": 930,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Kael'thas Sunstrider",
+            "total": 8003,
+            "type": "Boss"
+          },
+          {
+            "name": "Nether Vapor",
+            "total": 2984,
+            "type": "NPC"
+          },
+          {
+            "name": "Environment",
+            "total": 930,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 2887,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 2496,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          },
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 391,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 35873,
+            "name": "Nether Beam",
+            "total": 2133,
+            "type": 64,
+            "icon": "spell_nature_chainlightning.jpg"
+          },
+          {
+            "guid": 36822,
+            "name": "Shock Barrier",
+            "total": 523,
+            "type": 1,
+            "icon": "spell_nature_lightningshield.jpg"
+          },
+          {
+            "guid": 35859,
+            "name": "Nether Vapor",
+            "total": 231,
+            "type": 32,
+            "icon": "spell_shadow_gathershadows.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Zugspeedman",
+            "total": 2887,
+            "type": "Warrior"
+          }
+        ]
+      },
+      "deathWindow": 21865,
+      "overkill": 0,
+      "events": [
+        {
+          "timestamp": 5644459,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 20,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Falling",
+            "guid": 3,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 930,
+          "unmitigatedAmount": 930,
+          "overkill": 0,
+          "isAoE": false
+        },
+        {
+          "timestamp": 5644107,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 20,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Nether Beam",
+            "guid": 35873,
+            "type": 64,
+            "abilityIcon": "spell_nature_chainlightning.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 2160,
+          "unmitigatedAmount": 1964,
+          "isAoE": false
+        },
+        {
+          "timestamp": 5640477,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 20,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Nether Beam",
+            "guid": 35873,
+            "type": 64,
+            "abilityIcon": "spell_nature_chainlightning.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 2089,
+          "unmitigatedAmount": 1899,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Falling",
+        "guid": 3,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "Badmf",
+      "id": 17,
+      "guid": 44111066,
+      "type": "Rogue",
+      "icon": "Rogue-Combat",
+      "timestamp": 5675072,
+      "fight": 41,
+      "damage": {
+        "total": 66841,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 66842,
+        "abilities": [
+          {
+            "guid": 36731,
+            "name": "Flame Strike",
+            "total": 66841,
+            "type": 4,
+            "icon": "spell_fire_selfdestruct.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 66841,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 57750,
+      "events": [
+        {
+          "timestamp": 5675054,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 17,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Strike",
+            "guid": 36731,
+            "type": 4,
+            "abilityIcon": "spell_fire_selfdestruct.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 9091,
+          "mitigated": 66842,
+          "unmitigatedAmount": 133683,
+          "overkill": 57750,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Flame Strike",
+        "guid": 36731,
+        "type": 4,
+        "abilityIcon": "spell_fire_selfdestruct.jpg"
+      }
+    },
+    {
+      "name": "Stridulation",
+      "id": 22,
+      "guid": 48039012,
+      "type": "Druid",
+      "icon": "Druid-Feral",
+      "timestamp": 5676050,
+      "fight": 41,
+      "damage": {
+        "total": 3347,
+        "totalReduced": 3248,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 1494,
+        "abilities": [
+          {
+            "guid": 36834,
+            "name": "Arcane Disruption",
+            "total": 1854,
+            "totalReduced": 1755,
+            "type": 64,
+            "icon": "spell_arcane_massdispel.jpg"
+          },
+          {
+            "guid": 36731,
+            "name": "Flame Strike",
+            "total": 1493,
+            "type": 4,
+            "icon": "spell_fire_selfdestruct.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Kael'thas Sunstrider",
+            "total": 1854,
+            "totalReduced": 1755,
+            "type": "Boss"
+          },
+          {
+            "name": "Environment",
+            "total": 1493,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 208,
+        "totalReduced": 109,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 109,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          },
+          {
+            "guid": 25218,
+            "name": "Power Word: Shield",
+            "total": 99,
+            "totalReduced": 0,
+            "type": 2,
+            "icon": "spell_holy_powerwordshield.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 36834,
+            "name": "Arcane Disruption",
+            "total": 208,
+            "totalReduced": 109,
+            "type": 64,
+            "icon": "spell_arcane_massdispel.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Stridulation",
+            "total": 109,
+            "type": "Druid"
+          },
+          {
+            "name": "Laventi",
+            "total": 99,
+            "totalReduced": 0,
+            "type": "Priest"
+          }
+        ]
+      },
+      "deathWindow": 3435,
+      "overkill": 406,
+      "events": [
+        {
+          "timestamp": 5676050,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 22,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Strike",
+            "guid": 36731,
+            "type": 4,
+            "abilityIcon": "spell_fire_selfdestruct.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1087,
+          "mitigated": 1494,
+          "unmitigatedAmount": 2987,
+          "overkill": 406,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 5672615,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 22,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Arcane Disruption",
+            "guid": 36834,
+            "type": 64,
+            "abilityIcon": "spell_arcane_massdispel.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1755,
+          "unmitigatedAmount": 1854,
+          "absorbed": 99,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Flame Strike",
+        "guid": 36731,
+        "type": 4,
+        "abilityIcon": "spell_fire_selfdestruct.jpg"
+      }
+    },
+    {
+      "name": "Beanmachine",
+      "id": 19,
+      "guid": 45601848,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 5681062,
+      "fight": 41,
+      "damage": {
+        "total": 11126,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 8974,
+        "abilities": [
+          {
+            "guid": 36731,
+            "name": "Flame Strike",
+            "total": 8978,
+            "type": 4,
+            "icon": "spell_fire_selfdestruct.jpg"
+          },
+          {
+            "guid": 36834,
+            "name": "Arcane Disruption",
+            "total": 2148,
+            "type": 64,
+            "icon": "spell_arcane_massdispel.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 8978,
+            "type": "Boss"
+          },
+          {
+            "name": "Kael'thas Sunstrider",
+            "total": 2148,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 250,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 33763,
+            "name": "Lifebloom",
+            "total": 250,
+            "type": 8,
+            "icon": "inv_misc_herb_felblossom.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 36731,
+            "name": "Flame Strike",
+            "total": 250,
+            "type": 4,
+            "icon": "spell_fire_selfdestruct.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Lilpoundcake",
+            "total": 250,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 8439,
+      "overkill": 667,
+      "events": [
+        {
+          "timestamp": 5681054,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Strike",
+            "guid": 36731,
+            "type": 4,
+            "abilityIcon": "spell_fire_selfdestruct.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 830,
+          "mitigated": 1495,
+          "unmitigatedAmount": 2992,
+          "overkill": 667,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 5680057,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Strike",
+            "guid": 36731,
+            "type": 4,
+            "abilityIcon": "spell_fire_selfdestruct.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1497,
+          "mitigated": 1495,
+          "unmitigatedAmount": 2992,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 5679053,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 19,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Strike",
+            "guid": 36731,
+            "type": 4,
+            "abilityIcon": "spell_fire_selfdestruct.jpg"
+          },
+          "fight": 41,
+          "hitType": 1,
+          "amount": 1496,
+          "mitigated": 1496,
+          "unmitigatedAmount": 2992,
+          "isAoE": true,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Flame Strike",
+        "guid": 36731,
+        "type": 4,
+        "abilityIcon": "spell_fire_selfdestruct.jpg"
+      }
+    }
+  ]
+}

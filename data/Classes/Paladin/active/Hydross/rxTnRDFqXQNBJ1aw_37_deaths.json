@@ -1,0 +1,168 @@
+{
+  "entries": [
+    {
+      "name": "Angix",
+      "id": 125,
+      "guid": 69554212,
+      "type": "Priest",
+      "icon": "Priest-Shadow",
+      "timestamp": 4315188,
+      "fight": 37,
+      "damage": {
+        "total": 13026,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 7626,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          },
+          {
+            "guid": 38235,
+            "name": "Water Tomb",
+            "total": 5400,
+            "type": 16,
+            "icon": "spell_frost_manarecharge.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 7626,
+            "type": "Boss"
+          },
+          {
+            "name": "Hydross the Unstable",
+            "total": 5400,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 3671,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 15290,
+            "name": "Vampiric Embrace",
+            "total": 3171,
+            "type": 32,
+            "icon": "spell_shadow_unsummonbuilding.jpg"
+          },
+          {
+            "guid": 39373,
+            "name": "Shadowmend",
+            "total": 500,
+            "type": 32,
+            "icon": "spell_shadow_unsummonbuilding.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 1999,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          },
+          {
+            "guid": 38235,
+            "name": "Water Tomb",
+            "total": 1672,
+            "type": 16,
+            "icon": "spell_frost_manarecharge.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "Angix",
+            "total": 3671,
+            "type": "Priest"
+          }
+        ]
+      },
+      "deathWindow": 14917,
+      "overkill": 834,
+      "events": [
+        {
+          "timestamp": 4315172,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 125,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shadow Word: Death",
+            "guid": 32409,
+            "type": 32,
+            "abilityIcon": "spell_shadow_demonicfortitude.jpg"
+          },
+          "fight": 37,
+          "hitType": 1,
+          "amount": 2854,
+          "unmitigatedAmount": 3688,
+          "overkill": 834,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 4312339,
+          "type": "damage",
+          "sourceID": 783,
+          "sourceIsFriendly": false,
+          "targetID": 125,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Water Tomb",
+            "guid": 38235,
+            "type": 16,
+            "abilityIcon": "spell_frost_manarecharge.jpg"
+          },
+          "fight": 37,
+          "hitType": 1,
+          "amount": 1350,
+          "unmitigatedAmount": 900,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 4311339,
+          "type": "damage",
+          "sourceID": 783,
+          "sourceIsFriendly": false,
+          "targetID": 125,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Water Tomb",
+            "guid": 38235,
+            "type": 16,
+            "abilityIcon": "spell_frost_manarecharge.jpg"
+          },
+          "fight": 37,
+          "hitType": 1,
+          "amount": 1350,
+          "unmitigatedAmount": 900,
+          "isAoE": true,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Shadow Word: Death",
+        "guid": 32409,
+        "type": 32,
+        "abilityIcon": "spell_shadow_demonicfortitude.jpg"
+      }
+    }
+  ]
+}

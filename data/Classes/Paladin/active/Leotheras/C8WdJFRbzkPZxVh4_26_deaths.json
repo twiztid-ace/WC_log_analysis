@@ -1,0 +1,137 @@
+{
+  "entries": [
+    {
+      "name": "번개의귀환",
+      "id": 9,
+      "guid": 30230073,
+      "type": "Shaman",
+      "icon": "Shaman-Elemental",
+      "timestamp": 10590969,
+      "fight": 26,
+      "damage": {
+        "total": 13990,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 735,
+        "abilities": [
+          {
+            "guid": 37641,
+            "name": "Whirlwind",
+            "total": 13990,
+            "type": 1,
+            "icon": "ability_gouge.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Leotheras the Blind",
+            "total": 13990,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 3744,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 3744,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 37641,
+            "name": "Whirlwind",
+            "total": 3744,
+            "type": 1,
+            "icon": "ability_gouge.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "번개의귀환",
+            "total": 3744,
+            "type": "Shaman"
+          }
+        ]
+      },
+      "deathWindow": 14991,
+      "overkill": 287,
+      "events": [
+        {
+          "timestamp": 10590966,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 9,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 37641,
+            "type": 1,
+            "abilityIcon": "ability_gouge.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 2088,
+          "unmitigatedAmount": 2375,
+          "overkill": 287,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 10587955,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 9,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 37641,
+            "type": 1,
+            "abilityIcon": "ability_gouge.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 2375,
+          "unmitigatedAmount": 2375,
+          "isAoE": true,
+          "tick": true
+        },
+        {
+          "timestamp": 10584972,
+          "type": "damage",
+          "sourceID": 132,
+          "sourceIsFriendly": false,
+          "targetID": 9,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Whirlwind",
+            "guid": 37641,
+            "type": 1,
+            "abilityIcon": "ability_gouge.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 2375,
+          "unmitigatedAmount": 2375,
+          "isAoE": true,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Whirlwind",
+        "guid": 37641,
+        "type": 1,
+        "abilityIcon": "ability_gouge.jpg"
+      }
+    }
+  ]
+}

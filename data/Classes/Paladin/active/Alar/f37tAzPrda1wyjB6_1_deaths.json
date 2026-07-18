@@ -1,0 +1,246 @@
+{
+  "entries": [
+    {
+      "name": "한예쁨",
+      "id": 3,
+      "guid": 18606622,
+      "type": "Priest",
+      "icon": "Priest-Discipline",
+      "timestamp": 2656347,
+      "fight": 1,
+      "damage": {
+        "total": 10892,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3881,
+        "abilities": [
+          {
+            "guid": 35369,
+            "name": "Rebirth",
+            "total": 5297,
+            "type": 4,
+            "icon": "spell_fire_burnout.jpg"
+          },
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 2960,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 2635,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 8257,
+            "type": "Boss"
+          },
+          {
+            "name": "Ember of Al'ar",
+            "total": 2635,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 5388,
+      "overkill": 1106,
+      "events": [
+        {
+          "timestamp": 2656314,
+          "type": "damage",
+          "sourceID": 37,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 3,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 1529,
+          "mitigated": 922,
+          "unmitigatedAmount": 3557,
+          "overkill": 1106,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2655482,
+          "type": "damage",
+          "sourceID": 28,
+          "sourceIsFriendly": false,
+          "targetID": 3,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Rebirth",
+            "guid": 35369,
+            "type": 4,
+            "abilityIcon": "spell_fire_burnout.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 5297,
+          "unmitigatedAmount": 5297,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2650926,
+          "type": "damage",
+          "sourceID": 28,
+          "sourceIsFriendly": false,
+          "targetID": 3,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Dive Bomb",
+            "guid": 35181,
+            "type": 4,
+            "abilityIcon": "spell_fire_fireball02.jpg"
+          },
+          "fight": 1,
+          "hitType": 16,
+          "amount": 2960,
+          "mitigated": 2959,
+          "unmitigatedAmount": 5919,
+          "resisted": 2960,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "숙련곰",
+      "id": 10,
+      "guid": 27499912,
+      "type": "Druid",
+      "icon": "Druid-Warden",
+      "timestamp": 2671775,
+      "fight": 1,
+      "damage": {
+        "total": 18165,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 19718,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 18165,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 18165,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 4018,
+      "overkill": 3251,
+      "events": [
+        {
+          "timestamp": 2671748,
+          "type": "damage",
+          "sourceID": 28,
+          "sourceIsFriendly": false,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 15,
+          "amount": 3448,
+          "mitigated": 5430,
+          "unmitigatedAmount": 12129,
+          "overkill": 3251,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2669733,
+          "type": "damage",
+          "sourceID": 28,
+          "sourceIsFriendly": false,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 15,
+          "amount": 5948,
+          "mitigated": 4821,
+          "unmitigatedAmount": 10769,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2667730,
+          "type": "damage",
+          "sourceID": 28,
+          "sourceIsFriendly": false,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 5518,
+          "mitigated": 9467,
+          "unmitigatedAmount": 14985,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    }
+  ]
+}
