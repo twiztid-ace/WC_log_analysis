@@ -1,0 +1,506 @@
+{
+  "entries": [
+    {
+      "name": "나잡아봐랑",
+      "id": 29,
+      "guid": 18768401,
+      "type": "Rogue",
+      "icon": "Rogue-Combat",
+      "timestamp": 5525802,
+      "fight": 38,
+      "damage": {
+        "total": 12917,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 5583,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 12917,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Coilfang Strider",
+            "total": 12917,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 2402,
+      "events": [
+        {
+          "timestamp": 5525782,
+          "type": "damage",
+          "sourceID": 153,
+          "sourceInstance": 1,
+          "sourceIsFriendly": false,
+          "targetID": 29,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 10515,
+          "mitigated": 5583,
+          "unmitigatedAmount": 18500,
+          "overkill": 2402,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "난얼드다",
+      "id": 37,
+      "guid": 17892381,
+      "type": "Priest",
+      "icon": "Priest-Discipline",
+      "timestamp": 5595822,
+      "fight": 38,
+      "damage": {
+        "total": 18048,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 18048,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Coilfang Elite",
+            "total": 18048,
+            "type": "NPC"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 10169,
+      "events": [
+        {
+          "timestamp": 5595805,
+          "type": "damage",
+          "sourceID": 151,
+          "sourceInstance": 1,
+          "sourceIsFriendly": false,
+          "targetID": 37,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 38,
+          "hitType": 2,
+          "amount": 7879,
+          "unmitigatedAmount": 10656,
+          "overkill": 10169,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "스트레칭",
+      "id": 25,
+      "guid": 29005995,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 5759825,
+      "fight": 38,
+      "damage": {
+        "total": 19088,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 2536,
+        "abilities": [
+          {
+            "guid": 360327,
+            "name": "Toxic Spores",
+            "total": 9134,
+            "type": 8,
+            "icon": "spell_nature_abolishmagic.jpg"
+          },
+          {
+            "guid": 38310,
+            "name": "Multi-Shot",
+            "total": 4447,
+            "type": 1,
+            "icon": "ability_upgrademoonglaive.jpg"
+          },
+          {
+            "guid": 38281,
+            "name": "Static Charge",
+            "total": 3541,
+            "type": 8,
+            "icon": "spell_nature_lightningoverload.jpg"
+          },
+          {
+            "guid": 38316,
+            "name": "Entangle",
+            "total": 1966,
+            "type": 8,
+            "icon": "spell_nature_stranglevines.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 9134,
+            "type": "Boss"
+          },
+          {
+            "name": "Lady Vashj",
+            "total": 6413,
+            "type": "Boss"
+          },
+          {
+            "name": "악노드루",
+            "total": 1785,
+            "type": "Druid"
+          },
+          {
+            "name": "Key",
+            "total": 1756,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "healing": {
+        "total": 6762,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25420,
+            "name": "Lesser Healing Wave",
+            "total": 2823,
+            "type": 8,
+            "icon": "spell_nature_healingwavelesser.jpg"
+          },
+          {
+            "guid": 25423,
+            "name": "Chain Heal",
+            "total": 1641,
+            "type": 8,
+            "icon": "spell_nature_healingwavegreater.jpg"
+          },
+          {
+            "guid": 10623,
+            "name": "Chain Heal",
+            "total": 1411,
+            "type": 8,
+            "icon": "spell_nature_healingwavegreater.jpg"
+          },
+          {
+            "guid": 26982,
+            "name": "Rejuvenation",
+            "total": 887,
+            "type": 8,
+            "icon": "spell_nature_rejuvenation.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 38310,
+            "name": "Multi-Shot",
+            "total": 3630,
+            "type": 1,
+            "icon": "ability_upgrademoonglaive.jpg"
+          },
+          {
+            "guid": 360327,
+            "name": "Toxic Spores",
+            "total": 1720,
+            "type": 8,
+            "icon": "spell_nature_abolishmagic.jpg"
+          },
+          {
+            "guid": 38281,
+            "name": "Static Charge",
+            "total": 1412,
+            "type": 8,
+            "icon": "spell_nature_lightningoverload.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "쥬신왕술사당",
+            "total": 3052,
+            "type": "Shaman"
+          },
+          {
+            "name": "스트레칭",
+            "total": 2823,
+            "type": "Shaman"
+          },
+          {
+            "name": "아프리카도토잠보",
+            "total": 887,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 19459,
+      "overkill": 1118,
+      "events": [
+        {
+          "timestamp": 5759813,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 1927,
+          "unmitigatedAmount": 3045,
+          "overkill": 1118,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 5758808,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 3044,
+          "unmitigatedAmount": 3044,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 5757806,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 3045,
+          "unmitigatedAmount": 3045,
+          "isAoE": false,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Toxic Spores",
+        "guid": 360327,
+        "type": 8,
+        "abilityIcon": "spell_nature_abolishmagic.jpg"
+      }
+    },
+    {
+      "name": "앵자",
+      "id": 4,
+      "guid": 42937866,
+      "type": "Priest",
+      "icon": "Priest-Holy",
+      "timestamp": 5773987,
+      "fight": 38,
+      "damage": {
+        "total": 9573,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 360327,
+            "name": "Toxic Spores",
+            "total": 9573,
+            "type": 8,
+            "icon": "spell_nature_abolishmagic.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 9573,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 2010,
+      "overkill": 700,
+      "events": [
+        {
+          "timestamp": 5773982,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 2491,
+          "unmitigatedAmount": 3191,
+          "overkill": 700,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 5772972,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 3191,
+          "unmitigatedAmount": 3191,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 5771972,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Toxic Spores",
+            "guid": 360327,
+            "type": 8,
+            "abilityIcon": "spell_nature_abolishmagic.jpg"
+          },
+          "fight": 38,
+          "hitType": 1,
+          "amount": 3191,
+          "unmitigatedAmount": 3191,
+          "isAoE": false,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Toxic Spores",
+        "guid": 360327,
+        "type": 8,
+        "abilityIcon": "spell_nature_abolishmagic.jpg"
+      }
+    }
+  ]
+}

@@ -6,8 +6,9 @@ boss, and generates a static HTML site auditing each healer's performance per
 boss kill.
 
 This file covers day-to-day setup and running the pipeline. For the full design
-(API details, file formats, known gotchas) see `WORKFLOW.md`. For orientation on
-the codebase's history and current state, see `CLAUDE.md`.
+(API details, file formats, known gotchas, current state) see `CLAUDE.md` — it
+is the single source of truth for orientation (the former `WORKFLOW.md` was
+retired 2026-07-18 and folded into it).
 
 Supported classes/builds: **Resto Druid, Resto Shaman, Holy Priest, Holy
 Paladin, Dreamstate Druid.**
@@ -49,11 +50,11 @@ time.
   minimal).
 - A Warcraft Logs v2 GraphQL API client ID/secret (see "Setup" below).
 - Tested on Windows; the pipeline has no Windows-specific code paths left
-  (the PowerShell 5.1 encoding/parsing traps documented in `WORKFLOW.md`
-  gotchas #13/#14/#19 don't apply to the Python implementation), but it
-  hasn't yet been run end-to-end on macOS/Linux — the underlying WCL API
-  calls and file I/O are platform-agnostic, so it's expected to work, just
-  not yet confirmed on a real non-Windows box.
+  (the PowerShell 5.1 encoding/parsing traps the old PowerShell implementation
+  had don't apply to the Python implementation), but it hasn't yet been run
+  end-to-end on macOS/Linux — the underlying WCL API calls and file I/O are
+  platform-agnostic, so it's expected to work, just not yet confirmed on a
+  real non-Windows box.
 
 ## Setup
 
@@ -359,10 +360,10 @@ If the new content tier's boss encourages different cooldown usage, or the
 class gains new relevant abilities, treat that as its own real-data discovery
 pass (confirm the guid against an actual pull before adding it) — the same
 rule this project already applies to every class's cooldown-guid table, see
-`WORKFLOW.md`'s "v2 GraphQL API" section for the established playbook (and
-its cautionary tale about the Holy Shock cast/heal guid split, where a
-finding scoped to one character's report turned out to be wrong once checked
-against the full Top 100 sample).
+`CLAUDE.md`'s "Per-build real cooldown/utility kits" section for the
+established playbook (and its cautionary tale about the Holy Shock cast/heal
+guid split, where a finding scoped to one character's report turned out to be
+wrong once checked against the full Top 100 sample).
 
 ## Hosting
 

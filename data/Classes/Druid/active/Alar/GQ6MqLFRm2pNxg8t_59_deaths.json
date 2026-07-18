@@ -1,0 +1,75 @@
+{
+  "entries": [
+    {
+      "name": "풀뜯는곰스키",
+      "id": 21,
+      "guid": 28520544,
+      "type": "Druid",
+      "icon": "Druid-Restoration",
+      "timestamp": 7540623,
+      "fight": 59,
+      "damage": {
+        "total": 11833,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 2911,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 11833,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 11833,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 1675,
+      "events": [
+        {
+          "timestamp": 7540614,
+          "type": "damage",
+          "sourceID": 497,
+          "sourceIsFriendly": false,
+          "targetID": 21,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 59,
+          "hitType": 1,
+          "amount": 10158,
+          "mitigated": 2911,
+          "unmitigatedAmount": 14744,
+          "overkill": 1675,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    }
+  ]
+}

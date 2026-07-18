@@ -33,10 +33,10 @@ summary), and every existing page that needs a new entry for it.
 Run this from the repo root (`C:\Users\raymo\wc_logs`) — every script here assumes
 that working directory, same as the rest of this pipeline.
 
-**Read `WORKFLOW.md` and `CLAUDE.md` first if this is a fresh session with no other
-context on this project** — this skill assumes familiarity with the active/archived
-data model, the events-vs-tables history, and the v1/v2 split. This file is the
-runbook for *this specific task*, not a replacement for those.
+**Read `CLAUDE.md` first if this is a fresh session with no other context on
+this project** — this skill assumes familiarity with the active/archived data
+model, the events-vs-tables history, and the v1/v2 split. This file is the
+runbook for *this specific task*, not a replacement for that.
 
 ## Before starting: confirm the class AND spec are supported
 
@@ -276,14 +276,19 @@ user wants the whole log processed in one pass instead of one
 `/generate-healer-report <name> <code>` invocation per healer.
 
 "Already-tracked" means every `character_name` in `data\site_index.json` —
-**not** every folder under `data\Characters\`. A healer can have real pulled
-data on disk while being deliberately excluded from `site_index.json` (see
-`CLAUDE.md`'s Turkeykin note — kept unlisted from the site homepage on
-purpose). Don't add `--character-names` to sweep in a healer who isn't in
-`site_index.json` without checking with the user first — same reasoning as
-not adding `-IsNewHealer`/registering a hidden healer without checking, this
-skill just has a wider blast radius now that one invocation can touch several
-healers at once.
+**not** every folder under `data\Characters\`. A healer *can* have real
+pulled data on disk while being deliberately excluded from `site_index.json`
+(registration happens automatically on first render — see
+`pipeline\hub_pages.py` — so this only happens if an entry is later removed
+by hand). As of 2026-07-18, no healer is currently hidden this way —
+`docs\index.html` links all 10 tracked healers, including Turkeykin. An
+earlier version of this file (and of `CLAUDE.md`) claimed Turkeykin was kept
+off the homepage on purpose; that claim is stale — see `CLAUDE.md`'s "Current
+state" section. Still don't add `--character-names` to sweep in a healer who
+isn't in `site_index.json` without checking with the user first — same
+reasoning as not registering a new healer without checking, this command just
+has a wider blast radius now that one invocation can touch several healers at
+once.
 
 ### 1. Resolve the report code
 Same as single-healer step 1 — extract the code from a full WCL URL if given

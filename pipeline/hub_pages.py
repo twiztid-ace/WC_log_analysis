@@ -60,6 +60,10 @@ def _sort_raid_nights(raid_nights: list[dict]) -> list[dict]:
     return sorted(raid_nights, key=lambda r: (r["raid_date"], r["report_code"]), reverse=True)
 
 
+def _sort_healers(healers: list[dict]) -> list[dict]:
+    return sorted(healers, key=lambda h: h["character_name"].lower())
+
+
 def upsert_raid_night(
     character_name: str,
     class_name: str,
@@ -135,6 +139,7 @@ def upsert_raid_night(
             "character_name": character_name, "healer_slug": healer_slug,
             "class_name": class_name, "display_name": cfg.display_name,
         })
+        site_index["healers"] = _sort_healers(site_index["healers"])
         jsonio.write_json(Path(data_root) / "site_index.json", site_index)
         render_site_index(site_index, docs_root, templates_root)
         print(f"Registered new healer '{character_name}' in site_index.json and re-rendered docs/index.html.")

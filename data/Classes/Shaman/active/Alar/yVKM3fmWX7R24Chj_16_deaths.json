@@ -1,0 +1,99 @@
+{
+  "entries": [
+    {
+      "name": "흑미란",
+      "id": 13,
+      "guid": 18676187,
+      "type": "Warlock",
+      "icon": "Warlock-Destruction",
+      "timestamp": 2384505,
+      "fight": 16,
+      "damage": {
+        "total": 7972,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 35412,
+            "name": "Charge",
+            "total": 5801,
+            "type": 4,
+            "icon": "ability_warrior_charge.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2171,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 7972,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 3888,
+      "overkill": 510,
+      "events": [
+        {
+          "timestamp": 2384479,
+          "type": "damage",
+          "sourceID": 82,
+          "sourceIsFriendly": false,
+          "targetID": 13,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Charge",
+            "guid": 35412,
+            "type": 4,
+            "abilityIcon": "ability_warrior_charge.jpg"
+          },
+          "fight": 16,
+          "hitType": 1,
+          "amount": 5291,
+          "unmitigatedAmount": 5274,
+          "overkill": 510,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2380591,
+          "type": "damage",
+          "sourceID": 82,
+          "sourceIsFriendly": false,
+          "targetID": 13,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Buffet",
+            "guid": 34121,
+            "type": 4,
+            "abilityIcon": "spell_fire_fireball.jpg"
+          },
+          "fight": 16,
+          "hitType": 1,
+          "amount": 2171,
+          "unmitigatedAmount": 2171,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Charge",
+        "guid": 35412,
+        "type": 4,
+        "abilityIcon": "ability_warrior_charge.jpg"
+      }
+    }
+  ]
+}

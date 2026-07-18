@@ -1,0 +1,110 @@
+{
+  "entries": [
+    {
+      "name": "엔프라니",
+      "id": 4,
+      "guid": 30111074,
+      "type": "Shaman",
+      "icon": "Shaman-Elemental",
+      "timestamp": 1442653,
+      "fight": 14,
+      "damage": {
+        "total": 3922,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 37478,
+            "name": "Geyser",
+            "total": 3422,
+            "type": 16,
+            "icon": "spell_frost_frostblast.jpg"
+          },
+          {
+            "guid": 37284,
+            "name": "Scalding Water",
+            "total": 500,
+            "type": 4,
+            "icon": "spell_fire_masterofelements.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "The Lurker Below",
+            "total": 3422,
+            "type": "Boss"
+          },
+          {
+            "name": "Environment",
+            "total": 500,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 1680,
+      "overkill": 22,
+      "events": [
+        {
+          "timestamp": 1442629,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scalding Water",
+            "guid": 37284,
+            "type": 4,
+            "abilityIcon": "spell_fire_masterofelements.jpg"
+          },
+          "fight": 14,
+          "hitType": 1,
+          "amount": 478,
+          "unmitigatedAmount": 500,
+          "overkill": 22,
+          "isAoE": false
+        },
+        {
+          "timestamp": 1440949,
+          "type": "damage",
+          "sourceID": 99,
+          "sourceIsFriendly": false,
+          "targetID": 4,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Geyser",
+            "guid": 37478,
+            "type": 16,
+            "abilityIcon": "spell_frost_frostblast.jpg"
+          },
+          "fight": 14,
+          "hitType": 1,
+          "amount": 3422,
+          "unmitigatedAmount": 3422,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Scalding Water",
+        "guid": 37284,
+        "type": 4,
+        "abilityIcon": "spell_fire_masterofelements.jpg"
+      }
+    }
+  ]
+}

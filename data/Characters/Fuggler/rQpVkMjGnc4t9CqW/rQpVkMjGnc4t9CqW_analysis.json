@@ -1,0 +1,2679 @@
+{
+  "CharacterName": "Fuggler",
+  "ReportCode": "rQpVkMjGnc4t9CqW",
+  "ClassName": "Shaman",
+  "Bosses": {
+    "hydross": {
+      "Deviations": {
+        "HPS": {
+          "Value": 701,
+          "Top1": 2077.0,
+          "Top100Avg": 1477.0,
+          "Median": 1431.0,
+          "RatioToAvg": 0.47,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 61.5,
+          "Best": 11.9,
+          "Median": 41.4,
+          "Worst": 60.4,
+          "GapToWorst": 1.1,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 94.1,
+          "Top1": 100.0,
+          "Top100Avg": 96.2,
+          "Median": 96.9,
+          "GapToAvg": -2.1,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.91,
+          "Top1": 8.68,
+          "Top100Avg": 6.34,
+          "Median": 6.24,
+          "RatioToAvg": 0.62,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 89.2,
+          "Top100Avg": 77.2,
+          "GapPoints": 12.0,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 39.6,
+          "Top100Avg": 47.5,
+          "GapPoints": -7.9,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 35.6,
+          "BenchmarkPct": 66.8,
+          "GapPoints": -31.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 9.7,
+          "GapPoints": -9.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 17.1,
+          "BenchmarkPct": 9.5,
+          "GapPoints": 7.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 5.6,
+          "GapPoints": -5.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.6,
+          "GapPoints": -2.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 47.3,
+          "BenchmarkPct": 1.7,
+          "GapPoints": 45.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.4,
+          "GapPoints": -1.4,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.7,
+          "GapPoints": -0.7,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 45.6
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.7,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 47.3,
+              "BenchmarkPct": 1.7,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 2.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 35.6,
+              "BenchmarkPct": 66.8,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 4,
+          "SelfCount": 0,
+          "TargetLabel": "→ Luffydonoo ×2, → Captinhelp ×2",
+          "Top100AvgCasts": 1.9,
+          "Top100UsedPct": 91.0,
+          "Top100SelfPct": 2.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 64.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 85.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 12.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.4,
+          "Top100UsedPct": 43.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Hezrun",
+          "DeathTimestamp": 752901,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 737725,
+          "DeltaMs": 15176
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "lurker": {
+      "Deviations": {
+        "HPS": {
+          "Value": 846,
+          "Top1": 2362.0,
+          "Top100Avg": 1776.0,
+          "Median": 1716.0,
+          "RatioToAvg": 0.48,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 42.9,
+          "Best": 5.5,
+          "Median": 22.0,
+          "Worst": 41.6,
+          "GapToWorst": 1.3,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 97.5,
+          "Top1": 99.8,
+          "Top100Avg": 93.6,
+          "Median": 95.1,
+          "GapToAvg": 3.9,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 6.5,
+          "Top1": 13.05,
+          "Top100Avg": 9.05,
+          "Median": 8.77,
+          "RatioToAvg": 0.72,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 60.9,
+          "Top100Avg": 51.8,
+          "GapPoints": 9.1,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 22.1,
+          "Top100Avg": 16.8,
+          "GapPoints": 5.3,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 54.2,
+          "BenchmarkPct": 75.4,
+          "GapPoints": -21.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 10.2,
+          "BenchmarkPct": 4.6,
+          "GapPoints": 5.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.1,
+          "GapPoints": -4.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 1.6,
+          "BenchmarkPct": 3.5,
+          "GapPoints": -1.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.2,
+          "GapPoints": -3.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.1,
+          "GapPoints": -3.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 33.1,
+          "BenchmarkPct": 2.9,
+          "GapPoints": 30.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.1,
+          "GapPoints": -1.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 1.0,
+          "BenchmarkPct": 0.8,
+          "GapPoints": 0.2,
+          "BenchmarkOnly": false
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 30.2
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 1.0,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 33.1,
+              "BenchmarkPct": 2.9,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 4.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 54.2,
+              "BenchmarkPct": 75.4,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 4,
+          "SelfCount": 0,
+          "TargetLabel": "→ Luffydonoo ×3, → Captinhelp",
+          "Top100AvgCasts": 1.1,
+          "Top100UsedPct": 70.0,
+          "Top100SelfPct": 1.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 66.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 89.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 16.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 65.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Staubaoz",
+          "DeathTimestamp": 1688281,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 1696257,
+          "DeltaMs": 7976
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "leotheras": {
+      "Deviations": {
+        "HPS": {
+          "Value": 1018,
+          "Top1": 2688.0,
+          "Top100Avg": 1990.0,
+          "Median": 1951.0,
+          "RatioToAvg": 0.51,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 39.7,
+          "Best": 7.7,
+          "Median": 24.1,
+          "Worst": 46.3,
+          "GapToWorst": -6.6,
+          "Flag": "in_line"
+        },
+        "ActiveTime": {
+          "Value": 85.3,
+          "Top1": 99.5,
+          "Top100Avg": 95.1,
+          "Median": 95.8,
+          "GapToAvg": -9.8,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 6.59,
+          "Top1": 12.54,
+          "Top100Avg": 9.43,
+          "Median": 9.24,
+          "RatioToAvg": 0.7,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 66.3,
+          "Top100Avg": 51.2,
+          "GapPoints": 15.1,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 18.3,
+          "Top100Avg": 13.9,
+          "GapPoints": 4.4,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 79.7,
+          "BenchmarkPct": 87.3,
+          "GapPoints": -7.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 6.0,
+          "BenchmarkPct": 3.5,
+          "GapPoints": 2.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": null,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.7,
+          "GapPoints": -1.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.5,
+          "GapPoints": -1.5,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 14.2,
+          "BenchmarkPct": 1.3,
+          "GapPoints": 12.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.2,
+          "GapPoints": -1.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.2,
+          "GapPoints": -1.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.1,
+          "BenchmarkPct": 0.8,
+          "GapPoints": -0.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": null,
+          "Name": "Persistent Shield",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.6,
+          "GapPoints": -0.6,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 12.9
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 0.1,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.5,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 14.2,
+              "BenchmarkPct": 1.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.2,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 79.7,
+              "BenchmarkPct": 87.3,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 2,
+          "SelfCount": 0,
+          "TargetLabel": "→ Captinhelp ×2",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 69.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 81.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 89.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 24.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 68.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Luffydonoo",
+          "DeathTimestamp": 2701098,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 2717215,
+          "DeltaMs": 16117
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 2704447,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 2717215,
+          "DeltaMs": 12768
+        },
+        {
+          "DeathName": "Porgrok",
+          "DeathTimestamp": 2757628,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 2762941,
+          "DeltaMs": 5313
+        },
+        {
+          "DeathName": "Luffydonoo",
+          "DeathTimestamp": 2803172,
+          "NearestCooldown": "Mana Tide Totem",
+          "NearestCooldownTimestamp": 2764437,
+          "DeltaMs": 38735
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 2809607,
+          "NearestCooldown": "Mana Tide Totem",
+          "NearestCooldownTimestamp": 2764437,
+          "DeltaMs": 45170
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "karathress": {
+      "Deviations": {
+        "HPS": {
+          "Value": 971,
+          "Top1": 2889.0,
+          "Top100Avg": 2177.0,
+          "Median": 2106.0,
+          "RatioToAvg": 0.45,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 24.5,
+          "Best": 8.5,
+          "Median": 28.3,
+          "Worst": 44.5,
+          "GapToWorst": -20.0,
+          "Flag": "in_line"
+        },
+        "ActiveTime": {
+          "Value": 92.4,
+          "Top1": 99.7,
+          "Top100Avg": 94.5,
+          "Median": 96.2,
+          "GapToAvg": -2.1,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 7.63,
+          "Top1": 11.28,
+          "Top100Avg": 9.25,
+          "Median": 9.24,
+          "RatioToAvg": 0.82,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 61.4,
+          "Top100Avg": 71.7,
+          "GapPoints": -10.3,
+          "Flag": "below_avg"
+        },
+        "Top1Concentration": {
+          "Value": 33.2,
+          "Top100Avg": 35.3,
+          "GapPoints": -2.1,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 45.4,
+          "BenchmarkPct": 83.7,
+          "GapPoints": -38.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 8.2,
+          "BenchmarkPct": 6.1,
+          "GapPoints": 2.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 2.8,
+          "BenchmarkPct": 2.8,
+          "GapPoints": 0.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": null,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.2,
+          "GapPoints": -2.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.6,
+          "GapPoints": -1.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 5.9,
+          "BenchmarkPct": 1.5,
+          "GapPoints": 4.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.8,
+          "GapPoints": -0.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 24.1,
+          "BenchmarkPct": 0.0,
+          "GapPoints": 24.1,
+          "BenchmarkOnly": false,
+          "CharacterOnly": true
+        },
+        {
+          "Guid": 10395,
+          "Name": "Healing Wave",
+          "CharacterPct": 12.3,
+          "BenchmarkPct": 0.0,
+          "GapPoints": 12.3,
+          "BenchmarkOnly": false,
+          "CharacterOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 25423,
+        "Name": "Chain Heal",
+        "GapPoints": -38.3
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 24.1,
+              "BenchmarkPct": 0.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 45.4,
+              "BenchmarkPct": 83.7,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Healing Wave",
+          "Ranks": [
+            {
+              "Guid": 10395,
+              "ManaCost": 440,
+              "ManaCostSource": "character",
+              "CharacterPct": 12.3,
+              "BenchmarkPct": 0.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25396,
+              "ManaCost": 720,
+              "ManaCostSource": "character",
+              "CharacterPct": 2.8,
+              "BenchmarkPct": 2.8,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 3,
+          "SelfCount": 0,
+          "TargetLabel": "→ Luffydonoo, → Captinhelp, → Thugalina",
+          "Top100AvgCasts": 1.4,
+          "Top100UsedPct": 67.0,
+          "Top100SelfPct": 1.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 58.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 86.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 12.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.5,
+          "Top100UsedPct": 53.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "morogrim": {
+      "Deviations": {
+        "HPS": {
+          "Value": 789,
+          "Top1": 2156.0,
+          "Top100Avg": 1546.0,
+          "Median": 1498.0,
+          "RatioToAvg": 0.51,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 48.4,
+          "Best": 17.6,
+          "Median": 31.8,
+          "Worst": 48.0,
+          "GapToWorst": 0.4,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 97.6,
+          "Top1": 99.6,
+          "Top100Avg": 97.1,
+          "Median": 97.8,
+          "GapToAvg": 0.5,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 5.67,
+          "Top1": 11.21,
+          "Top100Avg": 8.23,
+          "Median": 8.13,
+          "RatioToAvg": 0.69,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 55.7,
+          "Top100Avg": 53.4,
+          "GapPoints": 2.3,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 27.0,
+          "Top100Avg": 23.9,
+          "GapPoints": 3.1,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 42.6,
+          "BenchmarkPct": 68.8,
+          "GapPoints": -26.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 14.8,
+          "BenchmarkPct": 7.8,
+          "GapPoints": 7.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.4,
+          "GapPoints": -4.4,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.3,
+          "GapPoints": -4.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.2,
+          "GapPoints": -4.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 41.5,
+          "BenchmarkPct": 3.1,
+          "GapPoints": 38.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.8,
+          "GapPoints": -2.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.1,
+          "GapPoints": -2.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 38.4
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 2.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 41.5,
+              "BenchmarkPct": 3.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 4.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 42.6,
+              "BenchmarkPct": 68.8,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 4,
+          "SelfCount": 0,
+          "TargetLabel": "→ Captinhelp ×4",
+          "Top100AvgCasts": 3.5,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 1.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 93.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 15.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 2,
+          "SelfCount": 2,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 82.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "vashj": {
+      "Deviations": {
+        "HPS": {
+          "Value": 695,
+          "Top1": 1303.0,
+          "Top100Avg": 1091.0,
+          "Median": 1071.0,
+          "RatioToAvg": 0.64,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 44.7,
+          "Best": 13.9,
+          "Median": 26.5,
+          "Worst": 41.2,
+          "GapToWorst": 3.5,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 92.8,
+          "Top1": 99.8,
+          "Top100Avg": 94.0,
+          "Median": 95.7,
+          "GapToAvg": -1.2,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 5.84,
+          "Top1": 9.47,
+          "Top100Avg": 7.37,
+          "Median": 7.31,
+          "RatioToAvg": 0.79,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 46.1,
+          "Top100Avg": 46.5,
+          "GapPoints": -0.4,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 15.2,
+          "Top100Avg": 17.2,
+          "GapPoints": -2.0,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 24.8,
+          "BenchmarkPct": 48.5,
+          "GapPoints": -23.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 2.1,
+          "BenchmarkPct": 12.6,
+          "GapPoints": -10.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 8.7,
+          "GapPoints": -8.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 6.1,
+          "GapPoints": -6.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 9.9,
+          "BenchmarkPct": 5.9,
+          "GapPoints": 4.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 7.5,
+          "BenchmarkPct": 5.7,
+          "GapPoints": 1.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 54.8,
+          "BenchmarkPct": 4.3,
+          "GapPoints": 50.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.3,
+          "GapPoints": -3.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": null,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.7,
+          "GapPoints": -1.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10468,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10467,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.9,
+          "BenchmarkPct": 0.8,
+          "GapPoints": 0.1,
+          "BenchmarkOnly": false
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 50.5
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 9.9,
+              "BenchmarkPct": 5.9,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 6.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 54.8,
+              "BenchmarkPct": 4.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 8.7,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 24.8,
+              "BenchmarkPct": 48.5,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Lesser Healing Wave",
+          "Ranks": [
+            {
+              "Guid": 10467,
+              "ManaCost": 305,
+              "ManaCostSource": "character",
+              "CharacterPct": 0.9,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10468,
+              "ManaCost": 380.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25420,
+              "ManaCost": 440,
+              "ManaCostSource": "character",
+              "CharacterPct": 2.1,
+              "BenchmarkPct": 12.6,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 6,
+          "SelfCount": 0,
+          "TargetLabel": "→ Luffydonoo ×3, → Thugalina ×2, → Captinhelp",
+          "Top100AvgCasts": 4.8,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 1.3,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 1.8,
+          "Top100UsedPct": 95.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 1.2,
+          "Top100UsedPct": 51.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Mana Potion": {
+          "Count": 3,
+          "SelfCount": 3,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 2.9,
+          "Top100UsedPct": 99.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 5510613,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 5532698,
+          "DeltaMs": 22085
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 5555737,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 5565801,
+          "DeltaMs": 10064
+        },
+        {
+          "DeathName": "Captinhelp",
+          "DeathTimestamp": 5611321,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 5623183,
+          "DeltaMs": 11862
+        },
+        {
+          "DeathName": "Enëlye",
+          "DeathTimestamp": 5613805,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 5623183,
+          "DeltaMs": 9378
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "alar": {
+      "Deviations": {
+        "HPS": {
+          "Value": 365,
+          "Top1": 1411.0,
+          "Top100Avg": 1132.0,
+          "Median": 1096.0,
+          "RatioToAvg": 0.32,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 62.6,
+          "Best": 11.2,
+          "Median": 33.5,
+          "Worst": 50.6,
+          "GapToWorst": 12.0,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 89.5,
+          "Top1": 99.9,
+          "Top100Avg": 96.1,
+          "Median": 98.0,
+          "GapToAvg": -6.6,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.46,
+          "Top1": 9.47,
+          "Top100Avg": 6.67,
+          "Median": 6.58,
+          "RatioToAvg": 0.52,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 68.1,
+          "Top100Avg": 54.7,
+          "GapPoints": 13.4,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 27.9,
+          "Top100Avg": 23.8,
+          "GapPoints": 4.1,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 10.5,
+          "BenchmarkPct": 55.9,
+          "GapPoints": -45.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 10.5,
+          "GapPoints": -10.5,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 21.3,
+          "BenchmarkPct": 9.1,
+          "GapPoints": 12.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 5.8,
+          "GapPoints": -5.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 5.2,
+          "GapPoints": -5.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 26.4,
+          "BenchmarkPct": 3.4,
+          "GapPoints": 23.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.6,
+          "GapPoints": -2.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.1,
+          "GapPoints": -2.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 41.8,
+          "BenchmarkPct": 2.0,
+          "GapPoints": 39.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 8005,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.1,
+          "GapPoints": -1.1,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 25423,
+        "Name": "Chain Heal",
+        "GapPoints": -45.4
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 41.8,
+              "BenchmarkPct": 2.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 2.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 26.4,
+              "BenchmarkPct": 3.4,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 5.2,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 10.5,
+              "BenchmarkPct": 55.9,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Healing Wave",
+          "Ranks": [
+            {
+              "Guid": 8005,
+              "ManaCost": 340.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25396,
+              "ManaCost": 720.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 5.8,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 7,
+          "SelfCount": 0,
+          "TargetLabel": "→ Luffydonoo ×3, → Captinhelp ×3, → Thugalina",
+          "Top100AvgCasts": 4.5,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 1.1,
+          "Top100UsedPct": 95.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.4,
+          "Top100UsedPct": 27.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.3,
+          "Top100UsedPct": 84.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Leechers",
+          "DeathTimestamp": 7368264,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 7379154,
+          "DeltaMs": 10890
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "voidreaver": {
+      "Deviations": {
+        "HPS": {
+          "Value": 1406,
+          "Top1": 3038.0,
+          "Top100Avg": 2664.0,
+          "Median": 2631.0,
+          "RatioToAvg": 0.53,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 33.5,
+          "Best": 7.0,
+          "Median": 16.2,
+          "Worst": 25.0,
+          "GapToWorst": 8.5,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 96.0,
+          "Top1": 99.6,
+          "Top100Avg": 97.0,
+          "Median": 97.1,
+          "GapToAvg": -1.0,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 8.65,
+          "Top1": 14.91,
+          "Top100Avg": 12.07,
+          "Median": 11.94,
+          "RatioToAvg": 0.72,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 50.0,
+          "Top100Avg": 42.5,
+          "GapPoints": 7.5,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 17.1,
+          "Top100Avg": 10.8,
+          "GapPoints": 6.3,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 65.9,
+          "BenchmarkPct": 84.2,
+          "GapPoints": -18.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 9.3,
+          "GapPoints": -9.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.3,
+          "GapPoints": -2.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 5.9,
+          "BenchmarkPct": 1.3,
+          "GapPoints": 4.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 28.2,
+          "BenchmarkPct": 0.9,
+          "GapPoints": 27.3,
+          "BenchmarkOnly": false
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 27.3
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 28.2,
+              "BenchmarkPct": 0.9,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 2.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 65.9,
+              "BenchmarkPct": 84.2,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 2,
+          "SelfCount": 0,
+          "TargetLabel": "→ Captinhelp ×2",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 35.0,
+          "Top100SelfPct": 11.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 81.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 90.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 25.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 87.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "solarian": {
+      "Deviations": {
+        "HPS": {
+          "Value": 580,
+          "Top1": 2566.0,
+          "Top100Avg": 1670.0,
+          "Median": 1613.0,
+          "RatioToAvg": 0.35,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 68.2,
+          "Best": 6.1,
+          "Median": 35.2,
+          "Worst": 56.7,
+          "GapToWorst": 11.5,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 96.8,
+          "Top1": 99.8,
+          "Top100Avg": 94.5,
+          "Median": 95.4,
+          "GapToAvg": 2.3,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.57,
+          "Top1": 10.48,
+          "Top100Avg": 6.92,
+          "Median": 6.73,
+          "RatioToAvg": 0.52,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 46.1,
+          "Top100Avg": 51.7,
+          "GapPoints": -5.6,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 12.4,
+          "Top100Avg": 15.7,
+          "GapPoints": -3.3,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 29.4,
+          "BenchmarkPct": 67.9,
+          "GapPoints": -38.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 6.6,
+          "BenchmarkPct": 18.0,
+          "GapPoints": -11.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.3,
+          "GapPoints": -3.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 8.5,
+          "BenchmarkPct": 2.9,
+          "GapPoints": 5.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25566,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.6,
+          "GapPoints": -2.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 50.6,
+          "BenchmarkPct": 2.2,
+          "GapPoints": 48.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.5,
+          "GapPoints": -1.5,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.6,
+          "GapPoints": -0.6,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 5.0,
+          "BenchmarkPct": 0.0,
+          "GapPoints": 5.0,
+          "BenchmarkOnly": false,
+          "CharacterOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 48.4
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 5.0,
+              "BenchmarkPct": 0.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 50.6,
+              "BenchmarkPct": 2.2,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 3.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 29.4,
+              "BenchmarkPct": 67.9,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 1,
+          "SelfCount": 0,
+          "TargetLabel": "→ Captinhelp",
+          "Top100AvgCasts": 0.3,
+          "Top100UsedPct": 25.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 0.5,
+          "Top100UsedPct": 46.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Ancestral Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 71.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 14.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.4,
+          "Top100UsedPct": 44.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "kaelthas": {
+      "Deviations": {
+        "HPS": {
+          "Value": 512,
+          "Top1": 1141.0,
+          "Top100Avg": 1034.0,
+          "Median": 1022.0,
+          "RatioToAvg": 0.5,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 50.7,
+          "Best": 15.7,
+          "Median": 35.4,
+          "Worst": 50.5,
+          "GapToWorst": 0.2,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 64.8,
+          "Top1": 100.0,
+          "Top100Avg": 86.9,
+          "Median": 86.6,
+          "GapToAvg": -22.1,
+          "Flag": "below_avg"
+        },
+        "HPM": {
+          "Value": 4.79,
+          "Top1": 9.43,
+          "Top100Avg": 7.51,
+          "Median": 7.48,
+          "RatioToAvg": 0.64,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 59.0,
+          "Top100Avg": 48.7,
+          "GapPoints": 10.3,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 28.7,
+          "Top100Avg": 17.9,
+          "GapPoints": 10.8,
+          "Flag": "above_avg"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 25423,
+          "Name": "Chain Heal",
+          "CharacterPct": 30.5,
+          "BenchmarkPct": 62.5,
+          "GapPoints": -32.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25420,
+          "Name": "Lesser Healing Wave",
+          "CharacterPct": 4.1,
+          "BenchmarkPct": 8.8,
+          "GapPoints": -4.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 379,
+          "Name": "Earth Shield",
+          "CharacterPct": 11.8,
+          "BenchmarkPct": 5.1,
+          "GapPoints": 6.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 25422,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.9,
+          "GapPoints": -4.9,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": null,
+          "Name": "Healing Stream",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.2,
+          "GapPoints": -4.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 1064,
+          "Name": "Chain Heal",
+          "CharacterPct": 5.2,
+          "BenchmarkPct": 3.8,
+          "GapPoints": 1.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 10622,
+          "Name": "Chain Heal",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.7,
+          "GapPoints": -3.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 25396,
+          "Name": "Healing Wave",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.7,
+          "GapPoints": -2.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 10623,
+          "Name": "Chain Heal",
+          "CharacterPct": 48.4,
+          "BenchmarkPct": 2.4,
+          "GapPoints": 46.0,
+          "BenchmarkOnly": false
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 10623,
+        "Name": "Chain Heal",
+        "GapPoints": 46.0
+      },
+      "SpellRanks": [
+        {
+          "Name": "Chain Heal",
+          "Ranks": [
+            {
+              "Guid": 1064,
+              "ManaCost": 260,
+              "ManaCostSource": "character",
+              "CharacterPct": 5.2,
+              "BenchmarkPct": 3.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10622,
+              "ManaCost": 315.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 3.7,
+              "RankLabel": null
+            },
+            {
+              "Guid": 10623,
+              "ManaCost": 405,
+              "ManaCostSource": "character",
+              "CharacterPct": 48.4,
+              "BenchmarkPct": 2.4,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25422,
+              "ManaCost": 435.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 4.9,
+              "RankLabel": null
+            },
+            {
+              "Guid": 25423,
+              "ManaCost": 540,
+              "ManaCostSource": "character",
+              "CharacterPct": 30.5,
+              "BenchmarkPct": 62.5,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Earth Shield": {
+          "Count": 10,
+          "SelfCount": 0,
+          "TargetLabel": "→ Captinhelp ×3, → Leechers, → Thugalina ×6",
+          "Top100AvgCasts": 4.8,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Tide Totem": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 1.1,
+          "Top100UsedPct": 99.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Ancestral Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "party",
+          "Top100AvgCasts": 1.9,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 37.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 2,
+          "SelfCount": 2,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 2.5,
+          "Top100UsedPct": 99.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": null,
+      "RebirthCandidates": null,
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Firewoody",
+          "DeathTimestamp": 10670885,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 10668868,
+          "DeltaMs": 2017
+        },
+        {
+          "DeathName": "Cheesypoo",
+          "DeathTimestamp": 10681799,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 10668868,
+          "DeltaMs": 12931
+        },
+        {
+          "DeathName": "Luffydonoo",
+          "DeathTimestamp": 10681802,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 10668868,
+          "DeltaMs": 12934
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 10689097,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 10668868,
+          "DeltaMs": 20229
+        },
+        {
+          "DeathName": "Thugalina",
+          "DeathTimestamp": 10693235,
+          "NearestCooldown": "Ancestral Swiftness",
+          "NearestCooldownTimestamp": 10668868,
+          "DeltaMs": 24367
+        },
+        {
+          "DeathName": "Dormammoo",
+          "DeathTimestamp": 10696081,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 23812
+        },
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 10696782,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 23111
+        },
+        {
+          "DeathName": "Hezrun",
+          "DeathTimestamp": 10701087,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 18806
+        },
+        {
+          "DeathName": "Leechers",
+          "DeathTimestamp": 10702493,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 17400
+        },
+        {
+          "DeathName": "Vajony",
+          "DeathTimestamp": 10705594,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 14299
+        },
+        {
+          "DeathName": "Staubaoz",
+          "DeathTimestamp": 10707213,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 12680
+        },
+        {
+          "DeathName": "Quruella",
+          "DeathTimestamp": 10710917,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 8976
+        },
+        {
+          "DeathName": "Megatauro",
+          "DeathTimestamp": 10713784,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 6109
+        },
+        {
+          "DeathName": "Enëlye",
+          "DeathTimestamp": 10763068,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 43175
+        },
+        {
+          "DeathName": "Enëlye",
+          "DeathTimestamp": 10776602,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 56709
+        },
+        {
+          "DeathName": "Firewoody",
+          "DeathTimestamp": 10780235,
+          "NearestCooldown": "Earth Shield",
+          "NearestCooldownTimestamp": 10719893,
+          "DeltaMs": 60342
+        }
+      ],
+      "CannedCaveats": []
+    }
+  },
+  "RaidWideRollups": {
+    "DeathCountByBoss": [
+      {
+        "Slug": "kaelthas",
+        "DeathCount": 16,
+        "Rank": 1
+      },
+      {
+        "Slug": "leotheras",
+        "DeathCount": 5,
+        "Rank": 2
+      },
+      {
+        "Slug": "vashj",
+        "DeathCount": 4,
+        "Rank": 3
+      },
+      {
+        "Slug": "alar",
+        "DeathCount": 1,
+        "Rank": 4
+      },
+      {
+        "Slug": "hydross",
+        "DeathCount": 1,
+        "Rank": 5
+      },
+      {
+        "Slug": "lurker",
+        "DeathCount": 1,
+        "Rank": 6
+      },
+      {
+        "Slug": "karathress",
+        "DeathCount": 0,
+        "Rank": 7
+      },
+      {
+        "Slug": "morogrim",
+        "DeathCount": 0,
+        "Rank": 8
+      },
+      {
+        "Slug": "solarian",
+        "DeathCount": 0,
+        "Rank": 9
+      },
+      {
+        "Slug": "voidreaver",
+        "DeathCount": 0,
+        "Rank": 10
+      }
+    ],
+    "OverhealExceedsWorstBosses": [
+      "hydross",
+      "lurker",
+      "morogrim",
+      "vashj",
+      "alar",
+      "voidreaver",
+      "solarian",
+      "kaelthas"
+    ],
+    "CooldownDeviations": {
+      "Mana Tide Totem": {
+        "UndercastBosses": [
+          "karathress",
+          "alar",
+          "kaelthas"
+        ],
+        "OvercastBosses": []
+      },
+      "Dark Rune": {
+        "UndercastBosses": [
+          "vashj"
+        ],
+        "OvercastBosses": []
+      },
+      "Ancestral Swiftness": {
+        "UndercastBosses": [
+          "solarian"
+        ],
+        "OvercastBosses": []
+      }
+    },
+    "SelfDeathBosses": [],
+    "LowestPercentileBosses": [
+      {
+        "Slug": "alar",
+        "Percentile": 20
+      },
+      {
+        "Slug": "solarian",
+        "Percentile": 34
+      },
+      {
+        "Slug": "kaelthas",
+        "Percentile": 36
+      }
+    ]
+  },
+  "GearAnalysis": {
+    "MissingEnchantFlags": [],
+    "DifferingSlotsAnnotated": [],
+    "EnchantableSlotCount": 9,
+    "EnchantedSlotCount": 9,
+    "ConsumableSetup": {
+      "TotalBosses": 10,
+      "CompleteCount": 0,
+      "UnknownCount": 0,
+      "IncompleteBosses": [
+        "Hydross the Unstable",
+        "The Lurker Below",
+        "Leotheras the Blind",
+        "Fathom-Lord Karathress",
+        "Morogrim Tidewalker",
+        "Lady Vashj",
+        "Al'ar",
+        "Void Reaver",
+        "High Astromancer Solarian",
+        "Kael'thas Sunstrider"
+      ]
+    }
+  }
+}

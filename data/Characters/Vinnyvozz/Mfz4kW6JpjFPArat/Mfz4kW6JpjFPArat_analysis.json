@@ -1,0 +1,3143 @@
+{
+  "CharacterName": "Vinnyvozz",
+  "ReportCode": "Mfz4kW6JpjFPArat",
+  "ClassName": "Druid",
+  "Bosses": {
+    "hydross": {
+      "Deviations": {
+        "HPS": {
+          "Value": 570,
+          "Top1": 1680.0,
+          "Top100Avg": 1280.0,
+          "Median": 1249.0,
+          "RatioToAvg": 0.45,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 72.0,
+          "Best": 33.7,
+          "Median": 47.3,
+          "Worst": 59.5,
+          "GapToWorst": 12.5,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.4,
+          "Top1": 99.9,
+          "Top100Avg": 99.2,
+          "Median": 99.4,
+          "GapToAvg": 0.2,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.08,
+          "Top1": 7.59,
+          "Top100Avg": 5.84,
+          "Median": 5.87,
+          "RatioToAvg": 0.53,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 90.1,
+          "Top100Avg": 83.5,
+          "GapPoints": 6.6,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 39.7,
+          "Top100Avg": 48.5,
+          "GapPoints": -8.8,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 51.1,
+          "BenchmarkPct": 41.0,
+          "GapPoints": 10.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 14.9,
+          "BenchmarkPct": 27.6,
+          "GapPoints": -12.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 25.2,
+          "BenchmarkPct": 14.4,
+          "GapPoints": 10.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 5.6,
+          "BenchmarkPct": 7.1,
+          "GapPoints": -1.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 3.2,
+          "BenchmarkPct": 4.5,
+          "GapPoints": -1.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.5,
+          "GapPoints": -1.5,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.3,
+          "GapPoints": -1.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9857,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -12.7
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 3.2,
+              "BenchmarkPct": 4.5,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 51.1,
+              "BenchmarkPct": 41.0,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9857,
+              "ManaCost": 485.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 14.9,
+              "BenchmarkPct": 27.6,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 78.0,
+          "Top100SelfPct": 60.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 85.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 1,
+          "SelfCount": 0,
+          "TargetLabel": "→ Victim",
+          "Top100AvgCasts": 3.8,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 1.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 9.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 9.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.5,
+          "Top100UsedPct": 49.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "lurker": {
+      "Deviations": {
+        "HPS": {
+          "Value": 894,
+          "Top1": 2304.0,
+          "Top100Avg": 1616.0,
+          "Median": 1563.0,
+          "RatioToAvg": 0.55,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 56.2,
+          "Best": 16.4,
+          "Median": 35.5,
+          "Worst": 49.1,
+          "GapToWorst": 7.1,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.3,
+          "Top1": 99.9,
+          "Top100Avg": 98.4,
+          "Median": 98.8,
+          "GapToAvg": 0.9,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 4.96,
+          "Top1": 10.81,
+          "Top100Avg": 7.37,
+          "Median": 7.15,
+          "RatioToAvg": 0.67,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 72.2,
+          "Top100Avg": 56.8,
+          "GapPoints": 15.4,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 31.7,
+          "Top100Avg": 25.2,
+          "GapPoints": 6.5,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 23.5,
+          "BenchmarkPct": 39.2,
+          "GapPoints": -15.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 22.5,
+          "BenchmarkPct": 28.4,
+          "GapPoints": -5.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 28.0,
+          "BenchmarkPct": 14.0,
+          "GapPoints": 14.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 8.7,
+          "BenchmarkPct": 8.5,
+          "GapPoints": 0.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 17.2,
+          "BenchmarkPct": 4.7,
+          "GapPoints": 12.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 2.4,
+          "GapPoints": -2.4,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 26981,
+          "Name": "Rejuvenation",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.8,
+          "GapPoints": -0.8,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -15.7
+      },
+      "SpellRanks": [
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 2.4,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 23.5,
+              "BenchmarkPct": 39.2,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 8.7,
+              "BenchmarkPct": 8.5,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 22.5,
+              "BenchmarkPct": 28.4,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Rejuvenation",
+          "Ranks": [
+            {
+              "Guid": 26981,
+              "ManaCost": 370.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26982,
+              "ManaCost": 415,
+              "ManaCostSource": "character",
+              "CharacterPct": 28.0,
+              "BenchmarkPct": 14.0,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 90.0,
+          "Top100SelfPct": 63.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 75.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 7,
+          "SelfCount": 3,
+          "TargetLabel": "self, → Captinhelp ×2, → Banepain, → Beublic",
+          "Top100AvgCasts": 3.2,
+          "Top100UsedPct": 92.0,
+          "Top100SelfPct": 7.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 18.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 15.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 60.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "leotheras": {
+      "Deviations": {
+        "HPS": {
+          "Value": 562,
+          "Top1": 2083.0,
+          "Top100Avg": 1536.0,
+          "Median": 1501.0,
+          "RatioToAvg": 0.37,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 62.1,
+          "Best": 27.6,
+          "Median": 42.0,
+          "Worst": 54.3,
+          "GapToWorst": 7.8,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 92.3,
+          "Top1": 100.0,
+          "Top100Avg": 99.0,
+          "Median": 99.5,
+          "GapToAvg": -6.7,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.81,
+          "Top1": 9.42,
+          "Top100Avg": 6.4,
+          "Median": 6.26,
+          "RatioToAvg": 0.6,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 52.7,
+          "Top100Avg": 51.4,
+          "GapPoints": 1.3,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 13.7,
+          "Top100Avg": 15.7,
+          "GapPoints": -2.0,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 12.3,
+          "BenchmarkPct": 52.8,
+          "GapPoints": -40.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 23.8,
+          "BenchmarkPct": 17.9,
+          "GapPoints": 5.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 40.4,
+          "BenchmarkPct": 13.3,
+          "GapPoints": 27.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 8.6,
+          "BenchmarkPct": 5.1,
+          "GapPoints": 3.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 11.6,
+          "BenchmarkPct": 4.7,
+          "GapPoints": 6.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 3.4,
+          "GapPoints": -3.4,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 3.3,
+          "BenchmarkPct": 1.1,
+          "GapPoints": 2.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9857,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.6,
+          "GapPoints": -0.6,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -40.5
+      },
+      "SpellRanks": [
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9857,
+              "ManaCost": 485.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 3.4,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 12.3,
+              "BenchmarkPct": 52.8,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 8.6,
+              "BenchmarkPct": 5.1,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 23.8,
+              "BenchmarkPct": 17.9,
+              "RankLabel": "HoT"
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 94.0,
+          "Top100SelfPct": 71.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 81.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Swiftmend": {
+          "Count": 6,
+          "SelfCount": 3,
+          "TargetLabel": "→ Hezrun, self, → Kilsby, → Braila",
+          "Top100AvgCasts": 3.5,
+          "Top100UsedPct": 95.0,
+          "Top100SelfPct": 9.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.3,
+          "Top100UsedPct": 26.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 19.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 2,
+          "SelfCount": 2,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 63.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Dormammoo",
+            "Timestamp": 4450442
+          },
+          {
+            "Name": "Lasmur",
+            "Timestamp": 4451650
+          },
+          {
+            "Name": "Ghostpepperx",
+            "Timestamp": 4461633
+          },
+          {
+            "Name": "Lasmur",
+            "Timestamp": 4466651
+          },
+          {
+            "Name": "Staubaoz",
+            "Timestamp": 4482658
+          },
+          {
+            "Name": "Beublic",
+            "Timestamp": 4483663
+          },
+          {
+            "Name": "Calamety",
+            "Timestamp": 4486667
+          },
+          {
+            "Name": "Vinnyvozz",
+            "Timestamp": 4489634
+          },
+          {
+            "Name": "Clippies",
+            "Timestamp": 4573388
+          },
+          {
+            "Name": "Victim",
+            "Timestamp": 4615628
+          },
+          {
+            "Name": "Captinhelp",
+            "Timestamp": 4643859
+          },
+          {
+            "Name": "Thugalina",
+            "Timestamp": 4643860
+          },
+          {
+            "Name": "Hezrun",
+            "Timestamp": 4653444
+          },
+          {
+            "Name": "Staubaoz",
+            "Timestamp": 4665741
+          },
+          {
+            "Name": "Brotauren",
+            "Timestamp": 4670510
+          },
+          {
+            "Name": "Silkyrebel",
+            "Timestamp": 4675297
+          },
+          {
+            "Name": "Banepain",
+            "Timestamp": 4689169
+          },
+          {
+            "Name": "Brotauren",
+            "Timestamp": 4705010
+          },
+          {
+            "Name": "Lasmur",
+            "Timestamp": 4705393
+          },
+          {
+            "Name": "Megatauro",
+            "Timestamp": 4708384
+          },
+          {
+            "Name": "Nameitis",
+            "Timestamp": 4713277
+          },
+          {
+            "Name": "Vinnyvozz",
+            "Timestamp": 4715096
+          }
+        ],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [
+        {
+          "Name": "Vinnyvozz",
+          "Timestamp": 4489634
+        },
+        {
+          "Name": "Vinnyvozz",
+          "Timestamp": 4715096
+        }
+      ],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Dormammoo",
+          "DeathTimestamp": 4450442,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4447022,
+          "DeltaMs": 3420
+        },
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 4451650,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4447022,
+          "DeltaMs": 4628
+        },
+        {
+          "DeathName": "Ghostpepperx",
+          "DeathTimestamp": 4461633,
+          "NearestCooldown": "Nature's Swiftness",
+          "NearestCooldownTimestamp": 4457399,
+          "DeltaMs": 4234
+        },
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 4466651,
+          "NearestCooldown": "Nature's Swiftness",
+          "NearestCooldownTimestamp": 4457399,
+          "DeltaMs": 9252
+        },
+        {
+          "DeathName": "Staubaoz",
+          "DeathTimestamp": 4482658,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4476428,
+          "DeltaMs": 6230
+        },
+        {
+          "DeathName": "Beublic",
+          "DeathTimestamp": 4483663,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4476428,
+          "DeltaMs": 7235
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 4486667,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4476428,
+          "DeltaMs": 10239
+        },
+        {
+          "DeathName": "Vinnyvozz",
+          "DeathTimestamp": 4489634,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4476428,
+          "DeltaMs": 13206
+        },
+        {
+          "DeathName": "Clippies",
+          "DeathTimestamp": 4573388,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4565869,
+          "DeltaMs": 7519
+        },
+        {
+          "DeathName": "Victim",
+          "DeathTimestamp": 4615628,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4634216,
+          "DeltaMs": 18588
+        },
+        {
+          "DeathName": "Captinhelp",
+          "DeathTimestamp": 4643859,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4634216,
+          "DeltaMs": 9643
+        },
+        {
+          "DeathName": "Thugalina",
+          "DeathTimestamp": 4643860,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4634216,
+          "DeltaMs": 9644
+        },
+        {
+          "DeathName": "Hezrun",
+          "DeathTimestamp": 4653444,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 4660363,
+          "DeltaMs": 6919
+        },
+        {
+          "DeathName": "Staubaoz",
+          "DeathTimestamp": 4665741,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 2492
+        },
+        {
+          "DeathName": "Brotauren",
+          "DeathTimestamp": 4670510,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 7261
+        },
+        {
+          "DeathName": "Silkyrebel",
+          "DeathTimestamp": 4675297,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 12048
+        },
+        {
+          "DeathName": "Banepain",
+          "DeathTimestamp": 4689169,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 25920
+        },
+        {
+          "DeathName": "Brotauren",
+          "DeathTimestamp": 4705010,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 41761
+        },
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 4705393,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 42144
+        },
+        {
+          "DeathName": "Megatauro",
+          "DeathTimestamp": 4708384,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 45135
+        },
+        {
+          "DeathName": "Nameitis",
+          "DeathTimestamp": 4713277,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 50028
+        },
+        {
+          "DeathName": "Vinnyvozz",
+          "DeathTimestamp": 4715096,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 4663249,
+          "DeltaMs": 51847
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "karathress": {
+      "Deviations": {
+        "HPS": {
+          "Value": 813,
+          "Top1": 2123.0,
+          "Top100Avg": 1846.0,
+          "Median": 1817.0,
+          "RatioToAvg": 0.44,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 58.2,
+          "Best": 11.8,
+          "Median": 33.8,
+          "Worst": 46.5,
+          "GapToWorst": 11.7,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.6,
+          "Top1": 100.0,
+          "Top100Avg": 99.2,
+          "Median": 99.5,
+          "GapToAvg": 0.4,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 4.62,
+          "Top1": 11.69,
+          "Top100Avg": 8.25,
+          "Median": 8.0,
+          "RatioToAvg": 0.56,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 52.0,
+          "Top100Avg": 74.9,
+          "GapPoints": -22.9,
+          "Flag": "below_avg"
+        },
+        "Top1Concentration": {
+          "Value": 12.1,
+          "Top100Avg": 34.9,
+          "GapPoints": -22.8,
+          "Flag": "below_avg"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 30.5,
+          "BenchmarkPct": 40.2,
+          "GapPoints": -9.7,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 17.7,
+          "BenchmarkPct": 33.7,
+          "GapPoints": -16.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 22.5,
+          "BenchmarkPct": 12.7,
+          "GapPoints": 9.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 9.9,
+          "BenchmarkPct": 5.6,
+          "GapPoints": 4.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 15.9,
+          "BenchmarkPct": 4.3,
+          "GapPoints": 11.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 3.4,
+          "BenchmarkPct": 1.2,
+          "GapPoints": 2.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26981,
+          "Name": "Rejuvenation",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.8,
+          "GapPoints": -0.8,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -16.0
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 9.9,
+              "BenchmarkPct": 5.6,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 30.5,
+              "BenchmarkPct": 40.2,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Rejuvenation",
+          "Ranks": [
+            {
+              "Guid": 26981,
+              "ManaCost": 370.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26982,
+              "ManaCost": 415,
+              "ManaCostSource": "character",
+              "CharacterPct": 22.5,
+              "BenchmarkPct": 12.7,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 80.0,
+          "Top100SelfPct": 69.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 74.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Swiftmend": {
+          "Count": 8,
+          "SelfCount": 0,
+          "TargetLabel": "→ Ghostpepperx, → Hezrun, → Megatauro, → Porgrok ×2, → Banepain, → Clippies, → Silkyrebel",
+          "Top100AvgCasts": 2.8,
+          "Top100UsedPct": 93.0,
+          "Top100SelfPct": 2.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 8.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 9.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 53.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Ghostpepperx",
+            "Timestamp": 5583580
+          },
+          {
+            "Name": "Megatauro",
+            "Timestamp": 5636143
+          }
+        ],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Ghostpepperx",
+          "DeathTimestamp": 5583580,
+          "NearestCooldown": "Nature's Swiftness",
+          "NearestCooldownTimestamp": 5581499,
+          "DeltaMs": 2081
+        },
+        {
+          "DeathName": "Megatauro",
+          "DeathTimestamp": 5636143,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 5635000,
+          "DeltaMs": 1143
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "morogrim": {
+      "Deviations": {
+        "HPS": {
+          "Value": 801,
+          "Top1": 1672.0,
+          "Top100Avg": 1447.0,
+          "Median": 1422.0,
+          "RatioToAvg": 0.55,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 66.0,
+          "Best": 23.7,
+          "Median": 40.3,
+          "Worst": 51.1,
+          "GapToWorst": 14.9,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.7,
+          "Top1": 100.0,
+          "Top100Avg": 99.2,
+          "Median": 99.5,
+          "GapToAvg": 0.5,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 4.12,
+          "Top1": 10.16,
+          "Top100Avg": 7.13,
+          "Median": 7.04,
+          "RatioToAvg": 0.58,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 57.5,
+          "Top100Avg": 67.4,
+          "GapPoints": -9.9,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 23.6,
+          "Top100Avg": 38.8,
+          "GapPoints": -15.2,
+          "Flag": "below_avg"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 29.2,
+          "BenchmarkPct": 37.4,
+          "GapPoints": -8.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 25.9,
+          "BenchmarkPct": 30.0,
+          "GapPoints": -4.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 24.3,
+          "BenchmarkPct": 13.0,
+          "GapPoints": 11.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 6.8,
+          "BenchmarkPct": 9.6,
+          "GapPoints": -2.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 7.3,
+          "BenchmarkPct": 5.5,
+          "GapPoints": 1.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 44208,
+          "Name": "Tranquility",
+          "CharacterPct": 6.5,
+          "BenchmarkPct": 1.3,
+          "GapPoints": 5.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.0,
+          "GapPoints": -1.0,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26982,
+        "Name": "Rejuvenation",
+        "GapPoints": 11.3
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 6.8,
+              "BenchmarkPct": 9.6,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 29.2,
+              "BenchmarkPct": 37.4,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.0,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 25.9,
+              "BenchmarkPct": 30.0,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 93.0,
+          "Top100SelfPct": 71.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 87.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 4,
+          "SelfCount": 0,
+          "TargetLabel": "→ Braila, → Lasmur ×2, → Enëlye",
+          "Top100AvgCasts": 5.1,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 5.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 17.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 11.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 61.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Lasmur",
+            "Timestamp": 6397833
+          },
+          {
+            "Name": "Lasmur",
+            "Timestamp": 6412834
+          }
+        ],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 6397833,
+          "NearestCooldown": "Innervate",
+          "NearestCooldownTimestamp": 6393584,
+          "DeltaMs": 4249
+        },
+        {
+          "DeathName": "Lasmur",
+          "DeathTimestamp": 6412834,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 6416344,
+          "DeltaMs": 3510
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "vashj": {
+      "Deviations": {
+        "HPS": {
+          "Value": 560,
+          "Top1": 1336.0,
+          "Top100Avg": 1142.0,
+          "Median": 1117.0,
+          "RatioToAvg": 0.49,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 67.4,
+          "Best": 34.3,
+          "Median": 44.7,
+          "Worst": 53.5,
+          "GapToWorst": 13.9,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.9,
+          "Top1": 100.0,
+          "Top100Avg": 99.1,
+          "Median": 99.8,
+          "GapToAvg": 0.8,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.71,
+          "Top1": 9.07,
+          "Top100Avg": 6.94,
+          "Median": 6.95,
+          "RatioToAvg": 0.53,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 38.2,
+          "Top100Avg": 50.9,
+          "GapPoints": -12.7,
+          "Flag": "below_avg"
+        },
+        "Top1Concentration": {
+          "Value": 9.1,
+          "Top100Avg": 21.0,
+          "GapPoints": -11.9,
+          "Flag": "below_avg"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 46.2,
+          "BenchmarkPct": 46.7,
+          "GapPoints": -0.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 2.6,
+          "BenchmarkPct": 21.9,
+          "GapPoints": -19.3,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 11.0,
+          "BenchmarkPct": 12.4,
+          "GapPoints": -1.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 24.4,
+          "BenchmarkPct": 11.6,
+          "GapPoints": 12.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 13.5,
+          "BenchmarkPct": 4.4,
+          "GapPoints": 9.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 2.3,
+          "BenchmarkPct": 0.8,
+          "GapPoints": 1.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.6,
+          "GapPoints": -0.6,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -19.3
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 11.0,
+              "BenchmarkPct": 12.4,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 46.2,
+              "BenchmarkPct": 46.7,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.6,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 2.6,
+              "BenchmarkPct": 21.9,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.1,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 87.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.4,
+          "Top100UsedPct": 86.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Swiftmend": {
+          "Count": 9,
+          "SelfCount": 1,
+          "TargetLabel": "→ Megatauro, → Firewoody ×2, → Victim, → Luffydonoo, → Dormammoo, → Beublic, self, → Vajomee",
+          "Top100AvgCasts": 6.9,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 5.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 1,
+          "SelfCount": 0,
+          "TargetLabel": "→ Vajomee",
+          "Top100AvgCasts": 0.4,
+          "Top100UsedPct": 41.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.5,
+          "Top100UsedPct": 24.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 2,
+          "SelfCount": 2,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 2.3,
+          "Top100UsedPct": 77.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Ghostpepperx",
+            "Timestamp": 7421448
+          },
+          {
+            "Name": "Vajomee",
+            "Timestamp": 7451959
+          }
+        ],
+        "RebirthCasts": [
+          {
+            "Target": "Vajomee",
+            "Timestamp": 7456420
+          }
+        ]
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Ghostpepperx",
+          "DeathTimestamp": 7421448,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 7424004,
+          "DeltaMs": 2556
+        },
+        {
+          "DeathName": "Vajomee",
+          "DeathTimestamp": 7451959,
+          "NearestCooldown": "Rebirth",
+          "NearestCooldownTimestamp": 7456420,
+          "DeltaMs": 4461
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "alar": {
+      "Deviations": {
+        "HPS": {
+          "Value": 514,
+          "Top1": 1494.0,
+          "Top100Avg": 1081.0,
+          "Median": 1064.0,
+          "RatioToAvg": 0.48,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 70.8,
+          "Best": 33.3,
+          "Median": 50.1,
+          "Worst": 61.1,
+          "GapToWorst": 9.7,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 99.9,
+          "Top1": 100.0,
+          "Top100Avg": 99.2,
+          "Median": 99.5,
+          "GapToAvg": 0.7,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.37,
+          "Top1": 8.15,
+          "Top100Avg": 6.27,
+          "Median": 6.18,
+          "RatioToAvg": 0.54,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 83.5,
+          "Top100Avg": 77.9,
+          "GapPoints": 5.6,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 28.2,
+          "Top100Avg": 42.7,
+          "GapPoints": -14.5,
+          "Flag": "below_avg"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 38.3,
+          "BenchmarkPct": 49.4,
+          "GapPoints": -11.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 18.1,
+          "BenchmarkPct": 20.9,
+          "GapPoints": -2.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 18.0,
+          "BenchmarkPct": 12.6,
+          "GapPoints": 5.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 9.2,
+          "BenchmarkPct": 6.4,
+          "GapPoints": 2.8,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 13.1,
+          "BenchmarkPct": 6.1,
+          "GapPoints": 7.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26981,
+          "Name": "Rejuvenation",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.3,
+          "GapPoints": -1.3,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 3.4,
+          "BenchmarkPct": 0.9,
+          "GapPoints": 2.5,
+          "BenchmarkOnly": false
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 33763,
+        "Name": "Lifebloom",
+        "GapPoints": -11.1
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 9.2,
+              "BenchmarkPct": 6.4,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 38.3,
+              "BenchmarkPct": 49.4,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Rejuvenation",
+          "Ranks": [
+            {
+              "Guid": 26981,
+              "ManaCost": 370.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.3,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26982,
+              "ManaCost": 415,
+              "ManaCostSource": "character",
+              "CharacterPct": 18.0,
+              "BenchmarkPct": 12.6,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.9,
+          "Top100UsedPct": 91.0,
+          "Top100SelfPct": 72.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.2,
+          "Top100UsedPct": 85.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Swiftmend": {
+          "Count": 6,
+          "SelfCount": 1,
+          "TargetLabel": "→ Dormammoo, → Thugalina, → Captinhelp, → Megatauro ×2, self",
+          "Top100AvgCasts": 6.4,
+          "Top100UsedPct": 99.0,
+          "Top100SelfPct": 5.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.3,
+          "Top100UsedPct": 29.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 11.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.2,
+          "Top100UsedPct": 65.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Captinhelp",
+            "Timestamp": 10082319
+          }
+        ],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Captinhelp",
+          "DeathTimestamp": 10082319,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 10071654,
+          "DeltaMs": 10665
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "voidreaver": {
+      "Deviations": {
+        "HPS": {
+          "Value": 1538,
+          "Top1": 3222.0,
+          "Top100Avg": 2467.0,
+          "Median": 2412.0,
+          "RatioToAvg": 0.62,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 41.3,
+          "Best": 10.4,
+          "Median": 22.2,
+          "Worst": 33.0,
+          "GapToWorst": 8.3,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 98.6,
+          "Top1": 99.9,
+          "Top100Avg": 98.8,
+          "Median": 99.4,
+          "GapToAvg": -0.2,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 7.14,
+          "Top1": 11.12,
+          "Top100Avg": 8.36,
+          "Median": 8.3,
+          "RatioToAvg": 0.85,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 68.2,
+          "Top100Avg": 37.2,
+          "GapPoints": 31.0,
+          "Flag": "above_avg"
+        },
+        "Top1Concentration": {
+          "Value": 17.2,
+          "Top100Avg": 9.4,
+          "GapPoints": 7.8,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 33.5,
+          "BenchmarkPct": 76.6,
+          "GapPoints": -43.1,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 12.3,
+          "BenchmarkPct": 5.1,
+          "GapPoints": 7.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 33.8,
+          "BenchmarkPct": 4.9,
+          "GapPoints": 28.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9858,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 4.2,
+          "GapPoints": -4.2,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 18.1,
+          "BenchmarkPct": 2.6,
+          "GapPoints": 15.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 2.4,
+          "BenchmarkPct": 1.8,
+          "GapPoints": 0.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9856,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.8,
+          "GapPoints": -1.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9857,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.4,
+          "GapPoints": -1.4,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": null,
+          "Name": "Tranquility",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.1,
+          "GapPoints": -1.1,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -43.1
+      },
+      "SpellRanks": [
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9856,
+              "ManaCost": 405.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 9857,
+              "ManaCost": 485.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.4,
+              "RankLabel": null
+            },
+            {
+              "Guid": 9858,
+              "ManaCost": 575.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 4.2,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 33.5,
+              "BenchmarkPct": 76.6,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 18.1,
+              "BenchmarkPct": 2.6,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 33.8,
+              "BenchmarkPct": 4.9,
+              "RankLabel": "HoT"
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.0,
+          "Top100UsedPct": 99.0,
+          "Top100SelfPct": 93.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 55.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 2,
+          "SelfCount": 0,
+          "TargetLabel": "→ Beublic, → Zitish",
+          "Top100AvgCasts": 2.2,
+          "Top100UsedPct": 80.0,
+          "Top100SelfPct": 9.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 7.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.2,
+          "Top100UsedPct": 20.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 59.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [],
+      "DeathsNearestCooldown": [],
+      "CannedCaveats": []
+    },
+    "solarian": {
+      "Deviations": {
+        "HPS": {
+          "Value": 336,
+          "Top1": 1833.0,
+          "Top100Avg": 1240.0,
+          "Median": 1192.0,
+          "RatioToAvg": 0.27,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 81.6,
+          "Best": 24.1,
+          "Median": 48.5,
+          "Worst": 65.4,
+          "GapToWorst": 16.2,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 85.8,
+          "Top1": 99.9,
+          "Top100Avg": 97.5,
+          "Median": 98.6,
+          "GapToAvg": -11.7,
+          "Flag": "below_avg"
+        },
+        "HPM": {
+          "Value": 2.23,
+          "Top1": 7.55,
+          "Top100Avg": 4.85,
+          "Median": 4.66,
+          "RatioToAvg": 0.46,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 58.2,
+          "Top100Avg": 52.7,
+          "GapPoints": 5.5,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 15.7,
+          "Top100Avg": 16.1,
+          "GapPoints": -0.4,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 9.2,
+          "BenchmarkPct": 59.4,
+          "GapPoints": -50.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 55.1,
+          "BenchmarkPct": 13.1,
+          "GapPoints": 42.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 5.9,
+          "BenchmarkPct": 10.1,
+          "GapPoints": -4.2,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 26.1,
+          "BenchmarkPct": 6.7,
+          "GapPoints": 19.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 3.7,
+          "BenchmarkPct": 3.2,
+          "GapPoints": 0.5,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": null,
+          "Name": "Healing Touch",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.9,
+          "GapPoints": -1.9,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9857,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.8,
+          "GapPoints": -1.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": null,
+          "Name": "癒合",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.8,
+          "GapPoints": -1.8,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 9856,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 1.1,
+          "GapPoints": -1.1,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": null,
+          "Name": "Tranquility",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.5,
+          "GapPoints": -0.5,
+          "BenchmarkOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -50.2
+      },
+      "SpellRanks": [
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9856,
+              "ManaCost": 405.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.1,
+              "RankLabel": null
+            },
+            {
+              "Guid": 9857,
+              "ManaCost": 485.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 1.8,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 9.2,
+              "BenchmarkPct": 59.4,
+              "RankLabel": null
+            }
+          ]
+        },
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 3.7,
+              "BenchmarkPct": 3.2,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 55.1,
+              "BenchmarkPct": 13.1,
+              "RankLabel": "HoT"
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.8,
+          "Top100UsedPct": 82.0,
+          "Top100SelfPct": 43.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.7,
+          "Top100UsedPct": 72.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 3,
+          "SelfCount": 0,
+          "TargetLabel": "→ Hezrun, → Bronimo, → Dormammoo",
+          "Top100AvgCasts": 2.4,
+          "Top100UsedPct": 91.0,
+          "Top100SelfPct": 9.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 12.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.1,
+          "Top100UsedPct": 11.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 60.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Clippies",
+            "Timestamp": 11904183
+          },
+          {
+            "Name": "Vajomee",
+            "Timestamp": 11908486
+          },
+          {
+            "Name": "Vinnyvozz",
+            "Timestamp": 11908789
+          },
+          {
+            "Name": "Enëlye",
+            "Timestamp": 11909024
+          },
+          {
+            "Name": "Nameitis",
+            "Timestamp": 11909063
+          },
+          {
+            "Name": "Ghostpepperx",
+            "Timestamp": 11910333
+          },
+          {
+            "Name": "Banepain",
+            "Timestamp": 11910528
+          },
+          {
+            "Name": "Porgrok",
+            "Timestamp": 11910760
+          },
+          {
+            "Name": "Zitish",
+            "Timestamp": 11916217
+          }
+        ],
+        "RebirthCasts": []
+      },
+      "SelfDeaths": [
+        {
+          "Name": "Vinnyvozz",
+          "Timestamp": 11908789
+        }
+      ],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Clippies",
+          "DeathTimestamp": 11904183,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 4020
+        },
+        {
+          "DeathName": "Vajomee",
+          "DeathTimestamp": 11908486,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 8323
+        },
+        {
+          "DeathName": "Vinnyvozz",
+          "DeathTimestamp": 11908789,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 8626
+        },
+        {
+          "DeathName": "Enëlye",
+          "DeathTimestamp": 11909024,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 8861
+        },
+        {
+          "DeathName": "Nameitis",
+          "DeathTimestamp": 11909063,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 8900
+        },
+        {
+          "DeathName": "Ghostpepperx",
+          "DeathTimestamp": 11910333,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 10170
+        },
+        {
+          "DeathName": "Banepain",
+          "DeathTimestamp": 11910528,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 10365
+        },
+        {
+          "DeathName": "Porgrok",
+          "DeathTimestamp": 11910760,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 10597
+        },
+        {
+          "DeathName": "Zitish",
+          "DeathTimestamp": 11916217,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 11900163,
+          "DeltaMs": 16054
+        }
+      ],
+      "CannedCaveats": []
+    },
+    "kaelthas": {
+      "Deviations": {
+        "HPS": {
+          "Value": 483,
+          "Top1": 1255.0,
+          "Top100Avg": 1018.0,
+          "Median": 1004.0,
+          "RatioToAvg": 0.47,
+          "Flag": "below_avg"
+        },
+        "Overheal": {
+          "Value": 68.3,
+          "Best": 33.7,
+          "Median": 51.8,
+          "Worst": 61.7,
+          "GapToWorst": 6.6,
+          "Flag": "exceeds_worst"
+        },
+        "ActiveTime": {
+          "Value": 94.6,
+          "Top1": 100.0,
+          "Top100Avg": 97.7,
+          "Median": 98.6,
+          "GapToAvg": -3.1,
+          "Flag": "in_line"
+        },
+        "HPM": {
+          "Value": 3.58,
+          "Top1": 8.37,
+          "Top100Avg": 6.09,
+          "Median": 5.99,
+          "RatioToAvg": 0.59,
+          "Flag": "below_avg",
+          "Omit": false
+        },
+        "TargetCoverage": {
+          "Value": 52.3,
+          "Top100Avg": 57.7,
+          "GapPoints": -5.4,
+          "Flag": "in_line"
+        },
+        "Top1Concentration": {
+          "Value": 19.7,
+          "Top100Avg": 20.9,
+          "GapPoints": -1.2,
+          "Flag": "in_line"
+        }
+      },
+      "SpellGaps": [
+        {
+          "Guid": 33763,
+          "Name": "Lifebloom",
+          "CharacterPct": 40.2,
+          "BenchmarkPct": 39.3,
+          "GapPoints": 0.9,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26980,
+          "Name": "Regrowth",
+          "CharacterPct": 19.4,
+          "BenchmarkPct": 33.8,
+          "GapPoints": -14.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 26982,
+          "Name": "Rejuvenation",
+          "CharacterPct": 18.1,
+          "BenchmarkPct": 10.1,
+          "GapPoints": 8.0,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 33778,
+          "Name": "Lifebloom",
+          "CharacterPct": 9.7,
+          "BenchmarkPct": 8.3,
+          "GapPoints": 1.4,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 18562,
+          "Name": "Swiftmend",
+          "CharacterPct": 12.5,
+          "BenchmarkPct": 4.9,
+          "GapPoints": 7.6,
+          "BenchmarkOnly": false
+        },
+        {
+          "Guid": 9856,
+          "Name": "Regrowth",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.9,
+          "GapPoints": -0.9,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 26979,
+          "Name": "Healing Touch",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.7,
+          "GapPoints": -0.7,
+          "BenchmarkOnly": true
+        },
+        {
+          "Guid": 44208,
+          "Name": "Tranquility",
+          "CharacterPct": 0.0,
+          "BenchmarkPct": 0.0,
+          "GapPoints": 0.0,
+          "BenchmarkOnly": false,
+          "CharacterOnly": true
+        }
+      ],
+      "TopSpellGap": {
+        "Guid": 26980,
+        "Name": "Regrowth",
+        "GapPoints": -14.4
+      },
+      "SpellRanks": [
+        {
+          "Name": "Lifebloom",
+          "Ranks": [
+            {
+              "Guid": 33778,
+              "ManaCost": 0,
+              "ManaCostSource": "known",
+              "CharacterPct": 9.7,
+              "BenchmarkPct": 8.3,
+              "RankLabel": "Bloom"
+            },
+            {
+              "Guid": 33763,
+              "ManaCost": 220,
+              "ManaCostSource": "character",
+              "CharacterPct": 40.2,
+              "BenchmarkPct": 39.3,
+              "RankLabel": "HoT"
+            }
+          ]
+        },
+        {
+          "Name": "Regrowth",
+          "Ranks": [
+            {
+              "Guid": 9856,
+              "ManaCost": 405.0,
+              "ManaCostSource": "benchmark",
+              "CharacterPct": 0.0,
+              "BenchmarkPct": 0.9,
+              "RankLabel": null
+            },
+            {
+              "Guid": 26980,
+              "ManaCost": 675,
+              "ManaCostSource": "character",
+              "CharacterPct": 19.4,
+              "BenchmarkPct": 33.8,
+              "RankLabel": null
+            }
+          ]
+        }
+      ],
+      "Cooldowns": {
+        "Innervate": {
+          "Count": 1,
+          "SelfCount": 1,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 1.1,
+          "Top100UsedPct": 97.0,
+          "Top100SelfPct": 87.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Nature's Swiftness": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 1.6,
+          "Top100UsedPct": 87.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": true,
+          "DeviationDirection": "undercast"
+        },
+        "Swiftmend": {
+          "Count": 10,
+          "SelfCount": 0,
+          "TargetLabel": "→ Bronimo, → Dormammoo, → Captinhelp, → Hezrun, → Clippies, → Luffydonoo, → Braila, → Megatauro, → Beublic, → Thugalina",
+          "Top100AvgCasts": 8.2,
+          "Top100UsedPct": 98.0,
+          "Top100SelfPct": 4.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Tranquility": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.0,
+          "Top100UsedPct": 0.0,
+          "Top100SelfPct": null,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Rebirth": {
+          "Count": 1,
+          "SelfCount": 0,
+          "TargetLabel": "→ Beublic",
+          "Top100AvgCasts": 0.6,
+          "Top100UsedPct": 61.0,
+          "Top100SelfPct": 0.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Dark Rune": {
+          "Count": 0,
+          "SelfCount": 0,
+          "TargetLabel": "—",
+          "Top100AvgCasts": 0.4,
+          "Top100UsedPct": 16.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        },
+        "Mana Potion": {
+          "Count": 3,
+          "SelfCount": 3,
+          "TargetLabel": "self",
+          "Top100AvgCasts": 2.1,
+          "Top100UsedPct": 70.0,
+          "Top100SelfPct": 100.0,
+          "Deviates": false,
+          "DeviationDirection": null
+        }
+      },
+      "TranquilityInclude": false,
+      "RebirthCandidates": {
+        "Deaths": [
+          {
+            "Name": "Vinnyvozz",
+            "Timestamp": 13099240
+          },
+          {
+            "Name": "Vajomee",
+            "Timestamp": 13151693
+          },
+          {
+            "Name": "Beublic",
+            "Timestamp": 13157993
+          },
+          {
+            "Name": "Calamety",
+            "Timestamp": 13318246
+          }
+        ],
+        "RebirthCasts": [
+          {
+            "Target": "Beublic",
+            "Timestamp": 13249205
+          }
+        ]
+      },
+      "SelfDeaths": [
+        {
+          "Name": "Vinnyvozz",
+          "Timestamp": 13099240
+        }
+      ],
+      "DeathsNearestCooldown": [
+        {
+          "DeathName": "Vinnyvozz",
+          "DeathTimestamp": 13099240,
+          "NearestCooldown": "Innervate",
+          "NearestCooldownTimestamp": 13134000,
+          "DeltaMs": 34760
+        },
+        {
+          "DeathName": "Vajomee",
+          "DeathTimestamp": 13151693,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 13140641,
+          "DeltaMs": 11052
+        },
+        {
+          "DeathName": "Beublic",
+          "DeathTimestamp": 13157993,
+          "NearestCooldown": "Swiftmend",
+          "NearestCooldownTimestamp": 13140641,
+          "DeltaMs": 17352
+        },
+        {
+          "DeathName": "Calamety",
+          "DeathTimestamp": 13318246,
+          "NearestCooldown": "Mana Potion",
+          "NearestCooldownTimestamp": 13353097,
+          "DeltaMs": 34851
+        }
+      ],
+      "CannedCaveats": []
+    }
+  },
+  "RaidWideRollups": {
+    "DeathCountByBoss": [
+      {
+        "Slug": "leotheras",
+        "DeathCount": 22,
+        "Rank": 1
+      },
+      {
+        "Slug": "solarian",
+        "DeathCount": 9,
+        "Rank": 2
+      },
+      {
+        "Slug": "kaelthas",
+        "DeathCount": 4,
+        "Rank": 3
+      },
+      {
+        "Slug": "karathress",
+        "DeathCount": 2,
+        "Rank": 4
+      },
+      {
+        "Slug": "morogrim",
+        "DeathCount": 2,
+        "Rank": 5
+      },
+      {
+        "Slug": "vashj",
+        "DeathCount": 2,
+        "Rank": 6
+      },
+      {
+        "Slug": "alar",
+        "DeathCount": 1,
+        "Rank": 7
+      },
+      {
+        "Slug": "hydross",
+        "DeathCount": 0,
+        "Rank": 8
+      },
+      {
+        "Slug": "lurker",
+        "DeathCount": 0,
+        "Rank": 9
+      },
+      {
+        "Slug": "voidreaver",
+        "DeathCount": 0,
+        "Rank": 10
+      }
+    ],
+    "OverhealExceedsWorstBosses": [
+      "hydross",
+      "lurker",
+      "leotheras",
+      "karathress",
+      "morogrim",
+      "vashj",
+      "alar",
+      "voidreaver",
+      "solarian",
+      "kaelthas"
+    ],
+    "CooldownDeviations": {
+      "Nature's Swiftness": {
+        "UndercastBosses": [
+          "hydross",
+          "lurker",
+          "morogrim",
+          "voidreaver",
+          "solarian",
+          "kaelthas"
+        ],
+        "OvercastBosses": []
+      },
+      "Innervate": {
+        "UndercastBosses": [
+          "lurker"
+        ],
+        "OvercastBosses": []
+      }
+    },
+    "SelfDeathBosses": [
+      "leotheras",
+      "solarian",
+      "kaelthas"
+    ],
+    "LowestPercentileBosses": [
+      {
+        "Slug": "solarian",
+        "Percentile": 18
+      },
+      {
+        "Slug": "karathress",
+        "Percentile": 21
+      },
+      {
+        "Slug": "leotheras",
+        "Percentile": 23
+      }
+    ]
+  },
+  "GearAnalysis": {
+    "MissingEnchantFlags": [
+      {
+        "SlotIndex": 14,
+        "SlotName": "Back",
+        "ItemId": 29989
+      }
+    ],
+    "DifferingSlotsAnnotated": [
+      {
+        "SlotIndex": 15,
+        "SlotName": "MainHand",
+        "LikelyBenign": true,
+        "Reason": "single/minority-kill variant"
+      }
+    ],
+    "EnchantableSlotCount": 9,
+    "EnchantedSlotCount": 8,
+    "ConsumableSetup": {
+      "TotalBosses": 10,
+      "CompleteCount": 10,
+      "UnknownCount": 0,
+      "IncompleteBosses": []
+    }
+  }
+}

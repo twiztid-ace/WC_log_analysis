@@ -1,0 +1,105 @@
+{
+  "entries": [
+    {
+      "name": "Redhanaberaa",
+      "id": 27,
+      "guid": 54449814,
+      "type": "Hunter",
+      "icon": "Hunter-BeastMastery",
+      "timestamp": 7767339,
+      "fight": 56,
+      "damage": {
+        "total": 10549,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 34190,
+            "name": "Arcane Orb",
+            "total": 10549,
+            "type": 64,
+            "icon": "spell_nature_wispsplode.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 10549,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 5057,
+      "overkill": 289,
+      "events": [
+        {
+          "timestamp": 7767328,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 27,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Arcane Orb",
+            "guid": 34190,
+            "type": 64,
+            "abilityIcon": "spell_nature_wispsplode.jpg"
+          },
+          "fight": 56,
+          "hitType": 1,
+          "amount": 4728,
+          "unmitigatedAmount": 5017,
+          "overkill": 289,
+          "isAoE": true
+        },
+        {
+          "timestamp": 7762271,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 27,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Arcane Orb",
+            "guid": 34190,
+            "type": 64,
+            "abilityIcon": "spell_nature_wispsplode.jpg"
+          },
+          "fight": 56,
+          "hitType": 1,
+          "amount": 5532,
+          "unmitigatedAmount": 5532,
+          "isAoE": true,
+          "targetMarker": 8
+        }
+      ],
+      "killingBlow": {
+        "name": "Arcane Orb",
+        "guid": 34190,
+        "type": 64,
+        "abilityIcon": "spell_nature_wispsplode.jpg"
+      }
+    }
+  ]
+}

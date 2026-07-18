@@ -1,0 +1,510 @@
+{
+  "entries": [
+    {
+      "name": "치달",
+      "id": 25,
+      "guid": 34423476,
+      "type": "Paladin",
+      "icon": "Paladin-Retribution",
+      "timestamp": 3026596,
+      "fight": 26,
+      "damage": {
+        "total": 37225,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 2450,
+        "abilities": [
+          {
+            "guid": 38445,
+            "name": "Sear Nova",
+            "total": 10325,
+            "type": 4,
+            "icon": "spell_fire_sealoffire.jpg"
+          },
+          {
+            "guid": 38296,
+            "name": "Scorch",
+            "total": 9536,
+            "type": 4,
+            "icon": "spell_fire_searingtotem.jpg",
+            "petName": "Spitfire Totem"
+          },
+          {
+            "guid": 38441,
+            "name": "Cataclysmic Bolt",
+            "total": 4828,
+            "type": 32,
+            "icon": "spell_shadow_shadowfury.jpg"
+          },
+          {
+            "guid": 32221,
+            "name": "Seal of Blood",
+            "total": 4309,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          },
+          {
+            "guid": 29436,
+            "name": "Leeching Throw",
+            "total": 3150,
+            "type": 8,
+            "icon": "ability_hunter_aimedshot.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Fathom-Lord Karathress",
+            "total": 15153,
+            "type": "Boss"
+          },
+          {
+            "name": "Spitfire Totem",
+            "total": 9536,
+            "type": "Pet"
+          },
+          {
+            "name": "치달",
+            "total": 6494,
+            "type": "Paladin"
+          },
+          {
+            "name": "Fathom-Guard Sharkkis",
+            "total": 3150,
+            "type": "Boss"
+          },
+          {
+            "name": "Fathom-Guard Caribdis",
+            "total": 2892,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 25798,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 26980,
+            "name": "Regrowth",
+            "total": 21911,
+            "type": 8,
+            "icon": "spell_nature_resistnature.jpg"
+          },
+          {
+            "guid": 26982,
+            "name": "Rejuvenation",
+            "total": 3887,
+            "type": 8,
+            "icon": "spell_nature_rejuvenation.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 38445,
+            "name": "Sear Nova",
+            "total": 8676,
+            "type": 4,
+            "icon": "spell_fire_sealoffire.jpg"
+          },
+          {
+            "guid": 38441,
+            "name": "Cataclysmic Bolt",
+            "total": 4254,
+            "type": 32,
+            "icon": "spell_shadow_shadowfury.jpg"
+          },
+          {
+            "guid": 32221,
+            "name": "Seal of Blood",
+            "total": 3826,
+            "type": 2,
+            "icon": "spell_holy_sealofblood.jpg"
+          },
+          {
+            "guid": 38335,
+            "name": "Water Bolt Volley",
+            "total": 2865,
+            "type": 16,
+            "icon": "spell_frost_frostbolt.jpg"
+          },
+          {
+            "guid": 38296,
+            "name": "Scorch",
+            "total": 2751,
+            "type": 4,
+            "icon": "spell_fire_searingtotem.jpg",
+            "petName": "Spitfire Totem"
+          }
+        ],
+        "sources": [
+          {
+            "name": "풀뜯는곰스키",
+            "total": 25798,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 102425,
+      "overkill": 1770,
+      "events": [
+        {
+          "timestamp": 3026535,
+          "type": "damage",
+          "sourceID": 143,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scorch",
+            "guid": 38296,
+            "type": 4,
+            "abilityIcon": "spell_fire_searingtotem.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 5015,
+          "unmitigatedAmount": 6785,
+          "overkill": 1770,
+          "isAoE": true
+        },
+        {
+          "timestamp": 3025686,
+          "type": "damage",
+          "sourceID": 25,
+          "sourceIsFriendly": true,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Seal of Blood",
+            "guid": 32221,
+            "type": 2,
+            "abilityIcon": "spell_holy_sealofblood.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 63,
+          "unmitigatedAmount": 63,
+          "isAoE": false
+        },
+        {
+          "timestamp": 3022978,
+          "type": "damage",
+          "sourceID": 25,
+          "sourceIsFriendly": true,
+          "targetID": 25,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Judgement of Blood",
+            "guid": 32220,
+            "type": 2,
+            "abilityIcon": "spell_shadow_lifedrain.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 163,
+          "unmitigatedAmount": 163,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Scorch",
+        "guid": 38296,
+        "type": 4,
+        "abilityIcon": "spell_fire_searingtotem.jpg"
+      }
+    },
+    {
+      "name": "플래티",
+      "id": 12,
+      "guid": 30102870,
+      "type": "Mage",
+      "icon": "Mage-Arcane",
+      "timestamp": 3027411,
+      "fight": 26,
+      "damage": {
+        "total": 14711,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 38441,
+            "name": "Cataclysmic Bolt",
+            "total": 7766,
+            "type": 32,
+            "icon": "spell_shadow_shadowfury.jpg"
+          },
+          {
+            "guid": 38296,
+            "name": "Scorch",
+            "total": 6945,
+            "type": 4,
+            "icon": "spell_fire_searingtotem.jpg",
+            "petName": "Spitfire Totem"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Fathom-Lord Karathress",
+            "total": 7766,
+            "type": "Boss"
+          },
+          {
+            "name": "Spitfire Totem",
+            "total": 6945,
+            "type": "Pet"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 3994,
+      "overkill": 5291,
+      "events": [
+        {
+          "timestamp": 3027400,
+          "type": "damage",
+          "sourceID": 143,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 12,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scorch",
+            "guid": 38296,
+            "type": 4,
+            "abilityIcon": "spell_fire_searingtotem.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 1654,
+          "unmitigatedAmount": 6945,
+          "overkill": 5291,
+          "isAoE": true
+        },
+        {
+          "timestamp": 3023406,
+          "type": "damage",
+          "sourceID": 138,
+          "sourceIsFriendly": false,
+          "targetID": 12,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Cataclysmic Bolt",
+            "guid": 38441,
+            "type": 32,
+            "abilityIcon": "spell_shadow_shadowfury.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 7766,
+          "unmitigatedAmount": 7766,
+          "isAoE": false,
+          "sourceMarker": 5
+        }
+      ],
+      "killingBlow": {
+        "name": "Scorch",
+        "guid": 38296,
+        "type": 4,
+        "abilityIcon": "spell_fire_searingtotem.jpg"
+      }
+    },
+    {
+      "name": "아르누보",
+      "id": 5,
+      "guid": 31454172,
+      "type": "Priest",
+      "icon": "Priest-Shadow",
+      "timestamp": 3027514,
+      "fight": 26,
+      "damage": {
+        "total": 16245,
+        "totalReduced": 14420,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3687,
+        "abilities": [
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 12556,
+            "totalReduced": 10731,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          },
+          {
+            "guid": 38296,
+            "name": "Scorch",
+            "total": 3689,
+            "type": 4,
+            "icon": "spell_fire_searingtotem.jpg",
+            "petName": "Spitfire Totem"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 12556,
+            "totalReduced": 10731,
+            "type": "Boss"
+          },
+          {
+            "name": "Spitfire Totem",
+            "total": 3689,
+            "type": "Pet"
+          }
+        ]
+      },
+      "healing": {
+        "total": 6839,
+        "totalReduced": 5014,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 26980,
+            "name": "Regrowth",
+            "total": 2518,
+            "type": 8,
+            "icon": "spell_nature_resistnature.jpg"
+          },
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 2496,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          },
+          {
+            "guid": 25218,
+            "name": "Power Word: Shield",
+            "total": 1825,
+            "totalReduced": 0,
+            "type": 2,
+            "icon": "spell_holy_powerwordshield.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 32409,
+            "name": "Shadow Word: Death",
+            "total": 6839,
+            "totalReduced": 5014,
+            "type": 32,
+            "icon": "spell_shadow_demonicfortitude.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "아르누보",
+            "total": 4321,
+            "totalReduced": 2496,
+            "type": "Priest"
+          },
+          {
+            "name": "풀뜯는곰스키",
+            "total": 2518,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 55669,
+      "overkill": 905,
+      "events": [
+        {
+          "timestamp": 3027513,
+          "type": "damage",
+          "sourceID": 143,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 5,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Scorch",
+            "guid": 38296,
+            "type": 4,
+            "abilityIcon": "spell_fire_searingtotem.jpg"
+          },
+          "fight": 26,
+          "hitType": 16,
+          "amount": 2784,
+          "mitigated": 3687,
+          "unmitigatedAmount": 7376,
+          "resisted": 3688,
+          "overkill": 905,
+          "isAoE": true
+        },
+        {
+          "timestamp": 3026155,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 5,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shadow Word: Death",
+            "guid": 32409,
+            "type": 32,
+            "abilityIcon": "spell_shadow_demonicfortitude.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 501,
+          "unmitigatedAmount": 2326,
+          "absorbed": 1825,
+          "isAoE": false,
+          "tick": true
+        },
+        {
+          "timestamp": 3010827,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 5,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Shadow Word: Death",
+            "guid": 32409,
+            "type": 32,
+            "abilityIcon": "spell_shadow_demonicfortitude.jpg"
+          },
+          "fight": 26,
+          "hitType": 1,
+          "amount": 2027,
+          "unmitigatedAmount": 2027,
+          "isAoE": false,
+          "tick": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Scorch",
+        "guid": 38296,
+        "type": 4,
+        "abilityIcon": "spell_fire_searingtotem.jpg"
+      }
+    }
+  ]
+}

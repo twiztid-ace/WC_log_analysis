@@ -1,0 +1,1204 @@
+{
+  "entries": [
+    {
+      "name": "이쁜마술사",
+      "id": 21,
+      "guid": 30286807,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 2214204,
+      "fight": 1,
+      "damage": {
+        "total": 18393,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 1502,
+        "abilities": [
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 8577,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 4509,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 3711,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          },
+          {
+            "guid": 3,
+            "name": "Falling",
+            "total": 1596,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 10173,
+            "type": "Boss"
+          },
+          {
+            "name": "Al'ar",
+            "total": 8220,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 5754,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 3258,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          },
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 2496,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 2904,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2672,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          },
+          {
+            "guid": 3,
+            "name": "Falling",
+            "total": 178,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "이쁜마술사",
+            "total": 5754,
+            "type": "Shaman"
+          }
+        ]
+      },
+      "deathWindow": 100684,
+      "overkill": 2460,
+      "events": [
+        {
+          "timestamp": 2214198,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 21,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 555,
+          "unmitigatedAmount": 2512,
+          "overkill": 2460,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2213187,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 21,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 3000,
+          "unmitigatedAmount": 2727,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2212178,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 21,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2562,
+          "unmitigatedAmount": 2562,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Flame Patch",
+        "guid": 35383,
+        "type": 4,
+        "abilityIcon": "spell_fire_lavaspawn.jpg"
+      }
+    },
+    {
+      "name": "그림자송곳니",
+      "id": 14,
+      "guid": 15807937,
+      "type": "Druid",
+      "icon": "Druid-Feral",
+      "timestamp": 2214206,
+      "fight": 1,
+      "damage": {
+        "total": 15542,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 13516,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2026,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 13516,
+            "type": "Boss"
+          },
+          {
+            "name": "Al'ar",
+            "total": 2026,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 5146,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25292,
+            "name": "Holy Light",
+            "total": 3669,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 1477,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 4039,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 1107,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "홀리퀸",
+            "total": 3669,
+            "type": "Paladin"
+          },
+          {
+            "name": "그림자송곳니",
+            "total": 1477,
+            "type": "Druid"
+          }
+        ]
+      },
+      "deathWindow": 47295,
+      "overkill": 1162,
+      "events": [
+        {
+          "timestamp": 2214200,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 14,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 1755,
+          "unmitigatedAmount": 2431,
+          "overkill": 1162,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2213187,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 14,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2937,
+          "unmitigatedAmount": 2670,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2212178,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 14,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2598,
+          "unmitigatedAmount": 2598,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Flame Patch",
+        "guid": 35383,
+        "type": 4,
+        "abilityIcon": "spell_fire_lavaspawn.jpg"
+      }
+    },
+    {
+      "name": "태풍경보",
+      "id": 2,
+      "guid": 25429143,
+      "type": "Paladin",
+      "icon": "Paladin-Protection",
+      "timestamp": 2222878,
+      "fight": 1,
+      "damage": {
+        "total": 36978,
+        "totalReduced": 34669,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 39186,
+        "blocked": 3708,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 36978,
+            "totalReduced": 34669,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Ember of Al'ar",
+            "total": 31534,
+            "totalReduced": 29225,
+            "type": "NPC"
+          },
+          {
+            "name": "Al'ar",
+            "total": 5444,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 22196,
+        "totalReduced": 19887,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25235,
+            "name": "Flash Heal",
+            "total": 7892,
+            "type": 2,
+            "icon": "spell_holy_flashheal.jpg"
+          },
+          {
+            "guid": 10328,
+            "name": "Holy Light",
+            "total": 3815,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 25292,
+            "name": "Holy Light",
+            "total": 3628,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 27137,
+            "name": "Flash of Light",
+            "total": 2690,
+            "type": 2,
+            "icon": "spell_holy_flashheal.jpg"
+          },
+          {
+            "guid": 25218,
+            "name": "Power Word: Shield",
+            "total": 2309,
+            "totalReduced": 0,
+            "type": 2,
+            "icon": "spell_holy_powerwordshield.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 22196,
+            "totalReduced": 19887,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "킷캣",
+            "total": 12063,
+            "totalReduced": 9754,
+            "type": "Priest"
+          },
+          {
+            "name": "홀리퀸",
+            "total": 7443,
+            "type": "Paladin"
+          },
+          {
+            "name": "태풍경보",
+            "total": 2690,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "deathWindow": 27659,
+      "overkill": 205,
+      "events": [
+        {
+          "timestamp": 2222856,
+          "type": "damage",
+          "sourceID": 57,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 2,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 4,
+          "amount": 1151,
+          "mitigated": 1177,
+          "unmitigatedAmount": 2533,
+          "overkill": 205,
+          "blocked": 309,
+          "isAoE": false,
+          "targetMarker": 8
+        },
+        {
+          "timestamp": 2218872,
+          "type": "damage",
+          "sourceID": 57,
+          "sourceInstance": 2,
+          "sourceIsFriendly": false,
+          "targetID": 2,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 4,
+          "amount": 1567,
+          "mitigated": 1287,
+          "unmitigatedAmount": 2854,
+          "blocked": 309,
+          "isAoE": false,
+          "targetMarker": 8
+        },
+        {
+          "timestamp": 2218841,
+          "type": "damage",
+          "sourceID": 57,
+          "sourceInstance": 3,
+          "sourceIsFriendly": false,
+          "targetID": 2,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 4,
+          "amount": 1978,
+          "mitigated": 1501,
+          "unmitigatedAmount": 3479,
+          "blocked": 309,
+          "isAoE": false,
+          "targetMarker": 8
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "킷캣",
+      "id": 10,
+      "guid": 15849957,
+      "type": "Priest",
+      "icon": "Priest-Discipline",
+      "timestamp": 2228489,
+      "fight": 1,
+      "damage": {
+        "total": 16155,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 3226,
+        "abilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 13426,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 1777,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          },
+          {
+            "guid": 27869,
+            "name": "Dark Rune",
+            "total": 952,
+            "type": 32,
+            "icon": "inv_misc_rune_04.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Ember of Al'ar",
+            "total": 13426,
+            "type": "NPC"
+          },
+          {
+            "name": "Al'ar",
+            "total": 1777,
+            "type": "Boss"
+          },
+          {
+            "name": "킷캣",
+            "total": 952,
+            "type": "Priest"
+          }
+        ]
+      },
+      "healing": {
+        "total": 5182,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25437,
+            "name": "Desperate Prayer",
+            "total": 2860,
+            "type": 2,
+            "icon": "spell_holy_restoration.jpg"
+          },
+          {
+            "guid": 25235,
+            "name": "Flash Heal",
+            "total": 2322,
+            "type": 2,
+            "icon": "spell_holy_flashheal.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 1,
+            "name": "Melee",
+            "total": 4893,
+            "type": 1,
+            "icon": "inv_axe_02.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 289,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "킷캣",
+            "total": 5182,
+            "type": "Priest"
+          }
+        ]
+      },
+      "deathWindow": 39508,
+      "overkill": 1172,
+      "events": [
+        {
+          "timestamp": 2228483,
+          "type": "damage",
+          "sourceID": 57,
+          "sourceInstance": 2,
+          "sourceIsFriendly": false,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 2,
+          "amount": 3159,
+          "unmitigatedAmount": 2936,
+          "overkill": 1172,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2209371,
+          "type": "damage",
+          "sourceID": 10,
+          "sourceIsFriendly": true,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Dark Rune",
+            "guid": 27869,
+            "type": 32,
+            "abilityIcon": "inv_misc_rune_04.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 952,
+          "unmitigatedAmount": 952,
+          "isAoE": false
+        },
+        {
+          "timestamp": 2201850,
+          "type": "damage",
+          "sourceID": 57,
+          "sourceInstance": 2,
+          "sourceIsFriendly": false,
+          "targetID": 10,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Melee",
+            "guid": 1,
+            "type": 1,
+            "abilityIcon": "inv_axe_02.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2026,
+          "mitigated": 724,
+          "unmitigatedAmount": 2750,
+          "isAoE": false
+        }
+      ],
+      "killingBlow": {
+        "name": "Melee",
+        "guid": 1,
+        "type": 1,
+        "abilityIcon": "inv_axe_02.jpg"
+      }
+    },
+    {
+      "name": "스브",
+      "id": 23,
+      "guid": 16347423,
+      "type": "Rogue",
+      "icon": "Rogue-Combat",
+      "timestamp": 2232866,
+      "fight": 1,
+      "damage": {
+        "total": 16115,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 8207,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 5799,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2109,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Environment",
+            "total": 8207,
+            "type": "Boss"
+          },
+          {
+            "name": "Al'ar",
+            "total": 7908,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 2530,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 1705,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          },
+          {
+            "guid": 25222,
+            "name": "Renew",
+            "total": 825,
+            "type": 2,
+            "icon": "spell_holy_renew.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2104,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          },
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 426,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "스브",
+            "total": 1705,
+            "type": "Rogue"
+          },
+          {
+            "name": "킷캣",
+            "total": 825,
+            "type": "Priest"
+          }
+        ]
+      },
+      "deathWindow": 43863,
+      "overkill": 2931,
+      "events": [
+        {
+          "timestamp": 2232840,
+          "type": "damage",
+          "sourceID": 46,
+          "sourceIsFriendly": false,
+          "targetID": 23,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Dive Bomb",
+            "guid": 35181,
+            "type": 4,
+            "abilityIcon": "spell_fire_fireball02.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2868,
+          "unmitigatedAmount": 5799,
+          "overkill": 2931,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2214200,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 23,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2769,
+          "unmitigatedAmount": 2308,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2213188,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 23,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 2735,
+          "unmitigatedAmount": 2487,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Dive Bomb",
+        "guid": 35181,
+        "type": 4,
+        "abilityIcon": "spell_fire_fireball02.jpg"
+      }
+    },
+    {
+      "name": "이쁜마술사",
+      "id": 21,
+      "guid": 30286807,
+      "type": "Shaman",
+      "icon": "Shaman-Enhancement",
+      "timestamp": 2232867,
+      "fight": 1,
+      "damage": {
+        "total": 6154,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 6154,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 6154,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 0,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [],
+        "damageAbilities": [],
+        "sources": []
+      },
+      "deathWindow": 0,
+      "overkill": 4489,
+      "events": [
+        {
+          "timestamp": 2232838,
+          "type": "damage",
+          "sourceID": 46,
+          "sourceIsFriendly": false,
+          "targetID": 21,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Dive Bomb",
+            "guid": 35181,
+            "type": 4,
+            "abilityIcon": "spell_fire_fireball02.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 1665,
+          "unmitigatedAmount": 6154,
+          "overkill": 4489,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Dive Bomb",
+        "guid": 35181,
+        "type": 4,
+        "abilityIcon": "spell_fire_fireball02.jpg"
+      }
+    },
+    {
+      "name": "개굳염",
+      "id": 34,
+      "guid": 15849854,
+      "type": "Warrior",
+      "icon": "Warrior-Arms",
+      "timestamp": 2232868,
+      "fight": 1,
+      "damage": {
+        "total": 23855,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "overheal": 61,
+        "abilities": [
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 14031,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 7487,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 2337,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "damageAbilities": [],
+        "sources": [
+          {
+            "name": "Al'ar",
+            "total": 16368,
+            "type": "Boss"
+          },
+          {
+            "name": "Environment",
+            "total": 7487,
+            "type": "Boss"
+          }
+        ]
+      },
+      "healing": {
+        "total": 12461,
+        "activeTime": 0,
+        "activeTimeReduced": 0,
+        "abilities": [
+          {
+            "guid": 25292,
+            "name": "Holy Light",
+            "total": 3698,
+            "type": 2,
+            "icon": "spell_holy_holybolt.jpg"
+          },
+          {
+            "guid": 27237,
+            "name": "Master Healthstone",
+            "total": 2496,
+            "type": 1,
+            "icon": "inv_stone_04.jpg"
+          },
+          {
+            "guid": 25222,
+            "name": "Renew",
+            "total": 2475,
+            "type": 2,
+            "icon": "spell_holy_renew.jpg"
+          },
+          {
+            "guid": 25235,
+            "name": "Flash Heal",
+            "total": 2257,
+            "type": 2,
+            "icon": "spell_holy_flashheal.jpg"
+          },
+          {
+            "guid": 34299,
+            "name": "Leader of the Pack",
+            "total": 1535,
+            "type": 1,
+            "icon": "spell_nature_unyeildingstamina.jpg"
+          }
+        ],
+        "damageAbilities": [
+          {
+            "guid": 35181,
+            "name": "Dive Bomb",
+            "total": 5348,
+            "type": 4,
+            "icon": "spell_fire_fireball02.jpg"
+          },
+          {
+            "guid": 35383,
+            "name": "Flame Patch",
+            "total": 5284,
+            "type": 4,
+            "icon": "spell_fire_lavaspawn.jpg"
+          },
+          {
+            "guid": 34121,
+            "name": "Flame Buffet",
+            "total": 1829,
+            "type": 4,
+            "icon": "spell_fire_fireball.jpg"
+          }
+        ],
+        "sources": [
+          {
+            "name": "킷캣",
+            "total": 4732,
+            "type": "Priest"
+          },
+          {
+            "name": "개굳염",
+            "total": 4031,
+            "type": "Warrior"
+          },
+          {
+            "name": "홀리퀸",
+            "total": 3698,
+            "type": "Paladin"
+          }
+        ]
+      },
+      "deathWindow": 51791,
+      "overkill": 271,
+      "events": [
+        {
+          "timestamp": 2232842,
+          "type": "damage",
+          "sourceID": 46,
+          "sourceIsFriendly": false,
+          "targetID": 34,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Dive Bomb",
+            "guid": 35181,
+            "type": 4,
+            "abilityIcon": "spell_fire_fireball02.jpg"
+          },
+          "fight": 1,
+          "hitType": 16,
+          "amount": 5837,
+          "mitigated": 61,
+          "unmitigatedAmount": 6169,
+          "resisted": 1542,
+          "overkill": 271,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2213188,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 34,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 4087,
+          "unmitigatedAmount": 2681,
+          "isAoE": true
+        },
+        {
+          "timestamp": 2212178,
+          "type": "damage",
+          "source": {
+            "name": "Environment",
+            "id": -1,
+            "guid": 0,
+            "type": "Boss",
+            "icon": "Boss"
+          },
+          "sourceIsFriendly": false,
+          "targetID": 34,
+          "targetIsFriendly": true,
+          "ability": {
+            "name": "Flame Patch",
+            "guid": 35383,
+            "type": 4,
+            "abilityIcon": "spell_fire_lavaspawn.jpg"
+          },
+          "fight": 1,
+          "hitType": 1,
+          "amount": 3400,
+          "unmitigatedAmount": 2453,
+          "isAoE": true
+        }
+      ],
+      "killingBlow": {
+        "name": "Dive Bomb",
+        "guid": 35181,
+        "type": 4,
+        "abilityIcon": "spell_fire_fireball02.jpg"
+      }
+    }
+  ]
+}

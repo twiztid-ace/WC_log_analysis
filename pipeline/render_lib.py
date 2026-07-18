@@ -46,8 +46,8 @@ def format_long_date(yyyy_mm_dd: str) -> str:
     dt = _dt.datetime.strptime(yyyy_mm_dd, "%Y-%m-%d")
     return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
 
-# ===== 19-slot gear order (WORKFLOW.md gotcha #31) - fixed WoW combatantinfo
-# gear[] position, confirmed real, never re-derive this ad hoc. =====
+# ===== 19-slot gear order (see CLAUDE.md's "Ground rules") - fixed WoW
+# combatantinfo gear[] position, confirmed real, never re-derive this ad hoc. =====
 GEAR_SLOT_NAMES = [
     "Head", "Neck", "Shoulder", "Shirt", "Chest", "Waist", "Legs", "Feet",
     "Wrist", "Hands", "Finger1", "Finger2", "Trinket1", "Trinket2",
@@ -138,7 +138,7 @@ def format_cooldown_target(targets: list[dict], mode: str) -> str:
 
 
 def test_tranquility_include(count: int, top100_used_pct: float | None) -> bool:
-    """Exact numeric rule from SKILL.md/WORKFLOW.md (Druid Tranquility only)."""
+    """Exact numeric rule from SKILL.md/CLAUDE.md (Druid Tranquility only)."""
     if top100_used_pct is None:
         return False
     pct = float(top100_used_pct)
