@@ -286,6 +286,30 @@
     padding: 2px 8px;
     vertical-align: middle;
   }
+
+  .tabs{
+    display:flex;
+    gap: 4px;
+    padding: 0 48px;
+    background: var(--parchment-dim);
+    border-bottom: 1px solid var(--line);
+  }
+  .tab-btn{
+    appearance:none;
+    border:none;
+    background:none;
+    cursor:pointer;
+    font-family:'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(19,42,44,0.5);
+    padding: 14px 18px 12px;
+    border-bottom: 2px solid transparent;
+  }
+  .tab-btn.active{ color: var(--ink); border-bottom-color: var(--copper); }
+  .tab-panel{ display:none; }
+  .tab-panel.active{ display:block; }
 </style>
 {% if theme_style_block %}{{ theme_style_block|safe }}{% endif %}
 </head>
@@ -333,6 +357,13 @@
       {% endif %}
     </div>
   </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" type="button" data-tab="report">Report</button>
+    <button class="tab-btn" type="button" data-tab="coaching">Coaching</button>
+  </div>
+
+  <div id="tab-report" class="tab-panel active">
 
   <div class="section">
     <div class="section-head">
@@ -534,11 +565,64 @@
   </div>
   {% endif %}
 
+  </div>
+
+  <div id="tab-coaching" class="tab-panel">
+    <div class="section">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Mana-timing efficiency</h2>
+      </div>
+      {% if mana_timing %}
+      <p class="section-desc">How {{ healer_name }}'s mana pool moved across this kill, derived from real per-cast mana readings ({{ mana_timing.ReadingCount }} sampled casts) — a step-function approximation between cast moments, not a continuous trace.</p>
+      <div class="stat-grid stat-grid-5">
+        <div class="stat">
+          <div class="stat-label">Starting mana</div>
+          <div class="stat-value">{{ mana_timing.StartingManaPct }}%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Ending mana (approx)</div>
+          <div class="stat-value">{{ mana_timing.EndingManaPctApprox }}%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Casts below {{ mana_timing.LowThreshold }}%</div>
+          <div class="stat-value">{{ mana_timing.LowManaCastCount }}</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Time below {{ mana_timing.LowThreshold }}%</div>
+          <div class="stat-value">{{ mana_timing.TimeBelowLowThresholdPct }}%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Time above {{ mana_timing.HighThreshold }}%</div>
+          <div class="stat-value">{{ mana_timing.TimeAboveHighThresholdPct }}%</div>
+        </div>
+      </div>
+      {% if missed_second_potion_window %}
+      <div class="coverage-note">A second Mana Potion use (120s internal cooldown) would have been available before this kill ended, based on the timing of the first use, but wasn't cast again.</div>
+      {% endif %}
+      {% else %}
+      <p class="section-desc">No usable mana-cast readings for this kill (either a build with no real mana pool, or the raw cast data predates this feature — re-run <span class="placeholder-tag">build-coaching</span>).</p>
+      {% endif %}
+      <div class="coverage-note">{{ mana_timing_finding }}</div>
+    </div>
+  </div>
+
   <div class="footer">
     <span>All data real: {{ healer_name }}'s fight log ({{ report_code }}, fight {{ fight_id }}) + Top 100 {{ boss_name }} benchmark (n={{ benchmark_n }})</span>
   </div>
 
 </div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>

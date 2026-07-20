@@ -105,7 +105,7 @@ Read its output carefully:
   (e.g. which spec has the `healers` role vs. `dps`/`tanks`).
 - The command prints `Resolved pipeline class: <Class> (WCL: <realClass>/<realSpec>)`
   at the end — this is the already-resolved pipeline class key to use for
-  `--class-name` in steps 3-9 below, computed automatically from the real
+  `--class-name` in steps 3-10 below, computed automatically from the real
   (WCL className, WCL specName) pair via `pipeline/classes.py` (e.g. real
   Druid/Dreamstate → pipeline key `"Dreamstate"`, never `"Druid"` for a
   Dreamstate healer — see that module for the full class/build table). You
@@ -149,14 +149,14 @@ benchmark row or missing gear files will be called out there, not silently absen
 from the JSON.
 
 **This step makes zero API calls.** Everything after this point is read-only against
-files already on disk — steps 6-9 should never need to touch the network.
+files already on disk — steps 6-10 should never need to touch the network.
 
 ### 6. Compute analysis flags (script, no LLM)
 ```
 python -m pipeline.cli build-analysis --character-name "<name>" --report-code "<code>" --class-name "<Class>"
 ```
 Writes `<code>_analysis.json` next to `report_data.json` — pre-computes every
-script-safe numeric judgment call so step 7 is verification and wording, not
+script-safe numeric judgment call so step 8 is verification and wording, not
 arithmetic: per-boss HPS/overheal/HPM/active-time deviation flags vs. the Top 100
 `BM` row, spell-composition gaps, per-cooldown `Deviates` flags (cast it while
 ≤20% of the sample does, or didn't cast it while ≥50% did — this generalizes the
@@ -171,12 +171,33 @@ gear analysis (missing-enchant flags, differing-slot annotations) built from the
 same 19-slot/enchantable-slot tables `pipeline\render_lib.py` uses
 everywhere else in this pipeline. Zero API calls, zero judgment calls of its own.
 
-### 7. Author findings.json (the only step touching an LLM)
+### 7. Compute coaching-layer analysis (script, no LLM)
+```
+python -m pipeline.cli build-coaching --character-name "<name>" --report-code "<code>" --class-name "<Class>"
+```
+Writes `<code>_coaching.json` next to `analysis.json` — Phase 1 of an additive
+"coaching-style" analysis layer (see `CLAUDE.md`'s writeup of the approved
+phased plan). Currently covers mana-timing only: per-boss starting/ending mana
+%, low/high-mana cast counts and time-share, and a fixed-rule
+`MissedSecondPotionWindow` flag, all derived from `classResources` already
+sitting in the existing `fight*_casts_events.json` files (see
+`pipeline\render_lib.py`'s `parse_mana_readings`/`compute_mana_timing` for the
+real, non-obvious field mapping WCL uses there — don't "fix" those field
+names without re-reading that docstring first). Zero API calls, zero
+judgment calls of its own — same discipline as step 6.
+
+### 8. Author findings.json (the only step touching an LLM)
 Read `<code>_report_data.json` **and** `<code>_analysis.json`. Write
 `data\Characters\<name>\<code>\<code>_findings.json` containing only the
 free-text strings the analysis script can't produce on its own — per boss slug,
-`SCORECARD_FINDING`, `SPELL_COMPOSITION_FINDING`, `COOLDOWN_FINDING`, and
-`TARGET_FINDING` (each 1-2 plain-text sentences, no markup), plus a
+`SCORECARD_FINDING`, `SPELL_COMPOSITION_FINDING`, `COOLDOWN_FINDING`,
+`TARGET_FINDING`, and (new, Phase 1 of the coaching layer)
+`MANA_TIMING_FINDING` (each 1-2 plain-text sentences, no markup) — read
+`<code>_coaching.json`'s `Bosses.<slug>.ManaTiming` for the real numbers
+(`null` means no usable mana readings this kill, e.g. a non-mana build; say
+so plainly rather than inventing a mana story) and
+`Bosses.<slug>.MissedSecondPotionWindow`/`CannedCaveats` for the one
+fixed-rule flag this phase computes, plus a
 `RaidOverview` object with `GEAR_CONSISTENCY_FINDING`, `GEAR_FINDING_NOTE`,
 `RAID_SUMMARY_FINDING`, an optional `RAID_WARNING_BANNER` (may contain `<strong>`
 tags — this is the one field the renderer doesn't escape), and an optional
@@ -212,14 +233,19 @@ saying and how to phrase it. Concretely, before writing each boss's findings:
   33074 — don't claim Holy Shock "doesn't heal" for a Paladin).
 
 **Validate before moving on**: every boss slug in `report_data.json.Bosses` has
-all 4 required keys non-empty in `BossFindings`, and `RaidOverview` has its 3
+all 5 required keys non-empty in `BossFindings`, and `RaidOverview` has its 3
 required keys (`GEAR_CONSISTENCY_FINDING`, `GEAR_FINDING_NOTE`,
 `RAID_SUMMARY_FINDING`) non-empty. `pipeline\render_report.py` in the next step
 also checks this and refuses to write a page on any gap — don't rely on it
 catching a typo'd boss slug for you, though; check the slug names match
-`report_data.json` exactly.
+`report_data.json` exactly. **Note for any report pulled/rendered before this
+Phase 1 coaching layer existed**: its real `findings.json` won't have
+`MANA_TIMING_FINDING` yet and will now fail this same validation on
+re-render — backfill a real sentence per boss (using step 7's
+`coaching.json` output) before re-running step 9 for that report, don't
+silently skip the key.
 
-### 8. Render boss pages + raid overview (script, no LLM)
+### 9. Render boss pages + raid overview (script, no LLM)
 ```
 python -m pipeline.cli render --character-name "<name>" --report-code "<code>" --class-name "<Class>" --raid-title "<title>"
 ```
@@ -236,13 +262,13 @@ current JSON. If it exits with an "unfilled `{{TOKEN}}`" error, that means a
 required findings.json key is missing or misspelled — fix `findings.json`,
 don't patch the rendered HTML by hand.
 
-### 9. Update hub pages (script, no LLM)
+### 10. Update hub pages (script, no LLM)
 ```
 python -m pipeline.cli update-hub --character-name "<name>" --raid-date "<date>" --report-code "<code>" --class-name "<Class>" --bosses-killed <N> --raid-title "<title>"
 ```
 `--raid-date` is display text only (shown next to the raid title on the hub
 page) — the inserted row's link always points at `<code>/index.html`, matching
-step 8's report-code-named output folder exactly. This upserts the healer's
+step 9's report-code-named output folder exactly. This upserts the healer's
 `data\Characters\<name>\index.json` (creating it if this is a brand-new healer)
 and fully re-renders both `docs\<healer>\index.html` and, when this healer
 isn't already registered, `docs\index.html` too — new-healer registration is
@@ -297,10 +323,11 @@ one.
 ```
 python -m pipeline.cli generate-all --report-code "<code>"
 ```
-This loops the single-healer pipeline's steps 2-6 (pull character data,
+This loops the single-healer pipeline's steps 2-7 (pull character data,
 refresh + re-summarize the resolved class's Top 100 benchmark once per
-distinct class, compute `report_data.json` + `analysis.json`) across every
-healer in `site_index.json`, and prints a per-healer summary line at the end:
+distinct class, compute `report_data.json` + `analysis.json` +
+`coaching.json`) across every healer in `site_index.json`, and prints a
+per-healer summary line at the end:
 `done`, `skipped`, `needs-findings`, or `error`. Read it carefully:
 
 - `skipped` with "was not found in this report's actors" or "plays more than
@@ -315,15 +342,16 @@ healer in `site_index.json`, and prints a per-healer summary line at the end:
   why — almost always a bad or private report code). Fix that and re-run
   before doing anything else.
 - `needs-findings` — this is the real output of this pass: one or more
-  healers with real `report_data.json`/`analysis.json` on disk, ready for
-  step 3 below. Note every `<code>_findings.json` path it printed.
+  healers with real `report_data.json`/`analysis.json`/`coaching.json` on
+  disk, ready for step 3 below. Note every `<code>_findings.json` path it
+  printed.
 
 ### 3. Author a real findings.json for every healer that needs one
-For each `needs-findings` healer from step 2, follow single-healer step 7
-exactly — read that healer's own `<code>_report_data.json` **and**
-`<code>_analysis.json`, write their own `<code>_findings.json` — using the
-same schema, the same `CannedCaveats`/`RebirthCandidates`/etc. rules, and the
-same validation ("every boss slug has all 4 required keys, `RaidOverview` has
+For each `needs-findings` healer from step 2, follow single-healer step 8
+exactly — read that healer's own `<code>_report_data.json`, `<code>_analysis.json`,
+**and** `<code>_coaching.json`, write their own `<code>_findings.json` — using
+the same schema, the same `CannedCaveats`/`RebirthCandidates`/etc. rules, and
+the same validation ("every boss slug has all 5 required keys, `RaidOverview` has
 its 3 required keys") described there. **Each healer's findings are their
 own** — never reuse or copy prose across healers just because they share a
 report code; the same kill can look very different from a Druid's cooldown
@@ -405,9 +433,9 @@ look if a rendered page looks wrong, rather than re-deriving the fix by hand.
   in `findings.json`'s prose (a stated number that doesn't match the real data)
   is the one class of error the scripts can't catch for you.
 - Confirm `git status` shows only new files under the plain `\<code>\` folder,
-  plus the two hub pages from step 9 if they changed.
+  plus the two hub pages from step 10 if they changed.
 - Confirm the raid-night count in `docs\<healer>\index.html` (bumped
-  automatically by step 9) matches the number of real boss pages actually built.
+  automatically by step 10) matches the number of real boss pages actually built.
 - **For a batch run**: re-check the step 2/4 per-healer summary lines rather
   than assuming "no error" means "everyone got a page" — a healer can land on
   `skipped` legitimately (not in this report, unsupported class, 0 boss

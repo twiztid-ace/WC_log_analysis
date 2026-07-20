@@ -18,6 +18,7 @@ import datetime as _dt
 from jinja2 import Environment, FileSystemLoader, StrictUndefined, select_autoescape
 
 from pipeline import classes as classes_module
+from pipeline.numeric import round_net
 
 EM_DASH = "—"
 RIGHT_ARROW = "→"
@@ -179,3 +180,110 @@ def get_canned_caveats(class_name: str, cooldown_rows: dict | None, spell_rows: 
 def get_active_stat_blocks(class_name: str) -> list[str]:
     cfg = classes_module.CLASSES.get(class_name)
     return list(cfg.active_stat_blocks) if cfg else ["Flask", "Food", "ManaConsumable", "HPM"]
+
+
+# ===== Mana-timing coaching (Phase 1) =====
+#
+# WCL v2's `classResources[]` sub-object on a Casts event has field names
+# that do NOT mean what they literally say. Confirmed live 2026-07-20 via
+# (a) cross-referencing this pipeline's own already-known Lifebloom mana
+# cost (report_data.json's ManaCostByGuid: {"33763": 220} - exactly matches),
+# and (b) a full-fight self-consistency check (never negative, never exceeds
+# the pool, matches worldData.encounter's separate Resources-events
+# maxResourceAmount). The real mapping:
+#   entry["amount"] -> the character's MAX mana pool (constant all fight)
+#   entry["max"]    -> the mana COST of this specific cast
+#   entry["type"]   -> the character's CURRENT mana at the moment of this
+#                       cast, BEFORE this cast's own cost is deducted
+# Do not "fix" these names to look more sensible without re-verifying live -
+# this is the real, confirmed shape of WCL's response, not a bug in this file.
+
+def parse_mana_readings(cast_events: list[dict]) -> list[dict]:
+    """Extracts one mana reading per cast event that carries classResources
+    (some events - e.g. procs with no resourceActor - don't), sorted by
+    timestamp. See the module-level note above for the real field mapping."""
+    readings = []
+    for ev in cast_events:
+        cr = ev.get("classResources")
+        if not cr:
+            continue
+        entry = cr[0]
+        pool = entry.get("amount")
+        current = entry.get("type")
+        cost = entry.get("max") or 0
+        if not pool:
+            continue
+        readings.append({
+            "Timestamp": ev["timestamp"], "CurrentMana": current, "MaxMana": pool, "Cost": cost,
+            "AbilityGuid": ev.get("abilityGameID"),
+            "PctAtCast": round_net((current / pool) * 100, 1),
+        })
+    readings.sort(key=lambda r: r["Timestamp"])
+    return readings
+
+
+def compute_mana_timing(
+    cast_events: list[dict], fight_start: float, fight_end: float,
+    low_pct_threshold: float = 20, high_pct_threshold: float = 90,
+) -> dict | None:
+    """Mana-timing summary for one boss kill - zero new API calls, entirely
+    derived from classResources already sitting in existing
+    fight*_casts_events.json files. Returns None when the fight has no usable
+    mana readings (e.g. a non-mana-user, or every cast event lacked
+    classResources).
+
+    "Time spent" figures are a step-function approximation (mana level held
+    constant from one reading to the next) since readings only exist at cast
+    moments, not continuously - a documented approximation, not a measured
+    fact, same spirit as this pipeline's other derived-not-logged figures."""
+    readings = parse_mana_readings(cast_events)
+    if not readings:
+        return None
+
+    last = readings[-1]
+    # Clamped to 0 - real mana can't go negative; a small negative raw value
+    # here just means the "current mana before this cast" reading already
+    # accounted for a regen tick this approximation doesn't otherwise model
+    # (e.g. Dark Rune landing right at the last cast).
+    ending_mana = max(0, last["CurrentMana"] - last["Cost"])
+    ending_pct = round_net((ending_mana / last["MaxMana"]) * 100, 1) if last["MaxMana"] else None
+
+    low_mana_casts = sum(1 for r in readings if r["PctAtCast"] < low_pct_threshold)
+    high_mana_casts = sum(1 for r in readings if r["PctAtCast"] >= high_pct_threshold)
+
+    points = [(fight_start, readings[0]["PctAtCast"])] + [(r["Timestamp"], r["PctAtCast"]) for r in readings] + [(fight_end, ending_pct)]
+    time_low_ms = 0.0
+    time_high_ms = 0.0
+    for (t0, pct0), (t1, _pct1) in zip(points, points[1:]):
+        if pct0 is None:
+            continue
+        dur = max(0.0, t1 - t0)
+        if pct0 < low_pct_threshold:
+            time_low_ms += dur
+        elif pct0 >= high_pct_threshold:
+            time_high_ms += dur
+
+    fight_duration_ms = max(1.0, fight_end - fight_start)
+    return {
+        "StartingManaPct": readings[0]["PctAtCast"], "EndingManaPctApprox": ending_pct,
+        "LowManaCastCount": low_mana_casts, "HighManaCastCount": high_mana_casts,
+        "TimeBelowLowThresholdPct": round_net((time_low_ms / fight_duration_ms) * 100, 1),
+        "TimeAboveHighThresholdPct": round_net((time_high_ms / fight_duration_ms) * 100, 1),
+        "LowThreshold": low_pct_threshold, "HighThreshold": high_pct_threshold,
+        "ReadingCount": len(readings),
+    }
+
+
+def test_missed_second_potion(potion_targets: list[dict], fight_end: float, potion_cooldown_ms: float = 120000) -> bool:
+    """Real TBC mechanic, not a guess: potions share a fixed 120s internal
+    cooldown. Fixed numeric rule (same style/shape as test_tranquility_include):
+    flags a real, missed second-use opportunity when exactly one potion was
+    used early enough in the fight that the cooldown would have been up again
+    before the fight ended, but no second use was ever cast. Never fires for
+    zero or 2+ real uses - those aren't a "missed opportunity" by this rule."""
+    if len(potion_targets) != 1:
+        return False
+    first_ts = potion_targets[0].get("Timestamp")
+    if first_ts is None:
+        return False
+    return (fight_end - first_ts) >= potion_cooldown_ms

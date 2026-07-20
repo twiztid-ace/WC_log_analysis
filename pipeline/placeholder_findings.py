@@ -59,6 +59,7 @@ def build_placeholder_findings(
             "SPELL_COMPOSITION_FINDING": PLACEHOLDER,
             "COOLDOWN_FINDING": PLACEHOLDER,
             "TARGET_FINDING": PLACEHOLDER,
+            "MANA_TIMING_FINDING": PLACEHOLDER,
         }
         for slug in boss_slugs
     }

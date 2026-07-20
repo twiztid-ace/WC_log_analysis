@@ -23,6 +23,7 @@ import sys
 
 from pipeline import (
     build_analysis as build_analysis_module,
+    build_coaching as build_coaching_module,
     build_report_data as build_report_data_module,
     hub_pages,
     jsonio,
@@ -91,6 +92,11 @@ def cmd_build_analysis(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_build_coaching(args: argparse.Namespace) -> int:
+    build_coaching_module.build_coaching(args.character_name, args.report_code, args.class_name, args.characters_root)
+    return 0
+
+
 def cmd_placeholder_findings(args: argparse.Namespace) -> int:
     placeholder_findings_module.build_placeholder_findings(args.character_name, args.report_code, args.characters_root, args.force)
     return 0
@@ -124,7 +130,7 @@ def cmd_update_hub(args: argparse.Namespace) -> int:
 
 
 def cmd_generate(args: argparse.Namespace) -> int:
-    print("=== generate: step 1/6 - pull character data ===")
+    print("=== generate: step 1/7 - pull character data ===")
     pull_result = pull_character_module.pull_character(
         args.report_code, args.character_name, spec=args.spec, max_threads=args.max_threads,
         characters_root=args.characters_root,
@@ -139,22 +145,25 @@ def cmd_generate(args: argparse.Namespace) -> int:
         return 1
     print(f"Resolved pipeline class: {class_name}")
 
-    print(f"\n=== generate: step 2/6 - refresh {class_name}'s Top 100 benchmark ===")
+    print(f"\n=== generate: step 2/7 - refresh {class_name}'s Top 100 benchmark ===")
     pull_top100_module.pull_top100(class_name, args.max_threads, args.classes_root)
 
-    print(f"\n=== generate: step 3/6 - re-summarize {class_name} benchmarks ===")
+    print(f"\n=== generate: step 3/7 - re-summarize {class_name} benchmarks ===")
     summarize_benchmarks_module.summarize_benchmarks(class_name, args.classes_root)
 
-    print("\n=== generate: step 4/6 - compute report data + analysis ===")
+    print("\n=== generate: step 4/7 - compute report data + analysis ===")
     build_report_data_module.build_report_data(args.character_name, args.report_code, class_name, args.characters_root, args.classes_root)
     build_analysis_module.build_analysis(args.character_name, args.report_code, class_name, args.characters_root)
+
+    print("\n=== generate: step 5/7 - coaching-layer analysis (mana timing) ===")
+    build_coaching_module.build_coaching(args.character_name, args.report_code, class_name, args.characters_root)
 
     char_root = args.characters_root
     report_data_file = paths.find_file_recursive(f"{char_root}/{args.character_name}", f"{args.report_code}_report_data.json")
     char_dir = report_data_file.parent
     findings_path = char_dir / f"{args.report_code}_findings.json"
 
-    print("\n=== generate: step 5/6 - findings ===")
+    print("\n=== generate: step 6/7 - findings ===")
     if not findings_path.exists():
         if args.placeholder_findings:
             placeholder_findings_module.build_placeholder_findings(args.character_name, args.report_code, args.characters_root)
@@ -173,7 +182,7 @@ def cmd_generate(args: argparse.Namespace) -> int:
     else:
         print(f"Using existing {findings_path}.")
 
-    print("\n=== generate: step 6/6 - render + update hub pages ===")
+    print("\n=== generate: step 7/7 - render + update hub pages ===")
     render_report_module.render_healer_report(
         args.character_name, args.report_code, class_name, raid_title=args.raid_title,
         characters_root=args.characters_root, templates_root=args.templates_root, output_root=args.docs_root,
@@ -259,6 +268,7 @@ def cmd_generate_all(args: argparse.Namespace) -> int:
 
         build_report_data_module.build_report_data(name, args.report_code, class_name, args.characters_root, args.classes_root)
         build_analysis_module.build_analysis(name, args.report_code, class_name, args.characters_root)
+        build_coaching_module.build_coaching(name, args.report_code, class_name, args.characters_root)
 
         report_data_file = paths.find_file_recursive(f"{args.characters_root}/{name}", f"{args.report_code}_report_data.json")
         char_dir = report_data_file.parent
@@ -339,6 +349,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--class-name", required=True)
     _add_common_roots(p)
     p.set_defaults(func=cmd_build_analysis)
+
+    p = sub.add_parser("build-coaching", help="Pre-flag coaching-layer findings (mana timing, Phase 1) into coaching.json")
+    p.add_argument("--character-name", required=True)
+    p.add_argument("--report-code", required=True)
+    p.add_argument("--class-name", required=True)
+    _add_common_roots(p)
+    p.set_defaults(func=cmd_build_coaching)
 
     p = sub.add_parser("placeholder-findings", help="Write a placeholder findings.json (data-only, no LLM)")
     p.add_argument("--character-name", required=True)

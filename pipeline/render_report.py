@@ -77,7 +77,7 @@ def _format_cooldown_benchmark(avg_casts, used_pct, self_pct, show_self_pct: boo
 
 def _validate_findings(report_data: dict, findings: dict) -> None:
     boss_slugs = list(report_data["Bosses"].keys())
-    required_boss_keys = ["SCORECARD_FINDING", "SPELL_COMPOSITION_FINDING", "COOLDOWN_FINDING", "TARGET_FINDING"]
+    required_boss_keys = ["SCORECARD_FINDING", "SPELL_COMPOSITION_FINDING", "COOLDOWN_FINDING", "TARGET_FINDING", "MANA_TIMING_FINDING"]
     missing = []
     boss_findings = findings.get("BossFindings", {})
     for slug in boss_slugs:
@@ -141,6 +141,12 @@ def render_healer_report(
     report_data = jsonio.read_json(report_data_file)
     analysis = jsonio.read_json(analysis_path)
     findings = jsonio.read_json(findings_path)
+
+    coaching_path = char_dir / f"{report_code}_coaching.json"
+    coaching = jsonio.read_json_if_exists(coaching_path)
+    if coaching is None:
+        print(f"  WARNING: {coaching_path} not found - run `build-coaching` first for real mana-timing data. Rendering with no coaching data for every boss.")
+        coaching = {"Bosses": {}}
 
     folder_name = char_dir.name
     raid_date_folder = folder_name
@@ -333,6 +339,10 @@ def render_healer_report(
 
         sample_n = bm.get("SampleSize", "100") if bm else "100"
 
+        boss_coaching = coaching.get("Bosses", {}).get(slug, {})
+        mana_timing = boss_coaching.get("ManaTiming")
+        missed_second_potion_window = boss_coaching.get("MissedSecondPotionWindow", False)
+
         context = {
             "raid_title": full_raid_title_for_boss_pages, "boss_name": boss["Display"],
             "healer_name": character_name, "healer_class_spec": class_spec, "item_level": item_level,
@@ -369,6 +379,8 @@ def render_healer_report(
             "healer_rank_rows": healer_rank_rows,
             "benchmark_n": sample_n,
             "theme_style_block": theme_style_block, "theme_tag": theme_tag,
+            "mana_timing": mana_timing, "missed_second_potion_window": missed_second_potion_window,
+            "mana_timing_finding": bf["MANA_TIMING_FINDING"],
         }
 
         # Note: no post-render scan for a literal "{{" here (the PowerShell

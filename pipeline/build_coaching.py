@@ -1,0 +1,122 @@
+"""Phase 1 of the additive "coaching-style" analysis layer (see
+Restoration Druid Healing Analysis.pdf and the approved plan for the full
+phased rollout). Reads a character's already-pulled data - {code}_report_data.json
+plus the raw fight*_casts_events.json files pull_character.py already writes
+- and writes a companion {code}_coaching.json, following the exact same
+zero-API, zero-LLM discipline as build_analysis.py: every judgment call is a
+pure predicate in render_lib.py, every result is a structured field (never
+free text), and anything that would require guessing intent (not just
+describing what happened) is gated behind a tag string for findings.json to
+pick up, never asserted here as fact.
+
+Phase 1 covers mana-timing only (zero new API calls - classResources is
+already sitting unused in every existing casts_events.json file). Later
+phases (Lifebloom refresh timing, damage-correlated cooldown-opportunity
+detection, peer-group comparison) extend this same module/sidecar rather
+than creating new ones - see the approved plan for the full breakdown.
+"""
+
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
+from typing import Any
+
+from pipeline import paths, render_lib
+from pipeline import jsonio
+
+# Fixed thresholds for tagging a boss's mana-timing pattern as caveat-worthy -
+# same "fixed numeric rule, not a per-page discovery" spirit as
+# render_lib.test_tranquility_include. Chosen to flag genuinely extended
+# low-mana stretches, not routine dips every healer experiences.
+LOW_MANA_TIME_CAVEAT_THRESHOLD_PCT = 15.0
+
+
+def build_coaching(
+    character_name: str,
+    report_code: str,
+    class_name: str,
+    characters_root: str = "data/Characters",
+) -> dict[str, Any]:
+    char_root = Path(characters_root) / character_name
+    if not char_root.exists():
+        raise FileNotFoundError(f"{char_root} not found.")
+
+    fights_file = paths.find_file_recursive(char_root, f"fights_{report_code}.json")
+    if not fights_file:
+        raise FileNotFoundError(
+            f"no fights_{report_code}.json found under {char_root} - "
+            f"run pull_character.py for '{character_name}' / {report_code} first."
+        )
+    char_dir = fights_file.parent
+    fights_data = jsonio.read_json(fights_file)
+    fight_times = {f["id"]: (f["start_time"], f["end_time"]) for f in fights_data["fights"]}
+
+    report_data_file = char_dir / f"{report_code}_report_data.json"
+    if not report_data_file.exists():
+        raise FileNotFoundError(
+            f"{report_data_file} not found - run build_report_data.py for "
+            f"{character_name} / {report_code} / {class_name} first."
+        )
+    report_data = jsonio.read_json(report_data_file)
+
+    boss_results: dict[str, dict] = {}
+
+    for slug, boss in report_data["Bosses"].items():
+        fight_id = boss["FightID"]
+        times = fight_times.get(fight_id)
+        if not times:
+            print(f"  WARNING: {slug} (fight {fight_id}) - not found in fights_{report_code}.json, skipping coaching analysis for this boss.")
+            continue
+        fight_start, fight_end = times
+
+        label = f"fight{fight_id:02d}_{slug}"
+        casts_path = char_dir / f"{label}_casts_events.json"
+        casts_data = jsonio.read_json_if_exists(casts_path)
+        if casts_data is None:
+            print(f"  WARNING: {slug} - {casts_path.name} not found, skipping mana-timing for this boss.")
+            mana_timing = None
+        else:
+            mana_timing = render_lib.compute_mana_timing(casts_data.get("events", []), fight_start, fight_end)
+
+        mana_potion_targets = boss.get("CooldownRows", {}).get("Mana Potion", {}).get("Targets", [])
+        missed_second_potion = render_lib.test_missed_second_potion(mana_potion_targets, fight_end)
+
+        tags: list[str] = []
+        if mana_timing and mana_timing["TimeBelowLowThresholdPct"] >= LOW_MANA_TIME_CAVEAT_THRESHOLD_PCT:
+            tags.append("mana_timing_extended_low_mana")
+        if missed_second_potion:
+            tags.append("mana_timing_missed_second_potion_window")
+
+        boss_results[slug] = {
+            "ManaTiming": mana_timing,
+            "MissedSecondPotionWindow": missed_second_potion,
+            "CannedCaveats": tags,
+        }
+
+    coaching = {
+        "CharacterName": character_name, "ReportCode": report_code, "ClassName": class_name,
+        "Bosses": boss_results,
+    }
+
+    out_path = char_dir / f"{report_code}_coaching.json"
+    jsonio.write_json(out_path, coaching)
+    print(f"\nWrote {out_path}")
+    print(f"{len(boss_results)} boss(es) analyzed.")
+    return coaching
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Phase 1 coaching-layer analysis (mana timing)")
+    parser.add_argument("--character-name", required=True)
+    parser.add_argument("--report-code", required=True)
+    parser.add_argument("--class-name", required=True)
+    parser.add_argument("--characters-root", default="data/Characters")
+    args = parser.parse_args()
+
+    build_coaching(args.character_name, args.report_code, args.class_name, args.characters_root)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
